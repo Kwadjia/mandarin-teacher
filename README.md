@@ -21,7 +21,7 @@ settled (Taiwan), corpus at HSK1 completeness. No app code yet, on purpose.
 Keep/Maybe/Cut verdict bar. See [`docs/exercises.md`](docs/exercises.md).
 
 ```powershell
-.venv\Scripts\python.exe pipelineuild_lab.py
+.venv\Scripts\python.exe pipeline\build_lab.py
 start pipeline\out\lab\index.html
 ```
 
