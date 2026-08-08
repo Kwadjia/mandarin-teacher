@@ -14,6 +14,11 @@ cd pipeline\out; python -m http.server 8000   # → localhost:8000/lab/
 do this every day?* Not *is this clever*. Most of these should die. The point of building
 24 was to make the choice by playing rather than by arguing.
 
+Each exercise has a **Keep / Maybe / Cut** bar under its description with a one-line note
+field. Judge it while you are playing it rather than trying to remember afterwards — the
+sidebar tracks how many you have judged, and **Export verdicts** dumps the lot as JSON.
+That file is the most useful thing you can hand back to me.
+
 Every interaction emits a row into the live event panel, in the shape of the real
 `event` table. That panel is the second thing to evaluate: it is the entire basis of
 the learner model, and if the data an exercise produces is not useful, the exercise
@@ -70,7 +75,7 @@ Pairs. Measuring this early is worth more than it looks.
 | **Flash Recognition** | Whole-word recognition | **Auto** | Good idea, low priority. The difference between reading Chinese and decoding it. |
 | **Traditional ↔ Simplified** | Script mapping | **Auto** | Probably unnecessary — you will absorb this passively from seeing both. Cut unless you enjoy it. |
 | **Build the Sentence** | Word order + written form | **Auto** | Fiddly. Unclear what it adds over Dictation. Likely cut. |
-| **Grammar Sense** | Word order | **Auto** | **Weakest exercise here, and I want to flag it honestly.** Distractors are made by swapping two adjacent tokens, which frequently produces something either still grammatical or obviously broken. Needs real grammar modelling to be worth building. |
+| **Grammar Sense** | Word order | **Auto** | Rebuilt. The first version generated distractors by swapping adjacent tokens, which often produced something either still grammatical or obviously broken. Now 18 hand-authored contrasts targeting real English-speaker errors (了 placement, 不 vs 没, time-before-verb), each showing the rule after you answer. Worth a look now. |
 
 ### Acquisition & input
 
@@ -120,8 +125,7 @@ it late), Shadow, Say It.
 real priority; Immersion when the learner model can keep input comprehensible;
 Progress once there is real data to show.
 
-**Cut candidates:** Which One?, Build the Sentence, Traditional ↔ Simplified, Grammar
-Sense as currently implemented.
+**Cut candidates:** Which One?, Build the Sentence, Traditional ↔ Simplified.
 
 ---
 
