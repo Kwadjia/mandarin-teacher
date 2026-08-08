@@ -476,6 +476,8 @@ def main() -> int:
              "azure = official API, needs a key; none = skip audio",
     )
     ap.add_argument("--skip-tts", action="store_true", help="alias for --tts none")
+    ap.add_argument("--force", action="store_true",
+                    help="re-synthesize clips that already exist on disk")
     ap.add_argument(
         "--self-test",
         action="store_true",
@@ -575,8 +577,6 @@ def main() -> int:
         print(f"      {total} placeholder clips")
 
     elif args.tts == "edge":
-        print(f"[3/3] Synthesizing {total} clips via edge-tts "
-              f"({len(VOICES)} voices x {len(RATES)} rates, free, no key)")
         jobs = [
             (
                 OUT_DIR / c["file"],
@@ -587,7 +587,17 @@ def main() -> int:
             for it in items
             for c in it["clips"]
         ]
-        failures = asyncio.run(_edge_render_all(jobs))
+        # Incremental by default: an existing, non-trivial file is left alone. Adding
+        # eight sentences should not re-synthesize sixteen hundred clips.
+        if not args.force:
+            fresh = [j for j in jobs if not (j[0].exists() and j[0].stat().st_size > 2000)]
+            if len(fresh) < len(jobs):
+                print(f"[3/3] {len(jobs) - len(fresh)} clips already on disk, "
+                      f"{len(fresh)} to synthesize  (--force to redo all)")
+            jobs = fresh
+        if jobs:
+            print(f"      via edge-tts ({len(VOICES)} voices x {len(RATES)} rates, free, no key)")
+        failures = asyncio.run(_edge_render_all(jobs)) if jobs else []
         if failures:
             failed = {p.name for p, _ in failures}
             print(f"      {len(failures)} clips FAILED and were dropped from the page:")

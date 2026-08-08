@@ -10,17 +10,40 @@ See [`docs/design.md`](docs/design.md) for the architecture, data model, and pha
 
 ## Status
 
-Phase 0 — validating that synthetic Mandarin audio and LLM-generated sentences are
-good enough to build on. Nothing else is built yet, on purpose.
+Phase 0 complete — audio-first premise validated by native review, language variety
+settled (Taiwan), corpus at HSK1 completeness. No app code yet, on purpose.
+
+**151 concepts · 212 sentences · 1,696 clips · 24 exercise prototypes**
+
+## The exercise lab
+
+24 playable drill prototypes running on the real corpus and audio, each with a
+Keep/Maybe/Cut verdict bar. See [`docs/exercises.md`](docs/exercises.md).
+
+```powershell
+.venv\Scripts\python.exe pipelineuild_lab.py
+start pipeline\out\lab\index.html
+```
 
 ## Layout
 
 ```
-docs/          design doc and decision records
-pipeline/      offline Python content pipeline (generation, verification, TTS)
-packages/      the app — schema, core logic, API, web (not yet created)
+docs/          design.md (architecture) · exercises.md (drill catalog)
+pipeline/      offline content pipeline
+  day0_validate.py    generate/load → verify → synthesize → review page
+  build_lab.py        exercise lab
+  build_tones.py      tone minimal-pair audio
+  normalize_corpus.py Taiwan variety rules + Traditional derivation
+  expand_hsk1.py      one-off vocabulary expansion
+  data/               seed vocabulary, sentences, minimal pairs, grammar pairs
+  out/                generated audio and pages (gitignored)
+packages/      the app — schema, core, api, web (not yet created)
 data/          local SQLite database (gitignored)
 ```
+
+Everything in `pipeline/out/` is regenerable and not committed. To rebuild from
+scratch: `day0_validate.py --sentences --tts edge` then `build_tones.py` then
+`build_lab.py`. Rendering is incremental — existing clips are left alone.
 
 ## Day 0: validate before building
 
