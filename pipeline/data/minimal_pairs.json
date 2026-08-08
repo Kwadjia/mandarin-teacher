@@ -1,0 +1,80 @@
+{
+  "_comment": "Tone minimal-pair sets: same syllable, all four tones, each a real word. This is the only way to train tone perception in isolation — inside a sentence, context lets you cheat. Sets chosen so all four tones are genuine common-ish words rather than obscure fillers. 宝/抱 and 买/卖 overlap the seed vocabulary deliberately.",
+  "sets": [
+    { "syllable": "ma",   "words": [
+      { "hanzi": "妈", "trad": "媽", "tone": 1, "gloss": "mother" },
+      { "hanzi": "麻", "trad": "麻", "tone": 2, "gloss": "hemp; numb" },
+      { "hanzi": "马", "trad": "馬", "tone": 3, "gloss": "horse" },
+      { "hanzi": "骂", "trad": "罵", "tone": 4, "gloss": "to scold" } ] },
+    { "syllable": "bao",  "words": [
+      { "hanzi": "包", "trad": "包", "tone": 1, "gloss": "bag; to wrap" },
+      { "hanzi": "薄", "trad": "薄", "tone": 2, "gloss": "thin" },
+      { "hanzi": "宝", "trad": "寶", "tone": 3, "gloss": "treasure" },
+      { "hanzi": "抱", "trad": "抱", "tone": 4, "gloss": "to hold" } ] },
+    { "syllable": "yi",   "words": [
+      { "hanzi": "衣", "trad": "衣", "tone": 1, "gloss": "clothing" },
+      { "hanzi": "疑", "trad": "疑", "tone": 2, "gloss": "to doubt" },
+      { "hanzi": "椅", "trad": "椅", "tone": 3, "gloss": "chair" },
+      { "hanzi": "意", "trad": "意", "tone": 4, "gloss": "meaning" } ] },
+    { "syllable": "shu",  "words": [
+      { "hanzi": "书", "trad": "書", "tone": 1, "gloss": "book" },
+      { "hanzi": "熟", "trad": "熟", "tone": 2, "gloss": "cooked; familiar" },
+      { "hanzi": "鼠", "trad": "鼠", "tone": 3, "gloss": "mouse, rat" },
+      { "hanzi": "树", "trad": "樹", "tone": 4, "gloss": "tree" } ] },
+    { "syllable": "tang", "words": [
+      { "hanzi": "汤", "trad": "湯", "tone": 1, "gloss": "soup" },
+      { "hanzi": "糖", "trad": "糖", "tone": 2, "gloss": "sugar, candy" },
+      { "hanzi": "躺", "trad": "躺", "tone": 3, "gloss": "to lie down" },
+      { "hanzi": "烫", "trad": "燙", "tone": 4, "gloss": "scalding hot" } ] },
+    { "syllable": "ba",   "words": [
+      { "hanzi": "八", "trad": "八", "tone": 1, "gloss": "eight" },
+      { "hanzi": "拔", "trad": "拔", "tone": 2, "gloss": "to pull out" },
+      { "hanzi": "把", "trad": "把", "tone": 3, "gloss": "to hold; (measure word)" },
+      { "hanzi": "爸", "trad": "爸", "tone": 4, "gloss": "dad" } ] },
+    { "syllable": "xi",   "words": [
+      { "hanzi": "西", "trad": "西", "tone": 1, "gloss": "west" },
+      { "hanzi": "习", "trad": "習", "tone": 2, "gloss": "to practise" },
+      { "hanzi": "洗", "trad": "洗", "tone": 3, "gloss": "to wash" },
+      { "hanzi": "戏", "trad": "戲", "tone": 4, "gloss": "play, drama" } ] },
+    { "syllable": "zhu",  "words": [
+      { "hanzi": "猪", "trad": "豬", "tone": 1, "gloss": "pig" },
+      { "hanzi": "竹", "trad": "竹", "tone": 2, "gloss": "bamboo" },
+      { "hanzi": "煮", "trad": "煮", "tone": 3, "gloss": "to boil, to cook" },
+      { "hanzi": "住", "trad": "住", "tone": 4, "gloss": "to live, to stay" } ] },
+    { "syllable": "ji",   "words": [
+      { "hanzi": "鸡", "trad": "雞", "tone": 1, "gloss": "chicken" },
+      { "hanzi": "急", "trad": "急", "tone": 2, "gloss": "urgent" },
+      { "hanzi": "几", "trad": "幾", "tone": 3, "gloss": "how many" },
+      { "hanzi": "记", "trad": "記", "tone": 4, "gloss": "to record, to remember" } ] },
+    { "syllable": "qi",   "words": [
+      { "hanzi": "七", "trad": "七", "tone": 1, "gloss": "seven" },
+      { "hanzi": "骑", "trad": "騎", "tone": 2, "gloss": "to ride" },
+      { "hanzi": "起", "trad": "起", "tone": 3, "gloss": "to rise" },
+      { "hanzi": "气", "trad": "氣", "tone": 4, "gloss": "air; anger" } ] },
+    { "syllable": "wen",  "words": [
+      { "hanzi": "温", "trad": "溫", "tone": 1, "gloss": "warm" },
+      { "hanzi": "文", "trad": "文", "tone": 2, "gloss": "writing, culture" },
+      { "hanzi": "稳", "trad": "穩", "tone": 3, "gloss": "steady" },
+      { "hanzi": "问", "trad": "問", "tone": 4, "gloss": "to ask" } ] },
+    { "syllable": "yao",  "words": [
+      { "hanzi": "腰", "trad": "腰", "tone": 1, "gloss": "waist" },
+      { "hanzi": "摇", "trad": "搖", "tone": 2, "gloss": "to shake, to rock" },
+      { "hanzi": "咬", "trad": "咬", "tone": 3, "gloss": "to bite" },
+      { "hanzi": "要", "trad": "要", "tone": 4, "gloss": "to want" } ] },
+    { "syllable": "fen",  "words": [
+      { "hanzi": "分", "trad": "分", "tone": 1, "gloss": "to divide; minute" },
+      { "hanzi": "坟", "trad": "墳", "tone": 2, "gloss": "grave" },
+      { "hanzi": "粉", "trad": "粉", "tone": 3, "gloss": "powder" },
+      { "hanzi": "份", "trad": "份", "tone": 4, "gloss": "portion, share" } ] },
+    { "syllable": "du",   "words": [
+      { "hanzi": "督", "trad": "督", "tone": 1, "gloss": "to supervise" },
+      { "hanzi": "读", "trad": "讀", "tone": 2, "gloss": "to read" },
+      { "hanzi": "赌", "trad": "賭", "tone": 3, "gloss": "to gamble" },
+      { "hanzi": "度", "trad": "度", "tone": 4, "gloss": "degree" } ] },
+    { "syllable": "ti",   "words": [
+      { "hanzi": "踢", "trad": "踢", "tone": 1, "gloss": "to kick" },
+      { "hanzi": "提", "trad": "提", "tone": 2, "gloss": "to lift, to mention" },
+      { "hanzi": "体", "trad": "體", "tone": 3, "gloss": "body" },
+      { "hanzi": "替", "trad": "替", "tone": 4, "gloss": "to replace" } ] }
+  ]
+}
