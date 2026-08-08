@@ -1,0 +1,824 @@
+{
+  "_comment": "100 hand-written sentences constrained to seed_vocab.json. Written directly by Claude in-session rather than via the API — for a corpus this small the API adds nothing but a signup step. Every sentence is still subject to the same programmatic vocabulary check as generated content. Replace/extend via the API pipeline once the vocabulary grows past a few hundred words.",
+  "sentences": [
+    {
+      "hanzi": "宝宝睡觉了。",
+      "pinyin": "bǎobao shuìjiào le",
+      "gloss_en": "The baby's asleep.",
+      "hanzi_trad": "寶寶睡覺了。"
+    },
+    {
+      "hanzi": "宝宝饿了。",
+      "pinyin": "bǎobao è le",
+      "gloss_en": "The baby's hungry.",
+      "hanzi_trad": "寶寶餓了。"
+    },
+    {
+      "hanzi": "宝宝哭了。",
+      "pinyin": "bǎobao kū le",
+      "gloss_en": "The baby's crying.",
+      "hanzi_trad": "寶寶哭了。"
+    },
+    {
+      "hanzi": "宝宝笑了！",
+      "pinyin": "bǎobao xiào le",
+      "gloss_en": "The baby smiled!",
+      "hanzi_trad": "寶寶笑了！"
+    },
+    {
+      "hanzi": "宝宝不哭。",
+      "pinyin": "bǎobao bù kū",
+      "gloss_en": "Don't cry, baby.",
+      "hanzi_trad": "寶寶不哭。"
+    },
+    {
+      "hanzi": "宝宝要喝奶。",
+      "pinyin": "bǎobao yào hēnǎi",
+      "gloss_en": "The baby wants milk.",
+      "hanzi_trad": "寶寶要喝奶。"
+    },
+    {
+      "hanzi": "宝宝喝奶了吗？",
+      "pinyin": "bǎobao hēnǎi le ma?",
+      "gloss_en": "Has the baby fed yet?",
+      "hanzi_trad": "寶寶喝奶了嗎？"
+    },
+    {
+      "hanzi": "奶瓶在哪里？",
+      "pinyin": "nǎipíng zài nǎlǐ?",
+      "gloss_en": "Where's the bottle?",
+      "hanzi_trad": "奶瓶在哪裡？"
+    },
+    {
+      "hanzi": "我去买奶瓶。",
+      "pinyin": "wǒ qù mǎi nǎipíng",
+      "gloss_en": "I'm going to buy bottles.",
+      "hanzi_trad": "我去買奶瓶。"
+    },
+    {
+      "hanzi": "换尿布吧。",
+      "pinyin": "huàn niàobù ba",
+      "gloss_en": "Let's change the diaper.",
+      "hanzi_trad": "換尿布吧。"
+    },
+    {
+      "hanzi": "尿布在哪里？",
+      "pinyin": "niàobù zài nǎlǐ?",
+      "gloss_en": "Where are the diapers?",
+      "hanzi_trad": "尿布在哪裡？"
+    },
+    {
+      "hanzi": "我换尿布。",
+      "pinyin": "wǒ huàn niàobù",
+      "gloss_en": "I'll change the diaper.",
+      "hanzi_trad": "我換尿布。"
+    },
+    {
+      "hanzi": "宝宝的尿布换了吗？",
+      "pinyin": "bǎobao de niàobù huàn le ma?",
+      "gloss_en": "Has the baby been changed?",
+      "hanzi_trad": "寶寶的尿布換了嗎？"
+    },
+    {
+      "hanzi": "你抱宝宝吧。",
+      "pinyin": "nǐ bào bǎobao ba",
+      "gloss_en": "You hold the baby.",
+      "hanzi_trad": "你抱寶寶吧。"
+    },
+    {
+      "hanzi": "我要抱宝宝。",
+      "pinyin": "wǒ yào bào bǎobao",
+      "gloss_en": "I want to hold the baby.",
+      "hanzi_trad": "我要抱寶寶。"
+    },
+    {
+      "hanzi": "谁抱宝宝？",
+      "pinyin": "shéi bào bǎobao?",
+      "gloss_en": "Who's holding the baby?",
+      "hanzi_trad": "誰抱寶寶？"
+    },
+    {
+      "hanzi": "宝宝喜欢奶奶。",
+      "pinyin": "bǎobao xǐhuan nǎinai",
+      "gloss_en": "The baby likes Grandma.",
+      "hanzi_trad": "寶寶喜歡奶奶。"
+    },
+    {
+      "hanzi": "奶奶抱宝宝。",
+      "pinyin": "nǎinai bào bǎobao",
+      "gloss_en": "Grandma's holding the baby.",
+      "hanzi_trad": "奶奶抱寶寶。"
+    },
+    {
+      "hanzi": "奶奶来了。",
+      "pinyin": "nǎinai lái le",
+      "gloss_en": "Grandma's here.",
+      "hanzi_trad": "奶奶來了。"
+    },
+    {
+      "hanzi": "奶奶很喜欢宝宝。",
+      "pinyin": "nǎinai hěn xǐhuan bǎobao",
+      "gloss_en": "Grandma really loves the baby.",
+      "hanzi_trad": "奶奶很喜歡寶寶。"
+    },
+    {
+      "hanzi": "明天奶奶来我们家。",
+      "pinyin": "míngtiān nǎinai lái wǒmen jiā",
+      "gloss_en": "Grandma's coming over tomorrow.",
+      "hanzi_trad": "明天奶奶來我們家。"
+    },
+    {
+      "hanzi": "宝宝现在睡觉。",
+      "pinyin": "bǎobao xiànzài shuìjiào",
+      "gloss_en": "The baby's sleeping right now.",
+      "hanzi_trad": "寶寶現在睡覺。"
+    },
+    {
+      "hanzi": "宝宝晚上不睡觉。",
+      "pinyin": "bǎobao wǎnshang bù shuìjiào",
+      "gloss_en": "The baby doesn't sleep at night.",
+      "hanzi_trad": "寶寶晚上不睡覺。"
+    },
+    {
+      "hanzi": "宝宝睡觉了吗？",
+      "pinyin": "bǎobao shuìjiào le ma?",
+      "gloss_en": "Is the baby asleep?",
+      "hanzi_trad": "寶寶睡覺了嗎？"
+    },
+    {
+      "hanzi": "宝宝今天很好。",
+      "pinyin": "bǎobao jīntiān hěn hǎo",
+      "gloss_en": "The baby's been good today.",
+      "hanzi_trad": "寶寶今天很好。"
+    },
+    {
+      "hanzi": "宝宝今天笑了很多。",
+      "pinyin": "bǎobao jīntiān xiào le hěn duō",
+      "gloss_en": "The baby smiled a lot today.",
+      "hanzi_trad": "寶寶今天笑了很多。"
+    },
+    {
+      "hanzi": "我们的宝宝很小。",
+      "pinyin": "wǒmen de bǎobao hěn xiǎo",
+      "gloss_en": "Our baby is so small.",
+      "hanzi_trad": "我們的寶寶很小。"
+    },
+    {
+      "hanzi": "宝宝要什么？",
+      "pinyin": "bǎobao yào shénme?",
+      "gloss_en": "What does the baby want?",
+      "hanzi_trad": "寶寶要什麼？"
+    },
+    {
+      "hanzi": "宝宝在哭吗？",
+      "pinyin": "bǎobao zài kū ma?",
+      "gloss_en": "Is the baby crying?",
+      "hanzi_trad": "寶寶在哭嗎？"
+    },
+    {
+      "hanzi": "宝宝不喝奶。",
+      "pinyin": "bǎobao bù hēnǎi",
+      "gloss_en": "The baby won't feed.",
+      "hanzi_trad": "寶寶不喝奶。"
+    },
+    {
+      "hanzi": "宝宝饿了吗？",
+      "pinyin": "bǎobao è le ma?",
+      "gloss_en": "Is the baby hungry?",
+      "hanzi_trad": "寶寶餓了嗎？"
+    },
+    {
+      "hanzi": "宝宝安静了。",
+      "pinyin": "bǎobao ānjìng le",
+      "gloss_en": "The baby's settled.",
+      "hanzi_trad": "寶寶安靜了。"
+    },
+    {
+      "hanzi": "安静，宝宝睡觉。",
+      "pinyin": "ānjìng, bǎobao shuìjiào",
+      "gloss_en": "Quiet — the baby's sleeping.",
+      "hanzi_trad": "安靜，寶寶睡覺。"
+    },
+    {
+      "hanzi": "老婆，宝宝哭了。",
+      "pinyin": "lǎopo, bǎobao kū le",
+      "gloss_en": "Honey, the baby's crying.",
+      "hanzi_trad": "老婆，寶寶哭了。"
+    },
+    {
+      "hanzi": "老婆，你累了吧？",
+      "pinyin": "lǎopo, nǐ lèi le ba?",
+      "gloss_en": "Honey, you're tired, aren't you?",
+      "hanzi_trad": "老婆，你累了吧？"
+    },
+    {
+      "hanzi": "我很累。",
+      "pinyin": "wǒ hěn lèi",
+      "gloss_en": "I'm exhausted.",
+      "hanzi_trad": "我很累。"
+    },
+    {
+      "hanzi": "我们都很累。",
+      "pinyin": "wǒmen dōu hěn lèi",
+      "gloss_en": "We're both exhausted.",
+      "hanzi_trad": "我們都很累。"
+    },
+    {
+      "hanzi": "我太累了。",
+      "pinyin": "wǒ tài lèi le",
+      "gloss_en": "I'm so tired.",
+      "hanzi_trad": "我太累了。"
+    },
+    {
+      "hanzi": "儿子笑了。",
+      "pinyin": "érzi xiào le",
+      "gloss_en": "Our son smiled.",
+      "hanzi_trad": "兒子笑了。"
+    },
+    {
+      "hanzi": "我们的儿子很好。",
+      "pinyin": "wǒmen de érzi hěn hǎo",
+      "gloss_en": "Our son is doing well.",
+      "hanzi_trad": "我們的兒子很好。"
+    },
+    {
+      "hanzi": "我喜欢抱儿子。",
+      "pinyin": "wǒ xǐhuan bào érzi",
+      "gloss_en": "I love holding my son.",
+      "hanzi_trad": "我喜歡抱兒子。"
+    },
+    {
+      "hanzi": "儿子饿了吧？",
+      "pinyin": "érzi è le ba?",
+      "gloss_en": "He's hungry, right?",
+      "hanzi_trad": "兒子餓了吧？"
+    },
+    {
+      "hanzi": "我回家了。",
+      "pinyin": "wǒ huí jiā le",
+      "gloss_en": "I'm home.",
+      "hanzi_trad": "我回家了。"
+    },
+    {
+      "hanzi": "你回家吗？",
+      "pinyin": "nǐ huí jiā ma?",
+      "gloss_en": "Are you coming home?",
+      "hanzi_trad": "你回家嗎？"
+    },
+    {
+      "hanzi": "我要去工作。",
+      "pinyin": "wǒ yào qù gōngzuò",
+      "gloss_en": "I have to go to work.",
+      "hanzi_trad": "我要去工作。"
+    },
+    {
+      "hanzi": "我今天不工作。",
+      "pinyin": "wǒ jīntiān bù gōngzuò",
+      "gloss_en": "I'm not working today.",
+      "hanzi_trad": "我今天不工作。"
+    },
+    {
+      "hanzi": "我上午工作。",
+      "pinyin": "wǒ shàngwǔ gōngzuò",
+      "gloss_en": "I work in the morning.",
+      "hanzi_trad": "我上午工作。"
+    },
+    {
+      "hanzi": "我下午回家。",
+      "pinyin": "wǒ xiàwǔ huí jiā",
+      "gloss_en": "I'll be home in the afternoon.",
+      "hanzi_trad": "我下午回家。"
+    },
+    {
+      "hanzi": "我明天不工作。",
+      "pinyin": "wǒ míngtiān bù gōngzuò",
+      "gloss_en": "I'm off tomorrow.",
+      "hanzi_trad": "我明天不工作。"
+    },
+    {
+      "hanzi": "现在是晚上。",
+      "pinyin": "xiànzài shì wǎnshang",
+      "gloss_en": "It's evening now.",
+      "hanzi_trad": "現在是晚上。"
+    },
+    {
+      "hanzi": "我昨天很累。",
+      "pinyin": "wǒ zuótiān hěn lèi",
+      "gloss_en": "I was worn out yesterday.",
+      "hanzi_trad": "我昨天很累。"
+    },
+    {
+      "hanzi": "我们的房子很大。",
+      "pinyin": "wǒmen de fángzi hěn dà",
+      "gloss_en": "Our house is big.",
+      "hanzi_trad": "我們的房子很大。"
+    },
+    {
+      "hanzi": "房子很安静。",
+      "pinyin": "fángzi hěn ānjìng",
+      "gloss_en": "The house is quiet.",
+      "hanzi_trad": "房子很安靜。"
+    },
+    {
+      "hanzi": "狗在哪里？",
+      "pinyin": "gǒu zài nǎlǐ?",
+      "gloss_en": "Where's the dog?",
+      "hanzi_trad": "狗在哪裡？"
+    },
+    {
+      "hanzi": "狗在家。",
+      "pinyin": "gǒu zài jiā",
+      "gloss_en": "The dog's at home.",
+      "hanzi_trad": "狗在家。"
+    },
+    {
+      "hanzi": "我们的狗很大。",
+      "pinyin": "wǒmen de gǒu hěn dà",
+      "gloss_en": "Our dog is big.",
+      "hanzi_trad": "我們的狗很大。"
+    },
+    {
+      "hanzi": "狗喜欢宝宝。",
+      "pinyin": "gǒu xǐhuan bǎobao",
+      "gloss_en": "The dog likes the baby.",
+      "hanzi_trad": "狗喜歡寶寶。"
+    },
+    {
+      "hanzi": "狗也累了。",
+      "pinyin": "gǒu yě lèi le",
+      "gloss_en": "The dog's tired too.",
+      "hanzi_trad": "狗也累了。"
+    },
+    {
+      "hanzi": "车在哪里？",
+      "pinyin": "chē zài nǎlǐ?",
+      "gloss_en": "Where's the car?",
+      "hanzi_trad": "車在哪裡？"
+    },
+    {
+      "hanzi": "我买车了。",
+      "pinyin": "wǒ mǎi chē le",
+      "gloss_en": "I bought a car.",
+      "hanzi_trad": "我買車了。"
+    },
+    {
+      "hanzi": "我们去买菜吧。",
+      "pinyin": "wǒmen qù mǎi cài ba",
+      "gloss_en": "Let's go get groceries.",
+      "hanzi_trad": "我們去買菜吧。"
+    },
+    {
+      "hanzi": "我去买菜。",
+      "pinyin": "wǒ qù mǎi cài",
+      "gloss_en": "I'm going grocery shopping.",
+      "hanzi_trad": "我去買菜。"
+    },
+    {
+      "hanzi": "你去哪里？",
+      "pinyin": "nǐ qù nǎlǐ?",
+      "gloss_en": "Where are you going?",
+      "hanzi_trad": "你去哪裡？"
+    },
+    {
+      "hanzi": "我去买水。",
+      "pinyin": "wǒ qù mǎi shuǐ",
+      "gloss_en": "I'm going to buy water.",
+      "hanzi_trad": "我去買水。"
+    },
+    {
+      "hanzi": "谁在家？",
+      "pinyin": "shéi zài jiā?",
+      "gloss_en": "Who's home?",
+      "hanzi_trad": "誰在家？"
+    },
+    {
+      "hanzi": "妈妈在家。",
+      "pinyin": "māma zài jiā",
+      "gloss_en": "Mom's home.",
+      "hanzi_trad": "媽媽在家。"
+    },
+    {
+      "hanzi": "爸爸不在家。",
+      "pinyin": "bàba bú zài jiā",
+      "gloss_en": "Dad isn't home.",
+      "hanzi_trad": "爸爸不在家。"
+    },
+    {
+      "hanzi": "爸爸妈妈都在。",
+      "pinyin": "bàba māma dōu zài",
+      "gloss_en": "Mom and Dad are both here.",
+      "hanzi_trad": "爸爸媽媽都在。"
+    },
+    {
+      "hanzi": "我在学习。",
+      "pinyin": "wǒ zài xuéxí",
+      "gloss_en": "I'm studying.",
+      "hanzi_trad": "我在學習。"
+    },
+    {
+      "hanzi": "我要学习。",
+      "pinyin": "wǒ yào xuéxí",
+      "gloss_en": "I need to study.",
+      "hanzi_trad": "我要學習。"
+    },
+    {
+      "hanzi": "我昨天学习了。",
+      "pinyin": "wǒ zuótiān xuéxí le",
+      "gloss_en": "I studied yesterday.",
+      "hanzi_trad": "我昨天學習了。"
+    },
+    {
+      "hanzi": "你在做什么？",
+      "pinyin": "nǐ zài zuò shénme?",
+      "gloss_en": "What are you doing?",
+      "hanzi_trad": "你在做什麼？"
+    },
+    {
+      "hanzi": "我在做菜。",
+      "pinyin": "wǒ zài zuò cài",
+      "gloss_en": "I'm cooking.",
+      "hanzi_trad": "我在做菜。"
+    },
+    {
+      "hanzi": "我做了很多菜。",
+      "pinyin": "wǒ zuò le hěn duō cài",
+      "gloss_en": "I cooked a lot.",
+      "hanzi_trad": "我做了很多菜。"
+    },
+    {
+      "hanzi": "你想吃什么？",
+      "pinyin": "nǐ xiǎng chī shénme?",
+      "gloss_en": "What do you want to eat?",
+      "hanzi_trad": "你想吃什麼？"
+    },
+    {
+      "hanzi": "我想吃白饭。",
+      "pinyin": "wǒ xiǎng chī báifàn",
+      "gloss_en": "I want rice.",
+      "hanzi_trad": "我想吃白飯。"
+    },
+    {
+      "hanzi": "菜很好吃。",
+      "pinyin": "cài hěn hǎochī",
+      "gloss_en": "The food's really good.",
+      "hanzi_trad": "菜很好吃。"
+    },
+    {
+      "hanzi": "我不喝茶。",
+      "pinyin": "wǒ bù hē chá",
+      "gloss_en": "I don't drink tea.",
+      "hanzi_trad": "我不喝茶。"
+    },
+    {
+      "hanzi": "我要喝水。",
+      "pinyin": "wǒ yào hē shuǐ",
+      "gloss_en": "I want some water.",
+      "hanzi_trad": "我要喝水。"
+    },
+    {
+      "hanzi": "你喝咖啡吗？",
+      "pinyin": "nǐ hē kāfēi ma?",
+      "gloss_en": "Do you want coffee?",
+      "hanzi_trad": "你喝咖啡嗎？"
+    },
+    {
+      "hanzi": "我很喜欢咖啡。",
+      "pinyin": "wǒ hěn xǐhuan kāfēi",
+      "gloss_en": "I love coffee.",
+      "hanzi_trad": "我很喜歡咖啡。"
+    },
+    {
+      "hanzi": "我上午喝咖啡。",
+      "pinyin": "wǒ shàngwǔ hē kāfēi",
+      "gloss_en": "I drink coffee in the morning.",
+      "hanzi_trad": "我上午喝咖啡。"
+    },
+    {
+      "hanzi": "我们一起吃吧。",
+      "pinyin": "wǒmen yìqǐ chī ba",
+      "gloss_en": "Let's eat together.",
+      "hanzi_trad": "我們一起吃吧。"
+    },
+    {
+      "hanzi": "你吃了吗？",
+      "pinyin": "nǐ chī le ma?",
+      "gloss_en": "Have you eaten?",
+      "hanzi_trad": "你吃了嗎？"
+    },
+    {
+      "hanzi": "我吃了。",
+      "pinyin": "wǒ chī le",
+      "gloss_en": "I've eaten.",
+      "hanzi_trad": "我吃了。"
+    },
+    {
+      "hanzi": "我没吃。",
+      "pinyin": "wǒ méi chī",
+      "gloss_en": "I haven't eaten.",
+      "hanzi_trad": "我沒吃。"
+    },
+    {
+      "hanzi": "太多了。",
+      "pinyin": "tài duō le",
+      "gloss_en": "That's too much.",
+      "hanzi_trad": "太多了。"
+    },
+    {
+      "hanzi": "水在哪里？",
+      "pinyin": "shuǐ zài nǎlǐ?",
+      "gloss_en": "Where's the water?",
+      "hanzi_trad": "水在哪裡？"
+    },
+    {
+      "hanzi": "我喜欢游戏。",
+      "pinyin": "wǒ xǐhuan yóuxì",
+      "gloss_en": "I like games.",
+      "hanzi_trad": "我喜歡遊戲。"
+    },
+    {
+      "hanzi": "我很喜欢这游戏。",
+      "pinyin": "wǒ hěn xǐhuan zhè yóuxì",
+      "gloss_en": "I really like this game.",
+      "hanzi_trad": "我很喜歡這遊戲。"
+    },
+    {
+      "hanzi": "电脑在哪里？",
+      "pinyin": "diànnǎo zài nǎlǐ?",
+      "gloss_en": "Where's the computer?",
+      "hanzi_trad": "電腦在哪裡？"
+    },
+    {
+      "hanzi": "我的电脑很小。",
+      "pinyin": "wǒ de diànnǎo hěn xiǎo",
+      "gloss_en": "My computer is small.",
+      "hanzi_trad": "我的電腦很小。"
+    },
+    {
+      "hanzi": "我要买电脑。",
+      "pinyin": "wǒ yào mǎi diànnǎo",
+      "gloss_en": "I want to buy a computer.",
+      "hanzi_trad": "我要買電腦。"
+    },
+    {
+      "hanzi": "我明天去健身。",
+      "pinyin": "wǒ míngtiān qù jiànshēn",
+      "gloss_en": "I'm going to the gym tomorrow.",
+      "hanzi_trad": "我明天去健身。"
+    },
+    {
+      "hanzi": "我今天没健身。",
+      "pinyin": "wǒ jīntiān méi jiànshēn",
+      "gloss_en": "I didn't work out today.",
+      "hanzi_trad": "我今天沒健身。"
+    },
+    {
+      "hanzi": "我喜欢健身。",
+      "pinyin": "wǒ xǐhuan jiànshēn",
+      "gloss_en": "I like working out.",
+      "hanzi_trad": "我喜歡健身。"
+    },
+    {
+      "hanzi": "你好！",
+      "pinyin": "nǐhǎo!",
+      "gloss_en": "Hello!",
+      "hanzi_trad": "你好！"
+    },
+    {
+      "hanzi": "你好吗？",
+      "pinyin": "nǐ hǎo ma?",
+      "gloss_en": "How are you?",
+      "hanzi_trad": "你好嗎？"
+    },
+    {
+      "hanzi": "我很好，谢谢。",
+      "pinyin": "wǒ hěn hǎo, xièxie",
+      "gloss_en": "I'm good, thanks.",
+      "hanzi_trad": "我很好，謝謝。"
+    },
+    {
+      "hanzi": "谢谢你。",
+      "pinyin": "xièxie nǐ",
+      "gloss_en": "Thank you.",
+      "hanzi_trad": "謝謝你。"
+    },
+    {
+      "hanzi": "再见！",
+      "pinyin": "zàijiàn!",
+      "gloss_en": "Bye!",
+      "hanzi_trad": "再見！"
+    },
+    {
+      "hanzi": "他是我的朋友。",
+      "pinyin": "tā shì wǒ de péngyou",
+      "gloss_en": "He's my friend.",
+      "hanzi_trad": "他是我的朋友。"
+    },
+    {
+      "hanzi": "我朋友来了。",
+      "pinyin": "wǒ péngyou lái le",
+      "gloss_en": "My friend's here.",
+      "hanzi_trad": "我朋友來了。"
+    },
+    {
+      "hanzi": "我们是朋友。",
+      "pinyin": "wǒmen shì péngyou",
+      "gloss_en": "We're friends.",
+      "hanzi_trad": "我們是朋友。"
+    },
+    {
+      "hanzi": "谁是你的老师？",
+      "pinyin": "shéi shì nǐ de lǎoshī?",
+      "gloss_en": "Who's your teacher?",
+      "hanzi_trad": "誰是你的老師？"
+    },
+    {
+      "hanzi": "她是老师。",
+      "pinyin": "tā shì lǎoshī",
+      "gloss_en": "She's a teacher.",
+      "hanzi_trad": "她是老師。"
+    },
+    {
+      "_comment": "Gap-filling pass — targeted at concepts the first 106 sentences covered zero or one times. This is coverage-driven generation done by hand."
+    },
+    {
+      "hanzi": "他是好人。",
+      "pinyin": "tā shì hǎo rén",
+      "gloss_en": "He's a good guy.",
+      "hanzi_trad": "他是好人。"
+    },
+    {
+      "hanzi": "我们家人很多。",
+      "pinyin": "wǒmen jiārén hěn duō",
+      "gloss_en": "We have a big family.",
+      "hanzi_trad": "我們家人很多。"
+    },
+    {
+      "hanzi": "有人吗？",
+      "pinyin": "yǒu rén ma?",
+      "gloss_en": "Anyone home?",
+      "hanzi_trad": "有人嗎？"
+    },
+    {
+      "hanzi": "我会做菜。",
+      "pinyin": "wǒ huì zuò cài",
+      "gloss_en": "I can cook.",
+      "hanzi_trad": "我會做菜。"
+    },
+    {
+      "hanzi": "宝宝会笑了。",
+      "pinyin": "bǎobao huì xiào le",
+      "gloss_en": "The baby can smile now.",
+      "hanzi_trad": "寶寶會笑了。"
+    },
+    {
+      "hanzi": "你听！宝宝哭了。",
+      "pinyin": "nǐ tīng! bǎobao kū le",
+      "gloss_en": "Listen — the baby's crying.",
+      "hanzi_trad": "你聽！寶寶哭了。"
+    },
+    {
+      "hanzi": "我在听。",
+      "pinyin": "wǒ zài tīng",
+      "gloss_en": "I'm listening.",
+      "hanzi_trad": "我在聽。"
+    },
+    {
+      "hanzi": "你呢？",
+      "pinyin": "nǐ ne?",
+      "gloss_en": "And you?",
+      "hanzi_trad": "你呢？"
+    },
+    {
+      "hanzi": "我的咖啡呢？",
+      "pinyin": "wǒ de kāfēi ne?",
+      "gloss_en": "Where'd my coffee go?",
+      "hanzi_trad": "我的咖啡呢？"
+    },
+    {
+      "hanzi": "菜太少了。",
+      "pinyin": "cài tài shǎo le",
+      "gloss_en": "There's not enough food.",
+      "hanzi_trad": "菜太少了。"
+    },
+    {
+      "hanzi": "水很少。",
+      "pinyin": "shuǐ hěn shǎo",
+      "gloss_en": "There's hardly any water.",
+      "hanzi_trad": "水很少。"
+    },
+    {
+      "hanzi": "怎么了？",
+      "pinyin": "zěnme le?",
+      "gloss_en": "What's wrong?",
+      "hanzi_trad": "怎麼了？"
+    },
+    {
+      "hanzi": "你怎么了？",
+      "pinyin": "nǐ zěnme le?",
+      "gloss_en": "What's the matter?",
+      "hanzi_trad": "你怎麼了？"
+    },
+    {
+      "hanzi": "我有电脑。",
+      "pinyin": "wǒ yǒu diànnǎo",
+      "gloss_en": "I have a computer.",
+      "hanzi_trad": "我有電腦。"
+    },
+    {
+      "hanzi": "我们有狗。",
+      "pinyin": "wǒmen yǒu gǒu",
+      "gloss_en": "We have a dog.",
+      "hanzi_trad": "我們有狗。"
+    },
+    {
+      "hanzi": "你看，宝宝笑了！",
+      "pinyin": "nǐ kàn, bǎobao xiào le",
+      "gloss_en": "Look, he's smiling!",
+      "hanzi_trad": "你看，寶寶笑了！"
+    },
+    {
+      "hanzi": "我在看宝宝。",
+      "pinyin": "wǒ zài kàn bǎobao",
+      "gloss_en": "I'm watching the baby.",
+      "hanzi_trad": "我在看寶寶。"
+    },
+    {
+      "hanzi": "我能抱宝宝吗？",
+      "pinyin": "wǒ néng bào bǎobao ma?",
+      "gloss_en": "Can I hold the baby?",
+      "hanzi_trad": "我能抱寶寶嗎？"
+    },
+    {
+      "hanzi": "你能来吗？",
+      "pinyin": "nǐ néng lái ma?",
+      "gloss_en": "Can you come?",
+      "hanzi_trad": "你能來嗎？"
+    },
+    {
+      "hanzi": "你说什么？",
+      "pinyin": "nǐ shuō shénme?",
+      "gloss_en": "What did you say?",
+      "hanzi_trad": "你說什麼？"
+    },
+    {
+      "hanzi": "他说他很累。",
+      "pinyin": "tā shuō tā hěn lèi",
+      "gloss_en": "He says he's tired.",
+      "hanzi_trad": "他說他很累。"
+    },
+    {
+      "hanzi": "那是什么？",
+      "pinyin": "nà shì shénme?",
+      "gloss_en": "What's that?",
+      "hanzi_trad": "那是什麼？"
+    },
+    {
+      "hanzi": "那是我的车。",
+      "pinyin": "nà shì wǒ de chē",
+      "gloss_en": "That's my car.",
+      "hanzi_trad": "那是我的車。"
+    },
+    {
+      "hanzi": "老师说什么？",
+      "pinyin": "lǎoshī shuō shénme?",
+      "gloss_en": "What did the teacher say?",
+      "hanzi_trad": "老師說什麼？"
+    },
+    {
+      "hanzi": "我上午喝茶，下午喝咖啡。",
+      "pinyin": "wǒ shàngwǔ hē chá, xiàwǔ hē kāfēi",
+      "gloss_en": "I drink tea in the morning and coffee in the afternoon.",
+      "hanzi_trad": "我上午喝茶，下午喝咖啡。"
+    },
+    {
+      "hanzi": "白饭在哪里？",
+      "pinyin": "báifàn zài nǎlǐ?",
+      "gloss_en": "Where's the rice?",
+      "hanzi_trad": "白飯在哪裡？"
+    },
+    {
+      "hanzi": "奶瓶太小了。",
+      "pinyin": "nǎipíng tài xiǎo le",
+      "gloss_en": "The bottle's too small.",
+      "hanzi_trad": "奶瓶太小了。"
+    },
+    {
+      "hanzi": "奶奶晚上来。",
+      "pinyin": "nǎinai wǎnshang lái",
+      "gloss_en": "Grandma's coming this evening.",
+      "hanzi_trad": "奶奶晚上來。"
+    },
+    {
+      "hanzi": "昨天晚上宝宝没睡觉。",
+      "pinyin": "zuótiān wǎnshang bǎobao méi shuìjiào",
+      "gloss_en": "The baby didn't sleep last night.",
+      "hanzi_trad": "昨天晚上寶寶沒睡覺。"
+    },
+    {
+      "hanzi": "我们一起看宝宝吧。",
+      "pinyin": "wǒmen yìqǐ kàn bǎobao ba",
+      "gloss_en": "Let's go check on the baby.",
+      "hanzi_trad": "我們一起看寶寶吧。"
+    }
+  ]
+}

@@ -1,0 +1,547 @@
+{
+  "_comment": "Phase-0 seed vocabulary. HSK1 core plus personal/family words. Every generated sentence must be fully coverable by these headwords (plus punctuation). Expand the personal list with whatever your wife actually says around the house.",
+  "core": [
+    {
+      "headword": "我",
+      "pinyin": "wǒ",
+      "gloss_en": "I, me",
+      "headword_trad": "我"
+    },
+    {
+      "headword": "你",
+      "pinyin": "nǐ",
+      "gloss_en": "you",
+      "headword_trad": "你"
+    },
+    {
+      "headword": "他",
+      "pinyin": "tā",
+      "gloss_en": "he, him",
+      "headword_trad": "他"
+    },
+    {
+      "headword": "她",
+      "pinyin": "tā",
+      "gloss_en": "she, her",
+      "headword_trad": "她"
+    },
+    {
+      "headword": "我们",
+      "pinyin": "wǒmen",
+      "gloss_en": "we, us",
+      "headword_trad": "我們"
+    },
+    {
+      "headword": "的",
+      "pinyin": "de",
+      "gloss_en": "possessive particle",
+      "headword_trad": "的"
+    },
+    {
+      "headword": "是",
+      "pinyin": "shì",
+      "gloss_en": "to be",
+      "headword_trad": "是"
+    },
+    {
+      "headword": "不",
+      "pinyin": "bù",
+      "gloss_en": "not",
+      "headword_trad": "不"
+    },
+    {
+      "headword": "没",
+      "pinyin": "méi",
+      "gloss_en": "not have, did not",
+      "headword_trad": "沒"
+    },
+    {
+      "headword": "有",
+      "pinyin": "yǒu",
+      "gloss_en": "to have",
+      "headword_trad": "有"
+    },
+    {
+      "headword": "在",
+      "pinyin": "zài",
+      "gloss_en": "at, in; to be at",
+      "headword_trad": "在"
+    },
+    {
+      "headword": "这",
+      "pinyin": "zhè",
+      "gloss_en": "this",
+      "headword_trad": "這"
+    },
+    {
+      "headword": "那",
+      "pinyin": "nà",
+      "gloss_en": "that",
+      "headword_trad": "那"
+    },
+    {
+      "headword": "什么",
+      "pinyin": "shénme",
+      "gloss_en": "what",
+      "headword_trad": "什麼"
+    },
+    {
+      "headword": "谁",
+      "pinyin": "shéi",
+      "gloss_en": "who",
+      "headword_trad": "誰"
+    },
+    {
+      "headword": "哪里",
+      "pinyin": "nǎlǐ",
+      "gloss_en": "where",
+      "headword_trad": "哪裡"
+    },
+    {
+      "headword": "怎么",
+      "pinyin": "zěnme",
+      "gloss_en": "how",
+      "headword_trad": "怎麼"
+    },
+    {
+      "headword": "好",
+      "pinyin": "hǎo",
+      "gloss_en": "good",
+      "headword_trad": "好"
+    },
+    {
+      "headword": "大",
+      "pinyin": "dà",
+      "gloss_en": "big",
+      "headword_trad": "大"
+    },
+    {
+      "headword": "小",
+      "pinyin": "xiǎo",
+      "gloss_en": "small",
+      "headword_trad": "小"
+    },
+    {
+      "headword": "多",
+      "pinyin": "duō",
+      "gloss_en": "many, much",
+      "headword_trad": "多"
+    },
+    {
+      "headword": "少",
+      "pinyin": "shǎo",
+      "gloss_en": "few, little",
+      "headword_trad": "少"
+    },
+    {
+      "headword": "很",
+      "pinyin": "hěn",
+      "gloss_en": "very",
+      "headword_trad": "很"
+    },
+    {
+      "headword": "太",
+      "pinyin": "tài",
+      "gloss_en": "too, excessively",
+      "headword_trad": "太"
+    },
+    {
+      "headword": "都",
+      "pinyin": "dōu",
+      "gloss_en": "all, both",
+      "headword_trad": "都"
+    },
+    {
+      "headword": "也",
+      "pinyin": "yě",
+      "gloss_en": "also",
+      "headword_trad": "也"
+    },
+    {
+      "headword": "会",
+      "pinyin": "huì",
+      "gloss_en": "can, will",
+      "headword_trad": "會"
+    },
+    {
+      "headword": "能",
+      "pinyin": "néng",
+      "gloss_en": "be able to",
+      "headword_trad": "能"
+    },
+    {
+      "headword": "想",
+      "pinyin": "xiǎng",
+      "gloss_en": "to want, to think, to miss",
+      "headword_trad": "想"
+    },
+    {
+      "headword": "要",
+      "pinyin": "yào",
+      "gloss_en": "to want, will",
+      "headword_trad": "要"
+    },
+    {
+      "headword": "喜欢",
+      "pinyin": "xǐhuan",
+      "gloss_en": "to like",
+      "headword_trad": "喜歡"
+    },
+    {
+      "headword": "吃",
+      "pinyin": "chī",
+      "gloss_en": "to eat",
+      "headword_trad": "吃"
+    },
+    {
+      "headword": "喝",
+      "pinyin": "hē",
+      "gloss_en": "to drink",
+      "headword_trad": "喝"
+    },
+    {
+      "headword": "看",
+      "pinyin": "kàn",
+      "gloss_en": "to look at, to watch",
+      "headword_trad": "看"
+    },
+    {
+      "headword": "听",
+      "pinyin": "tīng",
+      "gloss_en": "to listen",
+      "headword_trad": "聽"
+    },
+    {
+      "headword": "说",
+      "pinyin": "shuō",
+      "gloss_en": "to speak",
+      "headword_trad": "說"
+    },
+    {
+      "headword": "睡觉",
+      "pinyin": "shuìjiào",
+      "gloss_en": "to sleep",
+      "headword_trad": "睡覺"
+    },
+    {
+      "headword": "去",
+      "pinyin": "qù",
+      "gloss_en": "to go",
+      "headword_trad": "去"
+    },
+    {
+      "headword": "来",
+      "pinyin": "lái",
+      "gloss_en": "to come",
+      "headword_trad": "來"
+    },
+    {
+      "headword": "回",
+      "pinyin": "huí",
+      "gloss_en": "to return",
+      "headword_trad": "回"
+    },
+    {
+      "headword": "做",
+      "pinyin": "zuò",
+      "gloss_en": "to do, to make",
+      "headword_trad": "做"
+    },
+    {
+      "headword": "买",
+      "pinyin": "mǎi",
+      "gloss_en": "to buy",
+      "headword_trad": "買"
+    },
+    {
+      "headword": "学习",
+      "pinyin": "xuéxí",
+      "gloss_en": "to study",
+      "headword_trad": "學習"
+    },
+    {
+      "headword": "工作",
+      "pinyin": "gōngzuò",
+      "gloss_en": "work; to work",
+      "headword_trad": "工作"
+    },
+    {
+      "headword": "家",
+      "pinyin": "jiā",
+      "gloss_en": "home, family",
+      "headword_trad": "家"
+    },
+    {
+      "headword": "人",
+      "pinyin": "rén",
+      "gloss_en": "person",
+      "headword_trad": "人"
+    },
+    {
+      "headword": "爸爸",
+      "pinyin": "bàba",
+      "gloss_en": "dad",
+      "headword_trad": "爸爸"
+    },
+    {
+      "headword": "妈妈",
+      "pinyin": "māma",
+      "gloss_en": "mom",
+      "headword_trad": "媽媽"
+    },
+    {
+      "headword": "老师",
+      "pinyin": "lǎoshī",
+      "gloss_en": "teacher",
+      "headword_trad": "老師"
+    },
+    {
+      "headword": "朋友",
+      "pinyin": "péngyou",
+      "gloss_en": "friend",
+      "headword_trad": "朋友"
+    },
+    {
+      "headword": "菜",
+      "pinyin": "cài",
+      "gloss_en": "dish, vegetable",
+      "headword_trad": "菜"
+    },
+    {
+      "headword": "白饭",
+      "pinyin": "báifàn",
+      "gloss_en": "rice",
+      "headword_trad": "白飯"
+    },
+    {
+      "headword": "水",
+      "pinyin": "shuǐ",
+      "gloss_en": "water",
+      "headword_trad": "水"
+    },
+    {
+      "headword": "茶",
+      "pinyin": "chá",
+      "gloss_en": "tea",
+      "headword_trad": "茶"
+    },
+    {
+      "headword": "今天",
+      "pinyin": "jīntiān",
+      "gloss_en": "today",
+      "headword_trad": "今天"
+    },
+    {
+      "headword": "明天",
+      "pinyin": "míngtiān",
+      "gloss_en": "tomorrow",
+      "headword_trad": "明天"
+    },
+    {
+      "headword": "昨天",
+      "pinyin": "zuótiān",
+      "gloss_en": "yesterday",
+      "headword_trad": "昨天"
+    },
+    {
+      "headword": "现在",
+      "pinyin": "xiànzài",
+      "gloss_en": "now",
+      "headword_trad": "現在"
+    },
+    {
+      "headword": "上午",
+      "pinyin": "shàngwǔ",
+      "gloss_en": "morning",
+      "headword_trad": "上午"
+    },
+    {
+      "headword": "下午",
+      "pinyin": "xiàwǔ",
+      "gloss_en": "afternoon",
+      "headword_trad": "下午"
+    },
+    {
+      "headword": "晚上",
+      "pinyin": "wǎnshang",
+      "gloss_en": "evening",
+      "headword_trad": "晚上"
+    },
+    {
+      "headword": "一起",
+      "pinyin": "yìqǐ",
+      "gloss_en": "together",
+      "headword_trad": "一起"
+    },
+    {
+      "headword": "了",
+      "pinyin": "le",
+      "gloss_en": "aspect / change-of-state particle",
+      "headword_trad": "了"
+    },
+    {
+      "headword": "吗",
+      "pinyin": "ma",
+      "gloss_en": "yes-no question particle",
+      "headword_trad": "嗎"
+    },
+    {
+      "headword": "呢",
+      "pinyin": "ne",
+      "gloss_en": "question particle",
+      "headword_trad": "呢"
+    },
+    {
+      "headword": "吧",
+      "pinyin": "ba",
+      "gloss_en": "suggestion particle",
+      "headword_trad": "吧"
+    },
+    {
+      "headword": "谢谢",
+      "pinyin": "xièxie",
+      "gloss_en": "thank you",
+      "headword_trad": "謝謝"
+    },
+    {
+      "headword": "你好",
+      "pinyin": "nǐhǎo",
+      "gloss_en": "hello",
+      "headword_trad": "你好"
+    },
+    {
+      "headword": "再见",
+      "pinyin": "zàijiàn",
+      "gloss_en": "goodbye",
+      "headword_trad": "再見"
+    }
+  ],
+  "personal": [
+    {
+      "headword": "宝宝",
+      "pinyin": "bǎobao",
+      "gloss_en": "baby",
+      "headword_trad": "寶寶"
+    },
+    {
+      "headword": "儿子",
+      "pinyin": "érzi",
+      "gloss_en": "son",
+      "headword_trad": "兒子"
+    },
+    {
+      "headword": "奶奶",
+      "pinyin": "nǎinai",
+      "gloss_en": "paternal grandmother",
+      "headword_trad": "奶奶"
+    },
+    {
+      "headword": "老婆",
+      "pinyin": "lǎopo",
+      "gloss_en": "wife (informal)",
+      "headword_trad": "老婆"
+    },
+    {
+      "headword": "尿布",
+      "pinyin": "niàobù",
+      "gloss_en": "diaper",
+      "headword_trad": "尿布"
+    },
+    {
+      "headword": "奶瓶",
+      "pinyin": "nǎipíng",
+      "gloss_en": "baby bottle",
+      "headword_trad": "奶瓶"
+    },
+    {
+      "headword": "喝奶",
+      "pinyin": "hēnǎi",
+      "gloss_en": "to drink milk (of a baby)",
+      "headword_trad": "喝奶"
+    },
+    {
+      "headword": "哭",
+      "pinyin": "kū",
+      "gloss_en": "to cry",
+      "headword_trad": "哭"
+    },
+    {
+      "headword": "笑",
+      "pinyin": "xiào",
+      "gloss_en": "to laugh, to smile",
+      "headword_trad": "笑"
+    },
+    {
+      "headword": "抱",
+      "pinyin": "bào",
+      "gloss_en": "to hold, to hug",
+      "headword_trad": "抱"
+    },
+    {
+      "headword": "换",
+      "pinyin": "huàn",
+      "gloss_en": "to change, to swap",
+      "headword_trad": "換"
+    },
+    {
+      "headword": "饿",
+      "pinyin": "è",
+      "gloss_en": "hungry",
+      "headword_trad": "餓"
+    },
+    {
+      "headword": "累",
+      "pinyin": "lèi",
+      "gloss_en": "tired",
+      "headword_trad": "累"
+    },
+    {
+      "headword": "安静",
+      "pinyin": "ānjìng",
+      "gloss_en": "quiet",
+      "headword_trad": "安靜"
+    },
+    {
+      "headword": "狗",
+      "pinyin": "gǒu",
+      "gloss_en": "dog",
+      "headword_trad": "狗"
+    },
+    {
+      "headword": "房子",
+      "pinyin": "fángzi",
+      "gloss_en": "house",
+      "headword_trad": "房子"
+    },
+    {
+      "headword": "车",
+      "pinyin": "chē",
+      "gloss_en": "car",
+      "headword_trad": "車"
+    },
+    {
+      "headword": "游戏",
+      "pinyin": "yóuxì",
+      "gloss_en": "game",
+      "headword_trad": "遊戲"
+    },
+    {
+      "headword": "电脑",
+      "pinyin": "diànnǎo",
+      "gloss_en": "computer",
+      "headword_trad": "電腦"
+    },
+    {
+      "headword": "健身",
+      "pinyin": "jiànshēn",
+      "gloss_en": "to work out",
+      "headword_trad": "健身"
+    },
+    {
+      "headword": "咖啡",
+      "pinyin": "kāfēi",
+      "gloss_en": "coffee",
+      "headword_trad": "咖啡"
+    }
+  ]
+}
