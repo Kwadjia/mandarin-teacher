@@ -29,6 +29,29 @@ if hasattr(sys.stdout, "reconfigure"):
 
 MARK = {"good": "+", "close": "~", "tone": "!", "wrong": "x", "missing": "_", "unscored": "?"}
 
+_by_target: dict[str, str] | None = None
+
+
+def _infer_reference(target: str) -> str | None:
+    """Find a native clip for this sentence when the attempt predates recording it.
+
+    Attempts saved before the `reference` field existed have no clip name, and without
+    one a rescore has nothing to compare contours against — every syllable comes back
+    unscored, which makes the earliest and most interesting recordings unusable for
+    evaluating changes. Matching on the target sentence recovers them.
+    """
+    global _by_target
+    if _by_target is None:
+        manifest = ss.AUDIO_DIR / "sentences.json"
+        _by_target = {}
+        if manifest.is_file():
+            for s in json.loads(manifest.read_text(encoding="utf-8"))["approved"]:
+                key = "".join(c for c in ss.to_simplified(s["hanzi"]) if ss._han(c))
+                clip = next((c["file"] for c in s["clips"] if c["rate"] == "+0%"), None)
+                if clip:
+                    _by_target[key] = clip
+    return _by_target.get(target)
+
 
 def main() -> int:
     files = sorted(ss.ATTEMPTS.glob("*.json"))
@@ -46,11 +69,21 @@ def main() -> int:
         wav = f.with_suffix(".wav")
 
         if rescore and wav.exists():
-            r = ss.score(wav, m["target"], m.get("targetPinyin", ""), None)
+            # Same native clip as the original attempt, or contours have nothing to
+            # compare against and every syllable comes back unscored. keep=False, or
+            # each rescore would re-save all of them and double the store.
+            ref = m.get("reference") or _infer_reference(m["target"])
+            ref_path = ss.AUDIO_DIR / ref if ref and (ss.AUDIO_DIR / ref).is_file() else None
+            r = ss.score(wav, m["target"], m.get("targetPinyin", ""), ref_path, keep=False)
             m = {**m, "transcript": r["transcript"], "confidence": r.get("confidence"),
                  "unusable": r["unusable"], "reason": r.get("reason"),
                  "correct": r["correctSyllables"], "total": r["totalSyllables"],
-                 "verdicts": [s["verdict"] for s in r["syllables"]]}
+                 "verdicts": [s["verdict"] for s in r["syllables"]],
+                 "errorKinds": [s["errorKind"] for s in r["syllables"]],
+                 "heard": [s["saidPinyin"] for s in r["syllables"]],
+                 "want": [s["pinyin"] for s in r["syllables"]]}
+            # Write the fresh analysis back, so the stored set reflects current code.
+            f.write_text(json.dumps(m, ensure_ascii=False, indent=1), encoding="utf-8")
 
         conf = m.get("confidence")
         if conf is not None:
@@ -78,9 +111,36 @@ def main() -> int:
         confs.sort()
         q = lambda p: confs[min(len(confs) - 1, int(p * len(confs)))]  # noqa: E731
         print(f"  confidence: p10 {q(0.1):.2f}  p50 {q(0.5):.2f}  p90 {q(0.9):.2f}")
-        print("\n  Compare against the synthetic baseline that thresholds were set from:")
+        print("\n  Compare against the synthetic baseline the thresholds came from:")
         print("    clean TTS -0.14 · degraded speech -0.18 · pink noise -0.64")
         print(f"    current cutoff MIN_CONFIDENCE = {ss.MIN_CONFIDENCE}")
+        below = sum(1 for c in confs if c < -0.64)
+        print(f"    real attempts quieter than pink noise: {below}/{len(confs)}"
+              f" — which is why confidence cannot be the filter")
+
+    # The part a teacher would notice and a single attempt cannot show: the same
+    # sound going wrong the same way, session after session.
+    confusions: dict[tuple[str, str, str], int] = {}
+    for f in files:
+        m = json.loads(f.read_text(encoding="utf-8"))
+        for want, heard, kind in zip(m.get("want") or [], m.get("heard") or [],
+                                     m.get("errorKinds") or []):
+            if kind and want and heard:
+                confusions[(kind, want, heard)] = confusions.get((kind, want, heard), 0) + 1
+    if confusions:
+        print("\n── recurring confusions ──")
+        for kind in ("tone", "vowel", "consonant", "different"):
+            rows = sorted(((k, n) for k, n in confusions.items() if k[0] == kind),
+                          key=lambda kv: -kv[1])
+            if not rows:
+                continue
+            print(f"  {kind}:")
+            for (_, want, heard), n in rows[:8]:
+                # Identical pinyin on both sides means whisper picked the right word
+                # and the pitch contour caught the tone anyway — the two signals
+                # covering for each other, which is the whole point of having both.
+                detail = "pitch drifted" if want == heard else f"heard {heard}"
+                print(f"    {n}x  want {want:<8} {detail}")
     return 0
 
 

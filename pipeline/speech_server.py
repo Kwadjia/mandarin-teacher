@@ -41,7 +41,7 @@ if hasattr(sys.stdout, "reconfigure"):
 # 8788 is taken on this machine by another dev server, and Windows let this one bind
 # beside it rather than refuse — see Server below.
 PORT = int(os.environ.get("MT_SPEECH_PORT", "8790"))
-AUDIO_DIR = Path(__file__).resolve().parent / "out" / "day0"
+AUDIO_DIR = ss.AUDIO_DIR
 
 # Scoring is serialised. Threads still serve /health promptly while an attempt is in
 # flight, but two attempts must not overlap: they would hit CTranslate2 concurrently

@@ -38,14 +38,28 @@ const VERDICT: Record<ScoredSyllable['verdict'], { cls: string; label: string }>
   unscored: { cls: 'text-stone-500', label: 'said right; tone too short to measure' },
 };
 
-/** The one-line correction under each syllable. */
+/**
+ * The one-line correction under each syllable.
+ *
+ * Naming *what* to change, not just that something was wrong. Real attempts split
+ * cleanly: bǎo→bào is a tone, gǒu→gāo is a vowel, chē→què is a consonant. "Sounded
+ * like 高" gave none of that away, and those three need different practice.
+ */
 function caption(s: ScoredSyllable): string {
   switch (s.verdict) {
     case 'tone':
-      // The specific, actionable case: the sound landed, the pitch did not.
-      return `said ${TONE_NAME[s.heardTone ?? 0]} · want ${TONE_NAME[s.tone]}`;
+      return s.heardTone && s.heardTone !== s.tone
+        ? `said ${TONE_NAME[s.heardTone]} · want ${TONE_NAME[s.tone]}`
+        : `${TONE_NAME[s.tone]} — pitch drifted`;
     case 'wrong':
-      return `sounded like ${s.said ?? '?'}`;
+      switch (s.errorKind) {
+        case 'vowel':
+          return `vowel · said ${s.saidPinyin}`;
+        case 'consonant':
+          return `consonant · said ${s.saidPinyin}`;
+        default:
+          return `sounded like ${s.saidPinyin ?? s.said ?? '?'}`;
+      }
     case 'missing':
       return 'not heard';
     case 'close':

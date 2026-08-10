@@ -42,6 +42,9 @@ if hasattr(sys.stdout, "reconfigure"):
 
 ROOT = Path(__file__).resolve().parent
 TMP = Path(os.environ.get("MT_TMP", "D:/ml-cache/mt-speech"))
+"""Native clips. Lives here rather than in the server so anything that scores — the
+server, the self-test, the attempt reviewer — resolves references the same way."""
+AUDIO_DIR = ROOT / "out" / "day0"
 
 
 def _setup_windows_cuda() -> None:
@@ -120,6 +123,42 @@ def to_simplified(s: str) -> str:
     return _t2s.convert(s)
 
 
+# Longest first: zh/ch/sh must be tried before z/c/s or 车 chē splits as c + hē.
+INITIALS = ("zh", "ch", "sh", "b", "p", "m", "f", "d", "t", "n", "l", "g", "k", "h",
+            "j", "q", "x", "r", "z", "c", "s", "y", "w")
+
+
+def split_initial_final(base: str) -> tuple[str, str]:
+    """'gou' → ('g', 'ou'). A syllable starting with a vowel has no initial."""
+    for i in INITIALS:
+        if base.startswith(i):
+            return i, base[len(i) :]
+    return "", base
+
+
+def error_kind(want: tuple[str, int], heard: tuple[str, int]) -> str:
+    """Name what went wrong, from the pinyin alone.
+
+    "Sounded like 高" tells a learner nothing they can act on. "The vowel — you said
+    gāo, this is gǒu" points at one thing to change. Real attempts split cleanly along
+    these lines:
+
+        bǎo → bào    tone       the same sound, the wrong pitch
+        gǒu → gāo    vowel      g intact, -ou became -ao
+        chē → què    consonant  retroflex ch replaced by palatal q
+        hòu → páng   different  not a near miss at all
+    """
+    if want[0] == heard[0]:
+        return "tone"
+    wi, wf = split_initial_final(want[0])
+    hi, hf = split_initial_final(heard[0])
+    if wi == hi:
+        return "vowel"
+    if wf == hf:
+        return "consonant"
+    return "different"
+
+
 def syllables(chars: str) -> list[tuple[str, int]]:
     """(base syllable, tone) per character — 尿 → ('niao', 4), 鸟 → ('niao', 3).
 
@@ -143,6 +182,18 @@ def syllables(chars: str) -> list[tuple[str, int]]:
         else:
             out.append((p, 0))  # a neutral tone carries no digit
     return out
+
+
+def pretty(ch: str) -> str:
+    """Proper pinyin with diacritics — bǎo, not bao3 or baoˇ.
+
+    Worth the second lookup: this is the form the learner reads everywhere else in the
+    app and on every textbook page, and feedback that uses a different notation from
+    the material makes them translate before they can act on it.
+    """
+    from pypinyin import Style, lazy_pinyin
+
+    return "".join(lazy_pinyin(ch, style=Style.TONE, errors=lambda x: [x]))
 
 
 def align(target: Sequence, hyp: Sequence) -> list[tuple[Any, Any | None, int | None]]:
@@ -331,17 +382,12 @@ class Syllable:
     heardTone: int | None
     """Right base syllable — the sound landed, whatever happened to the tone."""
     correct: bool
+    """tone | vowel | consonant | different — what to actually change."""
+    errorKind: str | None = None
     distance: float | None = None
     verdict: str = "unscored"  # good | close | tone | wrong | missing | unscored
     learner: list[float] = field(default_factory=list)
     reference: list[float] = field(default_factory=list)
-
-
-TONE_MARK = {0: "", 1: "ˉ", 2: "ˊ", 3: "ˇ", 4: "ˋ"}
-
-
-def _pretty(base: str, tone: int) -> str:
-    return f"{base}{TONE_MARK.get(tone, '')}"
 
 
 def reference(path: Path, target: str) -> dict:
@@ -434,7 +480,7 @@ def _keep(wav: Path, meta: dict) -> None:
 
 
 def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
-          reference_clip: Path | None) -> dict:
+          reference_clip: Path | None, keep: bool = True) -> dict:
     """Measure one spoken attempt. Returns measurements; grading happens in @mt/core.
 
     Matching is done on base syllables, not characters. A learner who says the right
@@ -461,8 +507,11 @@ def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
         signature output when it cannot decode) — and logging those as 0/5 buries cards
         for mistakes that were never made.
         """
-        _keep(wav, {"target": target, "targetPinyin": target_pinyin, "transcript": transcript,
-                    "confidence": confidence, "unusable": True, "reason": reason})
+        if keep:
+            _keep(wav, {"target": target, "targetPinyin": target_pinyin,
+                        "reference": reference_clip.name if reference_clip else None,
+                        "transcript": transcript, "confidence": confidence,
+                        "unusable": True, "reason": reason})
         return {
             "unusable": True, "reason": reason, "transcript": transcript, "target": target,
             "confidence": confidence, "syllables": [], "totalSyllables": 0,
@@ -515,7 +564,7 @@ def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
         char = target[i] if i < len(target) else str(want)
 
         if got is None or j is None:
-            out.append(Syllable(char, None, _pretty(base, tone), None, tone, None, False,
+            out.append(Syllable(char, None, pretty(char), None, tone, None, False,
                                 verdict="missing"))
             continue
 
@@ -526,11 +575,12 @@ def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
         s = Syllable(
             char=char,
             said=heard_char,
-            pinyin=_pretty(base, tone),
-            saidPinyin=_pretty(heard_base, heard_tone),
+            pinyin=pretty(char),
+            saidPinyin=pretty(heard_char),
             tone=tone,
             heardTone=heard_tone,
             correct=right_sound,
+            errorKind=None if right_sound else error_kind((base, tone), (heard_base, heard_tone)),
             verdict="good" if right_sound else "wrong",
         )
 
@@ -547,25 +597,32 @@ def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
             # outranks the contour. A neutral tone is excluded: it has no target shape,
             # and whisper's neutral-vs-full choice is unreliable.
             if tone and heard_tone and tone != heard_tone:
-                s.verdict = "tone"
+                s.verdict, s.errorKind = "tone", "tone"
             elif s.distance is None:
                 s.verdict = "unscored"
             elif s.distance > BAD_SEMITONES:
-                s.verdict = "tone"
+                s.verdict, s.errorKind = "tone", "tone"
             elif s.distance > GOOD_SEMITONES:
                 s.verdict = "close"
 
         out.append(s)
 
     scored = [s for s in out if s.distance is not None or s.verdict == "tone"]
-    _keep(wav, {
-        "target": target, "targetPinyin": target_pinyin, "transcript": transcript,
-        "confidence": round(confidence, 2), "unusable": False,
-        "correct": sum(1 for s in out if s.correct), "total": len(out),
-        "verdicts": [s.verdict for s in out],
-        "heard": [s.saidPinyin for s in out],
-        "want": [s.pinyin for s in out],
-    })
+    if keep:
+        _keep(wav, {
+            "target": target, "targetPinyin": target_pinyin,
+            # Recorded so a later rescore can compare against the same native clip.
+            # Without it, rescoring had no reference and marked every syllable
+            # unscored — the tool built to evaluate changes could not evaluate them.
+            "reference": reference_clip.name if reference_clip else None,
+            "transcript": transcript,
+            "confidence": round(confidence, 2), "unusable": False,
+            "correct": sum(1 for s in out if s.correct), "total": len(out),
+            "verdicts": [s.verdict for s in out],
+            "errorKinds": [s.errorKind for s in out],
+            "heard": [s.saidPinyin for s in out],
+            "want": [s.pinyin for s in out],
+        })
     return {
         "unusable": False,
         "reason": None,

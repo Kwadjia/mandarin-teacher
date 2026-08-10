@@ -47,14 +47,16 @@ export interface ScoredSyllable {
   char: string;
   /** The character the recogniser heard here; null if the syllable was not said. */
   said: string | null;
-  /** Expected pinyin with a tone mark, e.g. 'niaoˋ'. */
+  /** Expected pinyin with diacritics, e.g. 'niào'. */
   pinyin: string;
-  /** Pinyin of what was heard — 'niaoˇ' against 'niaoˋ' is a tone error, not a word error. */
+  /** Pinyin of what was heard — 'niǎo' against 'niào' is a tone error, not a word error. */
   saidPinyin: string | null;
   tone: number;
   heardTone: number | null;
   /** Right base syllable: the sound landed, whatever happened to the tone. */
   correct: boolean;
+  /** What to change: tone, vowel, consonant, or a different word entirely. */
+  errorKind: 'tone' | 'vowel' | 'consonant' | 'different' | null;
   distance: number | null;
   verdict: 'good' | 'close' | 'tone' | 'wrong' | 'missing' | 'unscored';
   learner: number[];

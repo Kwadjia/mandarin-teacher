@@ -90,7 +90,7 @@ export interface ScoredSyllable {
   char: string;
   /** The character heard here, or null if the syllable was not said at all. */
   said: string | null;
-  /** Expected pinyin with a tone mark, e.g. 'niaoˋ'. */
+  /** Expected pinyin with diacritics, e.g. 'niào'. */
   pinyin: string;
   /** Pinyin of what was heard. Same base with a different mark means a tone slip. */
   saidPinyin: string | null;
@@ -99,6 +99,8 @@ export interface ScoredSyllable {
   heardTone: number | null;
   /** Right base syllable — the sound was right, whatever the tone did. */
   correct: boolean;
+  /** What to change: tone, vowel, consonant, or a different word entirely. */
+  errorKind: 'tone' | 'vowel' | 'consonant' | 'different' | null;
   /** Semitones from the native contour. Null when it could not be measured. */
   distance: number | null;
   verdict: 'good' | 'close' | 'tone' | 'wrong' | 'missing' | 'unscored';
