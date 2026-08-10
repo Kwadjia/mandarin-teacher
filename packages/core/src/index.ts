@@ -16,3 +16,4 @@ export * from './plan.ts';
 export * from './daily.ts';
 export * from './dictation.ts';
 export * from './practice.ts';
+export * from './choices.ts';

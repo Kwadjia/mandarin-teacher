@@ -15,6 +15,7 @@ import type { Db } from '@mt/schema';
 import { segment } from '@mt/schema';
 import {
   checkDictation,
+  choices,
   gradeAuto,
   gradeCommit,
   gradeDictation,
@@ -751,6 +752,156 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
       watch: {
         tone: { correct: toneRow?.ok ?? 0, total: toneRow?.n ?? 0 },
         remainingNew: states.find((s) => s.modality === 'listen')?.newAvailable ?? 0,
+      },
+    });
+  });
+
+  /**
+   * A multiple-choice listening item: Meaning Match, Which One, or Cloze.
+   *
+   * These are the auto-graded listening exercises from the prototype review that were
+   * kept and never built. Listen & Commit asks whether you got it and believes you —
+   * cheap to build, weak to learn from, since there is no way to be wrong and hindsight
+   * makes every revealed answer feel familiar. These have a wrong answer available.
+   *
+   * The options go out in random order with no marking of which is correct; the answer
+   * is checked here. Sending a flag the client could read would make the whole thing
+   * decorative (§2.9).
+   */
+  app.get('/api/choice', async (c) => {
+    const kind = (c.req.query('kind') ?? 'meaning-match') as
+      | 'meaning-match'
+      | 'which-one'
+      | 'cloze';
+    const at = now();
+
+    const [concepts, cards, utterances] = await Promise.all([
+      q.loadConcepts(db),
+      q.loadCards(db, 'listen'),
+      q.loadUtteranceRefs(db),
+    ]);
+    const known = cards.filter((k) => k.introducedAt !== null);
+    if (known.length < 4) {
+      return c.json({
+        type: 'idle',
+        reason: 'Learn a few more words first — these need four to choose between.',
+      });
+    }
+
+    // Weakest first, same as practice: the words about to be forgotten are the ones
+    // worth a question. Drawn from the weakest handful rather than always the single
+    // weakest, or a session is the same word over and over — taking index 0 every time
+    // served 宝宝 three questions running.
+    const queue = practiceQueue({ cards, modality: 'listen', now: at });
+    const window = queue.slice(0, Math.min(10, queue.length));
+    const card = window[Math.floor(Math.random() * window.length)]!;
+    const target = concepts.find((x) => x.id === card.conceptId)!;
+    const pool = concepts.filter((x) => known.some((k) => k.conceptId === x.id));
+
+    const options = choices({ target, pool });
+    const pick = pickUtterance(
+      target.id,
+      utterances,
+      new Set(known.map((k) => k.conceptId)),
+    );
+    const utterance = pick ? await q.loadUtteranceDetail(db, pick.utterance.id) : null;
+    if (!utterance) {
+      return c.json({ type: 'idle', reason: 'No sentence available for that word.' });
+    }
+
+    return c.json({
+      type: 'item',
+      kind,
+      conceptId: target.id,
+      utteranceId: utterance.id,
+      clips: utterance.clips,
+      options: options.map((o) => ({
+        conceptId: o.id,
+        // Meaning Match asks for the English; the other two ask for the Chinese, so
+        // the audio cannot be bypassed by reading a translation.
+        label: kind === 'meaning-match' ? o.glossEn : o.headwordTrad,
+        sub: kind === 'meaning-match' ? null : o.pinyin,
+      })),
+      // Cloze shows the sentence with the target blanked, so the gap is the question.
+      prompt:
+        kind === 'cloze'
+          ? utterance.hanziTrad.replace(target.headwordTrad, '＿'.repeat(1))
+          : null,
+    });
+  });
+
+  /** Check one multiple-choice answer, grade it, and log it. */
+  app.post('/api/choice', async (c) => {
+    const body = (await c.req.json()) as {
+      sessionId?: number | null;
+      conceptId: number;
+      utteranceId: number;
+      audioId?: number | null;
+      chosenConceptId: number;
+      kind: string;
+      replays?: number;
+      latencyMs?: number | null;
+      practice?: boolean;
+    };
+
+    const correct = body.chosenConceptId === body.conceptId;
+    const at = now();
+    const grade = gradeAuto({
+      correct,
+      replays: body.replays ?? 0,
+      latencyMs: body.latencyMs ?? null,
+    });
+
+    const existing = (await q.loadCards(db, 'listen')).find(
+      (k) => k.conceptId === body.conceptId,
+    );
+    if (!existing) return c.json({ error: 'not an introduced word' }, 409);
+
+    /**
+     * The practice rule always applies here, whatever the client says.
+     *
+     * The quiz selects by weakness rather than by due date, so most of its reps are
+     * early — the same shape as dictation, which was silently rescheduling every word
+     * in every sentence until it was fixed. Leaving this to a client-supplied flag
+     * would reintroduce that bug the first time a caller forgot to set it.
+     */
+    const wasDue = existing.dueAt <= at.getTime();
+    const result = review(existing, grade, at);
+    const reschedule = shouldReschedule(grade, wasDue);
+    const cardId = reschedule
+      ? await q.saveCard(db, result.card)
+      : await q.cardId(db, body.conceptId, 'listen');
+
+    await q.insertEvent(db, {
+      ts: at.getTime(),
+      sessionId: body.sessionId ?? null,
+      kind: 'review',
+      conceptId: body.conceptId,
+      cardId,
+      utteranceId: body.utteranceId,
+      audioId: body.audioId ?? null,
+      modality: 'listen',
+      exerciseType: body.kind,
+      result: grade,
+      latencyMs: body.latencyMs ?? null,
+      replays: body.replays ?? 0,
+      committedBeforeReveal: true,
+      payload: { correct, chose: body.chosenConceptId },
+    });
+
+    const concept = await q.loadConcept(db, body.conceptId);
+    const utterance = await q.loadUtteranceDetail(db, body.utteranceId);
+    return c.json({
+      correct,
+      grade,
+      intervalDays: Math.round((result.intervalMs / 86_400_000) * 10) / 10,
+      rescheduled: reschedule,
+      concept,
+      utterance: utterance && {
+        hanzi: utterance.hanzi,
+        hanziTrad: utterance.hanziTrad,
+        pinyin: utterance.pinyin,
+        glossEn: utterance.glossEn,
       },
     });
   });

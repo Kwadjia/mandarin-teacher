@@ -180,6 +180,38 @@ export interface CaptureResponse {
   knownFraction: number;
 }
 
+export type ChoiceKind = 'meaning-match' | 'which-one' | 'cloze';
+
+/** Options arrive shuffled and unmarked; only the server knows which is right. */
+export interface ChoiceOption {
+  conceptId: number;
+  label: string;
+  sub: string | null;
+}
+
+export type ChoiceItem =
+  | {
+      type: 'item';
+      kind: ChoiceKind;
+      conceptId: number;
+      utteranceId: number;
+      clips: Clip[];
+      options: ChoiceOption[];
+      /** Cloze only: the sentence with the target blanked out. */
+      prompt: string | null;
+    }
+  | { type: 'idle'; reason: string };
+
+export interface ChoiceResult {
+  correct: boolean;
+  grade: Grade;
+  intervalDays: number;
+  /** False when a correct early answer deliberately left the schedule alone. */
+  rescheduled: boolean;
+  concept: Concept | null;
+  utterance: { hanzi: string; hanziTrad: string; pinyin: string; glossEn: string } | null;
+}
+
 /** One dictation item — audio only. The text would be the answer key. */
 export type DictationItem =
   | { type: 'item'; utteranceId: number; syllableCount: number; clips: Clip[]; dueNow: number }
@@ -263,6 +295,20 @@ export const api = {
       `/api/next?modality=${modality}&mode=practice` +
         (seen.length ? `&seen=${seen.join(',')}` : ''),
     ),
+
+  /** A multiple-choice listening item. Options come shuffled and unmarked. */
+  choice: (kind: ChoiceKind) => json<ChoiceItem>(`/api/choice?kind=${kind}`),
+  choiceAnswer: (body: {
+    sessionId: number | null;
+    conceptId: number;
+    utteranceId: number;
+    audioId: number | null;
+    chosenConceptId: number;
+    kind: ChoiceKind;
+    replays: number;
+    latencyMs: number | null;
+    practice?: boolean;
+  }) => json<ChoiceResult>('/api/choice', { method: 'POST', body: JSON.stringify(body) }),
 
   /** Audio only — the sentence text is withheld until the answer is submitted. */
   dictation: () => json<DictationItem>('/api/dictation'),
