@@ -31,10 +31,14 @@ import {
   medianLatency,
   newCard,
   nextAction,
+  pickUtterance,
   planDuration,
   planSession,
+  practiceQueue,
   review,
+  shouldReschedule,
   strandedCards,
+  NEW_WORDS_PER_DAY,
   type Grade,
   type Modality,
   type ModalityState,
@@ -254,10 +258,65 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
    */
   app.get('/api/next', async (c) => {
     const modality = (c.req.query('modality') ?? 'listen') as Modality;
-    // The daily cap is a guard against bingeing, not a rule. An hour-long session
-    // should never be stopped by it, so the client can raise it for the session.
-    const maxNewPerDay = Number(c.req.query('maxNew') ?? 20);
+    const maxNewPerDay = Number(c.req.query('maxNew') ?? NEW_WORDS_PER_DAY);
     const at = now();
+
+    /**
+     * Practice: drill anything already introduced, ignoring due dates, introducing
+     * nothing new.
+     *
+     * The two walls in a session are different problems. The cap on new vocabulary is
+     * deliberate — every new word is weeks of review debt — while running out of due
+     * reviews is not a reason to stop when there are hundreds of known words and an
+     * hour of appetite. Raising the cap answered the second by breaking the first.
+     */
+    if (c.req.query('mode') === 'practice') {
+      const [concepts, cards, utterances] = await Promise.all([
+        q.loadConcepts(db),
+        q.loadCards(db, modality),
+        q.loadUtteranceRefs(db),
+      ]);
+      const seen = new Set(
+        (c.req.query('seen') ?? '').split(',').map(Number).filter(Boolean),
+      );
+      let queue = practiceQueue({ cards, modality, now: at, seen });
+      // Everything served already: start the cycle again rather than stopping.
+      if (!queue.length) queue = practiceQueue({ cards, modality, now: at });
+
+      const card = queue[0];
+      if (!card) {
+        return c.json({
+          type: 'idle',
+          reason: 'Nothing learned yet to practise.',
+          cause: 'nothing-due' as const,
+          nextDueAt: null,
+          queue: { due: 0, introducedToday: 0, introduced: 0, total: concepts.length },
+        });
+      }
+
+      const concept = concepts.find((x) => x.id === card.conceptId)!;
+      const pick = pickUtterance(
+        card.conceptId,
+        utterances,
+        new Set(cards.filter((k) => k.introducedAt !== null).map((k) => k.conceptId)),
+      );
+      return c.json({
+        type: 'review' as const,
+        practice: true,
+        // Whether it was genuinely due decides if the answer reschedules.
+        wasDue: card.dueAt <= at.getTime(),
+        concept,
+        utterance: pick ? await q.loadUtteranceDetail(db, pick.utterance.id) : null,
+        unknownCount: pick?.unknownCount ?? null,
+        dueAt: card.dueAt,
+        queue: {
+          due: cards.filter((k) => k.introducedAt !== null && k.dueAt <= at.getTime()).length,
+          introducedToday: 0,
+          introduced: cards.filter((k) => k.introducedAt !== null).length,
+          total: concepts.length,
+        },
+      });
+    }
 
     const [concepts, cards, utterances, counts] = await Promise.all([
       q.loadConcepts(db),
@@ -353,6 +412,8 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
       modality?: Modality;
       exerciseType: string;
       outcome: Outcome;
+      /** Extra drilling beyond what is due — see practice.ts for the scheduling rule. */
+      practice?: boolean;
     };
 
     if (typeof body.conceptId !== 'number' || !body.outcome?.kind) {
@@ -368,7 +429,22 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
     );
     const before = existing ?? newCard(body.conceptId, modality, at);
     const result = review(before, grade, at);
-    const cardId = await q.saveCard(db, result.card);
+
+    /**
+     * In practice, a correct answer does not move the card.
+     *
+     * Recalling a word early is not evidence it would still have been there on the due
+     * date, and crediting it pushes the interval out on no evidence — an hour of
+     * enthusiastic practice would otherwise scatter the whole schedule into the far
+     * future. Failing early *is* evidence, so that still reschedules.
+     */
+    // Determined here, not taken from the client: whether a card was due is exactly the
+    // kind of thing a client could get wrong, or flatter itself about.
+    const wasDue = existing ? existing.dueAt <= at.getTime() : true;
+    const reschedule = !body.practice || shouldReschedule(grade, wasDue);
+    const cardId = reschedule
+      ? await q.saveCard(db, result.card)
+      : await q.cardId(db, body.conceptId, modality);
 
     const replays =
       'replays' in body.outcome ? (body.outcome.replays ?? 0) : 0;
@@ -572,7 +648,7 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
    */
   app.get('/api/plan', async (c) => {
     const at = now();
-    const maxNewPerDay = Number(c.req.query('maxNew') ?? 15);
+    const maxNewPerDay = Number(c.req.query('maxNew') ?? NEW_WORDS_PER_DAY);
     const today = startOfToday(at);
 
     const [concepts, counts, gaps] = await Promise.all([
@@ -757,8 +833,16 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
     for (const conceptId of new Set(conceptIds)) {
       const existing = (await q.loadCards(db, 'listen')).find((k) => k.conceptId === conceptId);
       if (!existing) continue; // never introduced — dictation does not introduce words
+
+      // Dictation picks sentences by what is *known*, not by what is due, so most of
+      // its reps are early. The same rule as practice therefore applies, or an evening
+      // of dictation would push every word in every sentence far into the future on no
+      // evidence they would have survived that long.
       const result = review(existing, grade, at);
-      const cardId = await q.saveCard(db, result.card);
+      const wasDue = existing.dueAt <= at.getTime();
+      const cardId = shouldReschedule(grade, wasDue)
+        ? await q.saveCard(db, result.card)
+        : await q.cardId(db, conceptId, 'listen');
       await q.insertEvent(db, {
         ts: at.getTime(),
         sessionId: body.sessionId ?? null,

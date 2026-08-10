@@ -26,8 +26,17 @@ export function Drill({ sessionId, onAnswered }: Props) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [reps, setReps] = useState(0);
-  /** Raised in-session when the daily cap is the only thing left blocking. */
-  const [maxNew, setMaxNew] = useState<number | undefined>(undefined);
+  /**
+   * Practice mode: keep drilling what is already known, adding nothing new.
+   *
+   * This replaces a button that raised the daily new-word cap, which answered "I want
+   * to keep going" by handing over more vocabulary — the opposite of what is wanted.
+   * The cap exists because every new word is weeks of review debt; the appetite to
+   * continue is real and should be met with the words already in hand.
+   */
+  const [practice, setPractice] = useState(false);
+  /** Concepts already served this practice run, so it cycles instead of repeating. */
+  const served = useRef(new Set<number>());
   const [countdown, setCountdown] = useState<number | null>(null);
   const clip = useRef(
     null as ReturnType<typeof pickClip>,
@@ -38,7 +47,9 @@ export function Drill({ sessionId, onAnswered }: Props) {
     setBusy(true);
     setError(null);
     try {
-      const next = await api.next('listen', maxNew);
+      const next = practice
+        ? await api.practice('listen', [...served.current])
+        : await api.next('listen');
       setItem(next);
       setResult(null);
       setGotIt(null);
@@ -47,6 +58,7 @@ export function Drill({ sessionId, onAnswered }: Props) {
         clip.current = null;
         return;
       }
+      if (practice) served.current.add(next.concept.id);
       clip.current = next.utterance ? pickClip(next.utterance.clips) : null;
       setPhase(next.type === 'introduce' ? 'introducing' : 'listening');
       // First Exposure shows the word before playing; a review plays immediately.
@@ -56,7 +68,7 @@ export function Drill({ sessionId, onAnswered }: Props) {
     } finally {
       setBusy(false);
     }
-  }, [audio, maxNew]);
+  }, [audio, practice]);
 
   // `load` is rebuilt every render, so effects that need it hold a ref instead of
   // listing it as a dependency and re-subscribing constantly.
@@ -69,7 +81,7 @@ export function Drill({ sessionId, onAnswered }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Raising the cap mid-session should immediately produce the next word.
+  // Switching into practice mid-session should immediately produce the next word.
   const firstRun = useRef(true);
   useEffect(() => {
     if (firstRun.current) {
@@ -77,7 +89,7 @@ export function Drill({ sessionId, onAnswered }: Props) {
       return;
     }
     void loadRef.current();
-  }, [maxNew]);
+  }, [practice]);
 
   /**
    * While caught up, count down to the next card and resume on its own when one
@@ -118,6 +130,9 @@ export function Drill({ sessionId, onAnswered }: Props) {
           utteranceId: item.utterance?.id ?? null,
           audioId: clip.current?.id ?? null,
           exerciseType: 'listen-commit',
+          // Tells the server not to credit an early correct answer with a longer
+          // interval. A wrong one still reschedules.
+          practice,
           outcome: {
             kind: 'commit',
             gotIt: understood,
@@ -213,17 +228,15 @@ export function Drill({ sessionId, onAnswered }: Props) {
       <div className="py-16 text-center">
         {item.cause === 'cap' ? (
           <>
-            <p className="text-2xl">Daily limit reached.</p>
+            <p className="text-2xl">That's today's new words.</p>
             <p className="mt-2 text-stone-500">
-              There is more material — the cap is just a guard against bingeing.
+              Twelve a day is the cap on purpose — each one is weeks of reviews to come.
+              Keep going with the words you already have.
             </p>
-            <button className="btn btn-primary mt-6" onClick={() => setMaxNew((n) => (n ?? 20) + 20)}>
-              Keep learning
-            </button>
           </>
         ) : (
           <>
-            <p className="text-2xl">All caught up.</p>
+            <p className="text-2xl">Nothing due right now.</p>
             {mins !== null ? (
               <p className="mt-2 text-stone-500">
                 Next review in {mins === 0 ? 'under a minute' : `${mins} min`}.
@@ -233,11 +246,19 @@ export function Drill({ sessionId, onAnswered }: Props) {
             )}
           </>
         )}
+
+        {/* The wall that should never stop a session. Practice draws on everything
+            already learned and adds nothing new; a correct answer here does not move
+            the schedule, so an hour of it cannot scatter the review dates. */}
+        <button className="btn btn-primary mt-6" onClick={() => setPractice(true)}>
+          Practice what I know →
+        </button>
+
         <p className="mt-6 text-sm text-stone-500">
           {item.queue.introduced} of {item.queue.total} concepts introduced
           {reps > 0 && ` · ${reps} rep${reps === 1 ? '' : 's'} this session`}
         </p>
-        <button className="btn mt-6" onClick={() => void load()}>
+        <button className="btn mt-4" onClick={() => void load()}>
           Check again
         </button>
       </div>
@@ -245,6 +266,30 @@ export function Drill({ sessionId, onAnswered }: Props) {
   }
 
   const { concept, utterance } = item;
+
+  /**
+   * Which mode is running, stated plainly.
+   *
+   * Practice looks identical to a review and means something different — nothing new
+   * is coming, and correct answers are not moving the schedule. Leaving that implicit
+   * would make the drill feel like it had quietly stopped counting.
+   */
+  const banner = practice ? (
+    <div className="mb-6 flex items-center justify-between rounded-lg border border-stone-200 px-3 py-2 text-sm dark:border-stone-800">
+      <span className="text-stone-500">
+        Practising {item.queue.introduced} known words · no new words, schedule untouched
+      </span>
+      <button
+        className="text-xs underline underline-offset-2 hover:no-underline"
+        onClick={() => {
+          served.current.clear();
+          setPractice(false);
+        }}
+      >
+        back to reviews
+      </button>
+    </div>
+  ) : null;
 
   // ── First Exposure ────────────────────────────────────────────────────────
   if (phase === 'introducing') {
@@ -290,6 +335,7 @@ export function Drill({ sessionId, onAnswered }: Props) {
   // ── Listen & Commit ───────────────────────────────────────────────────────
   return (
     <div>
+      {banner}
       {phase === 'listening' ? (
         <>
           <div className="flex flex-col items-center py-10">

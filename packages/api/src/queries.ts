@@ -433,3 +433,17 @@ export async function pickDictation(
     LIMIT 1
   `);
 }
+
+/** The card's row id without touching its state — for logging a practice rep. */
+export async function cardId(
+  db: Db,
+  conceptId: number,
+  modality: Modality,
+): Promise<number | null> {
+  const r = await db.first<{ id: number }>(
+    'SELECT id FROM card WHERE concept_id = ? AND modality = ?',
+    conceptId,
+    modality,
+  );
+  return r?.id ?? null;
+}

@@ -239,6 +239,8 @@ export const api = {
     utteranceId: number | null;
     audioId: number | null;
     exerciseType: string;
+    /** Extra drilling beyond what is due; a correct answer will not move the card. */
+    practice?: boolean;
     outcome:
       | { kind: 'commit'; gotIt: boolean; replays: number; latencyMs: number | null; committedBeforeReveal: boolean }
       | { kind: 'auto'; correct: boolean; replays: number; latencyMs: number | null };
@@ -249,6 +251,18 @@ export const api = {
   health: () => json<{ ok: boolean; speech: boolean }>('/api/health'),
 
   plan: (maxNew?: number) => json<Plan>('/api/plan' + (maxNew ? `?maxNew=${maxNew}` : '')),
+
+  /**
+   * Drill what is already known, ignoring due dates and introducing nothing new.
+   *
+   * `seen` is the concepts already served this run, so the queue cycles through the
+   * whole set rather than handing back the weakest word forever.
+   */
+  practice: (modality: Modality = 'listen', seen: number[] = []) =>
+    json<NextResponse>(
+      `/api/next?modality=${modality}&mode=practice` +
+        (seen.length ? `&seen=${seen.join(',')}` : ''),
+    ),
 
   /** Audio only — the sentence text is withheld until the answer is submitted. */
   dictation: () => json<DictationItem>('/api/dictation'),
