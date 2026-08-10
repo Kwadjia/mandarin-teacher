@@ -11,7 +11,7 @@
 
 import { serve } from '@hono/node-server';
 import { serveStatic } from '@hono/node-server/serve-static';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { NodeDb } from '@mt/schema/node';
@@ -34,12 +34,34 @@ if (!existsSync(AUDIO_DIR)) {
   process.exit(1);
 }
 
+const TONES_DIR = join(REPO, 'pipeline', 'out', 'tones');
+const tonesManifest = join(TONES_DIR, 'manifest.json');
+const tones = existsSync(tonesManifest)
+  ? (JSON.parse(readFileSync(tonesManifest, 'utf8')) as { sets: never[] }).sets
+  : [];
+if (!tones.length) console.warn('No tone drills — run: python pipeline/build_tones.py');
+
 const db = new NodeDb(DB_PATH);
-const app = createApp({ db });
+const app = createApp({ db, tones });
 
 // serveStatic resolves relative to cwd, so express the audio directory that way.
 const audioRoot = relative(process.cwd(), AUDIO_DIR).replaceAll('\\', '/');
 app.use('/audio/*', serveStatic({ root: audioRoot, rewriteRequestPath: (p) => p.replace(/^\/audio/, '') }));
+
+const tonesRoot = relative(process.cwd(), TONES_DIR).replaceAll('\\', '/');
+app.use('/tones/*', serveStatic({ root: tonesRoot, rewriteRequestPath: (p) => p.replace(/^\/tones/, '') }));
+
+// Serve the built web app from the same origin when it exists. This is how the
+// Worker will serve it too — one origin, no proxy, no CORS. `npm run dev -w @mt/web`
+// is still the fast path while editing the UI.
+const WEB_DIST = join(REPO, 'packages', 'web', 'dist');
+if (existsSync(WEB_DIST)) {
+  const webRoot = relative(process.cwd(), WEB_DIST).replaceAll('\\', '/');
+  app.use('/assets/*', serveStatic({ root: webRoot }));
+  app.get('/', serveStatic({ root: webRoot, path: 'index.html' }));
+  // Single-page app: anything not an API or asset route falls through to the shell.
+  app.get('*', serveStatic({ root: webRoot, path: 'index.html' }));
+}
 
 const counts = db.raw
   .prepare(

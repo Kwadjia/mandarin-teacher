@@ -12,7 +12,10 @@
     "seed": "npm run seed -w @mt/schema",
     "dev": "npm run api:dev",
     "api": "npm run start -w @mt/api",
-    "api:dev": "npm run dev -w @mt/api"
+    "api:dev": "npm run dev -w @mt/api",
+    "build:web": "npm run build -w @mt/web",
+    "study": "npm run build:web && npm run api",
+    "web": "npm run dev -w @mt/web"
   },
   "devDependencies": {
     "typescript": "^5.7.2",
@@ -20,5 +23,8 @@
   },
   "engines": {
     "node": ">=22"
+  },
+  "overrides": {
+    "vite": "^5.4.11"
   }
 }

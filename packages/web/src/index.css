@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+/*
+ * Warm paper, serif, generous spacing — the aesthetic from the exercise lab, which
+ * survived review. Deliberately calm: this gets opened every day for years, often
+ * one-handed at an unreasonable hour, and a loud interface would wear out fast.
+ */
+
+@theme {
+  --font-sans: ui-sans-serif, 'Microsoft JhengHei', 'Microsoft YaHei', system-ui, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, serif;
+}
+
+@layer base {
+  html {
+    color-scheme: light dark;
+  }
+  body {
+    @apply bg-stone-50 font-serif text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100;
+  }
+  kbd {
+    @apply rounded border border-stone-300 bg-stone-100 px-1.5 py-0.5 font-mono text-[0.7rem]
+           text-stone-600 dark:border-stone-700 dark:bg-stone-900 dark:text-stone-400;
+  }
+  code {
+    @apply rounded bg-stone-100 px-1 py-0.5 font-mono text-[0.85em] dark:bg-stone-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply cursor-pointer rounded-lg border border-stone-300 px-4 py-2 text-base transition
+           hover:border-amber-700/70 disabled:cursor-not-allowed disabled:opacity-40
+           dark:border-stone-700 dark:hover:border-amber-500/70;
+  }
+  .btn-primary {
+    @apply border-amber-800 bg-amber-800 text-white hover:border-amber-900 hover:bg-amber-900
+           dark:border-amber-600 dark:bg-amber-600 dark:hover:bg-amber-500;
+  }
+  .btn-got {
+    @apply border-emerald-700/70 px-8 text-emerald-800 hover:bg-emerald-700/10
+           dark:border-emerald-500/60 dark:text-emerald-400;
+  }
+  .btn-miss {
+    @apply border-rose-700/70 px-8 text-rose-800 hover:bg-rose-700/10
+           dark:border-rose-500/60 dark:text-rose-400;
+  }
+
+  .tab {
+    @apply cursor-pointer rounded-full border border-stone-300 px-3.5 py-1 text-sm transition
+           dark:border-stone-700;
+  }
+  .tab[aria-current='true'] {
+    @apply border-amber-800 bg-amber-800 text-white dark:border-amber-600 dark:bg-amber-600;
+  }
+
+  .hanzi {
+    @apply font-sans text-5xl leading-tight;
+  }
+  .hanzi-alt {
+    @apply font-sans text-xl text-stone-400 dark:text-stone-600;
+  }
+  .pinyin {
+    @apply mt-1 text-lg text-stone-500;
+  }
+  .label {
+    @apply text-[0.7rem] uppercase tracking-[0.08em] text-stone-500;
+  }
+  .hint {
+    @apply text-xs text-stone-500;
+  }
+
+  .input {
+    @apply rounded-lg border border-stone-300 bg-transparent px-3 py-2 font-serif
+           outline-none focus:border-amber-700 dark:border-stone-700 dark:focus:border-amber-500;
+  }
+
+  .tone-btn {
+    @apply flex w-20 cursor-pointer flex-col items-center rounded-lg border border-stone-300
+           py-3 font-sans transition hover:border-amber-700/70 disabled:cursor-default
+           dark:border-stone-700;
+  }
+  .tone-btn.right {
+    @apply border-emerald-600 bg-emerald-600/10;
+  }
+  .tone-btn.wrong {
+    @apply border-rose-600 bg-rose-600/10;
+  }
+
+  .tok {
+    @apply mx-0.5 inline-block rounded px-1.5 font-sans;
+  }
+  .tok.known {
+    @apply bg-emerald-600/15 text-emerald-800 dark:text-emerald-300;
+  }
+  .tok.unknown {
+    @apply bg-rose-600/15 text-rose-800 dark:text-rose-300;
+  }
+}

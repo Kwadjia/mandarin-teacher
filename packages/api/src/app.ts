@@ -28,10 +28,28 @@ import {
 } from '@mt/core';
 import * as q from './queries.ts';
 
+export interface ToneWord {
+  hanzi: string;
+  trad: string;
+  tone: number;
+  gloss: string;
+  clips: { f: string; tw: number }[];
+}
+export interface ToneSet {
+  syllable: string;
+  words: ToneWord[];
+}
+
 export interface Deps {
   db: Db;
   /** Injectable so tests can control the clock. */
   now?: () => Date;
+  /**
+   * Tone minimal-pair drills. These live outside the concept table on purpose —
+   * 妈 麻 马 骂 are not vocabulary being learned, they are a perception probe — so
+   * their reps are logged as events with no card attached.
+   */
+  tones?: ToneSet[];
 }
 
 type Outcome =
@@ -79,10 +97,52 @@ function toGrade(o: Outcome): Grade {
 const startOfToday = (now: Date) =>
   new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
 
-export function createApp({ db, now = () => new Date() }: Deps) {
+export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
   const app = new Hono();
 
   app.get('/api/health', (c) => c.json({ ok: true }));
+
+  app.get('/api/tones', (c) => c.json({ sets: tones }));
+
+  /**
+   * Tone drills have no concept and therefore no card — they measure perception
+   * rather than teach a word, so they are logged and reported but never scheduled.
+   */
+  app.post('/api/tone-answer', async (c) => {
+    const body = (await c.req.json()) as {
+      sessionId?: number | null;
+      syllable: string;
+      tone: number;
+      answered: number;
+      latencyMs?: number | null;
+      exerciseType?: string;
+    };
+    if (!body.syllable || typeof body.tone !== 'number') {
+      return c.json({ error: 'syllable and tone are required' }, 400);
+    }
+    const correct = body.answered === body.tone;
+    await q.insertEvent(db, {
+      ts: now().getTime(),
+      sessionId: body.sessionId ?? null,
+      kind: 'review',
+      modality: 'listen',
+      exerciseType: body.exerciseType ?? 'tone_id',
+      result: correct ? 'good' : 'again',
+      latencyMs: body.latencyMs ?? null,
+      payload: { syllable: body.syllable, tone: body.tone, answered: body.answered },
+    });
+    return c.json({ correct });
+  });
+
+  app.get('/api/tone-stats', async (c) => {
+    const rows = await db.all<{ result: string; n: number }>(
+      `SELECT result, count(*) AS n FROM event
+       WHERE exercise_type = 'tone_id' GROUP BY result`,
+    );
+    const good = rows.find((r) => r.result === 'good')?.n ?? 0;
+    const again = rows.find((r) => r.result === 'again')?.n ?? 0;
+    return c.json({ correct: good, wrong: again, total: good + again });
+  });
 
   app.post('/api/session', async (c) => {
     const id = await q.startSession(db);

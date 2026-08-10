@@ -15,6 +15,30 @@ settled (Taiwan), corpus at HSK1 completeness. No app code yet, on purpose.
 
 **151 concepts · 212 sentences · 1,696 clips · 24 exercise prototypes**
 
+## Study
+
+```powershell
+npm install
+npm run seed          # corpus JSON -> data/mandarin.db  (idempotent)
+npm run study         # builds the web app and serves everything on :8787
+```
+
+Open <http://localhost:8787>. Press **Start** (browsers block audio until a gesture),
+then drill with the keyboard:
+
+| key | |
+|---|---|
+| `Space` | replay |
+| `1` / `2` | missed it / got it |
+| `Enter` | next, or accept a new word |
+| `1`–`4` | tone, in the Tones drill |
+
+Four screens: **Drill** (Listen & Commit plus First Exposure), **Tones** (Tone ID),
+**Add Mandarin** (family capture), **Progress** (HSK coverage, latency, queue).
+
+While editing the UI, `npm run web` runs Vite on :5173 with the API proxied — faster
+reloads, same behaviour.
+
 ## The exercise lab
 
 24 playable drill prototypes running on the real corpus and audio, each with a

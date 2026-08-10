@@ -1,0 +1,139 @@
+/**
+ * Typed client for the API. Mirrors packages/api/src/app.ts.
+ *
+ * Note what is *not* here: any grading logic. The client reports what happened and
+ * the server decides what it was worth (docs/design.md §2.9).
+ */
+
+export type Modality = 'listen' | 'speak' | 'read';
+export type Grade = 'again' | 'hard' | 'good' | 'easy';
+
+export interface Concept {
+  id: number;
+  headword: string;
+  headwordTrad: string;
+  pinyin: string;
+  glossEn: string;
+  source: 'core' | 'personal' | 'emergent';
+  hskLevel: number | null;
+}
+
+export interface Clip {
+  id: number;
+  url: string;
+  voice: string;
+  variety: 'tw' | 'cn';
+  rate: string;
+}
+
+export interface Utterance {
+  id: number;
+  hanzi: string;
+  hanziTrad: string;
+  pinyin: string;
+  glossEn: string;
+  clips: Clip[];
+}
+
+export interface Queue {
+  due: number;
+  introducedToday: number;
+  introduced: number;
+  total: number;
+}
+
+export type NextResponse =
+  | { type: 'review' | 'introduce'; concept: Concept; utterance: Utterance | null; unknownCount: number | null; dueAt: number | null; queue: Queue }
+  | { type: 'idle'; reason: string; queue: Queue };
+
+export interface AnswerResponse {
+  grade: Grade;
+  dueAt: number;
+  intervalDays: number;
+  retentionAtDue: number;
+}
+
+export interface Stats {
+  modality: Modality;
+  hsk: { estimate: number; perLevel: { level: number; total: number; known: number; coverage: number }[]; shaky: number };
+  medianLatencyMs: number | null;
+  due: number;
+  introduced: number;
+  total: number;
+  reviewsToday: number;
+  reviews24h: number;
+  stranded: number[];
+}
+
+export interface ToneWord {
+  hanzi: string;
+  trad: string;
+  tone: number;
+  gloss: string;
+  clips: { f: string; tw: number }[];
+}
+export interface ToneSet {
+  syllable: string;
+  words: ToneWord[];
+}
+
+export interface CaptureResponse {
+  captureId: number;
+  text: string;
+  known: { headword: string; conceptId: number }[];
+  unknown: string[];
+  knownFraction: number;
+}
+
+async function json<T>(path: string, init?: RequestInit): Promise<T> {
+  const res = await fetch(path, {
+    ...init,
+    headers: init?.body ? { 'content-type': 'application/json' } : undefined,
+  });
+  if (!res.ok) {
+    const detail = await res.text().catch(() => '');
+    throw new Error(`${init?.method ?? 'GET'} ${path} → ${res.status} ${detail}`);
+  }
+  return res.json() as Promise<T>;
+}
+
+export const api = {
+  startSession: () => json<{ sessionId: number }>('/api/session', { method: 'POST' }),
+  endSession: (id: number) => json<{ ok: true }>(`/api/session/${id}/end`, { method: 'POST' }),
+
+  next: (modality: Modality = 'listen') =>
+    json<NextResponse>(`/api/next?modality=${modality}`),
+
+  answer: (body: {
+    sessionId: number | null;
+    conceptId: number;
+    utteranceId: number | null;
+    audioId: number | null;
+    exerciseType: string;
+    outcome:
+      | { kind: 'commit'; gotIt: boolean; replays: number; latencyMs: number | null; committedBeforeReveal: boolean }
+      | { kind: 'auto'; correct: boolean; replays: number; latencyMs: number | null };
+  }) => json<AnswerResponse>('/api/answer', { method: 'POST', body: JSON.stringify(body) }),
+
+  stats: (modality: Modality = 'listen') => json<Stats>(`/api/stats?modality=${modality}`),
+
+  tones: () => json<{ sets: ToneSet[] }>('/api/tones'),
+  toneAnswer: (body: {
+    sessionId: number | null;
+    syllable: string;
+    tone: number;
+    answered: number;
+    latencyMs: number | null;
+  }) => json<{ correct: boolean }>('/api/tone-answer', { method: 'POST', body: JSON.stringify(body) }),
+  toneStats: () => json<{ correct: number; wrong: number; total: number }>('/api/tone-stats'),
+
+  capture: (text: string, capturedBy?: string) =>
+    json<CaptureResponse>('/api/capture', {
+      method: 'POST',
+      body: JSON.stringify({ text, capturedBy }),
+    }),
+  captures: () =>
+    json<{ id: number; ts: number; raw_text: string | null; captured_by: string | null }[]>(
+      '/api/captures',
+    ),
+};
