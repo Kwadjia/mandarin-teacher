@@ -10,7 +10,9 @@
     "typecheck": "npm run typecheck --workspaces --if-present",
     "build": "npm run build --workspaces --if-present",
     "seed": "npm run seed -w @mt/schema",
-    "dev": "npm run dev -w @mt/web"
+    "dev": "npm run api:dev",
+    "api": "npm run start -w @mt/api",
+    "api:dev": "npm run dev -w @mt/api"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

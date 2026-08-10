@@ -59,7 +59,19 @@ function main(): void {
       );
       process.exit(1);
     }
-    for (const suffix of ['', '-wal', '-shm']) rmSync(DB_PATH + suffix, { force: true });
+    try {
+      for (const suffix of ['', '-wal', '-shm']) rmSync(DB_PATH + suffix, { force: true });
+    } catch (err) {
+      // Windows will not unlink a file another process still holds open.
+      if ((err as NodeJS.ErrnoException).code === 'EBUSY') {
+        console.error(
+          `Cannot delete ${DB_PATH} — another process is holding it open.\n` +
+            `The API server is the usual culprit; stop it and try again.`,
+        );
+        process.exit(1);
+      }
+      throw err;
+    }
     console.log('reset: database deleted');
   }
 

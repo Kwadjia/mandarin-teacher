@@ -1,0 +1,23 @@
+{
+  "name": "@mt/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/app.ts",
+  "scripts": {
+    "dev": "node --experimental-strip-types --no-warnings --watch src/server.ts",
+    "start": "node --experimental-strip-types --no-warnings src/server.ts",
+    "test": "node --test --experimental-strip-types --no-warnings test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@mt/core": "*",
+    "@mt/schema": "*",
+    "hono": "^4.6.14"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
