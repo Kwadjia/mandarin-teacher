@@ -25,6 +25,10 @@ export function Drill({ sessionId, onAnswered }: Props) {
   const [gotIt, setGotIt] = useState<boolean | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [reps, setReps] = useState(0);
+  /** Raised in-session when the daily cap is the only thing left blocking. */
+  const [maxNew, setMaxNew] = useState<number | undefined>(undefined);
+  const [countdown, setCountdown] = useState<number | null>(null);
   const clip = useRef(
     null as ReturnType<typeof pickClip>,
   );
@@ -34,7 +38,7 @@ export function Drill({ sessionId, onAnswered }: Props) {
     setBusy(true);
     setError(null);
     try {
-      const next = await api.next();
+      const next = await api.next('listen', maxNew);
       setItem(next);
       setResult(null);
       setGotIt(null);
@@ -52,13 +56,49 @@ export function Drill({ sessionId, onAnswered }: Props) {
     } finally {
       setBusy(false);
     }
-  }, [audio]);
+  }, [audio, maxNew]);
+
+  // `load` is rebuilt every render, so effects that need it hold a ref instead of
+  // listing it as a dependency and re-subscribing constantly.
+  const loadRef = useRef(load);
+  loadRef.current = load;
 
   useEffect(() => {
     void load();
     // Intentionally once: subsequent items are loaded by `next()`.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Raising the cap mid-session should immediately produce the next word.
+  const firstRun = useRef(true);
+  useEffect(() => {
+    if (firstRun.current) {
+      firstRun.current = false;
+      return;
+    }
+    void loadRef.current();
+  }, [maxNew]);
+
+  /**
+   * While caught up, count down to the next card and resume on its own when one
+   * lands. Learning-state cards come back in ten minutes, so during a long session
+   * this is the difference between a dead end and a pause.
+   */
+  useEffect(() => {
+    if (!item || item.type !== 'idle' || item.nextDueAt === null) {
+      setCountdown(null);
+      return;
+    }
+    const due = item.nextDueAt;
+    const tick = () => {
+      const remaining = due - Date.now();
+      setCountdown(remaining);
+      if (remaining <= 0) void loadRef.current();
+    };
+    tick();
+    const id = setInterval(tick, 3000);
+    return () => clearInterval(id);
+  }, [item]);
 
   // `useAudio` decides for itself whether this is a replay — the first play of an
   // item never is, regardless of who triggered it.
@@ -88,6 +128,7 @@ export function Drill({ sessionId, onAnswered }: Props) {
         });
         setResult(res);
         setPhase('revealed');
+        setReps((n) => n + 1);
         onAnswered?.();
       } catch (e) {
         setError((e as Error).message);
@@ -121,6 +162,7 @@ export function Drill({ sessionId, onAnswered }: Props) {
           committedBeforeReveal: true,
         },
       });
+      setReps((n) => n + 1);
       onAnswered?.();
       await load();
     } catch (e) {
@@ -166,12 +208,34 @@ export function Drill({ sessionId, onAnswered }: Props) {
   if (!item) return <p className="text-stone-500">Loading…</p>;
 
   if (item.type === 'idle') {
+    const mins = countdown === null ? null : Math.max(0, Math.ceil(countdown / 60000));
     return (
       <div className="py-16 text-center">
-        <p className="text-2xl">Nothing due.</p>
-        <p className="mt-2 text-stone-500">{item.reason}</p>
+        {item.cause === 'cap' ? (
+          <>
+            <p className="text-2xl">Daily limit reached.</p>
+            <p className="mt-2 text-stone-500">
+              There is more material — the cap is just a guard against bingeing.
+            </p>
+            <button className="btn btn-primary mt-6" onClick={() => setMaxNew((n) => (n ?? 20) + 20)}>
+              Keep learning
+            </button>
+          </>
+        ) : (
+          <>
+            <p className="text-2xl">All caught up.</p>
+            {mins !== null ? (
+              <p className="mt-2 text-stone-500">
+                Next review in {mins === 0 ? 'under a minute' : `${mins} min`}.
+              </p>
+            ) : (
+              <p className="mt-2 text-stone-500">{item.reason}</p>
+            )}
+          </>
+        )}
         <p className="mt-6 text-sm text-stone-500">
-          {item.queue.introduced} of {item.queue.total} concepts introduced.
+          {item.queue.introduced} of {item.queue.total} concepts introduced
+          {reps > 0 && ` · ${reps} rep${reps === 1 ? '' : 's'} this session`}
         </p>
         <button className="btn mt-6" onClick={() => void load()}>
           Check again

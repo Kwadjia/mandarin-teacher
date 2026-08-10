@@ -44,7 +44,14 @@ export interface Queue {
 
 export type NextResponse =
   | { type: 'review' | 'introduce'; concept: Concept; utterance: Utterance | null; unknownCount: number | null; dueAt: number | null; queue: Queue }
-  | { type: 'idle'; reason: string; queue: Queue };
+  | {
+      type: 'idle';
+      reason: string;
+      /** 'cap' = more material exists, only the daily limit is stopping you. */
+      cause: 'cap' | 'nothing-due';
+      nextDueAt: number | null;
+      queue: Queue;
+    };
 
 export interface AnswerResponse {
   grade: Grade;
@@ -62,6 +69,7 @@ export interface Stats {
   total: number;
   reviewsToday: number;
   reviews24h: number;
+  remainingNew: number;
   stranded: number[];
 }
 
@@ -104,8 +112,10 @@ export const api = {
   startSession: () => json<{ sessionId: number }>('/api/session', { method: 'POST' }),
   endSession: (id: number) => json<{ ok: true }>(`/api/session/${id}/end`, { method: 'POST' }),
 
-  next: (modality: Modality = 'listen') =>
-    json<NextResponse>(`/api/next?modality=${modality}`),
+  next: (modality: Modality = 'listen', maxNew?: number) =>
+    json<NextResponse>(
+      `/api/next?modality=${modality}` + (maxNew ? `&maxNew=${maxNew}` : ''),
+    ),
 
   answer: (body: {
     sessionId: number | null;

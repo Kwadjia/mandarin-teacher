@@ -41,6 +41,7 @@ export function Stats({ refreshKey }: { refreshKey: number }) {
             <Row k="Shaky" v={String(s.hsk.shaky)} />
             <Row k="Reviews today" v={String(s.reviewsToday)} />
             <Row k="Reviews, 24h" v={String(s.reviews24h)} />
+            <Row k="New words left" v={String(s.remainingNew)} />
             <Row
               k="Median response"
               v={s.medianLatencyMs === null ? '—' : `${(s.medianLatencyMs / 1000).toFixed(1)}s`}
@@ -70,6 +71,15 @@ export function Stats({ refreshKey }: { refreshKey: number }) {
           </div>
         </div>
       </div>
+
+      {s.remainingNew < 40 && (
+        <p className="rounded-lg border border-amber-700/40 bg-amber-700/5 p-3 text-sm">
+          {s.remainingNew} new word{s.remainingNew === 1 ? '' : 's'} left in the corpus.
+          At a dozen a day that is about {Math.max(1, Math.round(s.remainingNew / 12))} more
+          day{Math.round(s.remainingNew / 12) === 1 ? '' : 's'} of new material — time to
+          extend the vocabulary and generate more sentences.
+        </p>
+      )}
 
       {s.stranded.length > 0 && (
         <p className="rounded-lg border border-rose-300/60 bg-rose-50/60 p-3 text-sm text-rose-800 dark:bg-rose-950/30 dark:text-rose-300">

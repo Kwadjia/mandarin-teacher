@@ -18,6 +18,7 @@ import {
   gradeCommit,
   gradeDictation,
   hskCoverage,
+  introductionQueue,
   medianLatency,
   newCard,
   nextAction,
@@ -188,6 +189,9 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
    */
   app.get('/api/next', async (c) => {
     const modality = (c.req.query('modality') ?? 'listen') as Modality;
+    // The daily cap is a guard against bingeing, not a rule. An hour-long session
+    // should never be stopped by it, so the client can raise it for the session.
+    const maxNewPerDay = Number(c.req.query('maxNew') ?? 20);
     const at = now();
 
     const [concepts, cards, utterances, counts] = await Promise.all([
@@ -207,6 +211,7 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
       utterances,
       now: at,
       introducedToday,
+      maxNewPerDay,
     });
 
     const dueNow = cards.filter((k) => k.introducedAt !== null && k.dueAt <= at.getTime()).length;
@@ -218,7 +223,25 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
     };
 
     if (action.type === 'idle') {
-      return c.json({ type: 'idle', reason: action.reason, queue });
+      // An idle screen with no way forward is where a study habit dies. Say *why*
+      // it stopped and when the next card lands, so the UI can offer a way on.
+      const introduced = cards.filter((k) => k.introducedAt !== null);
+      const soonest = introduced.reduce<number | null>(
+        (min, k) => (min === null || k.dueAt < min ? k.dueAt : min),
+        null,
+      );
+      const remainingNew = introductionQueue(
+        { concepts, cards, modality, utteranceCount: counts },
+        1,
+      ).length;
+      return c.json({
+        type: 'idle',
+        reason: action.reason,
+        // 'cap' means more material exists and only the daily limit is stopping you.
+        cause: remainingNew > 0 && introducedToday >= maxNewPerDay ? 'cap' : 'nothing-due',
+        nextDueAt: soonest,
+        queue,
+      });
     }
 
     const conceptId =
@@ -342,6 +365,12 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
       total: concepts.length,
       reviewsToday: await q.countEventsSince(db, startOfToday(at)),
       reviews24h: await q.countEventsSince(db, dayAgo),
+      // How much new material is left. At a dozen or more words a day the corpus is
+      // the real limiter, and it should be visible before it runs out rather than after.
+      remainingNew: introductionQueue(
+        { concepts, cards, modality, utteranceCount: await q.utteranceCounts(db) },
+        10_000,
+      ).length,
       // Should always be empty; surfaced because a corpus edit can create one.
       stranded: strandedCards(cards, modality, utterances).map((k) => k.conceptId),
     });
