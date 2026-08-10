@@ -248,6 +248,37 @@ export async function recentLatencies(db: Db, limit = 200): Promise<number[]> {
   return rows.map((r) => r.latency_ms);
 }
 
+/**
+ * Gaps between consecutive reps within a session, grouped by modality and whether the
+ * rep introduced a word.
+ *
+ * Real elapsed time per rep, so a session estimate is measured rather than invented. A
+ * made-up "about ten minutes" is worse than no estimate: it is wrong in a direction the
+ * learner cannot predict, and they stop believing the next one.
+ */
+export async function repGaps(
+  db: Db,
+): Promise<{ modality: Modality; kind: 'review' | 'new'; gap: number }[]> {
+  const rows = await db.all<{ modality: Modality; exercise_type: string; gap: number }>(`
+    SELECT modality, exercise_type, gap FROM (
+      SELECT modality,
+             exercise_type,
+             ts - LAG(ts) OVER (PARTITION BY session_id ORDER BY ts) AS gap
+      FROM event
+      WHERE kind = 'review' AND session_id IS NOT NULL AND modality IS NOT NULL
+        -- Tone drills are logged as listening reviews but are a different activity and
+        -- several times quicker; including them made a listening block look faster than
+        -- it is, which is precisely the kind of estimate that stops being believed.
+        AND exercise_type NOT IN ('tone_id', 'tone_same_diff')
+    ) WHERE gap IS NOT NULL
+  `);
+  return rows.map((r) => ({
+    modality: r.modality,
+    kind: r.exercise_type === 'first-exposure' ? 'new' : 'review',
+    gap: r.gap,
+  }));
+}
+
 export async function countEventsSince(db: Db, since: number): Promise<number> {
   const r = await db.first<{ n: number }>(
     `SELECT count(*) AS n FROM event WHERE kind = 'review' AND ts >= ?`,

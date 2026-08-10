@@ -128,6 +128,40 @@ export type SpeakResponse =
   | ({ unusable: false; score: SpeechScore } & AnswerResponse)
   | { unusable: true; reason: string | null; score: SpeechScore };
 
+export interface PlanBlock {
+  kind: 'review' | 'new';
+  modality: Modality;
+  reps: number;
+  reason: string;
+  /** Null when there is no measured pace yet — shown as unknown, never guessed. */
+  estimateMs: number | null;
+}
+
+export interface Plan {
+  blocks: PlanBlock[];
+  totalMs: number | null;
+  states: {
+    modality: Modality;
+    due: number;
+    newAvailable: number;
+    introducedToday: number;
+    dailyCap: number;
+  }[];
+  standing: {
+    /** Passing the retention test — legitimately 0 for the first couple of weeks. */
+    solid: number;
+    /** Introduced and in rotation. */
+    learning: number;
+    total: number;
+    medianLatencyMs: number | null;
+    reviewsToday: number;
+  };
+  watch: {
+    tone: { correct: number; total: number };
+    remainingNew: number;
+  };
+}
+
 export interface CaptureResponse {
   captureId: number;
   text: string;
@@ -174,6 +208,8 @@ export const api = {
   stats: (modality: Modality = 'listen') => json<Stats>(`/api/stats?modality=${modality}`),
 
   health: () => json<{ ok: boolean; speech: boolean }>('/api/health'),
+
+  plan: (maxNew?: number) => json<Plan>('/api/plan' + (maxNew ? `?maxNew=${maxNew}` : '')),
 
   /**
    * Upload one spoken attempt. Multipart rather than JSON so the recording goes up as

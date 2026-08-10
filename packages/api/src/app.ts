@@ -20,13 +20,17 @@ import {
   gradeSpeak,
   hskCoverage,
   introductionQueue,
+  measurePace,
   medianLatency,
   newCard,
   nextAction,
+  planDuration,
+  planSession,
   review,
   strandedCards,
   type Grade,
   type Modality,
+  type ModalityState,
 } from '@mt/core';
 import * as q from './queries.ts';
 
@@ -548,6 +552,89 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
       intervalDays: Math.round((result.intervalMs / 86_400_000) * 10) / 10,
       retentionAtDue: Math.round(result.retentionAtDue * 100) / 100,
       score,
+    });
+  });
+
+  /**
+   * The home screen: what to do next, why, and how long it should take.
+   *
+   * Everything here is derived from the log rather than configured. The session
+   * estimate uses measured gaps between the learner's own reps, and the "watch" items
+   * are the two things the data says are actually going wrong — tone perception sitting
+   * at chance, and the corpus running out.
+   */
+  app.get('/api/plan', async (c) => {
+    const at = now();
+    const maxNewPerDay = Number(c.req.query('maxNew') ?? 15);
+    const today = startOfToday(at);
+
+    const [concepts, counts, gaps] = await Promise.all([
+      q.loadConcepts(db),
+      q.utteranceCounts(db),
+      q.repGaps(db),
+    ]);
+
+    const heard = await q.loadCards(db, 'listen');
+    const speakable = new Set(
+      heard.filter((k) => k.introducedAt !== null).map((k) => k.conceptId),
+    );
+
+    const states: ModalityState[] = [];
+    for (const modality of ['listen', 'speak'] as Modality[]) {
+      const cards = await q.loadCards(db, modality);
+      // Speaking draws only on words already heard — the same gate /api/next applies.
+      const eligible = modality === 'speak' ? concepts.filter((x) => speakable.has(x.id)) : concepts;
+      states.push({
+        modality,
+        due: cards.filter((k) => k.introducedAt !== null && k.dueAt <= at.getTime()).length,
+        newAvailable: introductionQueue(
+          { concepts: eligible, cards, modality, utteranceCount: counts },
+          10_000,
+        ).length,
+        introducedToday: await q.introducedSince(db, today, modality),
+        dailyCap: maxNewPerDay,
+      });
+    }
+
+    const paceMs = new Map<string, number>();
+    for (const key of ['listen:review', 'listen:new', 'speak:review', 'speak:new']) {
+      const [m, k] = key.split(':');
+      const p = measurePace(
+        gaps.filter((g) => g.modality === m && g.kind === k).map((g) => g.gap),
+      );
+      if (p !== null) paceMs.set(key, p);
+    }
+
+    const blocks = planSession({ states, paceMs });
+
+    const listenCards = heard;
+    const coverage = hskCoverage(concepts, listenCards, 'listen', at);
+    const toneRow = await db.first<{ ok: number; n: number }>(
+      `SELECT sum(CASE WHEN result = 'good' THEN 1 ELSE 0 END) AS ok, count(*) AS n
+       FROM event WHERE exercise_type = 'tone_id'`,
+    );
+
+    return c.json({
+      blocks,
+      totalMs: planDuration(blocks),
+      states,
+      standing: {
+        // Three counts that mean different things and were being conflated. `solid`
+        // uses the retention test — predicted 85% recall at a fortnight — so it is
+        // legitimately zero for the first couple of weeks, and the UI has to say that
+        // rather than present a bare 0 next to a 12 and let them contradict each other.
+        solid: coverage.perLevel.reduce((n, l) => n + l.known, 0),
+        learning: listenCards.filter((k) => k.introducedAt !== null).length,
+        total: concepts.length,
+        medianLatencyMs: medianLatency(await q.recentLatencies(db)),
+        reviewsToday: await q.countEventsSince(db, today),
+      },
+      // Surfaced because the log disagrees with how these feel. Tone ID has sat below
+      // chance for a four-way choice since the first session.
+      watch: {
+        tone: { correct: toneRow?.ok ?? 0, total: toneRow?.n ?? 0 },
+        remainingNew: states.find((s) => s.modality === 'listen')?.newAvailable ?? 0,
+      },
     });
   });
 

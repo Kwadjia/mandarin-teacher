@@ -1,15 +1,17 @@
 import { useCallback, useEffect, useState } from 'react';
 import { api } from './api.ts';
 import { Drill } from './Drill.tsx';
+import { Home } from './Home.tsx';
 import { Shadow } from './Shadow.tsx';
 import { ToneDrill } from './ToneDrill.tsx';
 import { Capture } from './Capture.tsx';
 import { Stats } from './Stats.tsx';
 
-type View = 'drill' | 'speak' | 'tones' | 'capture' | 'stats';
+type View = 'home' | 'drill' | 'speak' | 'tones' | 'capture' | 'stats';
 
-// Ordered by priority: listening, then speaking (docs/design.md §1).
+// Home first, then the priority order: listening, speaking (docs/design.md §1).
 const TABS: [View, string][] = [
+  ['home', 'Today'],
   ['drill', 'Listen'],
   ['speak', 'Speak'],
   ['tones', 'Tones'],
@@ -20,7 +22,9 @@ const TABS: [View, string][] = [
 export function App() {
   const [started, setStarted] = useState(false);
   const [sessionId, setSessionId] = useState<number | null>(null);
-  const [view, setView] = useState<View>('drill');
+  // Opens on the plan rather than a drill: the point of the home screen is that the
+  // order is decided before the session starts, not by whichever tab is nearest.
+  const [view, setView] = useState<View>('home');
   const [answered, setAnswered] = useState(0);
 
   const begin = useCallback(async () => {
@@ -83,6 +87,9 @@ export function App() {
       </header>
 
       <div className="min-h-[26rem]">
+        {view === 'home' && (
+          <Home onGo={(m) => setView(m === 'speak' ? 'speak' : 'drill')} />
+        )}
         {view === 'drill' && (
           <Drill sessionId={sessionId} onAnswered={() => setAnswered((n) => n + 1)} />
         )}
