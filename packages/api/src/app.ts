@@ -116,6 +116,8 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
       answered: number;
       latencyMs?: number | null;
       exerciseType?: string;
+      /** Extra detail merged into the event payload — shape varies by drill. */
+      detail?: Record<string, unknown>;
     };
     if (!body.syllable || typeof body.tone !== 'number') {
       return c.json({ error: 'syllable and tone are required' }, 400);
@@ -129,19 +131,42 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
       exerciseType: body.exerciseType ?? 'tone_id',
       result: correct ? 'good' : 'again',
       latencyMs: body.latencyMs ?? null,
-      payload: { syllable: body.syllable, tone: body.tone, answered: body.answered },
+      payload: {
+        syllable: body.syllable,
+        tone: body.tone,
+        answered: body.answered,
+        ...(body.detail ?? {}),
+      },
     });
     return c.json({ correct });
   });
 
+  /**
+   * Tone accuracy, overall and per tone. Reported because self-report and measured
+   * perception turned out to disagree sharply — an exercise can feel helpful while
+   * accuracy sits at chance, and only the log knows which.
+   */
   app.get('/api/tone-stats', async (c) => {
-    const rows = await db.all<{ result: string; n: number }>(
-      `SELECT result, count(*) AS n FROM event
-       WHERE exercise_type = 'tone_id' GROUP BY result`,
+    const rows = await db.all<{ exercise_type: string; result: string; n: number }>(
+      `SELECT exercise_type, result, count(*) AS n FROM event
+       WHERE exercise_type IN ('tone_id', 'tone_same_diff') GROUP BY exercise_type, result`,
     );
-    const good = rows.find((r) => r.result === 'good')?.n ?? 0;
-    const again = rows.find((r) => r.result === 'again')?.n ?? 0;
-    return c.json({ correct: good, wrong: again, total: good + again });
+    const tally = (ex: string) => {
+      const good = rows.find((r) => r.exercise_type === ex && r.result === 'good')?.n ?? 0;
+      const again = rows.find((r) => r.exercise_type === ex && r.result === 'again')?.n ?? 0;
+      return { correct: good, wrong: again, total: good + again };
+    };
+
+    const perTone = await db.all<{ tone: number; ok: number; n: number }>(
+      `SELECT json_extract(payload, '$.tone') AS tone,
+              sum(CASE WHEN result = 'good' THEN 1 ELSE 0 END) AS ok,
+              count(*) AS n
+       FROM event WHERE exercise_type = 'tone_id'
+       GROUP BY tone ORDER BY tone`,
+    );
+
+    const id = tally('tone_id');
+    return c.json({ ...id, sameDiff: tally('tone_same_diff'), perTone });
   });
 
   app.post('/api/session', async (c) => {

@@ -60,8 +60,10 @@ export function Drill({ sessionId, onAnswered }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // `useAudio` decides for itself whether this is a replay — the first play of an
+  // item never is, regardless of who triggered it.
   const replay = useCallback(() => {
-    if (clip.current) audio.play(clip.current.url, true);
+    if (clip.current) audio.play(clip.current.url);
   }, [audio]);
 
   const commit = useCallback(

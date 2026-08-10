@@ -20,6 +20,13 @@ export function useAudio() {
   const [playing, setPlaying] = useState(false);
   /** Set when playback finishes — the clock for comprehension latency starts here. */
   const endedAt = useRef<number | null>(null);
+  /**
+   * Whether this item has been heard at all yet. The *first* play is not a replay.
+   * Callers must not decide this themselves: First Exposure does not autoplay, so
+   * making the caller pass a flag meant its initial Play click was counted as a
+   * replay and every single introduction was graded `hard` instead of `good`.
+   */
+  const heard = useRef(false);
 
   useEffect(() => {
     const audio = new Audio();
@@ -37,7 +44,7 @@ export function useAudio() {
     };
   }, []);
 
-  const play = useCallback((url: string, isReplay = false) => {
+  const play = useCallback((url: string) => {
     const audio = el.current;
     if (!audio) return;
     audio.src = url;
@@ -46,11 +53,13 @@ export function useAudio() {
     void audio.play().catch(() => {
       // Autoplay blocked until the first gesture; the Start screen handles that.
     });
-    if (isReplay) setReplays((n) => n + 1);
+    if (heard.current) setReplays((n) => n + 1);
+    else heard.current = true;
   }, []);
 
   const reset = useCallback(() => {
     setReplays(0);
+    heard.current = false;
     endedAt.current = null;
     el.current?.pause();
   }, []);

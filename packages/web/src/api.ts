@@ -124,8 +124,17 @@ export const api = {
     tone: number;
     answered: number;
     latencyMs: number | null;
+    exerciseType?: string;
+    detail?: Record<string, unknown>;
   }) => json<{ correct: boolean }>('/api/tone-answer', { method: 'POST', body: JSON.stringify(body) }),
-  toneStats: () => json<{ correct: number; wrong: number; total: number }>('/api/tone-stats'),
+  toneStats: () =>
+    json<{
+      correct: number;
+      wrong: number;
+      total: number;
+      sameDiff: { correct: number; wrong: number; total: number };
+      perTone: { tone: number; ok: number; n: number }[];
+    }>('/api/tone-stats'),
 
   capture: (text: string, capturedBy?: string) =>
     json<CaptureResponse>('/api/capture', {
