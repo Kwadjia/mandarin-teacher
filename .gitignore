@@ -25,3 +25,7 @@ pipeline/out/
 .DS_Store
 .idea/
 *.swp
+
+# Node
+node_modules/
+package-lock.json
