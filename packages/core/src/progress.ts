@@ -12,8 +12,11 @@ import type { Card, Concept, Modality } from './types.ts';
 
 export interface LevelCoverage {
   level: number;
+  /** The official size of the level — the denominator that matters. */
   total: number;
   known: number;
+  /** How much of the level the corpus can even teach yet. */
+  inCorpus: number;
   coverage: number;
 }
 
@@ -33,7 +36,27 @@ export interface CoverageOptions {
   horizonDays?: number;
   /** Fraction of a level that must be known before that level counts as cleared. */
   levelPass?: number;
+  /**
+   * Official HSK 2.0 level sizes, used as the coverage denominator.
+   *
+   * Dividing by the corpus instead would let "HSK 2 complete" be reached by knowing
+   * every level-2 word we happen to have written a sentence for — the estimate would
+   * measure our content, not his Chinese, and would silently deflate every time the
+   * corpus grew. Against the real sizes, a thin level reads as thin, which is true and
+   * also tells us where to write next.
+   */
+  levelSizes?: Record<number, number>;
 }
+
+/** HSK 2.0, the ordering backbone (docs/design.md §4). */
+export const HSK_SIZES: Record<number, number> = {
+  1: 150,
+  2: 150,
+  3: 300,
+  4: 600,
+  5: 1300,
+  6: 2500,
+};
 
 export function hskCoverage(
   concepts: Concept[],
@@ -42,18 +65,23 @@ export function hskCoverage(
   now: Date,
   opts: CoverageOptions = {},
 ): CoverageReport {
-  const { threshold = 0.85, horizonDays = 14, levelPass = 0.8 } = opts;
+  const {
+    threshold = 0.85,
+    horizonDays = 14,
+    levelPass = 0.8,
+    levelSizes = HSK_SIZES,
+  } = opts;
 
   const byConcept = new Map<number, Card>();
   for (const c of cards) if (c.modality === modality) byConcept.set(c.conceptId, c);
 
-  const levels = new Map<number, { total: number; known: number }>();
+  const levels = new Map<number, { inCorpus: number; known: number }>();
   let shaky = 0;
 
   for (const concept of concepts) {
     if (concept.hskLevel === null) continue;
-    const bucket = levels.get(concept.hskLevel) ?? { total: 0, known: 0 };
-    bucket.total++;
+    const bucket = levels.get(concept.hskLevel) ?? { inCorpus: 0, known: 0 };
+    bucket.inCorpus++;
 
     const card = byConcept.get(concept.id);
     if (card && isRetained(card, now, threshold, horizonDays)) bucket.known++;
@@ -64,12 +92,17 @@ export function hskCoverage(
 
   const perLevel: LevelCoverage[] = [...levels.entries()]
     .sort((a, b) => a[0] - b[0])
-    .map(([level, b]) => ({
-      level,
-      total: b.total,
-      known: b.known,
-      coverage: b.total === 0 ? 0 : b.known / b.total,
-    }));
+    .map(([level, b]) => {
+      // The level's real size, not how much of it we happen to have written.
+      const total = levelSizes[level] ?? b.inCorpus;
+      return {
+        level,
+        total,
+        known: b.known,
+        inCorpus: b.inCorpus,
+        coverage: total === 0 ? 0 : b.known / total,
+      };
+    });
 
   // Highest contiguous level that clears the bar, plus partial progress into the next.
   let cleared = 0;

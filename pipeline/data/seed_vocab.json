@@ -5,307 +5,358 @@
       "headword": "我",
       "pinyin": "wǒ",
       "gloss_en": "I, me",
-      "headword_trad": "我"
+      "headword_trad": "我",
+      "hsk": 1
     },
     {
       "headword": "你",
       "pinyin": "nǐ",
       "gloss_en": "you",
-      "headword_trad": "你"
+      "headword_trad": "你",
+      "hsk": 1
     },
     {
       "headword": "他",
       "pinyin": "tā",
       "gloss_en": "he, him",
-      "headword_trad": "他"
+      "headword_trad": "他",
+      "hsk": 1
     },
     {
       "headword": "她",
       "pinyin": "tā",
       "gloss_en": "she, her",
-      "headword_trad": "她"
+      "headword_trad": "她",
+      "hsk": 1
     },
     {
       "headword": "我们",
       "pinyin": "wǒmen",
       "gloss_en": "we, us",
-      "headword_trad": "我們"
+      "headword_trad": "我們",
+      "hsk": 1
     },
     {
       "headword": "的",
       "pinyin": "de",
       "gloss_en": "possessive particle",
-      "headword_trad": "的"
+      "headword_trad": "的",
+      "hsk": 1
     },
     {
       "headword": "是",
       "pinyin": "shì",
       "gloss_en": "to be",
-      "headword_trad": "是"
+      "headword_trad": "是",
+      "hsk": 1
     },
     {
       "headword": "不",
       "pinyin": "bù",
       "gloss_en": "not",
-      "headword_trad": "不"
+      "headword_trad": "不",
+      "hsk": 1
     },
     {
       "headword": "没",
       "pinyin": "méi",
       "gloss_en": "not have, did not",
-      "headword_trad": "沒"
+      "headword_trad": "沒",
+      "hsk": 1
     },
     {
       "headword": "有",
       "pinyin": "yǒu",
       "gloss_en": "to have",
-      "headword_trad": "有"
+      "headword_trad": "有",
+      "hsk": 1
     },
     {
       "headword": "在",
       "pinyin": "zài",
       "gloss_en": "at, in; to be at",
-      "headword_trad": "在"
+      "headword_trad": "在",
+      "hsk": 1
     },
     {
       "headword": "这",
       "pinyin": "zhè",
       "gloss_en": "this",
-      "headword_trad": "這"
+      "headword_trad": "這",
+      "hsk": 1
     },
     {
       "headword": "那",
       "pinyin": "nà",
       "gloss_en": "that",
-      "headword_trad": "那"
+      "headword_trad": "那",
+      "hsk": 1
     },
     {
       "headword": "什么",
       "pinyin": "shénme",
       "gloss_en": "what",
-      "headword_trad": "什麼"
+      "headword_trad": "什麼",
+      "hsk": 1
     },
     {
       "headword": "谁",
       "pinyin": "shéi",
       "gloss_en": "who",
-      "headword_trad": "誰"
+      "headword_trad": "誰",
+      "hsk": 1
     },
     {
       "headword": "哪里",
       "pinyin": "nǎlǐ",
       "gloss_en": "where",
-      "headword_trad": "哪裡"
+      "headword_trad": "哪裡",
+      "hsk": 1
     },
     {
       "headword": "怎么",
       "pinyin": "zěnme",
       "gloss_en": "how",
-      "headword_trad": "怎麼"
+      "headword_trad": "怎麼",
+      "hsk": 1
     },
     {
       "headword": "好",
       "pinyin": "hǎo",
       "gloss_en": "good",
-      "headword_trad": "好"
+      "headword_trad": "好",
+      "hsk": 1
     },
     {
       "headword": "大",
       "pinyin": "dà",
       "gloss_en": "big",
-      "headword_trad": "大"
+      "headword_trad": "大",
+      "hsk": 1
     },
     {
       "headword": "小",
       "pinyin": "xiǎo",
       "gloss_en": "small",
-      "headword_trad": "小"
+      "headword_trad": "小",
+      "hsk": 1
     },
     {
       "headword": "多",
       "pinyin": "duō",
       "gloss_en": "many, much",
-      "headword_trad": "多"
+      "headword_trad": "多",
+      "hsk": 1
     },
     {
       "headword": "少",
       "pinyin": "shǎo",
       "gloss_en": "few, little",
-      "headword_trad": "少"
+      "headword_trad": "少",
+      "hsk": 1
     },
     {
       "headword": "很",
       "pinyin": "hěn",
       "gloss_en": "very",
-      "headword_trad": "很"
+      "headword_trad": "很",
+      "hsk": 1
     },
     {
       "headword": "太",
       "pinyin": "tài",
       "gloss_en": "too, excessively",
-      "headword_trad": "太"
+      "headword_trad": "太",
+      "hsk": 1
     },
     {
       "headword": "都",
       "pinyin": "dōu",
       "gloss_en": "all, both",
-      "headword_trad": "都"
+      "headword_trad": "都",
+      "hsk": 1
     },
     {
       "headword": "也",
       "pinyin": "yě",
       "gloss_en": "also",
-      "headword_trad": "也"
+      "headword_trad": "也",
+      "hsk": 1
     },
     {
       "headword": "会",
       "pinyin": "huì",
       "gloss_en": "can, will",
-      "headword_trad": "會"
+      "headword_trad": "會",
+      "hsk": 1
     },
     {
       "headword": "能",
       "pinyin": "néng",
       "gloss_en": "be able to",
-      "headword_trad": "能"
+      "headword_trad": "能",
+      "hsk": 1
     },
     {
       "headword": "想",
       "pinyin": "xiǎng",
       "gloss_en": "to want, to think, to miss",
-      "headword_trad": "想"
+      "headword_trad": "想",
+      "hsk": 1
     },
     {
       "headword": "要",
       "pinyin": "yào",
       "gloss_en": "to want, will",
-      "headword_trad": "要"
+      "headword_trad": "要",
+      "hsk": 1
     },
     {
       "headword": "喜欢",
       "pinyin": "xǐhuan",
       "gloss_en": "to like",
-      "headword_trad": "喜歡"
+      "headword_trad": "喜歡",
+      "hsk": 1
     },
     {
       "headword": "吃",
       "pinyin": "chī",
       "gloss_en": "to eat",
-      "headword_trad": "吃"
+      "headword_trad": "吃",
+      "hsk": 1
     },
     {
       "headword": "喝",
       "pinyin": "hē",
       "gloss_en": "to drink",
-      "headword_trad": "喝"
+      "headword_trad": "喝",
+      "hsk": 1
     },
     {
       "headword": "看",
       "pinyin": "kàn",
       "gloss_en": "to look at, to watch",
-      "headword_trad": "看"
+      "headword_trad": "看",
+      "hsk": 1
     },
     {
       "headword": "听",
       "pinyin": "tīng",
       "gloss_en": "to listen",
-      "headword_trad": "聽"
+      "headword_trad": "聽",
+      "hsk": 1
     },
     {
       "headword": "说",
       "pinyin": "shuō",
       "gloss_en": "to speak",
-      "headword_trad": "說"
+      "headword_trad": "說",
+      "hsk": 1
     },
     {
       "headword": "睡觉",
       "pinyin": "shuìjiào",
       "gloss_en": "to sleep",
-      "headword_trad": "睡覺"
+      "headword_trad": "睡覺",
+      "hsk": 1
     },
     {
       "headword": "去",
       "pinyin": "qù",
       "gloss_en": "to go",
-      "headword_trad": "去"
+      "headword_trad": "去",
+      "hsk": 1
     },
     {
       "headword": "来",
       "pinyin": "lái",
       "gloss_en": "to come",
-      "headword_trad": "來"
+      "headword_trad": "來",
+      "hsk": 1
     },
     {
       "headword": "回",
       "pinyin": "huí",
       "gloss_en": "to return",
-      "headword_trad": "回"
+      "headword_trad": "回",
+      "hsk": 1
     },
     {
       "headword": "做",
       "pinyin": "zuò",
       "gloss_en": "to do, to make",
-      "headword_trad": "做"
+      "headword_trad": "做",
+      "hsk": 1
     },
     {
       "headword": "买",
       "pinyin": "mǎi",
       "gloss_en": "to buy",
-      "headword_trad": "買"
+      "headword_trad": "買",
+      "hsk": 1
     },
     {
       "headword": "学习",
       "pinyin": "xuéxí",
       "gloss_en": "to study",
-      "headword_trad": "學習"
+      "headword_trad": "學習",
+      "hsk": 1
     },
     {
       "headword": "工作",
       "pinyin": "gōngzuò",
       "gloss_en": "work; to work",
-      "headword_trad": "工作"
+      "headword_trad": "工作",
+      "hsk": 1
     },
     {
       "headword": "家",
       "pinyin": "jiā",
       "gloss_en": "home, family",
-      "headword_trad": "家"
+      "headword_trad": "家",
+      "hsk": 1
     },
     {
       "headword": "人",
       "pinyin": "rén",
       "gloss_en": "person",
-      "headword_trad": "人"
+      "headword_trad": "人",
+      "hsk": 1
     },
     {
       "headword": "爸爸",
       "pinyin": "bàba",
       "gloss_en": "dad",
-      "headword_trad": "爸爸"
+      "headword_trad": "爸爸",
+      "hsk": 1
     },
     {
       "headword": "妈妈",
       "pinyin": "māma",
       "gloss_en": "mom",
-      "headword_trad": "媽媽"
+      "headword_trad": "媽媽",
+      "hsk": 1
     },
     {
       "headword": "老师",
       "pinyin": "lǎoshī",
       "gloss_en": "teacher",
-      "headword_trad": "老師"
+      "headword_trad": "老師",
+      "hsk": 1
     },
     {
       "headword": "朋友",
       "pinyin": "péngyou",
       "gloss_en": "friend",
-      "headword_trad": "朋友"
+      "headword_trad": "朋友",
+      "hsk": 1
     },
     {
       "headword": "菜",
       "pinyin": "cài",
       "gloss_en": "dish, vegetable",
-      "headword_trad": "菜"
+      "headword_trad": "菜",
+      "hsk": 1
     },
     {
       "headword": "白饭",
@@ -317,547 +368,638 @@
       "headword": "水",
       "pinyin": "shuǐ",
       "gloss_en": "water",
-      "headword_trad": "水"
+      "headword_trad": "水",
+      "hsk": 1
     },
     {
       "headword": "茶",
       "pinyin": "chá",
       "gloss_en": "tea",
-      "headword_trad": "茶"
+      "headword_trad": "茶",
+      "hsk": 1
     },
     {
       "headword": "今天",
       "pinyin": "jīntiān",
       "gloss_en": "today",
-      "headword_trad": "今天"
+      "headword_trad": "今天",
+      "hsk": 1
     },
     {
       "headword": "明天",
       "pinyin": "míngtiān",
       "gloss_en": "tomorrow",
-      "headword_trad": "明天"
+      "headword_trad": "明天",
+      "hsk": 1
     },
     {
       "headword": "昨天",
       "pinyin": "zuótiān",
       "gloss_en": "yesterday",
-      "headword_trad": "昨天"
+      "headword_trad": "昨天",
+      "hsk": 1
     },
     {
       "headword": "现在",
       "pinyin": "xiànzài",
       "gloss_en": "now",
-      "headword_trad": "現在"
+      "headword_trad": "現在",
+      "hsk": 1
     },
     {
       "headword": "上午",
       "pinyin": "shàngwǔ",
       "gloss_en": "morning",
-      "headword_trad": "上午"
+      "headword_trad": "上午",
+      "hsk": 1
     },
     {
       "headword": "下午",
       "pinyin": "xiàwǔ",
       "gloss_en": "afternoon",
-      "headword_trad": "下午"
+      "headword_trad": "下午",
+      "hsk": 1
     },
     {
       "headword": "晚上",
       "pinyin": "wǎnshang",
       "gloss_en": "evening",
-      "headword_trad": "晚上"
+      "headword_trad": "晚上",
+      "hsk": 2
     },
     {
       "headword": "一起",
       "pinyin": "yìqǐ",
       "gloss_en": "together",
-      "headword_trad": "一起"
+      "headword_trad": "一起",
+      "hsk": 1
     },
     {
       "headword": "了",
       "pinyin": "le",
       "gloss_en": "aspect / change-of-state particle",
-      "headword_trad": "了"
+      "headword_trad": "了",
+      "hsk": 1
     },
     {
       "headword": "吗",
       "pinyin": "ma",
       "gloss_en": "yes-no question particle",
-      "headword_trad": "嗎"
+      "headword_trad": "嗎",
+      "hsk": 1
     },
     {
       "headword": "呢",
       "pinyin": "ne",
       "gloss_en": "question particle",
-      "headword_trad": "呢"
+      "headword_trad": "呢",
+      "hsk": 1
     },
     {
       "headword": "吧",
       "pinyin": "ba",
       "gloss_en": "suggestion particle",
-      "headword_trad": "吧"
+      "headword_trad": "吧",
+      "hsk": 2
     },
     {
       "headword": "谢谢",
       "pinyin": "xièxie",
       "gloss_en": "thank you",
-      "headword_trad": "謝謝"
+      "headword_trad": "謝謝",
+      "hsk": 1
     },
     {
       "headword": "你好",
       "pinyin": "nǐhǎo",
       "gloss_en": "hello",
-      "headword_trad": "你好"
+      "headword_trad": "你好",
+      "hsk": 1
     },
     {
       "headword": "再见",
       "pinyin": "zàijiàn",
       "gloss_en": "goodbye",
-      "headword_trad": "再見"
+      "headword_trad": "再見",
+      "hsk": 1
     },
     {
       "headword": "一",
       "pinyin": "yī",
       "gloss_en": "one",
-      "headword_trad": "一"
+      "headword_trad": "一",
+      "hsk": 1
     },
     {
       "headword": "二",
       "pinyin": "èr",
       "gloss_en": "two",
-      "headword_trad": "二"
+      "headword_trad": "二",
+      "hsk": 1
     },
     {
       "headword": "三",
       "pinyin": "sān",
       "gloss_en": "three",
-      "headword_trad": "三"
+      "headword_trad": "三",
+      "hsk": 1
     },
     {
       "headword": "四",
       "pinyin": "sì",
       "gloss_en": "four",
-      "headword_trad": "四"
+      "headword_trad": "四",
+      "hsk": 1
     },
     {
       "headword": "五",
       "pinyin": "wǔ",
       "gloss_en": "five",
-      "headword_trad": "五"
+      "headword_trad": "五",
+      "hsk": 1
     },
     {
       "headword": "六",
       "pinyin": "liù",
       "gloss_en": "six",
-      "headword_trad": "六"
+      "headword_trad": "六",
+      "hsk": 1
     },
     {
       "headword": "七",
       "pinyin": "qī",
       "gloss_en": "seven",
-      "headword_trad": "七"
+      "headword_trad": "七",
+      "hsk": 1
     },
     {
       "headword": "八",
       "pinyin": "bā",
       "gloss_en": "eight",
-      "headword_trad": "八"
+      "headword_trad": "八",
+      "hsk": 1
     },
     {
       "headword": "九",
       "pinyin": "jiǔ",
       "gloss_en": "nine",
-      "headword_trad": "九"
+      "headword_trad": "九",
+      "hsk": 1
     },
     {
       "headword": "十",
       "pinyin": "shí",
       "gloss_en": "ten",
-      "headword_trad": "十"
+      "headword_trad": "十",
+      "hsk": 1
     },
     {
       "headword": "个",
       "pinyin": "gè",
       "gloss_en": "general measure word",
-      "headword_trad": "個"
+      "headword_trad": "個",
+      "hsk": 1
     },
     {
       "headword": "年",
       "pinyin": "nián",
       "gloss_en": "year",
-      "headword_trad": "年"
+      "headword_trad": "年",
+      "hsk": 1
     },
     {
       "headword": "月",
       "pinyin": "yuè",
       "gloss_en": "month",
-      "headword_trad": "月"
+      "headword_trad": "月",
+      "hsk": 1
     },
     {
       "headword": "号",
       "pinyin": "hào",
       "gloss_en": "day of the month",
-      "headword_trad": "號"
+      "headword_trad": "號",
+      "hsk": 1
     },
     {
       "headword": "星期",
       "pinyin": "xīngqí",
       "gloss_en": "week",
-      "headword_trad": "星期"
+      "headword_trad": "星期",
+      "hsk": 1
     },
     {
       "headword": "点",
       "pinyin": "diǎn",
       "gloss_en": "o'clock",
-      "headword_trad": "點"
+      "headword_trad": "點",
+      "hsk": 1
     },
     {
       "headword": "分钟",
       "pinyin": "fēnzhōng",
       "gloss_en": "minute",
-      "headword_trad": "分鐘"
+      "headword_trad": "分鐘",
+      "hsk": 1
     },
     {
       "headword": "时候",
       "pinyin": "shíhou",
       "gloss_en": "time, moment",
-      "headword_trad": "時候"
+      "headword_trad": "時候",
+      "hsk": 1
     },
     {
       "headword": "名字",
       "pinyin": "míngzi",
       "gloss_en": "name",
-      "headword_trad": "名字"
+      "headword_trad": "名字",
+      "hsk": 1
     },
     {
       "headword": "学生",
       "pinyin": "xuésheng",
       "gloss_en": "student",
-      "headword_trad": "學生"
+      "headword_trad": "學生",
+      "hsk": 1
     },
     {
       "headword": "医生",
       "pinyin": "yīshēng",
       "gloss_en": "doctor",
-      "headword_trad": "醫生"
+      "headword_trad": "醫生",
+      "hsk": 1
     },
     {
       "headword": "女",
       "pinyin": "nǚ",
       "gloss_en": "female",
-      "headword_trad": "女"
+      "headword_trad": "女",
+      "hsk": 1
     },
     {
       "headword": "男",
       "pinyin": "nán",
       "gloss_en": "male",
-      "headword_trad": "男"
+      "headword_trad": "男",
+      "hsk": 1
     },
     {
       "headword": "学校",
       "pinyin": "xuéxiào",
       "gloss_en": "school",
-      "headword_trad": "學校"
+      "headword_trad": "學校",
+      "hsk": 1
     },
     {
       "headword": "医院",
       "pinyin": "yīyuàn",
       "gloss_en": "hospital",
-      "headword_trad": "醫院"
+      "headword_trad": "醫院",
+      "hsk": 1
     },
     {
       "headword": "商店",
       "pinyin": "shāngdiàn",
       "gloss_en": "shop",
-      "headword_trad": "商店"
+      "headword_trad": "商店",
+      "hsk": 1
     },
     {
       "headword": "里",
       "pinyin": "lǐ",
       "gloss_en": "inside",
-      "headword_trad": "裡"
+      "headword_trad": "裡",
+      "hsk": 1
     },
     {
       "headword": "上",
       "pinyin": "shàng",
       "gloss_en": "on, above",
-      "headword_trad": "上"
+      "headword_trad": "上",
+      "hsk": 1
     },
     {
       "headword": "下",
       "pinyin": "xià",
       "gloss_en": "under, below",
-      "headword_trad": "下"
+      "headword_trad": "下",
+      "hsk": 1
     },
     {
       "headword": "前面",
       "pinyin": "qiánmiàn",
       "gloss_en": "in front",
-      "headword_trad": "前面"
+      "headword_trad": "前面",
+      "hsk": 1
     },
     {
       "headword": "后面",
       "pinyin": "hòumiàn",
       "gloss_en": "behind",
-      "headword_trad": "後面"
+      "headword_trad": "後面",
+      "hsk": 1
     },
     {
       "headword": "中国",
       "pinyin": "Zhōngguó",
       "gloss_en": "China",
-      "headword_trad": "中國"
+      "headword_trad": "中國",
+      "hsk": 1
     },
     {
       "headword": "中文",
       "pinyin": "Zhōngwén",
       "gloss_en": "Chinese (language)",
-      "headword_trad": "中文"
+      "headword_trad": "中文",
+      "hsk": 1
     },
     {
       "headword": "东西",
       "pinyin": "dōngxi",
       "gloss_en": "thing",
-      "headword_trad": "東西"
+      "headword_trad": "東西",
+      "hsk": 1
     },
     {
       "headword": "电视",
       "pinyin": "diànshì",
       "gloss_en": "television",
-      "headword_trad": "電視"
+      "headword_trad": "電視",
+      "hsk": 1
     },
     {
       "headword": "电话",
       "pinyin": "diànhuà",
       "gloss_en": "telephone",
-      "headword_trad": "電話"
+      "headword_trad": "電話",
+      "hsk": 1
     },
     {
       "headword": "衣服",
       "pinyin": "yīfu",
       "gloss_en": "clothes",
-      "headword_trad": "衣服"
+      "headword_trad": "衣服",
+      "hsk": 1
     },
     {
       "headword": "钱",
       "pinyin": "qián",
       "gloss_en": "money",
-      "headword_trad": "錢"
+      "headword_trad": "錢",
+      "hsk": 1
     },
     {
       "headword": "书",
       "pinyin": "shū",
       "gloss_en": "book",
-      "headword_trad": "書"
+      "headword_trad": "書",
+      "hsk": 1
     },
     {
       "headword": "开",
       "pinyin": "kāi",
       "gloss_en": "to open; to drive",
-      "headword_trad": "開"
+      "headword_trad": "開",
+      "hsk": 1
     },
     {
       "headword": "坐",
       "pinyin": "zuò",
       "gloss_en": "to sit",
-      "headword_trad": "坐"
+      "headword_trad": "坐",
+      "hsk": 1
     },
     {
       "headword": "住",
       "pinyin": "zhù",
       "gloss_en": "to live, to stay",
-      "headword_trad": "住"
+      "headword_trad": "住",
+      "hsk": 1
     },
     {
       "headword": "读",
       "pinyin": "dú",
       "gloss_en": "to read",
-      "headword_trad": "讀"
+      "headword_trad": "讀",
+      "hsk": 1
     },
     {
       "headword": "写",
       "pinyin": "xiě",
       "gloss_en": "to write",
-      "headword_trad": "寫"
+      "headword_trad": "寫",
+      "hsk": 1
     },
     {
       "headword": "认识",
       "pinyin": "rènshi",
       "gloss_en": "to know (a person)",
-      "headword_trad": "認識"
+      "headword_trad": "認識",
+      "hsk": 1
     },
     {
       "headword": "叫",
       "pinyin": "jiào",
       "gloss_en": "to be called",
-      "headword_trad": "叫"
+      "headword_trad": "叫",
+      "hsk": 1
     },
     {
       "headword": "请",
       "pinyin": "qǐng",
       "gloss_en": "please",
-      "headword_trad": "請"
+      "headword_trad": "請",
+      "hsk": 1
     },
     {
       "headword": "给",
       "pinyin": "gěi",
       "gloss_en": "to give",
-      "headword_trad": "給"
+      "headword_trad": "給",
+      "hsk": 1
     },
     {
       "headword": "找",
       "pinyin": "zhǎo",
       "gloss_en": "to look for",
-      "headword_trad": "找"
+      "headword_trad": "找",
+      "hsk": 1
     },
     {
       "headword": "玩",
       "pinyin": "wán",
       "gloss_en": "to play",
-      "headword_trad": "玩"
+      "headword_trad": "玩",
+      "hsk": 2
     },
     {
       "headword": "热",
       "pinyin": "rè",
       "gloss_en": "hot",
-      "headword_trad": "熱"
+      "headword_trad": "熱",
+      "hsk": 1
     },
     {
       "headword": "冷",
       "pinyin": "lěng",
       "gloss_en": "cold",
-      "headword_trad": "冷"
+      "headword_trad": "冷",
+      "hsk": 1
     },
     {
       "headword": "高兴",
       "pinyin": "gāoxìng",
       "gloss_en": "happy",
-      "headword_trad": "高興"
+      "headword_trad": "高興",
+      "hsk": 1
     },
     {
       "headword": "漂亮",
       "pinyin": "piàoliang",
       "gloss_en": "pretty",
-      "headword_trad": "漂亮"
+      "headword_trad": "漂亮",
+      "hsk": 1
     },
     {
       "headword": "新",
       "pinyin": "xīn",
       "gloss_en": "new",
-      "headword_trad": "新"
+      "headword_trad": "新",
+      "hsk": 1
     },
     {
       "headword": "快",
       "pinyin": "kuài",
       "gloss_en": "fast",
-      "headword_trad": "快"
+      "headword_trad": "快",
+      "hsk": 1
     },
     {
       "headword": "慢",
       "pinyin": "màn",
       "gloss_en": "slow",
-      "headword_trad": "慢"
+      "headword_trad": "慢",
+      "hsk": 2
     },
     {
       "headword": "对不起",
       "pinyin": "duìbuqǐ",
       "gloss_en": "sorry",
-      "headword_trad": "對不起"
+      "headword_trad": "對不起",
+      "hsk": 1
     },
     {
       "headword": "没关系",
       "pinyin": "méiguānxi",
       "gloss_en": "it's fine",
-      "headword_trad": "沒關係"
+      "headword_trad": "沒關係",
+      "hsk": 1
     },
     {
       "headword": "不客气",
       "pinyin": "búkèqi",
       "gloss_en": "you're welcome",
-      "headword_trad": "不客氣"
+      "headword_trad": "不客氣",
+      "hsk": 2
     },
     {
       "headword": "和",
       "pinyin": "hé",
       "gloss_en": "and",
-      "headword_trad": "和"
+      "headword_trad": "和",
+      "hsk": 1
     },
     {
       "headword": "早上",
       "pinyin": "zǎoshang",
       "gloss_en": "morning",
-      "headword_trad": "早上"
+      "headword_trad": "早上",
+      "hsk": 2
     },
     {
       "headword": "中午",
       "pinyin": "zhōngwǔ",
       "gloss_en": "noon",
-      "headword_trad": "中午"
+      "headword_trad": "中午",
+      "hsk": 1
     },
     {
       "headword": "小时",
       "pinyin": "xiǎoshí",
       "gloss_en": "hour",
-      "headword_trad": "小時"
+      "headword_trad": "小時",
+      "hsk": 1
     },
     {
       "headword": "每天",
       "pinyin": "měitiān",
       "gloss_en": "every day",
-      "headword_trad": "每天"
+      "headword_trad": "每天",
+      "hsk": 2
     },
     {
       "headword": "每",
       "pinyin": "měi",
       "gloss_en": "every, each",
-      "headword_trad": "每"
+      "headword_trad": "每",
+      "hsk": 2
     },
     {
       "headword": "已经",
       "pinyin": "yǐjīng",
       "gloss_en": "already",
-      "headword_trad": "已經"
+      "headword_trad": "已經",
+      "hsk": 2
     },
     {
       "headword": "正在",
       "pinyin": "zhèngzài",
       "gloss_en": "in the middle of doing",
-      "headword_trad": "正在"
+      "headword_trad": "正在",
+      "hsk": 2
     },
     {
       "headword": "还",
       "pinyin": "hái",
       "gloss_en": "still, yet",
-      "headword_trad": "還"
+      "headword_trad": "還",
+      "hsk": 2
     },
     {
       "headword": "就",
       "pinyin": "jiù",
       "gloss_en": "then, right away",
-      "headword_trad": "就"
+      "headword_trad": "就",
+      "hsk": 2
     },
     {
       "headword": "才",
       "pinyin": "cái",
       "gloss_en": "only just, not until",
-      "headword_trad": "才"
+      "headword_trad": "才",
+      "hsk": 2
     },
     {
       "headword": "以后",
       "pinyin": "yǐhòu",
       "gloss_en": "after, later",
-      "headword_trad": "以後"
+      "headword_trad": "以後",
+      "hsk": 2
     },
     {
       "headword": "以前",
       "pinyin": "yǐqián",
       "gloss_en": "before, previously",
-      "headword_trad": "以前"
+      "headword_trad": "以前",
+      "hsk": 2
     },
     {
       "headword": "时间",
       "pinyin": "shíjiān",
       "gloss_en": "time",
-      "headword_trad": "時間"
+      "headword_trad": "時間",
+      "hsk": 2
     },
     {
       "headword": "午觉",
@@ -869,217 +1011,253 @@
       "headword": "孩子",
       "pinyin": "háizi",
       "gloss_en": "child",
-      "headword_trad": "孩子"
+      "headword_trad": "孩子",
+      "hsk": 2
     },
     {
       "headword": "女儿",
       "pinyin": "nǚ'ér",
       "gloss_en": "daughter",
-      "headword_trad": "女兒"
+      "headword_trad": "女兒",
+      "hsk": 1
     },
     {
       "headword": "哥哥",
       "pinyin": "gēge",
       "gloss_en": "older brother",
-      "headword_trad": "哥哥"
+      "headword_trad": "哥哥",
+      "hsk": 2
     },
     {
       "headword": "姐姐",
       "pinyin": "jiějie",
       "gloss_en": "older sister",
-      "headword_trad": "姐姐"
+      "headword_trad": "姐姐",
+      "hsk": 2
     },
     {
       "headword": "弟弟",
       "pinyin": "dìdi",
       "gloss_en": "younger brother",
-      "headword_trad": "弟弟"
+      "headword_trad": "弟弟",
+      "hsk": 2
     },
     {
       "headword": "妹妹",
       "pinyin": "mèimei",
       "gloss_en": "younger sister",
-      "headword_trad": "妹妹"
+      "headword_trad": "妹妹",
+      "hsk": 2
     },
     {
       "headword": "大家",
       "pinyin": "dàjiā",
       "gloss_en": "everyone",
-      "headword_trad": "大家"
+      "headword_trad": "大家",
+      "hsk": 2
     },
     {
       "headword": "别人",
       "pinyin": "biérén",
       "gloss_en": "other people",
-      "headword_trad": "別人"
+      "headword_trad": "別人",
+      "hsk": 2
     },
     {
       "headword": "自己",
       "pinyin": "zìjǐ",
       "gloss_en": "oneself",
-      "headword_trad": "自己"
+      "headword_trad": "自己",
+      "hsk": 2
     },
     {
       "headword": "说话",
       "pinyin": "shuōhuà",
       "gloss_en": "to speak, to talk",
-      "headword_trad": "說話"
+      "headword_trad": "說話",
+      "hsk": 2
     },
     {
       "headword": "帮",
       "pinyin": "bāng",
       "gloss_en": "to help",
-      "headword_trad": "幫"
+      "headword_trad": "幫",
+      "hsk": 2
     },
     {
       "headword": "等",
       "pinyin": "děng",
       "gloss_en": "to wait",
-      "headword_trad": "等"
+      "headword_trad": "等",
+      "hsk": 2
     },
     {
       "headword": "让",
       "pinyin": "ràng",
       "gloss_en": "to let, to make",
-      "headword_trad": "讓"
+      "headword_trad": "讓",
+      "hsk": 2
     },
     {
       "headword": "送",
       "pinyin": "sòng",
       "gloss_en": "to give, to see off",
-      "headword_trad": "送"
+      "headword_trad": "送",
+      "hsk": 2
     },
     {
       "headword": "拿",
       "pinyin": "ná",
       "gloss_en": "to take, to hold",
-      "headword_trad": "拿"
+      "headword_trad": "拿",
+      "hsk": 3
     },
     {
       "headword": "放",
       "pinyin": "fàng",
       "gloss_en": "to put, to place",
-      "headword_trad": "放"
+      "headword_trad": "放",
+      "hsk": 3
     },
     {
       "headword": "洗",
       "pinyin": "xǐ",
       "gloss_en": "to wash",
-      "headword_trad": "洗"
+      "headword_trad": "洗",
+      "hsk": 2
     },
     {
       "headword": "洗澡",
       "pinyin": "xǐzǎo",
       "gloss_en": "to bathe",
-      "headword_trad": "洗澡"
+      "headword_trad": "洗澡",
+      "hsk": 2
     },
     {
       "headword": "穿",
       "pinyin": "chuān",
       "gloss_en": "to wear, to put on",
-      "headword_trad": "穿"
+      "headword_trad": "穿",
+      "hsk": 2
     },
     {
       "headword": "起床",
       "pinyin": "qǐchuáng",
       "gloss_en": "to get up",
-      "headword_trad": "起床"
+      "headword_trad": "起床",
+      "hsk": 2
     },
     {
       "headword": "休息",
       "pinyin": "xiūxi",
       "gloss_en": "to rest",
-      "headword_trad": "休息"
+      "headword_trad": "休息",
+      "hsk": 2
     },
     {
       "headword": "准备",
       "pinyin": "zhǔnbèi",
       "gloss_en": "to prepare",
-      "headword_trad": "準備"
+      "headword_trad": "準備",
+      "hsk": 2
     },
     {
       "headword": "知道",
       "pinyin": "zhīdào",
       "gloss_en": "to know",
-      "headword_trad": "知道"
+      "headword_trad": "知道",
+      "hsk": 2
     },
     {
       "headword": "觉得",
       "pinyin": "juéde",
       "gloss_en": "to feel, to think",
-      "headword_trad": "覺得"
+      "headword_trad": "覺得",
+      "hsk": 2
     },
     {
       "headword": "希望",
       "pinyin": "xīwàng",
       "gloss_en": "to hope",
-      "headword_trad": "希望"
+      "headword_trad": "希望",
+      "hsk": 2
     },
     {
       "headword": "需要",
       "pinyin": "xūyào",
       "gloss_en": "to need",
-      "headword_trad": "需要"
+      "headword_trad": "需要",
+      "hsk": 2
     },
     {
       "headword": "应该",
       "pinyin": "yīnggāi",
       "gloss_en": "should",
-      "headword_trad": "應該"
+      "headword_trad": "應該",
+      "hsk": 2
     },
     {
       "headword": "可以",
       "pinyin": "kěyǐ",
       "gloss_en": "can, may",
-      "headword_trad": "可以"
+      "headword_trad": "可以",
+      "hsk": 2
     },
     {
       "headword": "完",
       "pinyin": "wán",
       "gloss_en": "to finish",
-      "headword_trad": "完"
+      "headword_trad": "完",
+      "hsk": 2
     },
     {
       "headword": "开始",
       "pinyin": "kāishǐ",
       "gloss_en": "to begin",
-      "headword_trad": "開始"
+      "headword_trad": "開始",
+      "hsk": 2
     },
     {
       "headword": "走",
       "pinyin": "zǒu",
       "gloss_en": "to walk, to leave",
-      "headword_trad": "走"
+      "headword_trad": "走",
+      "hsk": 2
     },
     {
       "headword": "跑",
       "pinyin": "pǎo",
       "gloss_en": "to run",
-      "headword_trad": "跑"
+      "headword_trad": "跑",
+      "hsk": 2
     },
     {
       "headword": "出去",
       "pinyin": "chūqù",
       "gloss_en": "to go out",
-      "headword_trad": "出去"
+      "headword_trad": "出去",
+      "hsk": 3
     },
     {
       "headword": "进来",
       "pinyin": "jìnlái",
       "gloss_en": "to come in",
-      "headword_trad": "進來"
+      "headword_trad": "進來",
+      "hsk": 3
     },
     {
       "headword": "上班",
       "pinyin": "shàngbān",
       "gloss_en": "to go to work",
-      "headword_trad": "上班"
+      "headword_trad": "上班",
+      "hsk": 2
     },
     {
       "headword": "下班",
       "pinyin": "xiàbān",
       "gloss_en": "to finish work",
-      "headword_trad": "下班"
+      "headword_trad": "下班",
+      "hsk": 3
     },
     {
       "headword": "哄",
@@ -1103,79 +1281,92 @@
       "headword": "忙",
       "pinyin": "máng",
       "gloss_en": "busy",
-      "headword_trad": "忙"
+      "headword_trad": "忙",
+      "hsk": 2
     },
     {
       "headword": "早",
       "pinyin": "zǎo",
       "gloss_en": "early",
-      "headword_trad": "早"
+      "headword_trad": "早",
+      "hsk": 2
     },
     {
       "headword": "晚",
       "pinyin": "wǎn",
       "gloss_en": "late",
-      "headword_trad": "晚"
+      "headword_trad": "晚",
+      "hsk": 2
     },
     {
       "headword": "长",
       "pinyin": "cháng",
       "gloss_en": "long",
-      "headword_trad": "長"
+      "headword_trad": "長",
+      "hsk": 2
     },
     {
       "headword": "短",
       "pinyin": "duǎn",
       "gloss_en": "short",
-      "headword_trad": "短"
+      "headword_trad": "短",
+      "hsk": 2
     },
     {
       "headword": "贵",
       "pinyin": "guì",
       "gloss_en": "expensive",
-      "headword_trad": "貴"
+      "headword_trad": "貴",
+      "hsk": 2
     },
     {
       "headword": "便宜",
       "pinyin": "piányi",
       "gloss_en": "cheap",
-      "headword_trad": "便宜"
+      "headword_trad": "便宜",
+      "hsk": 2
     },
     {
       "headword": "难",
       "pinyin": "nán",
       "gloss_en": "difficult",
-      "headword_trad": "難"
+      "headword_trad": "難",
+      "hsk": 2
     },
     {
       "headword": "容易",
       "pinyin": "róngyì",
       "gloss_en": "easy",
-      "headword_trad": "容易"
+      "headword_trad": "容易",
+      "hsk": 2
     },
     {
       "headword": "重要",
       "pinyin": "zhòngyào",
       "gloss_en": "important",
-      "headword_trad": "重要"
+      "headword_trad": "重要",
+      "hsk": 3
     },
     {
       "headword": "干净",
       "pinyin": "gānjìng",
       "gloss_en": "clean",
-      "headword_trad": "乾淨"
+      "headword_trad": "乾淨",
+      "hsk": 2
     },
     {
       "headword": "舒服",
       "pinyin": "shūfu",
       "gloss_en": "comfortable, well",
-      "headword_trad": "舒服"
+      "headword_trad": "舒服",
+      "hsk": 3
     },
     {
       "headword": "安全",
       "pinyin": "ānquán",
       "gloss_en": "safe",
-      "headword_trad": "安全"
+      "headword_trad": "安全",
+      "hsk": 3
     },
     {
       "headword": "大声",
@@ -1187,91 +1378,106 @@
       "headword": "一样",
       "pinyin": "yíyàng",
       "gloss_en": "the same",
-      "headword_trad": "一樣"
+      "headword_trad": "一樣",
+      "hsk": 3
     },
     {
       "headword": "真",
       "pinyin": "zhēn",
       "gloss_en": "really, truly",
-      "headword_trad": "真"
+      "headword_trad": "真",
+      "hsk": 2
     },
     {
       "headword": "最",
       "pinyin": "zuì",
       "gloss_en": "most",
-      "headword_trad": "最"
+      "headword_trad": "最",
+      "hsk": 2
     },
     {
       "headword": "非常",
       "pinyin": "fēicháng",
       "gloss_en": "extremely",
-      "headword_trad": "非常"
+      "headword_trad": "非常",
+      "hsk": 2
     },
     {
       "headword": "事情",
       "pinyin": "shìqing",
       "gloss_en": "matter, thing",
-      "headword_trad": "事情"
+      "headword_trad": "事情",
+      "hsk": 2
     },
     {
       "headword": "问题",
       "pinyin": "wèntí",
       "gloss_en": "question, problem",
-      "headword_trad": "問題"
+      "headword_trad": "問題",
+      "hsk": 2
     },
     {
       "headword": "办法",
       "pinyin": "bànfǎ",
       "gloss_en": "way, method",
-      "headword_trad": "辦法"
+      "headword_trad": "辦法",
+      "hsk": 3
     },
     {
       "headword": "地方",
       "pinyin": "dìfang",
       "gloss_en": "place",
-      "headword_trad": "地方"
+      "headword_trad": "地方",
+      "hsk": 3
     },
     {
       "headword": "房间",
       "pinyin": "fángjiān",
       "gloss_en": "room",
-      "headword_trad": "房間"
+      "headword_trad": "房間",
+      "hsk": 2
     },
     {
       "headword": "厨房",
       "pinyin": "chúfáng",
       "gloss_en": "kitchen",
-      "headword_trad": "廚房"
+      "headword_trad": "廚房",
+      "hsk": 3
     },
     {
       "headword": "床",
       "pinyin": "chuáng",
       "gloss_en": "bed",
-      "headword_trad": "床"
+      "headword_trad": "床",
+      "hsk": 2
     },
     {
       "headword": "桌子",
       "pinyin": "zhuōzi",
       "gloss_en": "table",
-      "headword_trad": "桌子"
+      "headword_trad": "桌子",
+      "hsk": 2
     },
     {
       "headword": "椅子",
       "pinyin": "yǐzi",
       "gloss_en": "chair",
-      "headword_trad": "椅子"
+      "headword_trad": "椅子",
+      "hsk": 2
     },
     {
       "headword": "门",
       "pinyin": "mén",
       "gloss_en": "door",
-      "headword_trad": "門"
+      "headword_trad": "門",
+      "hsk": 2
     },
     {
       "headword": "窗户",
       "pinyin": "chuānghu",
       "gloss_en": "window",
-      "headword_trad": "窗戶"
+      "headword_trad": "窗戶",
+      "hsk": 3
     },
     {
       "headword": "灯",
@@ -1283,73 +1489,85 @@
       "headword": "手机",
       "pinyin": "shǒujī",
       "gloss_en": "mobile phone",
-      "headword_trad": "手機"
+      "headword_trad": "手機",
+      "hsk": 2
     },
     {
       "headword": "音乐",
       "pinyin": "yīnyuè",
       "gloss_en": "music",
-      "headword_trad": "音樂"
+      "headword_trad": "音樂",
+      "hsk": 3
     },
     {
       "headword": "牛奶",
       "pinyin": "niúnǎi",
       "gloss_en": "milk",
-      "headword_trad": "牛奶"
+      "headword_trad": "牛奶",
+      "hsk": 2
     },
     {
       "headword": "鸡蛋",
       "pinyin": "jīdàn",
       "gloss_en": "egg",
-      "headword_trad": "雞蛋"
+      "headword_trad": "雞蛋",
+      "hsk": 2
     },
     {
       "headword": "面包",
       "pinyin": "miànbāo",
       "gloss_en": "bread",
-      "headword_trad": "麵包"
+      "headword_trad": "麵包",
+      "hsk": 3
     },
     {
       "headword": "面条",
       "pinyin": "miàntiáo",
       "gloss_en": "noodles",
-      "headword_trad": "麵條"
+      "headword_trad": "麵條",
+      "hsk": 2
     },
     {
       "headword": "水果",
       "pinyin": "shuǐguǒ",
       "gloss_en": "fruit",
-      "headword_trad": "水果"
+      "headword_trad": "水果",
+      "hsk": 2
     },
     {
       "headword": "苹果",
       "pinyin": "píngguǒ",
       "gloss_en": "apple",
-      "headword_trad": "蘋果"
+      "headword_trad": "蘋果",
+      "hsk": 2
     },
     {
       "headword": "香蕉",
       "pinyin": "xiāngjiāo",
       "gloss_en": "banana",
-      "headword_trad": "香蕉"
+      "headword_trad": "香蕉",
+      "hsk": 2
     },
     {
       "headword": "肉",
       "pinyin": "ròu",
       "gloss_en": "meat",
-      "headword_trad": "肉"
+      "headword_trad": "肉",
+      "hsk": 2
     },
     {
       "headword": "鱼",
       "pinyin": "yú",
       "gloss_en": "fish",
-      "headword_trad": "魚"
+      "headword_trad": "魚",
+      "hsk": 2
     },
     {
       "headword": "汤",
       "pinyin": "tāng",
       "gloss_en": "soup",
-      "headword_trad": "湯"
+      "headword_trad": "湯",
+      "hsk": 3
     },
     {
       "headword": "早饭",
@@ -1373,229 +1591,267 @@
       "headword": "为什么",
       "pinyin": "wèishénme",
       "gloss_en": "why",
-      "headword_trad": "為什麼"
+      "headword_trad": "為什麼",
+      "hsk": 2
     },
     {
       "headword": "因为",
       "pinyin": "yīnwèi",
       "gloss_en": "because",
-      "headword_trad": "因為"
+      "headword_trad": "因為",
+      "hsk": 2
     },
     {
       "headword": "所以",
       "pinyin": "suǒyǐ",
       "gloss_en": "so, therefore",
-      "headword_trad": "所以"
+      "headword_trad": "所以",
+      "hsk": 2
     },
     {
       "headword": "但是",
       "pinyin": "dànshì",
       "gloss_en": "but",
-      "headword_trad": "但是"
+      "headword_trad": "但是",
+      "hsk": 2
     },
     {
       "headword": "可是",
       "pinyin": "kěshì",
       "gloss_en": "but, however",
-      "headword_trad": "可是"
+      "headword_trad": "可是",
+      "hsk": 2
     },
     {
       "headword": "还是",
       "pinyin": "háishi",
       "gloss_en": "or (in questions); still",
-      "headword_trad": "還是"
+      "headword_trad": "還是",
+      "hsk": 2
     },
     {
       "headword": "或者",
       "pinyin": "huòzhě",
       "gloss_en": "or",
-      "headword_trad": "或者"
+      "headword_trad": "或者",
+      "hsk": 2
     },
     {
       "headword": "如果",
       "pinyin": "rúguǒ",
       "gloss_en": "if",
-      "headword_trad": "如果"
+      "headword_trad": "如果",
+      "hsk": 2
     },
     {
       "headword": "跟",
       "pinyin": "gēn",
       "gloss_en": "with, and",
-      "headword_trad": "跟"
+      "headword_trad": "跟",
+      "hsk": 2
     },
     {
       "headword": "对",
       "pinyin": "duì",
       "gloss_en": "correct; toward",
-      "headword_trad": "對"
+      "headword_trad": "對",
+      "hsk": 2
     },
     {
       "headword": "错",
       "pinyin": "cuò",
       "gloss_en": "wrong",
-      "headword_trad": "錯"
+      "headword_trad": "錯",
+      "hsk": 2
     },
     {
       "headword": "一点",
       "pinyin": "yìdiǎn",
       "gloss_en": "a little",
-      "headword_trad": "一點"
+      "headword_trad": "一點",
+      "hsk": 2
     },
     {
       "headword": "一下",
       "pinyin": "yíxià",
       "gloss_en": "briefly, a moment",
-      "headword_trad": "一下"
+      "headword_trad": "一下",
+      "hsk": 2
     },
     {
       "headword": "有点",
       "pinyin": "yǒudiǎn",
       "gloss_en": "a bit (of something unwanted)",
-      "headword_trad": "有點"
+      "headword_trad": "有點",
+      "hsk": 2
     },
     {
       "headword": "比",
       "pinyin": "bǐ",
       "gloss_en": "compared to",
-      "headword_trad": "比"
+      "headword_trad": "比",
+      "hsk": 2
     },
     {
       "headword": "别",
       "pinyin": "bié",
       "gloss_en": "don't",
-      "headword_trad": "別"
+      "headword_trad": "別",
+      "hsk": 2
     },
     {
       "headword": "哪",
       "pinyin": "nǎ",
       "gloss_en": "which",
-      "headword_trad": "哪"
+      "headword_trad": "哪",
+      "hsk": 1
     },
     {
       "headword": "些",
       "pinyin": "xiē",
       "gloss_en": "some (measure)",
-      "headword_trad": "些"
+      "headword_trad": "些",
+      "hsk": 1
     },
     {
       "headword": "多少",
       "pinyin": "duōshao",
       "gloss_en": "how many, how much",
-      "headword_trad": "多少"
+      "headword_trad": "多少",
+      "hsk": 1
     },
     {
       "headword": "怎么样",
       "pinyin": "zěnmeyàng",
       "gloss_en": "how is it",
-      "headword_trad": "怎麼樣"
+      "headword_trad": "怎麼樣",
+      "hsk": 1
     },
     {
       "headword": "只",
       "pinyin": "zhī",
       "gloss_en": "(measure for animals)",
-      "headword_trad": "只"
+      "headword_trad": "只",
+      "hsk": 2
     },
     {
       "headword": "张",
       "pinyin": "zhāng",
       "gloss_en": "(measure for flat things)",
-      "headword_trad": "張"
+      "headword_trad": "張",
+      "hsk": 2
     },
     {
       "headword": "本",
       "pinyin": "běn",
       "gloss_en": "(measure for books)",
-      "headword_trad": "本"
+      "headword_trad": "本",
+      "hsk": 1
     },
     {
       "headword": "件",
       "pinyin": "jiàn",
       "gloss_en": "(measure for clothes, matters)",
-      "headword_trad": "件"
+      "headword_trad": "件",
+      "hsk": 2
     },
     {
       "headword": "瓶",
       "pinyin": "píng",
       "gloss_en": "bottle (measure)",
-      "headword_trad": "瓶"
+      "headword_trad": "瓶",
+      "hsk": 2
     },
     {
       "headword": "杯",
       "pinyin": "bēi",
       "gloss_en": "cup (measure)",
-      "headword_trad": "杯"
+      "headword_trad": "杯",
+      "hsk": 1
     },
     {
       "headword": "次",
       "pinyin": "cì",
       "gloss_en": "time, occurrence (measure)",
-      "headword_trad": "次"
+      "headword_trad": "次",
+      "hsk": 2
     },
     {
       "headword": "生病",
       "pinyin": "shēngbìng",
       "gloss_en": "to fall ill",
-      "headword_trad": "生病"
+      "headword_trad": "生病",
+      "hsk": 2
     },
     {
       "headword": "发烧",
       "pinyin": "fāshāo",
       "gloss_en": "to have a fever",
-      "headword_trad": "發燒"
+      "headword_trad": "發燒",
+      "hsk": 2
     },
     {
       "headword": "疼",
       "pinyin": "téng",
       "gloss_en": "to hurt, sore",
-      "headword_trad": "疼"
+      "headword_trad": "疼",
+      "hsk": 2
     },
     {
       "headword": "药",
       "pinyin": "yào",
       "gloss_en": "medicine",
-      "headword_trad": "藥"
+      "headword_trad": "藥",
+      "hsk": 2
     },
     {
       "headword": "天气",
       "pinyin": "tiānqì",
       "gloss_en": "weather",
-      "headword_trad": "天氣"
+      "headword_trad": "天氣",
+      "hsk": 1
     },
     {
       "headword": "下雨",
       "pinyin": "xiàyǔ",
       "gloss_en": "to rain",
-      "headword_trad": "下雨"
+      "headword_trad": "下雨",
+      "hsk": 1
     },
     {
       "headword": "太阳",
       "pinyin": "tàiyáng",
       "gloss_en": "sun",
-      "headword_trad": "太陽"
+      "headword_trad": "太陽",
+      "hsk": 3
     },
     {
       "headword": "公园",
       "pinyin": "gōngyuán",
       "gloss_en": "park",
-      "headword_trad": "公園"
+      "headword_trad": "公園",
+      "hsk": 3
     },
     {
       "headword": "超市",
       "pinyin": "chāoshì",
       "gloss_en": "supermarket",
-      "headword_trad": "超市"
+      "headword_trad": "超市",
+      "hsk": 3
     },
     {
       "headword": "外面",
       "pinyin": "wàimiàn",
       "gloss_en": "outside",
-      "headword_trad": "外面"
+      "headword_trad": "外面",
+      "hsk": 2
     },
     {
       "headword": "上网",
       "pinyin": "shàngwǎng",
       "gloss_en": "to go online",
-      "headword_trad": "上網"
+      "headword_trad": "上網",
+      "hsk": 3
     },
     {
       "headword": "视频",
@@ -1607,19 +1863,22 @@
       "headword": "运动",
       "pinyin": "yùndòng",
       "gloss_en": "to exercise",
-      "headword_trad": "運動"
+      "headword_trad": "運動",
+      "hsk": 2
     },
     {
       "headword": "跑步",
       "pinyin": "pǎobù",
       "gloss_en": "to go running",
-      "headword_trad": "跑步"
+      "headword_trad": "跑步",
+      "hsk": 2
     },
     {
       "headword": "睡",
       "pinyin": "shuì",
       "gloss_en": "to sleep",
-      "headword_trad": "睡"
+      "headword_trad": "睡",
+      "hsk": 1
     },
     {
       "headword": "该",
@@ -1631,7 +1890,8 @@
       "headword": "过",
       "pinyin": "guò",
       "gloss_en": "(experiential marker); to pass",
-      "headword_trad": "過"
+      "headword_trad": "過",
+      "hsk": 2
     },
     {
       "headword": "奶",
@@ -1643,67 +1903,1247 @@
       "headword": "几",
       "pinyin": "jǐ",
       "gloss_en": "how many; a few",
-      "headword_trad": "幾"
+      "headword_trad": "幾",
+      "hsk": 1
     },
     {
       "headword": "两",
       "pinyin": "liǎng",
       "gloss_en": "two (of something)",
-      "headword_trad": "兩"
+      "headword_trad": "兩",
+      "hsk": 1
     },
     {
       "headword": "马上",
       "pinyin": "mǎshàng",
       "gloss_en": "right away",
-      "headword_trad": "馬上"
+      "headword_trad": "馬上",
+      "hsk": 3
     },
     {
       "headword": "岁",
       "pinyin": "suì",
       "gloss_en": "years of age",
-      "headword_trad": "歲"
+      "headword_trad": "歲",
+      "hsk": 1
     },
     {
       "headword": "得",
       "pinyin": "de",
       "gloss_en": "(links a verb to how it is done)",
-      "headword_trad": "得"
+      "headword_trad": "得",
+      "hsk": 2
     },
     {
       "headword": "把",
       "pinyin": "bǎ",
       "gloss_en": "(moves the object before the verb)",
-      "headword_trad": "把"
+      "headword_trad": "把",
+      "hsk": 2
     },
     {
       "headword": "关",
       "pinyin": "guān",
       "gloss_en": "to close, to turn off",
-      "headword_trad": "關"
+      "headword_trad": "關",
+      "hsk": 2
     },
     {
       "headword": "手",
       "pinyin": "shǒu",
       "gloss_en": "hand",
-      "headword_trad": "手"
+      "headword_trad": "手",
+      "hsk": 2
     },
     {
       "headword": "头",
       "pinyin": "tóu",
       "gloss_en": "head",
-      "headword_trad": "頭"
+      "headword_trad": "頭",
+      "hsk": 2
     },
     {
       "headword": "们",
       "pinyin": "men",
       "gloss_en": "(plural marker for people)",
-      "headword_trad": "們"
+      "headword_trad": "們",
+      "hsk": 2
     },
     {
       "headword": "事",
       "pinyin": "shì",
       "gloss_en": "matter, affair",
       "headword_trad": "事"
+    },
+    {
+      "headword": "环境",
+      "pinyin": "huánjìng",
+      "gloss_en": "environment, surroundings",
+      "hsk": 3
+    },
+    {
+      "headword": "习惯",
+      "pinyin": "xíguàn",
+      "gloss_en": "habit; to be used to",
+      "hsk": 3
+    },
+    {
+      "headword": "打算",
+      "pinyin": "dǎsuàn",
+      "gloss_en": "to plan to",
+      "hsk": 3
+    },
+    {
+      "headword": "决定",
+      "pinyin": "juédìng",
+      "gloss_en": "to decide",
+      "hsk": 3
+    },
+    {
+      "headword": "同意",
+      "pinyin": "tóngyì",
+      "gloss_en": "to agree",
+      "hsk": 3
+    },
+    {
+      "headword": "关系",
+      "pinyin": "guānxi",
+      "gloss_en": "relationship",
+      "hsk": 3
+    },
+    {
+      "headword": "办公室",
+      "pinyin": "bàngōngshì",
+      "gloss_en": "office",
+      "hsk": 3
+    },
+    {
+      "headword": "会议",
+      "pinyin": "huìyì",
+      "gloss_en": "meeting",
+      "hsk": 3
+    },
+    {
+      "headword": "机会",
+      "pinyin": "jīhuì",
+      "gloss_en": "opportunity",
+      "hsk": 3
+    },
+    {
+      "headword": "选择",
+      "pinyin": "xuǎnzé",
+      "gloss_en": "to choose",
+      "hsk": 3
+    },
+    {
+      "headword": "客人",
+      "pinyin": "kèrén",
+      "gloss_en": "guest",
+      "hsk": 3
+    },
+    {
+      "headword": "邻居",
+      "pinyin": "línjū",
+      "gloss_en": "neighbour",
+      "hsk": 3
+    },
+    {
+      "headword": "银行",
+      "pinyin": "yínháng",
+      "gloss_en": "bank",
+      "hsk": 3
+    },
+    {
+      "headword": "机场",
+      "pinyin": "jīchǎng",
+      "gloss_en": "airport",
+      "hsk": 3
+    },
+    {
+      "headword": "地铁",
+      "pinyin": "dìtiě",
+      "gloss_en": "subway",
+      "hsk": 3
+    },
+    {
+      "headword": "自行车",
+      "pinyin": "zìxíngchē",
+      "gloss_en": "bicycle",
+      "hsk": 3
+    },
+    {
+      "headword": "楼",
+      "pinyin": "lóu",
+      "gloss_en": "floor, building",
+      "hsk": 3
+    },
+    {
+      "headword": "地图",
+      "pinyin": "dìtú",
+      "gloss_en": "map",
+      "hsk": 3
+    },
+    {
+      "headword": "空调",
+      "pinyin": "kōngtiáo",
+      "gloss_en": "air conditioning",
+      "hsk": 3
+    },
+    {
+      "headword": "冰箱",
+      "pinyin": "bīngxiāng",
+      "gloss_en": "refrigerator",
+      "hsk": 3
+    },
+    {
+      "headword": "洗手间",
+      "pinyin": "xǐshǒujiān",
+      "gloss_en": "bathroom",
+      "hsk": 3
+    },
+    {
+      "headword": "客厅",
+      "pinyin": "kètīng",
+      "gloss_en": "living room",
+      "hsk": 3
+    },
+    {
+      "headword": "鞋",
+      "pinyin": "xié",
+      "gloss_en": "shoes",
+      "hsk": 3
+    },
+    {
+      "headword": "帽子",
+      "pinyin": "màozi",
+      "gloss_en": "hat",
+      "hsk": 3
+    },
+    {
+      "headword": "眼镜",
+      "pinyin": "yǎnjìng",
+      "gloss_en": "glasses",
+      "hsk": 3
+    },
+    {
+      "headword": "照片",
+      "pinyin": "zhàopiàn",
+      "gloss_en": "photograph",
+      "hsk": 3
+    },
+    {
+      "headword": "礼物",
+      "pinyin": "lǐwù",
+      "gloss_en": "gift",
+      "hsk": 3
+    },
+    {
+      "headword": "蛋糕",
+      "pinyin": "dàngāo",
+      "gloss_en": "cake",
+      "hsk": 3
+    },
+    {
+      "headword": "果汁",
+      "pinyin": "guǒzhī",
+      "gloss_en": "juice",
+      "hsk": 3
+    },
+    {
+      "headword": "西瓜",
+      "pinyin": "xīguā",
+      "gloss_en": "watermelon",
+      "hsk": 3
+    },
+    {
+      "headword": "甜",
+      "pinyin": "tián",
+      "gloss_en": "sweet",
+      "hsk": 3
+    },
+    {
+      "headword": "渴",
+      "pinyin": "kě",
+      "gloss_en": "thirsty",
+      "hsk": 3
+    },
+    {
+      "headword": "胖",
+      "pinyin": "pàng",
+      "gloss_en": "fat, chubby",
+      "hsk": 3
+    },
+    {
+      "headword": "年轻",
+      "pinyin": "niánqīng",
+      "gloss_en": "young",
+      "hsk": 3
+    },
+    {
+      "headword": "聪明",
+      "pinyin": "cōngming",
+      "gloss_en": "clever",
+      "hsk": 3
+    },
+    {
+      "headword": "认真",
+      "pinyin": "rènzhēn",
+      "gloss_en": "conscientious, serious",
+      "hsk": 3
+    },
+    {
+      "headword": "简单",
+      "pinyin": "jiǎndān",
+      "gloss_en": "simple",
+      "hsk": 3
+    },
+    {
+      "headword": "奇怪",
+      "pinyin": "qíguài",
+      "gloss_en": "strange",
+      "hsk": 3
+    },
+    {
+      "headword": "着急",
+      "pinyin": "zháojí",
+      "gloss_en": "anxious, in a hurry",
+      "hsk": 3
+    },
+    {
+      "headword": "担心",
+      "pinyin": "dānxīn",
+      "gloss_en": "to worry",
+      "hsk": 3
+    },
+    {
+      "headword": "害怕",
+      "pinyin": "hàipà",
+      "gloss_en": "to be afraid",
+      "hsk": 3
+    },
+    {
+      "headword": "生气",
+      "pinyin": "shēngqì",
+      "gloss_en": "angry",
+      "hsk": 3
+    },
+    {
+      "headword": "难过",
+      "pinyin": "nánguò",
+      "gloss_en": "sad",
+      "hsk": 3
+    },
+    {
+      "headword": "满意",
+      "pinyin": "mǎnyì",
+      "gloss_en": "satisfied",
+      "hsk": 3
+    },
+    {
+      "headword": "健康",
+      "pinyin": "jiànkāng",
+      "gloss_en": "healthy; health",
+      "hsk": 3
+    },
+    {
+      "headword": "热闹",
+      "pinyin": "rènao",
+      "gloss_en": "lively, bustling",
+      "hsk": 3
+    },
+    {
+      "headword": "方便",
+      "pinyin": "fāngbiàn",
+      "gloss_en": "convenient",
+      "hsk": 3
+    },
+    {
+      "headword": "清楚",
+      "pinyin": "qīngchu",
+      "gloss_en": "clear",
+      "hsk": 3
+    },
+    {
+      "headword": "特别",
+      "pinyin": "tèbié",
+      "gloss_en": "especially",
+      "hsk": 3
+    },
+    {
+      "headword": "一定",
+      "pinyin": "yídìng",
+      "gloss_en": "certainly, definitely",
+      "hsk": 3
+    },
+    {
+      "headword": "必须",
+      "pinyin": "bìxū",
+      "gloss_en": "must",
+      "hsk": 3
+    },
+    {
+      "headword": "可能",
+      "pinyin": "kěnéng",
+      "gloss_en": "maybe, possible",
+      "hsk": 3
+    },
+    {
+      "headword": "当然",
+      "pinyin": "dāngrán",
+      "gloss_en": "of course",
+      "hsk": 3
+    },
+    {
+      "headword": "其实",
+      "pinyin": "qíshí",
+      "gloss_en": "actually",
+      "hsk": 3
+    },
+    {
+      "headword": "总是",
+      "pinyin": "zǒngshì",
+      "gloss_en": "always",
+      "hsk": 3
+    },
+    {
+      "headword": "经常",
+      "pinyin": "jīngcháng",
+      "gloss_en": "often",
+      "hsk": 3
+    },
+    {
+      "headword": "刚才",
+      "pinyin": "gāngcái",
+      "gloss_en": "just now",
+      "hsk": 3
+    },
+    {
+      "headword": "一直",
+      "pinyin": "yìzhí",
+      "gloss_en": "continuously, all along",
+      "hsk": 3
+    },
+    {
+      "headword": "终于",
+      "pinyin": "zhōngyú",
+      "gloss_en": "finally",
+      "hsk": 3
+    },
+    {
+      "headword": "然后",
+      "pinyin": "ránhòu",
+      "gloss_en": "then, afterwards",
+      "hsk": 3
+    },
+    {
+      "headword": "先",
+      "pinyin": "xiān",
+      "gloss_en": "first",
+      "hsk": 3
+    },
+    {
+      "headword": "再",
+      "pinyin": "zài",
+      "gloss_en": "again, then",
+      "hsk": 3
+    },
+    {
+      "headword": "又",
+      "pinyin": "yòu",
+      "gloss_en": "again (already happened)",
+      "hsk": 3
+    },
+    {
+      "headword": "更",
+      "pinyin": "gèng",
+      "gloss_en": "even more",
+      "hsk": 3
+    },
+    {
+      "headword": "差不多",
+      "pinyin": "chàbuduō",
+      "gloss_en": "almost, about the same",
+      "hsk": 3
+    },
+    {
+      "headword": "虽然",
+      "pinyin": "suīrán",
+      "gloss_en": "although",
+      "hsk": 3
+    },
+    {
+      "headword": "而且",
+      "pinyin": "érqiě",
+      "gloss_en": "moreover",
+      "hsk": 3
+    },
+    {
+      "headword": "其他",
+      "pinyin": "qítā",
+      "gloss_en": "other",
+      "hsk": 3
+    },
+    {
+      "headword": "世界",
+      "pinyin": "shìjiè",
+      "gloss_en": "world",
+      "hsk": 3
+    },
+    {
+      "headword": "国家",
+      "pinyin": "guójiā",
+      "gloss_en": "country",
+      "hsk": 3
+    },
+    {
+      "headword": "城市",
+      "pinyin": "chéngshì",
+      "gloss_en": "city",
+      "hsk": 3
+    },
+    {
+      "headword": "文化",
+      "pinyin": "wénhuà",
+      "gloss_en": "culture",
+      "hsk": 3
+    },
+    {
+      "headword": "故事",
+      "pinyin": "gùshi",
+      "gloss_en": "story",
+      "hsk": 3
+    },
+    {
+      "headword": "新闻",
+      "pinyin": "xīnwén",
+      "gloss_en": "news",
+      "hsk": 3
+    },
+    {
+      "headword": "节目",
+      "pinyin": "jiémù",
+      "gloss_en": "programme, show",
+      "hsk": 3
+    },
+    {
+      "headword": "锻炼",
+      "pinyin": "duànliàn",
+      "gloss_en": "to exercise",
+      "hsk": 3
+    },
+    {
+      "headword": "旅游",
+      "pinyin": "lǚyóu",
+      "gloss_en": "to travel",
+      "hsk": 3
+    },
+    {
+      "headword": "散步",
+      "pinyin": "sànbù",
+      "gloss_en": "to take a walk",
+      "hsk": 3
+    },
+    {
+      "headword": "游泳",
+      "pinyin": "yóuyǒng",
+      "gloss_en": "to swim",
+      "hsk": 3
+    },
+    {
+      "headword": "唱歌",
+      "pinyin": "chànggē",
+      "gloss_en": "to sing",
+      "hsk": 3
+    },
+    {
+      "headword": "打扫",
+      "pinyin": "dǎsǎo",
+      "gloss_en": "to clean up",
+      "hsk": 3
+    },
+    {
+      "headword": "搬",
+      "pinyin": "bān",
+      "gloss_en": "to move (something)",
+      "hsk": 3
+    },
+    {
+      "headword": "借",
+      "pinyin": "jiè",
+      "gloss_en": "to borrow, to lend",
+      "hsk": 3
+    },
+    {
+      "headword": "带",
+      "pinyin": "dài",
+      "gloss_en": "to bring, to take along",
+      "hsk": 3
+    },
+    {
+      "headword": "接",
+      "pinyin": "jiē",
+      "gloss_en": "to pick up, to answer",
+      "hsk": 3
+    },
+    {
+      "headword": "遇到",
+      "pinyin": "yùdào",
+      "gloss_en": "to run into, to encounter",
+      "hsk": 3
+    },
+    {
+      "headword": "发现",
+      "pinyin": "fāxiàn",
+      "gloss_en": "to discover",
+      "hsk": 3
+    },
+    {
+      "headword": "忘记",
+      "pinyin": "wàngjì",
+      "gloss_en": "to forget",
+      "hsk": 3
+    },
+    {
+      "headword": "记得",
+      "pinyin": "jìde",
+      "gloss_en": "to remember",
+      "hsk": 3
+    },
+    {
+      "headword": "相信",
+      "pinyin": "xiāngxìn",
+      "gloss_en": "to believe",
+      "hsk": 3
+    },
+    {
+      "headword": "解决",
+      "pinyin": "jiějué",
+      "gloss_en": "to solve",
+      "hsk": 3
+    },
+    {
+      "headword": "完成",
+      "pinyin": "wánchéng",
+      "gloss_en": "to complete",
+      "hsk": 3
+    },
+    {
+      "headword": "继续",
+      "pinyin": "jìxù",
+      "gloss_en": "to continue",
+      "hsk": 3
+    },
+    {
+      "headword": "结束",
+      "pinyin": "jiéshù",
+      "gloss_en": "to end",
+      "hsk": 3
+    },
+    {
+      "headword": "参加",
+      "pinyin": "cānjiā",
+      "gloss_en": "to take part in",
+      "hsk": 3
+    },
+    {
+      "headword": "照顾",
+      "pinyin": "zhàogù",
+      "gloss_en": "to look after",
+      "hsk": 3
+    },
+    {
+      "headword": "教",
+      "pinyin": "jiāo",
+      "gloss_en": "to teach",
+      "hsk": 3
+    },
+    {
+      "headword": "回答",
+      "pinyin": "huídá",
+      "gloss_en": "to answer",
+      "hsk": 3
+    },
+    {
+      "headword": "感觉",
+      "pinyin": "gǎnjué",
+      "gloss_en": "to feel; feeling",
+      "hsk": 3
+    },
+    {
+      "headword": "到",
+      "pinyin": "dào",
+      "gloss_en": "to arrive; to reach",
+      "hsk": 2
+    },
+    {
+      "headword": "饭",
+      "pinyin": "fàn",
+      "gloss_en": "rice; a meal",
+      "hsk": 1
+    },
+    {
+      "headword": "学",
+      "pinyin": "xué",
+      "gloss_en": "to study, to learn",
+      "hsk": 1
+    },
+    {
+      "headword": "话",
+      "pinyin": "huà",
+      "gloss_en": "speech, words",
+      "hsk": 2
+    },
+    {
+      "headword": "位",
+      "pinyin": "wèi",
+      "gloss_en": "(polite measure word for people)",
+      "hsk": 3
+    },
+    {
+      "headword": "种",
+      "pinyin": "zhǒng",
+      "gloss_en": "kind, sort",
+      "hsk": 3
+    },
+    {
+      "headword": "条",
+      "pinyin": "tiáo",
+      "gloss_en": "(measure word for long things)",
+      "hsk": 3
+    },
+    {
+      "headword": "双",
+      "pinyin": "shuāng",
+      "gloss_en": "pair",
+      "hsk": 3
+    },
+    {
+      "headword": "边",
+      "pinyin": "biān",
+      "gloss_en": "side",
+      "hsk": 3
+    },
+    {
+      "headword": "旁边",
+      "pinyin": "pángbiān",
+      "gloss_en": "beside, next to",
+      "hsk": 2
+    },
+    {
+      "headword": "中间",
+      "pinyin": "zhōngjiān",
+      "gloss_en": "middle, between",
+      "hsk": 3
+    },
+    {
+      "headword": "对面",
+      "pinyin": "duìmiàn",
+      "gloss_en": "opposite",
+      "hsk": 3
+    },
+    {
+      "headword": "附近",
+      "pinyin": "fùjìn",
+      "gloss_en": "nearby",
+      "hsk": 3
+    },
+    {
+      "headword": "远",
+      "pinyin": "yuǎn",
+      "gloss_en": "far",
+      "hsk": 2
+    },
+    {
+      "headword": "近",
+      "pinyin": "jìn",
+      "gloss_en": "near",
+      "hsk": 2
+    },
+    {
+      "headword": "北方",
+      "pinyin": "běifāng",
+      "gloss_en": "the north",
+      "hsk": 3
+    },
+    {
+      "headword": "南",
+      "pinyin": "nán",
+      "gloss_en": "south",
+      "hsk": 1
+    },
+    {
+      "headword": "东",
+      "pinyin": "dōng",
+      "gloss_en": "east",
+      "hsk": 1
+    },
+    {
+      "headword": "西",
+      "pinyin": "xī",
+      "gloss_en": "west",
+      "hsk": 1
+    },
+    {
+      "headword": "春",
+      "pinyin": "chūn",
+      "gloss_en": "spring",
+      "hsk": 3
+    },
+    {
+      "headword": "夏",
+      "pinyin": "xià",
+      "gloss_en": "summer",
+      "hsk": 3
+    },
+    {
+      "headword": "秋",
+      "pinyin": "qiū",
+      "gloss_en": "autumn",
+      "hsk": 3
+    },
+    {
+      "headword": "冬",
+      "pinyin": "dōng",
+      "gloss_en": "winter",
+      "hsk": 3
+    },
+    {
+      "headword": "季节",
+      "pinyin": "jìjié",
+      "gloss_en": "season",
+      "hsk": 3
+    },
+    {
+      "headword": "刮风",
+      "pinyin": "guāfēng",
+      "gloss_en": "to be windy",
+      "hsk": 3
+    },
+    {
+      "headword": "下雪",
+      "pinyin": "xiàxuě",
+      "gloss_en": "to snow",
+      "hsk": 3
+    },
+    {
+      "headword": "阴",
+      "pinyin": "yīn",
+      "gloss_en": "overcast",
+      "hsk": 3
+    },
+    {
+      "headword": "晴",
+      "pinyin": "qíng",
+      "gloss_en": "clear, sunny",
+      "hsk": 3
+    },
+    {
+      "headword": "河",
+      "pinyin": "hé",
+      "gloss_en": "river",
+      "hsk": 3
+    },
+    {
+      "headword": "山",
+      "pinyin": "shān",
+      "gloss_en": "mountain",
+      "hsk": 3
+    },
+    {
+      "headword": "树",
+      "pinyin": "shù",
+      "gloss_en": "tree",
+      "hsk": 3
+    },
+    {
+      "headword": "花",
+      "pinyin": "huā",
+      "gloss_en": "flower; to spend",
+      "hsk": 3
+    },
+    {
+      "headword": "草",
+      "pinyin": "cǎo",
+      "gloss_en": "grass",
+      "hsk": 3
+    },
+    {
+      "headword": "动物",
+      "pinyin": "dòngwù",
+      "gloss_en": "animal",
+      "hsk": 3
+    },
+    {
+      "headword": "猫",
+      "pinyin": "māo",
+      "gloss_en": "cat",
+      "hsk": 1
+    },
+    {
+      "headword": "鸟",
+      "pinyin": "niǎo",
+      "gloss_en": "bird",
+      "hsk": 3
+    },
+    {
+      "headword": "声音",
+      "pinyin": "shēngyīn",
+      "gloss_en": "sound, voice",
+      "hsk": 3
+    },
+    {
+      "headword": "颜色",
+      "pinyin": "yánsè",
+      "gloss_en": "colour",
+      "hsk": 2
+    },
+    {
+      "headword": "红",
+      "pinyin": "hóng",
+      "gloss_en": "red",
+      "hsk": 2
+    },
+    {
+      "headword": "白",
+      "pinyin": "bái",
+      "gloss_en": "white",
+      "hsk": 1
+    },
+    {
+      "headword": "黑",
+      "pinyin": "hēi",
+      "gloss_en": "black",
+      "hsk": 2
+    },
+    {
+      "headword": "蓝",
+      "pinyin": "lán",
+      "gloss_en": "blue",
+      "hsk": 3
+    },
+    {
+      "headword": "绿",
+      "pinyin": "lǜ",
+      "gloss_en": "green",
+      "hsk": 3
+    },
+    {
+      "headword": "重",
+      "pinyin": "zhòng",
+      "gloss_en": "heavy",
+      "hsk": 3
+    },
+    {
+      "headword": "轻",
+      "pinyin": "qīng",
+      "gloss_en": "light (in weight)",
+      "hsk": 3
+    },
+    {
+      "headword": "满",
+      "pinyin": "mǎn",
+      "gloss_en": "full",
+      "hsk": 3
+    },
+    {
+      "headword": "空",
+      "pinyin": "kōng",
+      "gloss_en": "empty",
+      "hsk": 3
+    },
+    {
+      "headword": "饱",
+      "pinyin": "bǎo",
+      "gloss_en": "full (from eating)",
+      "hsk": 3
+    },
+    {
+      "headword": "脏",
+      "pinyin": "zāng",
+      "gloss_en": "dirty",
+      "hsk": 3
+    },
+    {
+      "headword": "湿",
+      "pinyin": "shī",
+      "gloss_en": "wet",
+      "hsk": 3
+    },
+    {
+      "headword": "笑话",
+      "pinyin": "xiàohua",
+      "gloss_en": "joke",
+      "hsk": 2
+    },
+    {
+      "headword": "同事",
+      "pinyin": "tóngshì",
+      "gloss_en": "colleague",
+      "hsk": 3
+    },
+    {
+      "headword": "同学",
+      "pinyin": "tóngxué",
+      "gloss_en": "classmate",
+      "hsk": 2
+    },
+    {
+      "headword": "经理",
+      "pinyin": "jīnglǐ",
+      "gloss_en": "manager",
+      "hsk": 3
+    },
+    {
+      "headword": "护士",
+      "pinyin": "hùshi",
+      "gloss_en": "nurse",
+      "hsk": 3
+    },
+    {
+      "headword": "司机",
+      "pinyin": "sījī",
+      "gloss_en": "driver",
+      "hsk": 3
+    },
+    {
+      "headword": "服务员",
+      "pinyin": "fúwùyuán",
+      "gloss_en": "waiter, attendant",
+      "hsk": 3
+    },
+    {
+      "headword": "校长",
+      "pinyin": "xiàozhǎng",
+      "gloss_en": "headteacher",
+      "hsk": 3
+    },
+    {
+      "headword": "词典",
+      "pinyin": "cídiǎn",
+      "gloss_en": "dictionary",
+      "hsk": 3
+    },
+    {
+      "headword": "铅笔",
+      "pinyin": "qiānbǐ",
+      "gloss_en": "pencil",
+      "hsk": 3
+    },
+    {
+      "headword": "黑板",
+      "pinyin": "hēibǎn",
+      "gloss_en": "blackboard",
+      "hsk": 3
+    },
+    {
+      "headword": "作业",
+      "pinyin": "zuòyè",
+      "gloss_en": "homework",
+      "hsk": 2
+    },
+    {
+      "headword": "考试",
+      "pinyin": "kǎoshì",
+      "gloss_en": "exam; to sit an exam",
+      "hsk": 2
+    },
+    {
+      "headword": "成绩",
+      "pinyin": "chéngjì",
+      "gloss_en": "result, grade",
+      "hsk": 3
+    },
+    {
+      "headword": "水平",
+      "pinyin": "shuǐpíng",
+      "gloss_en": "level, standard",
+      "hsk": 3
+    },
+    {
+      "headword": "努力",
+      "pinyin": "nǔlì",
+      "gloss_en": "to work hard",
+      "hsk": 2
+    },
+    {
+      "headword": "帮忙",
+      "pinyin": "bāngmáng",
+      "gloss_en": "to help out",
+      "hsk": 2
+    },
+    {
+      "headword": "关心",
+      "pinyin": "guānxīn",
+      "gloss_en": "to care about",
+      "hsk": 2
+    },
+    {
+      "headword": "感谢",
+      "pinyin": "gǎnxiè",
+      "gloss_en": "to thank",
+      "hsk": 3
+    },
+    {
+      "headword": "生活",
+      "pinyin": "shēnghuó",
+      "gloss_en": "life; to live",
+      "hsk": 2
+    },
+    {
+      "headword": "结婚",
+      "pinyin": "jiéhūn",
+      "gloss_en": "to marry",
+      "hsk": 3
+    },
+    {
+      "headword": "爱",
+      "pinyin": "ài",
+      "gloss_en": "to love",
+      "hsk": 2
+    },
+    {
+      "headword": "样子",
+      "pinyin": "yàngzi",
+      "gloss_en": "appearance, look",
+      "hsk": 3
+    },
+    {
+      "headword": "意思",
+      "pinyin": "yìsi",
+      "gloss_en": "meaning",
+      "hsk": 2
+    },
+    {
+      "headword": "有意思",
+      "pinyin": "yǒuyìsi",
+      "gloss_en": "interesting",
+      "hsk": 2
+    },
+    {
+      "headword": "好吃",
+      "pinyin": "hǎochī",
+      "gloss_en": "tasty",
+      "hsk": 2
+    },
+    {
+      "headword": "好看",
+      "pinyin": "hǎokàn",
+      "gloss_en": "good-looking",
+      "hsk": 2
+    },
+    {
+      "headword": "好听",
+      "pinyin": "hǎotīng",
+      "gloss_en": "pleasant to hear",
+      "hsk": 2
+    },
+    {
+      "headword": "讲",
+      "pinyin": "jiǎng",
+      "gloss_en": "to tell, to speak",
+      "hsk": 2
+    },
+    {
+      "headword": "骑",
+      "pinyin": "qí",
+      "gloss_en": "to ride",
+      "hsk": 2
+    },
+    {
+      "headword": "站",
+      "pinyin": "zhàn",
+      "gloss_en": "to stand; station",
+      "hsk": 2
+    },
+    {
+      "headword": "跳",
+      "pinyin": "tiào",
+      "gloss_en": "to jump",
+      "hsk": 2
+    },
+    {
+      "headword": "唱",
+      "pinyin": "chàng",
+      "gloss_en": "to sing",
+      "hsk": 2
+    },
+    {
+      "headword": "掉",
+      "pinyin": "diào",
+      "gloss_en": "to drop, to fall",
+      "hsk": 3
+    },
+    {
+      "headword": "拉",
+      "pinyin": "lā",
+      "gloss_en": "to pull",
+      "hsk": 3
+    },
+    {
+      "headword": "推",
+      "pinyin": "tuī",
+      "gloss_en": "to push",
+      "hsk": 3
+    },
+    {
+      "headword": "抬",
+      "pinyin": "tái",
+      "gloss_en": "to lift",
+      "hsk": 3
+    },
+    {
+      "headword": "擦",
+      "pinyin": "cā",
+      "gloss_en": "to wipe",
+      "hsk": 3
+    },
+    {
+      "headword": "刷牙",
+      "pinyin": "shuāyá",
+      "gloss_en": "to brush one's teeth",
+      "hsk": 3
+    },
+    {
+      "headword": "脸",
+      "pinyin": "liǎn",
+      "gloss_en": "face",
+      "hsk": 3
+    },
+    {
+      "headword": "眼睛",
+      "pinyin": "yǎnjing",
+      "gloss_en": "eye",
+      "hsk": 2
+    },
+    {
+      "headword": "耳朵",
+      "pinyin": "ěrduo",
+      "gloss_en": "ear",
+      "hsk": 3
+    },
+    {
+      "headword": "嘴",
+      "pinyin": "zuǐ",
+      "gloss_en": "mouth",
+      "hsk": 3
+    },
+    {
+      "headword": "脚",
+      "pinyin": "jiǎo",
+      "gloss_en": "foot",
+      "hsk": 3
+    },
+    {
+      "headword": "身体",
+      "pinyin": "shēntǐ",
+      "gloss_en": "body; health",
+      "hsk": 2
+    },
+    {
+      "headword": "天",
+      "pinyin": "tiān",
+      "gloss_en": "day; sky",
+      "hsk": 1
     }
   ],
   "personal": [
@@ -1717,7 +3157,8 @@
       "headword": "儿子",
       "pinyin": "érzi",
       "gloss_en": "son",
-      "headword_trad": "兒子"
+      "headword_trad": "兒子",
+      "hsk": 1
     },
     {
       "headword": "奶奶",
@@ -1777,7 +3218,8 @@
       "headword": "饿",
       "pinyin": "è",
       "gloss_en": "hungry",
-      "headword_trad": "餓"
+      "headword_trad": "餓",
+      "hsk": 3
     },
     {
       "headword": "累",
@@ -1789,13 +3231,15 @@
       "headword": "安静",
       "pinyin": "ānjìng",
       "gloss_en": "quiet",
-      "headword_trad": "安靜"
+      "headword_trad": "安靜",
+      "hsk": 3
     },
     {
       "headword": "狗",
       "pinyin": "gǒu",
       "gloss_en": "dog",
-      "headword_trad": "狗"
+      "headword_trad": "狗",
+      "hsk": 1
     },
     {
       "headword": "房子",
@@ -1813,13 +3257,15 @@
       "headword": "游戏",
       "pinyin": "yóuxì",
       "gloss_en": "game",
-      "headword_trad": "遊戲"
+      "headword_trad": "遊戲",
+      "hsk": 3
     },
     {
       "headword": "电脑",
       "pinyin": "diànnǎo",
       "gloss_en": "computer",
-      "headword_trad": "電腦"
+      "headword_trad": "電腦",
+      "hsk": 3
     },
     {
       "headword": "健身",
@@ -1831,7 +3277,8 @@
       "headword": "咖啡",
       "pinyin": "kāfēi",
       "gloss_en": "coffee",
-      "headword_trad": "咖啡"
+      "headword_trad": "咖啡",
+      "hsk": 3
     },
     {
       "headword": "奶粉",

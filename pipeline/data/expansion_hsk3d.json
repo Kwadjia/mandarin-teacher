@@ -1,0 +1,26 @@
+{
+  "label": "HSK3d — 天, and the four seasons that needed it",
+  "_comment": "春 夏 秋 冬 were left stranded because every natural sentence uses 春天/夏天, and 天 existed only inside 今天/明天/每天 — never as a word in its own right. The same compound-versus-standalone miss as 到/饭/学 in batch b. Adding 天 unlocks all four.",
+  "words": [
+    { "headword": "天", "pinyin": "tiān", "gloss_en": "day; sky" }
+  ],
+  "sentences": [
+    { "hanzi": "春天很舒服。", "pinyin": "chūn tiān hěn shūfu", "gloss_en": "Spring is pleasant." },
+    { "hanzi": "春天有很多花。", "pinyin": "chūn tiān yǒu hěn duō huā", "gloss_en": "There are lots of flowers in spring." },
+    { "hanzi": "我喜欢春天。", "pinyin": "wǒ xǐhuan chūn tiān", "gloss_en": "I like spring." },
+    { "hanzi": "夏天很热。", "pinyin": "xià tiān hěn rè", "gloss_en": "Summer is hot." },
+    { "hanzi": "夏天我们去游泳。", "pinyin": "xià tiān wǒmen qù yóuyǒng", "gloss_en": "In summer we go swimming." },
+    { "hanzi": "秋天很舒服。", "pinyin": "qiū tiān hěn shūfu", "gloss_en": "Autumn is pleasant." },
+    { "hanzi": "秋天的天气很好。", "pinyin": "qiū tiān de tiānqì hěn hǎo", "gloss_en": "The weather in autumn is good." },
+    { "hanzi": "冬天很冷。", "pinyin": "dōng tiān hěn lěng", "gloss_en": "Winter is cold." },
+    { "hanzi": "冬天会下雪。", "pinyin": "dōng tiān huì xiàxuě", "gloss_en": "It snows in winter." },
+    { "hanzi": "今天天气很好。", "pinyin": "jīntiān tiānqì hěn hǎo", "gloss_en": "The weather's lovely today." },
+    { "hanzi": "天很蓝。", "pinyin": "tiān hěn lán", "gloss_en": "The sky is blue." },
+    { "hanzi": "太阳从东边出来。", "pinyin": "tàiyáng cóng dōng biān chūlái", "gloss_en": "SKIP" },
+    { "hanzi": "阴天我不想出去。", "pinyin": "yīn tiān wǒ bù xiǎng chūqù", "gloss_en": "On an overcast day I don't want to go out." },
+    { "hanzi": "这个杯很满。", "pinyin": "zhè ge bēi hěn mǎn", "gloss_en": "This cup is full." },
+    { "hanzi": "这个瓶是空的。", "pinyin": "zhè ge píng shì kōng de", "gloss_en": "This bottle is empty." },
+    { "hanzi": "山很高。", "pinyin": "SKIP", "gloss_en": "SKIP" },
+    { "hanzi": "他会唱中文歌。", "pinyin": "SKIP", "gloss_en": "SKIP" }
+  ]
+}

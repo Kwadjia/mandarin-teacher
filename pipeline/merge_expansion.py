@@ -52,15 +52,33 @@ def main() -> int:
     have = {e["headword"] for e in vocab["core"] + vocab["personal"]}
 
     added_words = 0
+    bad_words: list[tuple[str, str]] = []
     for w in data.get("words", []):
-        if w["headword"] in have:
+        head = w["headword"]
+        # Words were previously accepted unchecked while sentences were verified, so a
+        # draft entry left as a placeholder — a literal "song" with SKIP pinyin — would
+        # enter the vocabulary as a real headword and then quietly satisfy the
+        # segmentation gate for any sentence containing those letters.
+        if w.get("pinyin") == "SKIP" or w.get("gloss_en") == "SKIP":
+            continue
+        if not head or any(c in PUNCT or c.isascii() for c in head):
+            bad_words.append((head, "not Chinese"))
+            continue
+        if head in have:
             continue
         bucket = "personal" if w.get("source") == "personal" else "core"
         vocab[bucket].append(
-            {"headword": w["headword"], "pinyin": w["pinyin"], "gloss_en": w["gloss_en"]}
+            {"headword": head, "pinyin": w["pinyin"], "gloss_en": w["gloss_en"]}
         )
-        have.add(w["headword"])
+        have.add(head)
         added_words += 1
+
+    if bad_words:
+        print(f"{len(bad_words)} unusable headword(s) — nothing written:")
+        for h, why in bad_words:
+            print(f"  {h!r}: {why}")
+        return 2
+
     VOCAB.write_text(json.dumps(vocab, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     corpus = json.loads(SENTENCES.read_text(encoding="utf-8"))

@@ -214,9 +214,15 @@ describe('two years of simulated study', () => {
 
   it('reaches meaningful HSK coverage', () => {
     const end = new Date(T0.getTime() + DAYS * MS_PER_DAY);
-    const report = hskCoverage(
-      buildCorpus().concepts, r.cards, 'listen', end,
-    );
+    const concepts = buildCorpus().concepts;
+    // Sized to this synthetic corpus. Against the real HSK denominators a corpus this
+    // small could never clear a level however well the scheduler performed, and this
+    // test is about the scheduler.
+    const levelSizes: Record<number, number> = {};
+    for (const c of concepts) {
+      if (c.hskLevel !== null) levelSizes[c.hskLevel] = (levelSizes[c.hskLevel] ?? 0) + 1;
+    }
+    const report = hskCoverage(concepts, r.cards, 'listen', end, { levelSizes });
     expect(report.estimate).toBeGreaterThan(1);
     expect(report.perLevel[0]!.coverage).toBeGreaterThan(0.7);
   });

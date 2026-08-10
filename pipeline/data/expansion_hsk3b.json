@@ -1,0 +1,888 @@
+{
+  "label": "HSK3b — the standalone words the first batch assumed, plus more level 3",
+  "_comment": "The verifier rejected 找到, 吃饭 and 学中文 because 到, 饭 and 学 only ever existed inside compounds (遇到, 早饭, 学习). All three are ordinary words in their own right. This is the same class of miss the gate caught in the HSK2 expansion, and the reason it runs on every batch.",
+  "words": [
+    {
+      "headword": "到",
+      "pinyin": "dào",
+      "gloss_en": "to arrive; to reach"
+    },
+    {
+      "headword": "饭",
+      "pinyin": "fàn",
+      "gloss_en": "rice; a meal"
+    },
+    {
+      "headword": "学",
+      "pinyin": "xué",
+      "gloss_en": "to study, to learn"
+    },
+    {
+      "headword": "话",
+      "pinyin": "huà",
+      "gloss_en": "speech, words"
+    },
+    {
+      "headword": "位",
+      "pinyin": "wèi",
+      "gloss_en": "(polite measure word for people)"
+    },
+    {
+      "headword": "种",
+      "pinyin": "zhǒng",
+      "gloss_en": "kind, sort"
+    },
+    {
+      "headword": "条",
+      "pinyin": "tiáo",
+      "gloss_en": "(measure word for long things)"
+    },
+    {
+      "headword": "双",
+      "pinyin": "shuāng",
+      "gloss_en": "pair"
+    },
+    {
+      "headword": "边",
+      "pinyin": "biān",
+      "gloss_en": "side"
+    },
+    {
+      "headword": "旁边",
+      "pinyin": "pángbiān",
+      "gloss_en": "beside, next to"
+    },
+    {
+      "headword": "中间",
+      "pinyin": "zhōngjiān",
+      "gloss_en": "middle, between"
+    },
+    {
+      "headword": "对面",
+      "pinyin": "duìmiàn",
+      "gloss_en": "opposite"
+    },
+    {
+      "headword": "附近",
+      "pinyin": "fùjìn",
+      "gloss_en": "nearby"
+    },
+    {
+      "headword": "远",
+      "pinyin": "yuǎn",
+      "gloss_en": "far"
+    },
+    {
+      "headword": "近",
+      "pinyin": "jìn",
+      "gloss_en": "near"
+    },
+    {
+      "headword": "北方",
+      "pinyin": "běifāng",
+      "gloss_en": "the north"
+    },
+    {
+      "headword": "南",
+      "pinyin": "nán",
+      "gloss_en": "south"
+    },
+    {
+      "headword": "东",
+      "pinyin": "dōng",
+      "gloss_en": "east"
+    },
+    {
+      "headword": "西",
+      "pinyin": "xī",
+      "gloss_en": "west"
+    },
+    {
+      "headword": "春",
+      "pinyin": "chūn",
+      "gloss_en": "spring"
+    },
+    {
+      "headword": "夏",
+      "pinyin": "xià",
+      "gloss_en": "summer"
+    },
+    {
+      "headword": "秋",
+      "pinyin": "qiū",
+      "gloss_en": "autumn"
+    },
+    {
+      "headword": "冬",
+      "pinyin": "dōng",
+      "gloss_en": "winter"
+    },
+    {
+      "headword": "季节",
+      "pinyin": "jìjié",
+      "gloss_en": "season"
+    },
+    {
+      "headword": "刮风",
+      "pinyin": "guāfēng",
+      "gloss_en": "to be windy"
+    },
+    {
+      "headword": "下雪",
+      "pinyin": "xiàxuě",
+      "gloss_en": "to snow"
+    },
+    {
+      "headword": "阴",
+      "pinyin": "yīn",
+      "gloss_en": "overcast"
+    },
+    {
+      "headword": "晴",
+      "pinyin": "qíng",
+      "gloss_en": "clear, sunny"
+    },
+    {
+      "headword": "河",
+      "pinyin": "hé",
+      "gloss_en": "river"
+    },
+    {
+      "headword": "山",
+      "pinyin": "shān",
+      "gloss_en": "mountain"
+    },
+    {
+      "headword": "树",
+      "pinyin": "shù",
+      "gloss_en": "tree"
+    },
+    {
+      "headword": "花",
+      "pinyin": "huā",
+      "gloss_en": "flower; to spend"
+    },
+    {
+      "headword": "草",
+      "pinyin": "cǎo",
+      "gloss_en": "grass"
+    },
+    {
+      "headword": "动物",
+      "pinyin": "dòngwù",
+      "gloss_en": "animal"
+    },
+    {
+      "headword": "猫",
+      "pinyin": "māo",
+      "gloss_en": "cat"
+    },
+    {
+      "headword": "鸟",
+      "pinyin": "niǎo",
+      "gloss_en": "bird"
+    },
+    {
+      "headword": "声音",
+      "pinyin": "shēngyīn",
+      "gloss_en": "sound, voice"
+    },
+    {
+      "headword": "颜色",
+      "pinyin": "yánsè",
+      "gloss_en": "colour"
+    },
+    {
+      "headword": "红",
+      "pinyin": "hóng",
+      "gloss_en": "red"
+    },
+    {
+      "headword": "白",
+      "pinyin": "bái",
+      "gloss_en": "white"
+    },
+    {
+      "headword": "黑",
+      "pinyin": "hēi",
+      "gloss_en": "black"
+    },
+    {
+      "headword": "蓝",
+      "pinyin": "lán",
+      "gloss_en": "blue"
+    },
+    {
+      "headword": "绿",
+      "pinyin": "lǜ",
+      "gloss_en": "green"
+    },
+    {
+      "headword": "重",
+      "pinyin": "zhòng",
+      "gloss_en": "heavy"
+    },
+    {
+      "headword": "轻",
+      "pinyin": "qīng",
+      "gloss_en": "light (in weight)"
+    },
+    {
+      "headword": "满",
+      "pinyin": "mǎn",
+      "gloss_en": "full"
+    },
+    {
+      "headword": "空",
+      "pinyin": "kōng",
+      "gloss_en": "empty"
+    },
+    {
+      "headword": "饱",
+      "pinyin": "bǎo",
+      "gloss_en": "full (from eating)"
+    },
+    {
+      "headword": "脏",
+      "pinyin": "zāng",
+      "gloss_en": "dirty"
+    },
+    {
+      "headword": "湿",
+      "pinyin": "shī",
+      "gloss_en": "wet"
+    },
+    {
+      "headword": "笑话",
+      "pinyin": "xiàohua",
+      "gloss_en": "joke"
+    },
+    {
+      "headword": "同事",
+      "pinyin": "tóngshì",
+      "gloss_en": "colleague"
+    },
+    {
+      "headword": "同学",
+      "pinyin": "tóngxué",
+      "gloss_en": "classmate"
+    },
+    {
+      "headword": "经理",
+      "pinyin": "jīnglǐ",
+      "gloss_en": "manager"
+    },
+    {
+      "headword": "护士",
+      "pinyin": "hùshi",
+      "gloss_en": "nurse"
+    },
+    {
+      "headword": "司机",
+      "pinyin": "sījī",
+      "gloss_en": "driver"
+    },
+    {
+      "headword": "服务员",
+      "pinyin": "fúwùyuán",
+      "gloss_en": "waiter, attendant"
+    },
+    {
+      "headword": "校长",
+      "pinyin": "xiàozhǎng",
+      "gloss_en": "headteacher"
+    },
+    {
+      "headword": "词典",
+      "pinyin": "cídiǎn",
+      "gloss_en": "dictionary"
+    },
+    {
+      "headword": "铅笔",
+      "pinyin": "qiānbǐ",
+      "gloss_en": "pencil"
+    },
+    {
+      "headword": "黑板",
+      "pinyin": "hēibǎn",
+      "gloss_en": "blackboard"
+    },
+    {
+      "headword": "作业",
+      "pinyin": "zuòyè",
+      "gloss_en": "homework"
+    },
+    {
+      "headword": "考试",
+      "pinyin": "kǎoshì",
+      "gloss_en": "exam; to sit an exam"
+    },
+    {
+      "headword": "成绩",
+      "pinyin": "chéngjì",
+      "gloss_en": "result, grade"
+    },
+    {
+      "headword": "水平",
+      "pinyin": "shuǐpíng",
+      "gloss_en": "level, standard"
+    },
+    {
+      "headword": "努力",
+      "pinyin": "nǔlì",
+      "gloss_en": "to work hard"
+    },
+    {
+      "headword": "帮忙",
+      "pinyin": "bāngmáng",
+      "gloss_en": "to help out"
+    },
+    {
+      "headword": "关心",
+      "pinyin": "guānxīn",
+      "gloss_en": "to care about"
+    },
+    {
+      "headword": "感谢",
+      "pinyin": "gǎnxiè",
+      "gloss_en": "to thank"
+    },
+    {
+      "headword": "生活",
+      "pinyin": "shēnghuó",
+      "gloss_en": "life; to live"
+    },
+    {
+      "headword": "结婚",
+      "pinyin": "jiéhūn",
+      "gloss_en": "to marry"
+    },
+    {
+      "headword": "爱",
+      "pinyin": "ài",
+      "gloss_en": "to love"
+    },
+    {
+      "headword": "样子",
+      "pinyin": "yàngzi",
+      "gloss_en": "appearance, look"
+    },
+    {
+      "headword": "意思",
+      "pinyin": "yìsi",
+      "gloss_en": "meaning"
+    },
+    {
+      "headword": "有意思",
+      "pinyin": "yǒuyìsi",
+      "gloss_en": "interesting"
+    },
+    {
+      "headword": "好吃",
+      "pinyin": "hǎochī",
+      "gloss_en": "tasty"
+    },
+    {
+      "headword": "好看",
+      "pinyin": "hǎokàn",
+      "gloss_en": "good-looking"
+    },
+    {
+      "headword": "好听",
+      "pinyin": "hǎotīng",
+      "gloss_en": "pleasant to hear"
+    },
+    {
+      "headword": "讲",
+      "pinyin": "jiǎng",
+      "gloss_en": "to tell, to speak"
+    },
+    {
+      "headword": "骑",
+      "pinyin": "qí",
+      "gloss_en": "to ride"
+    },
+    {
+      "headword": "站",
+      "pinyin": "zhàn",
+      "gloss_en": "to stand; station"
+    },
+    {
+      "headword": "跳",
+      "pinyin": "tiào",
+      "gloss_en": "to jump"
+    },
+    {
+      "headword": "唱",
+      "pinyin": "chàng",
+      "gloss_en": "to sing"
+    },
+    {
+      "headword": "掉",
+      "pinyin": "diào",
+      "gloss_en": "to drop, to fall"
+    },
+    {
+      "headword": "拉",
+      "pinyin": "lā",
+      "gloss_en": "to pull"
+    },
+    {
+      "headword": "推",
+      "pinyin": "tuī",
+      "gloss_en": "to push"
+    },
+    {
+      "headword": "抬",
+      "pinyin": "tái",
+      "gloss_en": "to lift"
+    },
+    {
+      "headword": "擦",
+      "pinyin": "cā",
+      "gloss_en": "to wipe"
+    },
+    {
+      "headword": "刷牙",
+      "pinyin": "shuāyá",
+      "gloss_en": "to brush one's teeth"
+    },
+    {
+      "headword": "脸",
+      "pinyin": "liǎn",
+      "gloss_en": "face"
+    },
+    {
+      "headword": "眼睛",
+      "pinyin": "yǎnjing",
+      "gloss_en": "eye"
+    },
+    {
+      "headword": "耳朵",
+      "pinyin": "ěrduo",
+      "gloss_en": "ear"
+    },
+    {
+      "headword": "嘴",
+      "pinyin": "zuǐ",
+      "gloss_en": "mouth"
+    },
+    {
+      "headword": "脚",
+      "pinyin": "jiǎo",
+      "gloss_en": "foot"
+    },
+    {
+      "headword": "身体",
+      "pinyin": "shēntǐ",
+      "gloss_en": "body; health"
+    }
+  ],
+  "sentences": [
+    {
+      "hanzi": "我终于找到了。",
+      "pinyin": "wǒ zhōngyú zhǎo dào le",
+      "gloss_en": "I finally found it."
+    },
+    {
+      "hanzi": "我们先吃饭，然后出去。",
+      "pinyin": "wǒmen xiān chī fàn, ránhòu chūqù",
+      "gloss_en": "Let's eat first, then go out."
+    },
+    {
+      "hanzi": "我打算学中文。",
+      "pinyin": "wǒ dǎsuàn xué Zhōngwén",
+      "gloss_en": "I plan to learn Chinese."
+    },
+    {
+      "hanzi": "我学中文。",
+      "pinyin": "wǒ xué Zhōngwén",
+      "gloss_en": "I'm learning Chinese."
+    },
+    {
+      "hanzi": "吃饭了。",
+      "pinyin": "chī fàn le",
+      "gloss_en": "Dinner's ready."
+    },
+    {
+      "hanzi": "他到了吗？",
+      "pinyin": "tā dào le ma?",
+      "gloss_en": "Has he arrived?"
+    },
+    {
+      "hanzi": "我到家了。",
+      "pinyin": "wǒ dào jiā le",
+      "gloss_en": "I'm home."
+    },
+    {
+      "hanzi": "宝宝在我旁边。",
+      "pinyin": "bǎobao zài wǒ pángbiān",
+      "gloss_en": "The baby's next to me."
+    },
+    {
+      "hanzi": "狗在床旁边。",
+      "pinyin": "gǒu zài chuáng pángbiān",
+      "gloss_en": "The dog's beside the bed."
+    },
+    {
+      "hanzi": "超市在附近。",
+      "pinyin": "chāoshì zài fùjìn",
+      "gloss_en": "The supermarket's nearby."
+    },
+    {
+      "hanzi": "医院在对面。",
+      "pinyin": "yīyuàn zài duìmiàn",
+      "gloss_en": "The hospital's opposite."
+    },
+    {
+      "hanzi": "学校很近。",
+      "pinyin": "xuéxiào hěn jìn",
+      "gloss_en": "The school is close."
+    },
+    {
+      "hanzi": "机场很远。",
+      "pinyin": "jīchǎng hěn yuǎn",
+      "gloss_en": "The airport is far."
+    },
+    {
+      "hanzi": "他坐在中间。",
+      "pinyin": "tā zuò zài zhōngjiān",
+      "gloss_en": "He's sitting in the middle."
+    },
+    {
+      "hanzi": "今天很冷。",
+      "pinyin": "jīntiān hěn lěng",
+      "gloss_en": "It's cold today."
+    },
+    {
+      "hanzi": "外面在下雪。",
+      "pinyin": "wàimiàn zài xiàxuě",
+      "gloss_en": "It's snowing outside."
+    },
+    {
+      "hanzi": "今天刮风。",
+      "pinyin": "jīntiān guāfēng",
+      "gloss_en": "It's windy today."
+    },
+    {
+      "hanzi": "今天天气很晴。",
+      "pinyin": "jīntiān tiānqì hěn qíng",
+      "gloss_en": "It's clear today."
+    },
+    {
+      "hanzi": "我喜欢春天。",
+      "pinyin": "SKIP",
+      "gloss_en": "SKIP"
+    },
+    {
+      "hanzi": "夏天很热。",
+      "pinyin": "SKIP",
+      "gloss_en": "SKIP"
+    },
+    {
+      "hanzi": "我们家有一只猫。",
+      "pinyin": "wǒmen jiā yǒu yì zhī māo",
+      "gloss_en": "We have a cat."
+    },
+    {
+      "hanzi": "宝宝喜欢动物。",
+      "pinyin": "bǎobao xǐhuan dòngwù",
+      "gloss_en": "The baby likes animals."
+    },
+    {
+      "hanzi": "外面有鸟。",
+      "pinyin": "wàimiàn yǒu niǎo",
+      "gloss_en": "There are birds outside."
+    },
+    {
+      "hanzi": "公园里有很多树。",
+      "pinyin": "gōngyuán lǐ yǒu hěn duō shù",
+      "gloss_en": "There are lots of trees in the park."
+    },
+    {
+      "hanzi": "这些花很漂亮。",
+      "pinyin": "zhè xiē huā hěn piàoliang",
+      "gloss_en": "These flowers are lovely."
+    },
+    {
+      "hanzi": "他的声音很好听。",
+      "pinyin": "tā de shēngyīn hěn hǎotīng",
+      "gloss_en": "His voice is nice."
+    },
+    {
+      "hanzi": "宝宝的声音很大。",
+      "pinyin": "bǎobao de shēngyīn hěn dà",
+      "gloss_en": "The baby is loud."
+    },
+    {
+      "hanzi": "你喜欢什么颜色？",
+      "pinyin": "nǐ xǐhuan shénme yánsè?",
+      "gloss_en": "What colour do you like?"
+    },
+    {
+      "hanzi": "这件衣服是红的。",
+      "pinyin": "zhè jiàn yīfu shì hóng de",
+      "gloss_en": "This piece of clothing is red."
+    },
+    {
+      "hanzi": "他的车是黑的。",
+      "pinyin": "tā de chē shì hēi de",
+      "gloss_en": "His car is black."
+    },
+    {
+      "hanzi": "天是蓝的。",
+      "pinyin": "SKIP",
+      "gloss_en": "SKIP"
+    },
+    {
+      "hanzi": "这个太重了。",
+      "pinyin": "zhè ge tài zhòng le",
+      "gloss_en": "This is too heavy."
+    },
+    {
+      "hanzi": "宝宝很轻。",
+      "pinyin": "bǎobao hěn qīng",
+      "gloss_en": "The baby is light."
+    },
+    {
+      "hanzi": "我饱了。",
+      "pinyin": "wǒ bǎo le",
+      "gloss_en": "I'm full."
+    },
+    {
+      "hanzi": "瓶子是空的。",
+      "pinyin": "SKIP",
+      "gloss_en": "SKIP"
+    },
+    {
+      "hanzi": "他的手很脏。",
+      "pinyin": "tā de shǒu hěn zāng",
+      "gloss_en": "His hands are dirty."
+    },
+    {
+      "hanzi": "尿布湿了。",
+      "pinyin": "niàobù shī le",
+      "gloss_en": "The nappy's wet."
+    },
+    {
+      "hanzi": "请擦桌子。",
+      "pinyin": "qǐng cā zhuōzi",
+      "gloss_en": "Please wipe the table."
+    },
+    {
+      "hanzi": "请刷牙。",
+      "pinyin": "qǐng shuāyá",
+      "gloss_en": "Brush your teeth."
+    },
+    {
+      "hanzi": "洗脸吧。",
+      "pinyin": "xǐ liǎn ba",
+      "gloss_en": "Wash your face."
+    },
+    {
+      "hanzi": "宝宝的眼睛很大。",
+      "pinyin": "bǎobao de yǎnjing hěn dà",
+      "gloss_en": "The baby has big eyes."
+    },
+    {
+      "hanzi": "他的脚很小。",
+      "pinyin": "tā de jiǎo hěn xiǎo",
+      "gloss_en": "His feet are tiny."
+    },
+    {
+      "hanzi": "我的身体很好。",
+      "pinyin": "wǒ de shēntǐ hěn hǎo",
+      "gloss_en": "I'm in good health."
+    },
+    {
+      "hanzi": "他是我的同事。",
+      "pinyin": "tā shì wǒ de tóngshì",
+      "gloss_en": "He's my colleague."
+    },
+    {
+      "hanzi": "她是我的同学。",
+      "pinyin": "tā shì wǒ de tóngxué",
+      "gloss_en": "She's my classmate."
+    },
+    {
+      "hanzi": "我的经理很忙。",
+      "pinyin": "wǒ de jīnglǐ hěn máng",
+      "gloss_en": "My manager is busy."
+    },
+    {
+      "hanzi": "护士在医院工作。",
+      "pinyin": "hùshi zài yīyuàn gōngzuò",
+      "gloss_en": "Nurses work at the hospital."
+    },
+    {
+      "hanzi": "请给我一本词典。",
+      "pinyin": "qǐng gěi wǒ yì běn cídiǎn",
+      "gloss_en": "Please give me a dictionary."
+    },
+    {
+      "hanzi": "我要做作业。",
+      "pinyin": "wǒ yào zuò zuòyè",
+      "gloss_en": "I need to do homework."
+    },
+    {
+      "hanzi": "我明天有考试。",
+      "pinyin": "wǒ míngtiān yǒu kǎoshì",
+      "gloss_en": "I have an exam tomorrow."
+    },
+    {
+      "hanzi": "我的中文水平不高。",
+      "pinyin": "wǒ de Zhōngwén shuǐpíng bù gāo",
+      "gloss_en": "SKIP"
+    },
+    {
+      "hanzi": "我很努力。",
+      "pinyin": "wǒ hěn nǔlì",
+      "gloss_en": "I'm working hard."
+    },
+    {
+      "hanzi": "请帮忙。",
+      "pinyin": "qǐng bāngmáng",
+      "gloss_en": "Please help."
+    },
+    {
+      "hanzi": "谢谢你的帮忙。",
+      "pinyin": "xièxie nǐ de bāngmáng",
+      "gloss_en": "Thanks for your help."
+    },
+    {
+      "hanzi": "他很关心宝宝。",
+      "pinyin": "tā hěn guānxīn bǎobao",
+      "gloss_en": "He cares a lot about the baby."
+    },
+    {
+      "hanzi": "我爱你。",
+      "pinyin": "wǒ ài nǐ",
+      "gloss_en": "I love you."
+    },
+    {
+      "hanzi": "我爱我的家。",
+      "pinyin": "wǒ ài wǒ de jiā",
+      "gloss_en": "I love my family."
+    },
+    {
+      "hanzi": "我们结婚了。",
+      "pinyin": "wǒmen jiéhūn le",
+      "gloss_en": "We're married."
+    },
+    {
+      "hanzi": "生活很好。",
+      "pinyin": "shēnghuó hěn hǎo",
+      "gloss_en": "Life is good."
+    },
+    {
+      "hanzi": "这是什么意思？",
+      "pinyin": "zhè shì shénme yìsi?",
+      "gloss_en": "What does this mean?"
+    },
+    {
+      "hanzi": "很有意思。",
+      "pinyin": "hěn yǒuyìsi",
+      "gloss_en": "That's interesting."
+    },
+    {
+      "hanzi": "这个菜很好吃。",
+      "pinyin": "zhè ge cài hěn hǎochī",
+      "gloss_en": "This dish is tasty."
+    },
+    {
+      "hanzi": "这个节目很好看。",
+      "pinyin": "zhè ge jiémù hěn hǎokàn",
+      "gloss_en": "This programme is good."
+    },
+    {
+      "hanzi": "我给宝宝讲故事。",
+      "pinyin": "wǒ gěi bǎobao jiǎng gùshi",
+      "gloss_en": "I tell the baby a story."
+    },
+    {
+      "hanzi": "他骑自行车。",
+      "pinyin": "tā qí zìxíngchē",
+      "gloss_en": "He rides a bicycle."
+    },
+    {
+      "hanzi": "请站起来。",
+      "pinyin": "SKIP",
+      "gloss_en": "SKIP"
+    },
+    {
+      "hanzi": "宝宝会站了。",
+      "pinyin": "bǎobao huì zhàn le",
+      "gloss_en": "The baby can stand now."
+    },
+    {
+      "hanzi": "他会跳。",
+      "pinyin": "tā huì tiào",
+      "gloss_en": "He can jump."
+    },
+    {
+      "hanzi": "她会唱歌。",
+      "pinyin": "tā huì chànggē",
+      "gloss_en": "She can sing."
+    },
+    {
+      "hanzi": "东西掉了。",
+      "pinyin": "dōngxi diào le",
+      "gloss_en": "It fell."
+    },
+    {
+      "hanzi": "请拉门。",
+      "pinyin": "qǐng lā mén",
+      "gloss_en": "Please pull the door."
+    },
+    {
+      "hanzi": "请推门。",
+      "pinyin": "qǐng tuī mén",
+      "gloss_en": "Please push the door."
+    },
+    {
+      "hanzi": "请抬一下。",
+      "pinyin": "qǐng tái yíxià",
+      "gloss_en": "Please lift it a moment."
+    },
+    {
+      "hanzi": "这个笑话很好笑。",
+      "pinyin": "SKIP",
+      "gloss_en": "SKIP"
+    },
+    {
+      "hanzi": "他的样子很累。",
+      "pinyin": "tā de yàngzi hěn lèi",
+      "gloss_en": "He looks tired."
+    },
+    {
+      "hanzi": "这里有两位客人。",
+      "pinyin": "zhè lǐ yǒu liǎng wèi kèrén",
+      "gloss_en": "There are two guests here."
+    },
+    {
+      "hanzi": "我要一双鞋。",
+      "pinyin": "wǒ yào yì shuāng xié",
+      "gloss_en": "I want a pair of shoes."
+    },
+    {
+      "hanzi": "这是什么种？",
+      "pinyin": "SKIP",
+      "gloss_en": "SKIP"
+    },
+    {
+      "hanzi": "我要一条鱼。",
+      "pinyin": "wǒ yào yì tiáo yú",
+      "gloss_en": "I'd like a fish."
+    },
+    {
+      "hanzi": "他说了很多话。",
+      "pinyin": "tā shuō le hěn duō huà",
+      "gloss_en": "He said a lot."
+    },
+    {
+      "hanzi": "宝宝会说话了。",
+      "pinyin": "bǎobao huì shuōhuà le",
+      "gloss_en": "The baby can talk now."
+    }
+  ]
+}

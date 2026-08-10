@@ -3228,6 +3228,1393 @@
       "pinyin": "wǒ zǎoshang chī liǎng gè jīdàn",
       "gloss_en": "I eat two eggs in the morning.",
       "hanzi_trad": "我早上吃兩個雞蛋。"
+    },
+    {
+      "_comment": "Expansion: HSK3a — people, places, daily life, and the modifiers that make sentences longer"
+    },
+    {
+      "hanzi": "我要照顾宝宝。",
+      "pinyin": "wǒ yào zhàogù bǎobao",
+      "gloss_en": "I'm going to look after the baby."
+    },
+    {
+      "hanzi": "奶奶很会照顾孩子。",
+      "pinyin": "nǎinai hěn huì zhàogù háizi",
+      "gloss_en": "Nainai is very good with children."
+    },
+    {
+      "hanzi": "谁照顾狗？",
+      "pinyin": "shéi zhàogù gǒu?",
+      "gloss_en": "Who's looking after the dog?"
+    },
+    {
+      "hanzi": "我们要一起照顾他。",
+      "pinyin": "wǒmen yào yìqǐ zhàogù tā",
+      "gloss_en": "We'll look after him together."
+    },
+    {
+      "hanzi": "宝宝一直哭。",
+      "pinyin": "bǎobao yìzhí kū",
+      "gloss_en": "The baby's been crying non-stop."
+    },
+    {
+      "hanzi": "他一直在睡觉。",
+      "pinyin": "tā yìzhí zài shuìjiào",
+      "gloss_en": "He's been sleeping the whole time."
+    },
+    {
+      "hanzi": "我一直很想去中国。",
+      "pinyin": "wǒ yìzhí hěn xiǎng qù Zhōngguó",
+      "gloss_en": "I've always wanted to go to China."
+    },
+    {
+      "hanzi": "他终于睡了。",
+      "pinyin": "tā zhōngyú shuì le",
+      "gloss_en": "He's finally asleep."
+    },
+    {
+      "hanzi": "我们终于回家了。",
+      "pinyin": "wǒmen zhōngyú huí jiā le",
+      "gloss_en": "We're finally home."
+    },
+    {
+      "hanzi": "我先洗澡，然后睡觉。",
+      "pinyin": "wǒ xiān xǐzǎo, ránhòu shuìjiào",
+      "gloss_en": "I'll shower first, then sleep."
+    },
+    {
+      "hanzi": "先喂宝宝，然后换尿布。",
+      "pinyin": "xiān wèi bǎobao, ránhòu huàn niàobù",
+      "gloss_en": "Feed the baby first, then change the nappy."
+    },
+    {
+      "hanzi": "他又哭了。",
+      "pinyin": "tā yòu kū le",
+      "gloss_en": "He's crying again."
+    },
+    {
+      "hanzi": "我又累又饿。",
+      "pinyin": "wǒ yòu lèi yòu è",
+      "gloss_en": "I'm both tired and hungry."
+    },
+    {
+      "hanzi": "明天再说吧。",
+      "pinyin": "míngtiān zài shuō ba",
+      "gloss_en": "Let's talk about it tomorrow."
+    },
+    {
+      "hanzi": "请再说一次。",
+      "pinyin": "qǐng zài shuō yí cì",
+      "gloss_en": "Please say that again."
+    },
+    {
+      "hanzi": "今天比昨天更热。",
+      "pinyin": "jīntiān bǐ zuótiān gèng rè",
+      "gloss_en": "Today's even hotter than yesterday."
+    },
+    {
+      "hanzi": "这个更好。",
+      "pinyin": "zhè ge gèng hǎo",
+      "gloss_en": "This one's better."
+    },
+    {
+      "hanzi": "他比我更累。",
+      "pinyin": "tā bǐ wǒ gèng lèi",
+      "gloss_en": "He's even more tired than me."
+    },
+    {
+      "hanzi": "我忘记了。",
+      "pinyin": "wǒ wàngjì le",
+      "gloss_en": "I forgot."
+    },
+    {
+      "hanzi": "别忘记买牛奶。",
+      "pinyin": "bié wàngjì mǎi niúnǎi",
+      "gloss_en": "Don't forget to buy milk."
+    },
+    {
+      "hanzi": "我忘记他的名字了。",
+      "pinyin": "wǒ wàngjì tā de míngzi le",
+      "gloss_en": "I've forgotten his name."
+    },
+    {
+      "hanzi": "你记得他吗？",
+      "pinyin": "nǐ jìde tā ma?",
+      "gloss_en": "Do you remember him?"
+    },
+    {
+      "hanzi": "我记得这个地方。",
+      "pinyin": "wǒ jìde zhè ge dìfang",
+      "gloss_en": "I remember this place."
+    },
+    {
+      "hanzi": "我不记得了。",
+      "pinyin": "wǒ bú jìde le",
+      "gloss_en": "I don't remember."
+    },
+    {
+      "hanzi": "我很担心他。",
+      "pinyin": "wǒ hěn dānxīn tā",
+      "gloss_en": "I'm worried about him."
+    },
+    {
+      "hanzi": "别担心。",
+      "pinyin": "bié dānxīn",
+      "gloss_en": "Don't worry."
+    },
+    {
+      "hanzi": "妈妈很担心宝宝。",
+      "pinyin": "māma hěn dānxīn bǎobao",
+      "gloss_en": "Mum's worried about the baby."
+    },
+    {
+      "hanzi": "你为什么着急？",
+      "pinyin": "nǐ wèishénme zháojí?",
+      "gloss_en": "Why are you in such a hurry?"
+    },
+    {
+      "hanzi": "别着急，还有时间。",
+      "pinyin": "bié zháojí, hái yǒu shíjiān",
+      "gloss_en": "Don't rush, there's still time."
+    },
+    {
+      "hanzi": "宝宝害怕狗。",
+      "pinyin": "bǎobao hàipà gǒu",
+      "gloss_en": "The baby's scared of dogs."
+    },
+    {
+      "hanzi": "我不害怕。",
+      "pinyin": "wǒ bú hàipà",
+      "gloss_en": "I'm not scared."
+    },
+    {
+      "hanzi": "他生气了。",
+      "pinyin": "tā shēngqì le",
+      "gloss_en": "He's angry."
+    },
+    {
+      "hanzi": "你别生气。",
+      "pinyin": "nǐ bié shēngqì",
+      "gloss_en": "Don't be angry."
+    },
+    {
+      "hanzi": "我很难过。",
+      "pinyin": "wǒ hěn nánguò",
+      "gloss_en": "I feel awful."
+    },
+    {
+      "hanzi": "他很满意。",
+      "pinyin": "tā hěn mǎnyì",
+      "gloss_en": "He's happy with it."
+    },
+    {
+      "hanzi": "宝宝很健康。",
+      "pinyin": "bǎobao hěn jiànkāng",
+      "gloss_en": "The baby's healthy."
+    },
+    {
+      "hanzi": "医生说他很健康。",
+      "pinyin": "yīshēng shuō tā hěn jiànkāng",
+      "gloss_en": "The doctor says he's healthy."
+    },
+    {
+      "hanzi": "多运动对健康好。",
+      "pinyin": "duō yùndòng duì jiànkāng hǎo",
+      "gloss_en": "Exercise is good for your health."
+    },
+    {
+      "hanzi": "这个孩子很聪明。",
+      "pinyin": "zhè ge háizi hěn cōngming",
+      "gloss_en": "This child is clever."
+    },
+    {
+      "hanzi": "我儿子很聪明。",
+      "pinyin": "wǒ érzi hěn cōngming",
+      "gloss_en": "My son is clever."
+    },
+    {
+      "hanzi": "她很认真。",
+      "pinyin": "tā hěn rènzhēn",
+      "gloss_en": "She's very conscientious."
+    },
+    {
+      "hanzi": "这个很简单。",
+      "pinyin": "zhè ge hěn jiǎndān",
+      "gloss_en": "This is simple."
+    },
+    {
+      "hanzi": "中文不简单。",
+      "pinyin": "Zhōngwén bù jiǎndān",
+      "gloss_en": "Chinese isn't simple."
+    },
+    {
+      "hanzi": "很奇怪。",
+      "pinyin": "hěn qíguài",
+      "gloss_en": "That's strange."
+    },
+    {
+      "hanzi": "他很年轻。",
+      "pinyin": "tā hěn niánqīng",
+      "gloss_en": "He's young."
+    },
+    {
+      "hanzi": "我渴了。",
+      "pinyin": "wǒ kě le",
+      "gloss_en": "I'm thirsty."
+    },
+    {
+      "hanzi": "宝宝渴了吗？",
+      "pinyin": "bǎobao kě le ma?",
+      "gloss_en": "Is the baby thirsty?"
+    },
+    {
+      "hanzi": "这个太甜了。",
+      "pinyin": "zhè ge tài tián le",
+      "gloss_en": "This is too sweet."
+    },
+    {
+      "hanzi": "水果很甜。",
+      "pinyin": "shuǐguǒ hěn tián",
+      "gloss_en": "The fruit is sweet."
+    },
+    {
+      "hanzi": "我买了一个蛋糕。",
+      "pinyin": "wǒ mǎi le yí ge dàngāo",
+      "gloss_en": "I bought a cake."
+    },
+    {
+      "hanzi": "这个蛋糕很甜。",
+      "pinyin": "zhè ge dàngāo hěn tián",
+      "gloss_en": "This cake is sweet."
+    },
+    {
+      "hanzi": "我想喝果汁。",
+      "pinyin": "wǒ xiǎng hē guǒzhī",
+      "gloss_en": "I'd like some juice."
+    },
+    {
+      "hanzi": "西瓜很甜。",
+      "pinyin": "xīguā hěn tián",
+      "gloss_en": "The watermelon is sweet."
+    },
+    {
+      "hanzi": "这是给你的礼物。",
+      "pinyin": "zhè shì gěi nǐ de lǐwù",
+      "gloss_en": "This is a gift for you."
+    },
+    {
+      "hanzi": "谢谢你的礼物。",
+      "pinyin": "xièxie nǐ de lǐwù",
+      "gloss_en": "Thank you for the gift."
+    },
+    {
+      "hanzi": "我们看照片吧。",
+      "pinyin": "wǒmen kàn zhàopiàn ba",
+      "gloss_en": "Let's look at the photos."
+    },
+    {
+      "hanzi": "这张照片很漂亮。",
+      "pinyin": "zhè zhāng zhàopiàn hěn piàoliang",
+      "gloss_en": "This photo is lovely."
+    },
+    {
+      "hanzi": "我的眼镜在哪里？",
+      "pinyin": "wǒ de yǎnjìng zài nǎlǐ?",
+      "gloss_en": "Where are my glasses?"
+    },
+    {
+      "hanzi": "他的鞋很新。",
+      "pinyin": "tā de xié hěn xīn",
+      "gloss_en": "His shoes are new."
+    },
+    {
+      "hanzi": "请穿鞋。",
+      "pinyin": "qǐng chuān xié",
+      "gloss_en": "Put your shoes on."
+    },
+    {
+      "hanzi": "宝宝的帽子很可爱。",
+      "pinyin": "bǎobao de màozi hěn kě'ài",
+      "gloss_en": "The baby's hat is adorable."
+    },
+    {
+      "hanzi": "牛奶在冰箱里。",
+      "pinyin": "niúnǎi zài bīngxiāng lǐ",
+      "gloss_en": "The milk's in the fridge."
+    },
+    {
+      "hanzi": "请把菜放在冰箱里。",
+      "pinyin": "qǐng bǎ cài fàng zài bīngxiāng lǐ",
+      "gloss_en": "Please put the food in the fridge."
+    },
+    {
+      "hanzi": "请开空调。",
+      "pinyin": "qǐng kāi kōngtiáo",
+      "gloss_en": "Please turn on the air conditioning."
+    },
+    {
+      "hanzi": "洗手间在哪里？",
+      "pinyin": "xǐshǒujiān zài nǎlǐ?",
+      "gloss_en": "Where's the bathroom?"
+    },
+    {
+      "hanzi": "他在客厅玩。",
+      "pinyin": "tā zài kètīng wán",
+      "gloss_en": "He's playing in the living room."
+    },
+    {
+      "hanzi": "我们的邻居很好。",
+      "pinyin": "wǒmen de línjū hěn hǎo",
+      "gloss_en": "Our neighbours are nice."
+    },
+    {
+      "hanzi": "今天有客人来。",
+      "pinyin": "jīntiān yǒu kèrén lái",
+      "gloss_en": "We have guests coming today."
+    },
+    {
+      "hanzi": "我要去银行。",
+      "pinyin": "wǒ yào qù yínháng",
+      "gloss_en": "I need to go to the bank."
+    },
+    {
+      "hanzi": "银行在哪里？",
+      "pinyin": "yínháng zài nǎlǐ?",
+      "gloss_en": "Where's the bank?"
+    },
+    {
+      "hanzi": "我坐地铁上班。",
+      "pinyin": "wǒ zuò dìtiě shàngbān",
+      "gloss_en": "I take the subway to work."
+    },
+    {
+      "hanzi": "我今天有会议。",
+      "pinyin": "wǒ jīntiān yǒu huìyì",
+      "gloss_en": "I have a meeting today."
+    },
+    {
+      "hanzi": "我在办公室。",
+      "pinyin": "wǒ zài bàngōngshì",
+      "gloss_en": "I'm at the office."
+    },
+    {
+      "hanzi": "这是一个好机会。",
+      "pinyin": "zhè shì yí ge hǎo jīhuì",
+      "gloss_en": "This is a good opportunity."
+    },
+    {
+      "hanzi": "你可以选择。",
+      "pinyin": "nǐ kěyǐ xuǎnzé",
+      "gloss_en": "You can choose."
+    },
+    {
+      "hanzi": "我决定了。",
+      "pinyin": "wǒ juédìng le",
+      "gloss_en": "I've decided."
+    },
+    {
+      "hanzi": "我们决定住在这里。",
+      "pinyin": "wǒmen juédìng zhù zài zhè lǐ",
+      "gloss_en": "We've decided to live here."
+    },
+    {
+      "hanzi": "我同意。",
+      "pinyin": "wǒ tóngyì",
+      "gloss_en": "I agree."
+    },
+    {
+      "hanzi": "我不同意。",
+      "pinyin": "wǒ bù tóngyì",
+      "gloss_en": "I don't agree."
+    },
+    {
+      "hanzi": "你打算做什么？",
+      "pinyin": "nǐ dǎsuàn zuò shénme?",
+      "gloss_en": "What are you planning to do?"
+    },
+    {
+      "hanzi": "这是我的习惯。",
+      "pinyin": "zhè shì wǒ de xíguàn",
+      "gloss_en": "It's a habit of mine."
+    },
+    {
+      "hanzi": "我每天锻炼。",
+      "pinyin": "wǒ měitiān duànliàn",
+      "gloss_en": "I exercise every day."
+    },
+    {
+      "hanzi": "我们去散步吧。",
+      "pinyin": "wǒmen qù sànbù ba",
+      "gloss_en": "Let's go for a walk."
+    },
+    {
+      "hanzi": "他喜欢游泳。",
+      "pinyin": "tā xǐhuan yóuyǒng",
+      "gloss_en": "He likes swimming."
+    },
+    {
+      "hanzi": "宝宝喜欢唱歌。",
+      "pinyin": "bǎobao xǐhuan chànggē",
+      "gloss_en": "The baby likes singing."
+    },
+    {
+      "hanzi": "我要打扫房间。",
+      "pinyin": "wǒ yào dǎsǎo fángjiān",
+      "gloss_en": "I need to clean the room."
+    },
+    {
+      "hanzi": "请帮我搬桌子。",
+      "pinyin": "qǐng bāng wǒ bān zhuōzi",
+      "gloss_en": "Please help me move the table."
+    },
+    {
+      "hanzi": "我可以借你的书吗？",
+      "pinyin": "wǒ kěyǐ jiè nǐ de shū ma?",
+      "gloss_en": "May I borrow your book?"
+    },
+    {
+      "hanzi": "请带宝宝出去。",
+      "pinyin": "qǐng dài bǎobao chūqù",
+      "gloss_en": "Please take the baby outside."
+    },
+    {
+      "hanzi": "我去接他。",
+      "pinyin": "wǒ qù jiē tā",
+      "gloss_en": "I'll go pick him up."
+    },
+    {
+      "hanzi": "请接电话。",
+      "pinyin": "qǐng jiē diànhuà",
+      "gloss_en": "Please answer the phone."
+    },
+    {
+      "hanzi": "我今天遇到他了。",
+      "pinyin": "wǒ jīntiān yùdào tā le",
+      "gloss_en": "I ran into him today."
+    },
+    {
+      "hanzi": "我发现了一个问题。",
+      "pinyin": "wǒ fāxiàn le yí ge wèntí",
+      "gloss_en": "I've found a problem."
+    },
+    {
+      "hanzi": "我相信你。",
+      "pinyin": "wǒ xiāngxìn nǐ",
+      "gloss_en": "I believe you."
+    },
+    {
+      "hanzi": "我们要解决这个问题。",
+      "pinyin": "wǒmen yào jiějué zhè ge wèntí",
+      "gloss_en": "We need to solve this problem."
+    },
+    {
+      "hanzi": "我完成了。",
+      "pinyin": "wǒ wánchéng le",
+      "gloss_en": "I've finished it."
+    },
+    {
+      "hanzi": "请继续。",
+      "pinyin": "qǐng jìxù",
+      "gloss_en": "Please carry on."
+    },
+    {
+      "hanzi": "会议结束了。",
+      "pinyin": "huìyì jiéshù le",
+      "gloss_en": "The meeting's over."
+    },
+    {
+      "hanzi": "我想参加。",
+      "pinyin": "wǒ xiǎng cānjiā",
+      "gloss_en": "I'd like to take part."
+    },
+    {
+      "hanzi": "她教中文。",
+      "pinyin": "tā jiāo Zhōngwén",
+      "gloss_en": "She teaches Chinese."
+    },
+    {
+      "hanzi": "请教我。",
+      "pinyin": "qǐng jiāo wǒ",
+      "gloss_en": "Please teach me."
+    },
+    {
+      "hanzi": "他没有回答。",
+      "pinyin": "tā méiyǒu huídá",
+      "gloss_en": "He didn't answer."
+    },
+    {
+      "hanzi": "我感觉很好。",
+      "pinyin": "wǒ gǎnjué hěn hǎo",
+      "gloss_en": "I feel good."
+    },
+    {
+      "hanzi": "你感觉怎么样？",
+      "pinyin": "nǐ gǎnjué zěnmeyàng?",
+      "gloss_en": "How do you feel?"
+    },
+    {
+      "hanzi": "这里很热闹。",
+      "pinyin": "zhè lǐ hěn rènao",
+      "gloss_en": "It's lively here."
+    },
+    {
+      "hanzi": "这里很方便。",
+      "pinyin": "zhè lǐ hěn fāngbiàn",
+      "gloss_en": "It's convenient here."
+    },
+    {
+      "hanzi": "我听不清楚。",
+      "pinyin": "wǒ tīng bù qīngchu",
+      "gloss_en": "I can't hear clearly."
+    },
+    {
+      "hanzi": "请说清楚。",
+      "pinyin": "qǐng shuō qīngchu",
+      "gloss_en": "Please speak clearly."
+    },
+    {
+      "hanzi": "我特别喜欢这个。",
+      "pinyin": "wǒ tèbié xǐhuan zhè ge",
+      "gloss_en": "I especially like this one."
+    },
+    {
+      "hanzi": "你一定要来。",
+      "pinyin": "nǐ yídìng yào lái",
+      "gloss_en": "You must come."
+    },
+    {
+      "hanzi": "我必须走了。",
+      "pinyin": "wǒ bìxū zǒu le",
+      "gloss_en": "I have to go."
+    },
+    {
+      "hanzi": "他可能来。",
+      "pinyin": "tā kěnéng lái",
+      "gloss_en": "He might come."
+    },
+    {
+      "hanzi": "当然可以。",
+      "pinyin": "dāngrán kěyǐ",
+      "gloss_en": "Of course."
+    },
+    {
+      "hanzi": "其实我不知道。",
+      "pinyin": "qíshí wǒ bù zhīdào",
+      "gloss_en": "Actually, I don't know."
+    },
+    {
+      "hanzi": "他总是很忙。",
+      "pinyin": "tā zǒngshì hěn máng",
+      "gloss_en": "He's always busy."
+    },
+    {
+      "hanzi": "我经常想你。",
+      "pinyin": "wǒ jīngcháng xiǎng nǐ",
+      "gloss_en": "I think of you often."
+    },
+    {
+      "hanzi": "他刚才走了。",
+      "pinyin": "tā gāngcái zǒu le",
+      "gloss_en": "He left just now."
+    },
+    {
+      "hanzi": "差不多了。",
+      "pinyin": "chàbuduō le",
+      "gloss_en": "That's about right."
+    },
+    {
+      "hanzi": "他们差不多一样。",
+      "pinyin": "tāmen chàbuduō yíyàng",
+      "gloss_en": "They're about the same."
+    },
+    {
+      "hanzi": "虽然很累，但是很高兴。",
+      "pinyin": "suīrán hěn lèi, dànshì hěn gāoxìng",
+      "gloss_en": "Tired, but happy."
+    },
+    {
+      "hanzi": "还有其他的吗？",
+      "pinyin": "hái yǒu qítā de ma?",
+      "gloss_en": "Are there any others?"
+    },
+    {
+      "hanzi": "这个城市很大。",
+      "pinyin": "zhè ge chéngshì hěn dà",
+      "gloss_en": "This city is big."
+    },
+    {
+      "hanzi": "我看新闻。",
+      "pinyin": "wǒ kàn xīnwén",
+      "gloss_en": "I watch the news."
+    },
+    {
+      "hanzi": "我们的关系很好。",
+      "pinyin": "wǒmen de guānxi hěn hǎo",
+      "gloss_en": "We get on well."
+    },
+    {
+      "hanzi": "这里的环境很好。",
+      "pinyin": "zhè lǐ de huánjìng hěn hǎo",
+      "gloss_en": "The surroundings here are nice."
+    },
+    {
+      "hanzi": "我想去旅游。",
+      "pinyin": "wǒ xiǎng qù lǚyóu",
+      "gloss_en": "I'd like to travel."
+    },
+    {
+      "hanzi": "他住在三楼。",
+      "pinyin": "tā zhù zài sān lóu",
+      "gloss_en": "He lives on the third floor."
+    },
+    {
+      "hanzi": "我需要一张地图。",
+      "pinyin": "wǒ xūyào yì zhāng dìtú",
+      "gloss_en": "I need a map."
+    },
+    {
+      "_comment": "Expansion: HSK3b — the standalone words the first batch assumed, plus more level 3"
+    },
+    {
+      "hanzi": "我终于找到了。",
+      "pinyin": "wǒ zhōngyú zhǎo dào le",
+      "gloss_en": "I finally found it."
+    },
+    {
+      "hanzi": "我们先吃饭，然后出去。",
+      "pinyin": "wǒmen xiān chī fàn, ránhòu chūqù",
+      "gloss_en": "Let's eat first, then go out."
+    },
+    {
+      "hanzi": "我打算学中文。",
+      "pinyin": "wǒ dǎsuàn xué Zhōngwén",
+      "gloss_en": "I plan to learn Chinese."
+    },
+    {
+      "hanzi": "我学中文。",
+      "pinyin": "wǒ xué Zhōngwén",
+      "gloss_en": "I'm learning Chinese."
+    },
+    {
+      "hanzi": "吃饭了。",
+      "pinyin": "chī fàn le",
+      "gloss_en": "Dinner's ready."
+    },
+    {
+      "hanzi": "他到了吗？",
+      "pinyin": "tā dào le ma?",
+      "gloss_en": "Has he arrived?"
+    },
+    {
+      "hanzi": "我到家了。",
+      "pinyin": "wǒ dào jiā le",
+      "gloss_en": "I'm home."
+    },
+    {
+      "hanzi": "宝宝在我旁边。",
+      "pinyin": "bǎobao zài wǒ pángbiān",
+      "gloss_en": "The baby's next to me."
+    },
+    {
+      "hanzi": "狗在床旁边。",
+      "pinyin": "gǒu zài chuáng pángbiān",
+      "gloss_en": "The dog's beside the bed."
+    },
+    {
+      "hanzi": "超市在附近。",
+      "pinyin": "chāoshì zài fùjìn",
+      "gloss_en": "The supermarket's nearby."
+    },
+    {
+      "hanzi": "医院在对面。",
+      "pinyin": "yīyuàn zài duìmiàn",
+      "gloss_en": "The hospital's opposite."
+    },
+    {
+      "hanzi": "学校很近。",
+      "pinyin": "xuéxiào hěn jìn",
+      "gloss_en": "The school is close."
+    },
+    {
+      "hanzi": "机场很远。",
+      "pinyin": "jīchǎng hěn yuǎn",
+      "gloss_en": "The airport is far."
+    },
+    {
+      "hanzi": "他坐在中间。",
+      "pinyin": "tā zuò zài zhōngjiān",
+      "gloss_en": "He's sitting in the middle."
+    },
+    {
+      "hanzi": "外面在下雪。",
+      "pinyin": "wàimiàn zài xiàxuě",
+      "gloss_en": "It's snowing outside."
+    },
+    {
+      "hanzi": "今天刮风。",
+      "pinyin": "jīntiān guāfēng",
+      "gloss_en": "It's windy today."
+    },
+    {
+      "hanzi": "今天天气很晴。",
+      "pinyin": "jīntiān tiānqì hěn qíng",
+      "gloss_en": "It's clear today."
+    },
+    {
+      "hanzi": "我们家有一只猫。",
+      "pinyin": "wǒmen jiā yǒu yì zhī māo",
+      "gloss_en": "We have a cat."
+    },
+    {
+      "hanzi": "宝宝喜欢动物。",
+      "pinyin": "bǎobao xǐhuan dòngwù",
+      "gloss_en": "The baby likes animals."
+    },
+    {
+      "hanzi": "外面有鸟。",
+      "pinyin": "wàimiàn yǒu niǎo",
+      "gloss_en": "There are birds outside."
+    },
+    {
+      "hanzi": "公园里有很多树。",
+      "pinyin": "gōngyuán lǐ yǒu hěn duō shù",
+      "gloss_en": "There are lots of trees in the park."
+    },
+    {
+      "hanzi": "这些花很漂亮。",
+      "pinyin": "zhè xiē huā hěn piàoliang",
+      "gloss_en": "These flowers are lovely."
+    },
+    {
+      "hanzi": "他的声音很好听。",
+      "pinyin": "tā de shēngyīn hěn hǎotīng",
+      "gloss_en": "His voice is nice."
+    },
+    {
+      "hanzi": "宝宝的声音很大。",
+      "pinyin": "bǎobao de shēngyīn hěn dà",
+      "gloss_en": "The baby is loud."
+    },
+    {
+      "hanzi": "你喜欢什么颜色？",
+      "pinyin": "nǐ xǐhuan shénme yánsè?",
+      "gloss_en": "What colour do you like?"
+    },
+    {
+      "hanzi": "这件衣服是红的。",
+      "pinyin": "zhè jiàn yīfu shì hóng de",
+      "gloss_en": "This piece of clothing is red."
+    },
+    {
+      "hanzi": "他的车是黑的。",
+      "pinyin": "tā de chē shì hēi de",
+      "gloss_en": "His car is black."
+    },
+    {
+      "hanzi": "这个太重了。",
+      "pinyin": "zhè ge tài zhòng le",
+      "gloss_en": "This is too heavy."
+    },
+    {
+      "hanzi": "宝宝很轻。",
+      "pinyin": "bǎobao hěn qīng",
+      "gloss_en": "The baby is light."
+    },
+    {
+      "hanzi": "我饱了。",
+      "pinyin": "wǒ bǎo le",
+      "gloss_en": "I'm full."
+    },
+    {
+      "hanzi": "他的手很脏。",
+      "pinyin": "tā de shǒu hěn zāng",
+      "gloss_en": "His hands are dirty."
+    },
+    {
+      "hanzi": "尿布湿了。",
+      "pinyin": "niàobù shī le",
+      "gloss_en": "The nappy's wet."
+    },
+    {
+      "hanzi": "请擦桌子。",
+      "pinyin": "qǐng cā zhuōzi",
+      "gloss_en": "Please wipe the table."
+    },
+    {
+      "hanzi": "请刷牙。",
+      "pinyin": "qǐng shuāyá",
+      "gloss_en": "Brush your teeth."
+    },
+    {
+      "hanzi": "洗脸吧。",
+      "pinyin": "xǐ liǎn ba",
+      "gloss_en": "Wash your face."
+    },
+    {
+      "hanzi": "宝宝的眼睛很大。",
+      "pinyin": "bǎobao de yǎnjing hěn dà",
+      "gloss_en": "The baby has big eyes."
+    },
+    {
+      "hanzi": "他的脚很小。",
+      "pinyin": "tā de jiǎo hěn xiǎo",
+      "gloss_en": "His feet are tiny."
+    },
+    {
+      "hanzi": "我的身体很好。",
+      "pinyin": "wǒ de shēntǐ hěn hǎo",
+      "gloss_en": "I'm in good health."
+    },
+    {
+      "hanzi": "他是我的同事。",
+      "pinyin": "tā shì wǒ de tóngshì",
+      "gloss_en": "He's my colleague."
+    },
+    {
+      "hanzi": "她是我的同学。",
+      "pinyin": "tā shì wǒ de tóngxué",
+      "gloss_en": "She's my classmate."
+    },
+    {
+      "hanzi": "我的经理很忙。",
+      "pinyin": "wǒ de jīnglǐ hěn máng",
+      "gloss_en": "My manager is busy."
+    },
+    {
+      "hanzi": "护士在医院工作。",
+      "pinyin": "hùshi zài yīyuàn gōngzuò",
+      "gloss_en": "Nurses work at the hospital."
+    },
+    {
+      "hanzi": "请给我一本词典。",
+      "pinyin": "qǐng gěi wǒ yì běn cídiǎn",
+      "gloss_en": "Please give me a dictionary."
+    },
+    {
+      "hanzi": "我要做作业。",
+      "pinyin": "wǒ yào zuò zuòyè",
+      "gloss_en": "I need to do homework."
+    },
+    {
+      "hanzi": "我明天有考试。",
+      "pinyin": "wǒ míngtiān yǒu kǎoshì",
+      "gloss_en": "I have an exam tomorrow."
+    },
+    {
+      "hanzi": "我很努力。",
+      "pinyin": "wǒ hěn nǔlì",
+      "gloss_en": "I'm working hard."
+    },
+    {
+      "hanzi": "请帮忙。",
+      "pinyin": "qǐng bāngmáng",
+      "gloss_en": "Please help."
+    },
+    {
+      "hanzi": "谢谢你的帮忙。",
+      "pinyin": "xièxie nǐ de bāngmáng",
+      "gloss_en": "Thanks for your help."
+    },
+    {
+      "hanzi": "他很关心宝宝。",
+      "pinyin": "tā hěn guānxīn bǎobao",
+      "gloss_en": "He cares a lot about the baby."
+    },
+    {
+      "hanzi": "我爱你。",
+      "pinyin": "wǒ ài nǐ",
+      "gloss_en": "I love you."
+    },
+    {
+      "hanzi": "我爱我的家。",
+      "pinyin": "wǒ ài wǒ de jiā",
+      "gloss_en": "I love my family."
+    },
+    {
+      "hanzi": "我们结婚了。",
+      "pinyin": "wǒmen jiéhūn le",
+      "gloss_en": "We're married."
+    },
+    {
+      "hanzi": "生活很好。",
+      "pinyin": "shēnghuó hěn hǎo",
+      "gloss_en": "Life is good."
+    },
+    {
+      "hanzi": "这是什么意思？",
+      "pinyin": "zhè shì shénme yìsi?",
+      "gloss_en": "What does this mean?"
+    },
+    {
+      "hanzi": "很有意思。",
+      "pinyin": "hěn yǒuyìsi",
+      "gloss_en": "That's interesting."
+    },
+    {
+      "hanzi": "这个菜很好吃。",
+      "pinyin": "zhè ge cài hěn hǎochī",
+      "gloss_en": "This dish is tasty."
+    },
+    {
+      "hanzi": "这个节目很好看。",
+      "pinyin": "zhè ge jiémù hěn hǎokàn",
+      "gloss_en": "This programme is good."
+    },
+    {
+      "hanzi": "我给宝宝讲故事。",
+      "pinyin": "wǒ gěi bǎobao jiǎng gùshi",
+      "gloss_en": "I tell the baby a story."
+    },
+    {
+      "hanzi": "他骑自行车。",
+      "pinyin": "tā qí zìxíngchē",
+      "gloss_en": "He rides a bicycle."
+    },
+    {
+      "hanzi": "宝宝会站了。",
+      "pinyin": "bǎobao huì zhàn le",
+      "gloss_en": "The baby can stand now."
+    },
+    {
+      "hanzi": "他会跳。",
+      "pinyin": "tā huì tiào",
+      "gloss_en": "He can jump."
+    },
+    {
+      "hanzi": "她会唱歌。",
+      "pinyin": "tā huì chànggē",
+      "gloss_en": "She can sing."
+    },
+    {
+      "hanzi": "东西掉了。",
+      "pinyin": "dōngxi diào le",
+      "gloss_en": "It fell."
+    },
+    {
+      "hanzi": "请拉门。",
+      "pinyin": "qǐng lā mén",
+      "gloss_en": "Please pull the door."
+    },
+    {
+      "hanzi": "请推门。",
+      "pinyin": "qǐng tuī mén",
+      "gloss_en": "Please push the door."
+    },
+    {
+      "hanzi": "请抬一下。",
+      "pinyin": "qǐng tái yíxià",
+      "gloss_en": "Please lift it a moment."
+    },
+    {
+      "hanzi": "他的样子很累。",
+      "pinyin": "tā de yàngzi hěn lèi",
+      "gloss_en": "He looks tired."
+    },
+    {
+      "hanzi": "这里有两位客人。",
+      "pinyin": "zhè lǐ yǒu liǎng wèi kèrén",
+      "gloss_en": "There are two guests here."
+    },
+    {
+      "hanzi": "我要一双鞋。",
+      "pinyin": "wǒ yào yì shuāng xié",
+      "gloss_en": "I want a pair of shoes."
+    },
+    {
+      "hanzi": "我要一条鱼。",
+      "pinyin": "wǒ yào yì tiáo yú",
+      "gloss_en": "I'd like a fish."
+    },
+    {
+      "hanzi": "他说了很多话。",
+      "pinyin": "tā shuō le hěn duō huà",
+      "gloss_en": "He said a lot."
+    },
+    {
+      "hanzi": "宝宝会说话了。",
+      "pinyin": "bǎobao huì shuōhuà le",
+      "gloss_en": "The baby can talk now."
+    },
+    {
+      "_comment": "Expansion: HSK3c — sentences for the 37 words that had none"
+    },
+    {
+      "hanzi": "这只猫很胖。",
+      "pinyin": "zhè zhī māo hěn pàng",
+      "gloss_en": "This cat is chubby."
+    },
+    {
+      "hanzi": "宝宝的脸很胖。",
+      "pinyin": "bǎobao de liǎn hěn pàng",
+      "gloss_en": "The baby has chubby cheeks."
+    },
+    {
+      "hanzi": "这个菜很好吃而且很便宜。",
+      "pinyin": "zhè ge cài hěn hǎochī érqiě hěn piányi",
+      "gloss_en": "This dish is tasty and cheap."
+    },
+    {
+      "hanzi": "他很聪明而且很努力。",
+      "pinyin": "tā hěn cōngming érqiě hěn nǔlì",
+      "gloss_en": "He's clever and hard-working."
+    },
+    {
+      "hanzi": "这个房子很大而且很干净。",
+      "pinyin": "zhè ge fángzi hěn dà érqiě hěn gānjìng",
+      "gloss_en": "This house is big and clean."
+    },
+    {
+      "hanzi": "世界很大。",
+      "pinyin": "shìjiè hěn dà",
+      "gloss_en": "The world is big."
+    },
+    {
+      "hanzi": "我想看世界。",
+      "pinyin": "wǒ xiǎng kàn shìjiè",
+      "gloss_en": "I want to see the world."
+    },
+    {
+      "hanzi": "中国是一个大国家。",
+      "pinyin": "Zhōngguó shì yí ge dà guójiā",
+      "gloss_en": "China is a big country."
+    },
+    {
+      "hanzi": "你是哪个国家的人？",
+      "pinyin": "nǐ shì nǎ ge guójiā de rén?",
+      "gloss_en": "Which country are you from?"
+    },
+    {
+      "hanzi": "我喜欢中国文化。",
+      "pinyin": "wǒ xǐhuan Zhōngguó wénhuà",
+      "gloss_en": "I like Chinese culture."
+    },
+    {
+      "hanzi": "文化很重要。",
+      "pinyin": "wénhuà hěn zhòngyào",
+      "gloss_en": "Culture matters."
+    },
+    {
+      "hanzi": "这是什么种的狗？",
+      "pinyin": "zhè shì shénme zhǒng de gǒu?",
+      "gloss_en": "What kind of dog is this?"
+    },
+    {
+      "hanzi": "我喜欢这种茶。",
+      "pinyin": "wǒ xǐhuan zhè zhǒng chá",
+      "gloss_en": "I like this kind of tea."
+    },
+    {
+      "hanzi": "有两种。",
+      "pinyin": "yǒu liǎng zhǒng",
+      "gloss_en": "There are two kinds."
+    },
+    {
+      "hanzi": "他站在我这边。",
+      "pinyin": "tā zhàn zài wǒ zhè biān",
+      "gloss_en": "He's standing on my side."
+    },
+    {
+      "hanzi": "河的那边有一个公园。",
+      "pinyin": "hé de nà biān yǒu yí ge gōngyuán",
+      "gloss_en": "There's a park on the other side of the river."
+    },
+    {
+      "hanzi": "北方很冷。",
+      "pinyin": "běifāng hěn lěng",
+      "gloss_en": "The north is cold."
+    },
+    {
+      "hanzi": "他是北方人。",
+      "pinyin": "tā shì běifāng rén",
+      "gloss_en": "He's a northerner."
+    },
+    {
+      "hanzi": "南边很热。",
+      "pinyin": "nán biān hěn rè",
+      "gloss_en": "The south is hot."
+    },
+    {
+      "hanzi": "我住在城市的南边。",
+      "pinyin": "wǒ zhù zài chéngshì de nán biān",
+      "gloss_en": "I live on the south side of the city."
+    },
+    {
+      "hanzi": "医院在东边。",
+      "pinyin": "yīyuàn zài dōng biān",
+      "gloss_en": "The hospital is on the east side."
+    },
+    {
+      "hanzi": "超市在西边。",
+      "pinyin": "chāoshì zài xī biān",
+      "gloss_en": "The supermarket is on the west side."
+    },
+    {
+      "hanzi": "学校在城市的西边。",
+      "pinyin": "xuéxiào zài chéngshì de xī biān",
+      "gloss_en": "The school is on the west side of the city."
+    },
+    {
+      "hanzi": "一年有四个季节。",
+      "pinyin": "yì nián yǒu sì ge jìjié",
+      "gloss_en": "There are four seasons in a year."
+    },
+    {
+      "hanzi": "你喜欢哪个季节？",
+      "pinyin": "nǐ xǐhuan nǎ ge jìjié?",
+      "gloss_en": "Which season do you like?"
+    },
+    {
+      "hanzi": "今天天气很阴。",
+      "pinyin": "jīntiān tiānqì hěn yīn",
+      "gloss_en": "It's overcast today."
+    },
+    {
+      "hanzi": "河很长。",
+      "pinyin": "hé hěn cháng",
+      "gloss_en": "The river is long."
+    },
+    {
+      "hanzi": "我们去河边散步。",
+      "pinyin": "wǒmen qù hé biān sànbù",
+      "gloss_en": "Let's walk by the river."
+    },
+    {
+      "hanzi": "我想去山上。",
+      "pinyin": "wǒ xiǎng qù shān shàng",
+      "gloss_en": "I'd like to go up the mountain."
+    },
+    {
+      "hanzi": "山上有很多树。",
+      "pinyin": "shān shàng yǒu hěn duō shù",
+      "gloss_en": "There are many trees on the mountain."
+    },
+    {
+      "hanzi": "草是绿的。",
+      "pinyin": "cǎo shì lǜ de",
+      "gloss_en": "The grass is green."
+    },
+    {
+      "hanzi": "宝宝在草上玩。",
+      "pinyin": "bǎobao zài cǎo shàng wán",
+      "gloss_en": "The baby's playing on the grass."
+    },
+    {
+      "hanzi": "这件衣服是白的。",
+      "pinyin": "zhè jiàn yīfu shì bái de",
+      "gloss_en": "This piece of clothing is white."
+    },
+    {
+      "hanzi": "白的还是黑的？",
+      "pinyin": "bái de háishi hēi de?",
+      "gloss_en": "White or black?"
+    },
+    {
+      "hanzi": "我喜欢蓝的。",
+      "pinyin": "wǒ xǐhuan lán de",
+      "gloss_en": "I like the blue one."
+    },
+    {
+      "hanzi": "他的车是蓝的。",
+      "pinyin": "tā de chē shì lán de",
+      "gloss_en": "His car is blue."
+    },
+    {
+      "hanzi": "我要绿的。",
+      "pinyin": "wǒ yào lǜ de",
+      "gloss_en": "I want the green one."
+    },
+    {
+      "hanzi": "树是绿的。",
+      "pinyin": "shù shì lǜ de",
+      "gloss_en": "The trees are green."
+    },
+    {
+      "hanzi": "奶瓶是满的。",
+      "pinyin": "nǎipíng shì mǎn de",
+      "gloss_en": "The bottle is full."
+    },
+    {
+      "hanzi": "房间是空的。",
+      "pinyin": "fángjiān shì kōng de",
+      "gloss_en": "The room is empty."
+    },
+    {
+      "hanzi": "他说了一个笑话。",
+      "pinyin": "tā shuō le yí ge xiàohua",
+      "gloss_en": "He told a joke."
+    },
+    {
+      "hanzi": "这个笑话很有意思。",
+      "pinyin": "zhè ge xiàohua hěn yǒuyìsi",
+      "gloss_en": "That joke is funny."
+    },
+    {
+      "hanzi": "他是司机。",
+      "pinyin": "tā shì sījī",
+      "gloss_en": "He's a driver."
+    },
+    {
+      "hanzi": "司机在车里等。",
+      "pinyin": "sījī zài chē lǐ děng",
+      "gloss_en": "The driver's waiting in the car."
+    },
+    {
+      "hanzi": "服务员给我们水。",
+      "pinyin": "fúwùyuán gěi wǒmen shuǐ",
+      "gloss_en": "The waiter gives us water."
+    },
+    {
+      "hanzi": "校长是一位老师。",
+      "pinyin": "xiàozhǎng shì yí wèi lǎoshī",
+      "gloss_en": "The headteacher is a teacher."
+    },
+    {
+      "hanzi": "校长在学校。",
+      "pinyin": "xiàozhǎng zài xuéxiào",
+      "gloss_en": "The headteacher is at the school."
+    },
+    {
+      "hanzi": "这是我的铅笔。",
+      "pinyin": "zhè shì wǒ de qiānbǐ",
+      "gloss_en": "This is my pencil."
+    },
+    {
+      "hanzi": "铅笔在桌子上。",
+      "pinyin": "qiānbǐ zài zhuōzi shàng",
+      "gloss_en": "The pencil's on the table."
+    },
+    {
+      "hanzi": "请看黑板。",
+      "pinyin": "qǐng kàn hēibǎn",
+      "gloss_en": "Please look at the blackboard."
+    },
+    {
+      "hanzi": "黑板是黑的。",
+      "pinyin": "hēibǎn shì hēi de",
+      "gloss_en": "The blackboard is black."
+    },
+    {
+      "hanzi": "他的成绩很好。",
+      "pinyin": "tā de chéngjì hěn hǎo",
+      "gloss_en": "His grades are good."
+    },
+    {
+      "hanzi": "我的成绩不太好。",
+      "pinyin": "wǒ de chéngjì bú tài hǎo",
+      "gloss_en": "My grades aren't great."
+    },
+    {
+      "hanzi": "他的中文水平很好。",
+      "pinyin": "tā de Zhōngwén shuǐpíng hěn hǎo",
+      "gloss_en": "His Chinese is at a good level."
+    },
+    {
+      "hanzi": "感谢你的帮忙。",
+      "pinyin": "gǎnxiè nǐ de bāngmáng",
+      "gloss_en": "Thank you for your help."
+    },
+    {
+      "hanzi": "我很感谢你。",
+      "pinyin": "wǒ hěn gǎnxiè nǐ",
+      "gloss_en": "I'm very grateful to you."
+    },
+    {
+      "hanzi": "请唱一个。",
+      "pinyin": "qǐng chàng yí ge",
+      "gloss_en": "Please sing one."
+    },
+    {
+      "hanzi": "妈妈给宝宝唱。",
+      "pinyin": "māma gěi bǎobao chàng",
+      "gloss_en": "Mum sings to the baby."
+    },
+    {
+      "hanzi": "宝宝的耳朵很小。",
+      "pinyin": "bǎobao de ěrduo hěn xiǎo",
+      "gloss_en": "The baby's ears are tiny."
+    },
+    {
+      "hanzi": "我的耳朵疼。",
+      "pinyin": "wǒ de ěrduo téng",
+      "gloss_en": "My ear hurts."
+    },
+    {
+      "hanzi": "宝宝的嘴很小。",
+      "pinyin": "bǎobao de zuǐ hěn xiǎo",
+      "gloss_en": "The baby's mouth is tiny."
+    },
+    {
+      "hanzi": "他的嘴里有东西。",
+      "pinyin": "tā de zuǐ lǐ yǒu dōngxi",
+      "gloss_en": "He has something in his mouth."
+    },
+    {
+      "_comment": "Expansion: HSK3d — 天, and the four seasons that needed it"
+    },
+    {
+      "hanzi": "春天很舒服。",
+      "pinyin": "chūn tiān hěn shūfu",
+      "gloss_en": "Spring is pleasant."
+    },
+    {
+      "hanzi": "春天有很多花。",
+      "pinyin": "chūn tiān yǒu hěn duō huā",
+      "gloss_en": "There are lots of flowers in spring."
+    },
+    {
+      "hanzi": "我喜欢春天。",
+      "pinyin": "wǒ xǐhuan chūn tiān",
+      "gloss_en": "I like spring."
+    },
+    {
+      "hanzi": "夏天很热。",
+      "pinyin": "xià tiān hěn rè",
+      "gloss_en": "Summer is hot."
+    },
+    {
+      "hanzi": "夏天我们去游泳。",
+      "pinyin": "xià tiān wǒmen qù yóuyǒng",
+      "gloss_en": "In summer we go swimming."
+    },
+    {
+      "hanzi": "秋天很舒服。",
+      "pinyin": "qiū tiān hěn shūfu",
+      "gloss_en": "Autumn is pleasant."
+    },
+    {
+      "hanzi": "秋天的天气很好。",
+      "pinyin": "qiū tiān de tiānqì hěn hǎo",
+      "gloss_en": "The weather in autumn is good."
+    },
+    {
+      "hanzi": "冬天很冷。",
+      "pinyin": "dōng tiān hěn lěng",
+      "gloss_en": "Winter is cold."
+    },
+    {
+      "hanzi": "冬天会下雪。",
+      "pinyin": "dōng tiān huì xiàxuě",
+      "gloss_en": "It snows in winter."
+    },
+    {
+      "hanzi": "天很蓝。",
+      "pinyin": "tiān hěn lán",
+      "gloss_en": "The sky is blue."
+    },
+    {
+      "hanzi": "阴天我不想出去。",
+      "pinyin": "yīn tiān wǒ bù xiǎng chūqù",
+      "gloss_en": "On an overcast day I don't want to go out."
+    },
+    {
+      "hanzi": "这个杯很满。",
+      "pinyin": "zhè ge bēi hěn mǎn",
+      "gloss_en": "This cup is full."
+    },
+    {
+      "hanzi": "这个瓶是空的。",
+      "pinyin": "zhè ge píng shì kōng de",
+      "gloss_en": "This bottle is empty."
     }
   ]
 }

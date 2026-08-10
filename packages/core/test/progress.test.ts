@@ -28,9 +28,9 @@ function mastered(conceptId: number): Card {
 describe('hskCoverage', () => {
   it('reports zero for a learner who has done nothing', () => {
     const concepts = [concept(1, 1), concept(2, 1)];
-    const r = hskCoverage(concepts, [], 'listen', T0);
+    const r = hskCoverage(concepts, [], 'listen', T0, { levelSizes: { 1: 2 } });
     expect(r.estimate).toBe(0);
-    expect(r.perLevel).toEqual([{ level: 1, total: 2, known: 0, coverage: 0 }]);
+    expect(r.perLevel).toEqual([{ level: 1, total: 2, known: 0, inCorpus: 2, coverage: 0 }]);
   });
 
   it('clears a level once enough of it is retained, and counts partway into the next', () => {
@@ -42,10 +42,27 @@ describe('hskCoverage', () => {
     const cards = [1, 2, 3, 4, 6].map(mastered);
     const at = new Date(T0.getTime() + 200 * MS_PER_DAY);
 
-    const r = hskCoverage(concepts, cards, 'listen', at);
+    const r = hskCoverage(concepts, cards, 'listen', at, { levelSizes: { 1: 5, 2: 4 } });
     expect(r.perLevel[0]).toMatchObject({ level: 1, total: 5, known: 4 });
     expect(r.perLevel[1]).toMatchObject({ level: 2, total: 4, known: 1 });
     expect(r.estimate).toBeCloseTo(1.25, 2);
+  });
+
+  /**
+   * The denominator is the size of the HSK level, not the size of our corpus.
+   *
+   * Dividing by the corpus would let "HSK 1 complete" be reached by mastering the
+   * handful of level-1 words we happen to have written sentences for — the estimate
+   * would measure our content rather than his Chinese, and would deflate every time the
+   * corpus grew. `inCorpus` keeps the other question answerable: how much of the level
+   * we can teach at all.
+   */
+  it('measures against the real level size, not the corpus', () => {
+    const concepts = [1, 2, 3, 4].map((i) => concept(i, 1));
+    const r = hskCoverage(concepts, [1, 2, 3, 4].map(mastered), 'listen', T0);
+    expect(r.perLevel[0]).toMatchObject({ level: 1, total: 150, known: 4, inCorpus: 4 });
+    // 4 of 150 is 3% into level 1 — nowhere near clearing it, which is the point.
+    expect(r.estimate).toBeCloseTo(0.03, 2);
   });
 
   it('does not credit a later level while an earlier one is incomplete', () => {

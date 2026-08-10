@@ -27,6 +27,8 @@ interface VocabEntry {
   headword_trad?: string;
   pinyin: string;
   gloss_en: string;
+  /** HSK 2.0 level, assigned by pipeline/tag_hsk.py. Absent for words outside HSK. */
+  hsk?: number;
 }
 interface SentenceEntry {
   hanzi?: string;
@@ -110,7 +112,12 @@ function main(): void {
         e.headword_trad ?? e.headword,
         e.pinyin,
         e.gloss_en,
-        source === 'core' ? 1 : null, // the seed list is HSK1; personal words sit outside it
+        // Per-word, from pipeline/tag_hsk.py. This was a hardcoded 1 for every core
+        // word, which put 284 of 308 concepts in "level 1" and made the whole coverage
+        // breakdown describe the corpus rather than any actual HSK level. Words with no
+        // level — family vocabulary, Taiwan usages — stay null rather than being
+        // assigned one to avoid a blank.
+        e.hsk ?? null,
         rank,
         source,
         now,
