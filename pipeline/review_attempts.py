@@ -1,0 +1,88 @@
+"""Inspect saved attempts — the real ones, from the real learner.
+
+Every threshold in speech_score.py was originally calibrated against TTS clips
+standing in for a learner, because no recording of the learner existed. That was the
+root cause of two rounds of wrong tuning: synthetic speech is clean, native, and
+correctly pronounced, which is precisely what real attempts are not.
+
+    python pipeline/review_attempts.py            # summary of everything kept
+    python pipeline/review_attempts.py --rescore  # re-run scoring after a code change
+
+`--rescore` is the point of keeping the audio: a threshold or algorithm change can be
+evaluated against attempts that already happened, instead of asking someone to speak
+into a microphone thirty more times to find out whether it helped.
+"""
+
+from __future__ import annotations
+
+import json
+import statistics
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import speech_score as ss  # noqa: E402
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
+MARK = {"good": "+", "close": "~", "tone": "!", "wrong": "x", "missing": "_", "unscored": "?"}
+
+
+def main() -> int:
+    files = sorted(ss.ATTEMPTS.glob("*.json"))
+    if not files:
+        print(f"No attempts saved yet in {ss.ATTEMPTS}.")
+        print("They accumulate as the Speak drill is used.")
+        return 1
+
+    rescore = "--rescore" in sys.argv
+    print(f"{len(files)} attempts in {ss.ATTEMPTS}{'  (re-scoring)' if rescore else ''}\n")
+
+    confs, rates, unusable = [], [], 0
+    for f in files:
+        m = json.loads(f.read_text(encoding="utf-8"))
+        wav = f.with_suffix(".wav")
+
+        if rescore and wav.exists():
+            r = ss.score(wav, m["target"], m.get("targetPinyin", ""), None)
+            m = {**m, "transcript": r["transcript"], "confidence": r.get("confidence"),
+                 "unusable": r["unusable"], "reason": r.get("reason"),
+                 "correct": r["correctSyllables"], "total": r["totalSyllables"],
+                 "verdicts": [s["verdict"] for s in r["syllables"]]}
+
+        conf = m.get("confidence")
+        if conf is not None:
+            confs.append(conf)
+
+        if m.get("unusable"):
+            unusable += 1
+            print(f"  {f.stem}  conf {conf!s:>6}  NOT SCORED  {m['target']}")
+            print(f"          heard {m.get('transcript', '')!r} — {m.get('reason', '')}")
+            continue
+
+        total = m.get("total") or 1
+        rates.append(m.get("correct", 0) / total)
+        marks = "".join(MARK.get(v, "?") for v in m.get("verdicts", []))
+        print(f"  {f.stem}  conf {conf!s:>6}  {m.get('correct')}/{m.get('total')}  "
+              f"{marks:<10}  {m['target']}")
+        print(f"          heard {m.get('transcript', '')!r}")
+
+    print(f"\n── {len(files)} attempts ──")
+    print(f"  not scored: {unusable} ({unusable / len(files):.0%})")
+    if rates:
+        print(f"  right-sound rate: mean {statistics.mean(rates):.0%}, "
+              f"median {statistics.median(rates):.0%}")
+    if confs:
+        confs.sort()
+        q = lambda p: confs[min(len(confs) - 1, int(p * len(confs)))]  # noqa: E731
+        print(f"  confidence: p10 {q(0.1):.2f}  p50 {q(0.5):.2f}  p90 {q(0.9):.2f}")
+        print("\n  Compare against the synthetic baseline that thresholds were set from:")
+        print("    clean TTS -0.14 · degraded speech -0.18 · pink noise -0.64")
+        print(f"    current cutoff MIN_CONFIDENCE = {ss.MIN_CONFIDENCE}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -400,6 +400,39 @@ MIN_VOICED_FRAMES = 10
 MIN_CONFIDENCE = -1.5
 
 
+KEEP_ATTEMPTS = int(os.environ.get("MT_KEEP_ATTEMPTS", "300"))
+ATTEMPTS = Path(os.environ.get("MT_ATTEMPTS", "D:/ml-cache/mt-attempts"))
+
+
+def _keep(wav: Path, meta: dict) -> None:
+    """Retain the recording and what we made of it, for later diagnosis.
+
+    Every threshold in this file was calibrated against TTS clips standing in for a
+    learner, because no recording of the actual learner existed. That was the root
+    cause of two rounds of wrong tuning: synthetic speech is clean, native, and
+    correctly pronounced, which is exactly what real attempts are not.
+
+    Kept locally, never uploaded, and capped — this is the same machine that already
+    holds the recordings, so it adds no exposure, and the diagnostic value is the
+    difference between measuring and guessing.
+    """
+    try:
+        ATTEMPTS.mkdir(parents=True, exist_ok=True)
+        existing = sorted(ATTEMPTS.glob("*.wav"))
+        for old in existing[: max(0, len(existing) - KEEP_ATTEMPTS + 1)]:
+            old.unlink(missing_ok=True)
+            old.with_suffix(".json").unlink(missing_ok=True)
+        # Monotonic and collision-free without needing a clock the caller controls.
+        n = 1 + max((int(p.stem) for p in existing if p.stem.isdigit()), default=0)
+        dest = ATTEMPTS / f"{n:05d}.wav"
+        dest.write_bytes(wav.read_bytes())
+        dest.with_suffix(".json").write_text(
+            json.dumps(meta, ensure_ascii=False, indent=1), encoding="utf-8"
+        )
+    except OSError:
+        pass  # diagnostics must never break scoring
+
+
 def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
           reference_clip: Path | None) -> dict:
     """Measure one spoken attempt. Returns measurements; grading happens in @mt/core.
@@ -423,10 +456,13 @@ def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
         """A recogniser failure is not a learner failure.
 
         Returning this rather than a score lets the caller decline to grade. Whisper
-        hallucinates fluently on unclear input — real attempts came back as "99888" and
-        "宝宝SOLA", and pink noise produces "谢谢大家" — and logging those as 0/5 would
-        bury cards for mistakes that were never made.
+        hallucinates fluently on unclear input — real attempts came back as "99888",
+        "宝宝SOLA" and "欢迎订阅我的频道" (a caption phrase memorised from YouTube, and its
+        signature output when it cannot decode) — and logging those as 0/5 buries cards
+        for mistakes that were never made.
         """
+        _keep(wav, {"target": target, "targetPinyin": target_pinyin, "transcript": transcript,
+                    "confidence": confidence, "unusable": True, "reason": reason})
         return {
             "unusable": True, "reason": reason, "transcript": transcript, "target": target,
             "confidence": confidence, "syllables": [], "totalSyllables": 0,
@@ -447,11 +483,31 @@ def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
     if confidence < MIN_CONFIDENCE:
         return unusable("the recording was too unclear to score", transcript, round(confidence, 2))
 
-    ref = reference(reference_clip, target) if reference_clip else {}
-
     want_syl = syllables(target)
     got_syl = syllables(hyp)
     pairs = align([b for b, _ in want_syl], [b for b, _ in got_syl])
+
+    # Not one syllable in common. Someone attempting a sentence they just heard does not
+    # miss every single sound — but a recogniser that has given up produces exactly this,
+    # fluently and with no other outward sign:
+    #
+    #   换尿布吧      → "欢迎订阅我的频道"
+    #   车在房子后面  → "这是番萨荷米"
+    #   奶奶抱宝宝    → "来呢 吧 吧 吧"
+    #
+    # Declining to grade costs a rep. Grading it writes `again` against words that were
+    # probably said correctly, and that is a lie the log keeps forever.
+    matched = sum(1 for i, (w, g, j) in enumerate(pairs)
+                  if g is not None and want_syl[i][0] == got_syl[j][0])
+    if matched == 0 and len(want_syl) >= 3:
+        return unusable(
+            "couldn't match that to the sentence — the recogniser struggles with "
+            "learner speech, so this was not counted",
+            transcript,
+            round(confidence, 2),
+        )
+
+    ref = reference(reference_clip, target) if reference_clip else {}
 
     out: list[Syllable] = []
     for i, (want, got, j) in enumerate(pairs):
@@ -502,6 +558,14 @@ def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
         out.append(s)
 
     scored = [s for s in out if s.distance is not None or s.verdict == "tone"]
+    _keep(wav, {
+        "target": target, "targetPinyin": target_pinyin, "transcript": transcript,
+        "confidence": round(confidence, 2), "unusable": False,
+        "correct": sum(1 for s in out if s.correct), "total": len(out),
+        "verdicts": [s.verdict for s in out],
+        "heard": [s.saidPinyin for s in out],
+        "want": [s.pinyin for s in out],
+    })
     return {
         "unusable": False,
         "reason": None,

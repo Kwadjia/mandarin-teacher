@@ -526,12 +526,16 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
       // verdicts are what a later analysis would want.
       payload: {
         transcript: score.transcript,
+        // Kept because the first two rounds of threshold tuning were done without it,
+        // against synthetic audio, and both were wrong.
+        confidence: score.confidence ?? null,
         correctSyllables: score.correctSyllables,
         totalSyllables: score.totalSyllables,
         toneErrors: score.toneErrors,
         scoredSyllables: score.scoredSyllables,
         meanToneDistance: score.meanToneDistance,
         verdicts: score.syllables.map((s) => s.verdict),
+        heard: score.syllables.map((s) => s.saidPinyin),
       },
     });
 
