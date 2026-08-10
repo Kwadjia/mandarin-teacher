@@ -7,7 +7,7 @@ import {
   review,
   type Card,
   type Concept,
-} from '../src/index.js';
+} from '../src/index.ts';
 
 const T0 = new Date('2026-01-01T09:00:00.000Z');
 

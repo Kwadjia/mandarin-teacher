@@ -7,8 +7,8 @@
  * hidden behind one aggregate number.
  */
 
-import { isRetained } from './scheduling.js';
-import type { Card, Concept, Modality } from './types.js';
+import { isRetained } from './scheduling.ts';
+import type { Card, Concept, Modality } from './types.ts';
 
 export interface LevelCoverage {
   level: number;

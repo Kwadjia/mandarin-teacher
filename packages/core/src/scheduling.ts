@@ -18,8 +18,8 @@ import {
   // a bare Rating. Aliased because we export a `Grade` of our own.
   type Grade as FsrsGrade,
 } from 'ts-fsrs';
-import type { Card, FsrsState, Grade, Modality } from './types.js';
-import { MS_PER_DAY } from './types.js';
+import type { Card, FsrsState, Grade, Modality } from './types.ts';
+import { MS_PER_DAY } from './types.ts';
 
 const GRADE_TO_RATING: Record<Grade, FsrsGrade> = {
   again: Rating.Again,

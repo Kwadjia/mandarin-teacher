@@ -9,8 +9,8 @@
  * priorities can never break retention maths.
  */
 
-import { isKnown } from './scheduling.js';
-import type { Card, Concept, Modality, UtteranceRef } from './types.js';
+import { isKnown } from './scheduling.ts';
+import type { Card, Concept, Modality, UtteranceRef } from './types.ts';
 
 // ── review queue ────────────────────────────────────────────────────────────
 

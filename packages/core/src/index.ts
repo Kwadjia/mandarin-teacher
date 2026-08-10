@@ -7,8 +7,8 @@
  * years to find out (docs/design.md §6).
  */
 
-export * from './types.js';
-export * from './scheduling.js';
-export * from './selection.js';
-export * from './grading.js';
-export * from './progress.js';
+export * from './types.ts';
+export * from './scheduling.ts';
+export * from './selection.ts';
+export * from './grading.ts';
+export * from './progress.ts';

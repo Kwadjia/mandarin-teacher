@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { FLUENT_MS, LABOURED_MS, gradeAuto, gradeCommit, gradeDictation } from '../src/index.js';
+import { FLUENT_MS, LABOURED_MS, gradeAuto, gradeCommit, gradeDictation } from '../src/index.ts';
 
 describe('gradeCommit', () => {
   const base = { gotIt: true, replays: 0, latencyMs: 3000, committedBeforeReveal: true };

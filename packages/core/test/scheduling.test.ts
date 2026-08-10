@@ -8,7 +8,7 @@ import {
   retrievability,
   review,
   type Card,
-} from '../src/index.js';
+} from '../src/index.ts';
 
 const T0 = new Date('2026-01-01T09:00:00.000Z');
 const days = (n: number) => new Date(T0.getTime() + n * MS_PER_DAY);

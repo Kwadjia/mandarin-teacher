@@ -21,7 +21,7 @@ import {
   type Card,
   type Concept,
   type UtteranceRef,
-} from '../src/index.js';
+} from '../src/index.ts';
 
 /** Deterministic PRNG — a flaky scheduler test is worse than no scheduler test. */
 function mulberry32(seed: number): () => number {

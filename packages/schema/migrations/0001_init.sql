@@ -17,7 +17,11 @@ CREATE TABLE concept (
   headword       TEXT NOT NULL,              -- Simplified; authored form
   headword_trad  TEXT NOT NULL,              -- Traditional; derived via opencc s2twp
   pinyin         TEXT NOT NULL,              -- part of identity: 长 cháng ≠ 长 zhǎng
-  sense          TEXT,                       -- nullable discriminator, unused for now
+  -- NOT NULL with an empty-string default, deliberately. SQLite treats NULLs as
+  -- distinct inside a UNIQUE constraint, so a nullable `sense` would make the
+  -- identity constraint below vacuous — and it is almost always unset. Leaving it
+  -- nullable let a re-seed silently double the corpus.
+  sense          TEXT NOT NULL DEFAULT '',   -- '' = the word has no sense split
   gloss_en       TEXT NOT NULL,
   hsk_level      INTEGER,
   freq_rank      INTEGER,

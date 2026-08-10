@@ -7,7 +7,7 @@
  * down-weight, any rep that failed that condition.
  */
 
-import type { Grade } from './types.js';
+import type { Grade } from './types.ts';
 
 export interface CommitOutcome {
   /** Did they say they understood it? */
