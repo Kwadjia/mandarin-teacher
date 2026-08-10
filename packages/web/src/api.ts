@@ -85,6 +85,38 @@ export interface ToneSet {
   words: ToneWord[];
 }
 
+/** One syllable of a spoken attempt, measured by the local scorer. */
+export interface ScoredSyllable {
+  char: string;
+  /** What the recogniser heard here, or null if the syllable was not said at all. */
+  said: string | null;
+  /** Expected tone from the pinyin; 0 = neutral. */
+  tone: number;
+  correct: boolean;
+  /** Semitones from the native contour. Null when it could not be measured. */
+  distance: number | null;
+  verdict: 'good' | 'close' | 'off' | 'wrong' | 'missing' | 'unscored';
+  /** Pitch shapes for drawing, in semitones relative to each speaker's median. */
+  learner: number[];
+  reference: number[];
+}
+
+export interface SpeechScore {
+  transcript: string;
+  target: string;
+  syllables: ScoredSyllable[];
+  totalSyllables: number;
+  correctSyllables: number;
+  toneErrors: number;
+  scoredSyllables: number;
+  meanToneDistance: number | null;
+  elapsedMs?: number;
+}
+
+export interface SpeakResponse extends AnswerResponse {
+  score: SpeechScore;
+}
+
 export interface CaptureResponse {
   captureId: number;
   text: string;
@@ -129,6 +161,35 @@ export const api = {
   }) => json<AnswerResponse>('/api/answer', { method: 'POST', body: JSON.stringify(body) }),
 
   stats: (modality: Modality = 'listen') => json<Stats>(`/api/stats?modality=${modality}`),
+
+  health: () => json<{ ok: boolean; speech: boolean }>('/api/health'),
+
+  /**
+   * Upload one spoken attempt. Multipart rather than JSON so the recording goes up as
+   * bytes instead of base64, and the server returns the grade — the browser measures
+   * nothing and grades nothing (docs/design.md §2.9).
+   */
+  speak: (body: {
+    sessionId: number | null;
+    conceptId: number;
+    utteranceId: number;
+    audioId: number | null;
+    replays: number;
+    audio: Blob;
+  }) => {
+    const form = new FormData();
+    form.set('audio', body.audio, 'attempt.webm');
+    form.set('conceptId', String(body.conceptId));
+    form.set('utteranceId', String(body.utteranceId));
+    form.set('replays', String(body.replays));
+    if (body.audioId !== null) form.set('audioId', String(body.audioId));
+    if (body.sessionId !== null) form.set('sessionId', String(body.sessionId));
+    // No content-type header: the browser must set the multipart boundary itself.
+    return fetch('/api/speak', { method: 'POST', body: form }).then(async (res) => {
+      if (!res.ok) throw new Error((await res.text().catch(() => '')) || `HTTP ${res.status}`);
+      return res.json() as Promise<SpeakResponse>;
+    });
+  },
 
   tones: () => json<{ sets: ToneSet[] }>('/api/tones'),
   toneAnswer: (body: {

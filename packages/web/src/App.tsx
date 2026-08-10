@@ -1,14 +1,17 @@
 import { useCallback, useEffect, useState } from 'react';
 import { api } from './api.ts';
 import { Drill } from './Drill.tsx';
+import { Shadow } from './Shadow.tsx';
 import { ToneDrill } from './ToneDrill.tsx';
 import { Capture } from './Capture.tsx';
 import { Stats } from './Stats.tsx';
 
-type View = 'drill' | 'tones' | 'capture' | 'stats';
+type View = 'drill' | 'speak' | 'tones' | 'capture' | 'stats';
 
+// Ordered by priority: listening, then speaking (docs/design.md §1).
 const TABS: [View, string][] = [
-  ['drill', 'Drill'],
+  ['drill', 'Listen'],
+  ['speak', 'Speak'],
   ['tones', 'Tones'],
   ['capture', 'Add Mandarin'],
   ['stats', 'Progress'],
@@ -82,6 +85,9 @@ export function App() {
       <div className="min-h-[26rem]">
         {view === 'drill' && (
           <Drill sessionId={sessionId} onAnswered={() => setAnswered((n) => n + 1)} />
+        )}
+        {view === 'speak' && (
+          <Shadow sessionId={sessionId} onAnswered={() => setAnswered((n) => n + 1)} />
         )}
         {view === 'tones' && <ToneDrill sessionId={sessionId} />}
         {view === 'capture' && <Capture />}

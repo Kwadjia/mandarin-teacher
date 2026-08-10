@@ -168,6 +168,62 @@ Then a **human gate**: a native speaker reviews a sample. Not all of them — 50
 sentences, 20 minutes, thumbs up/down/fix. Below ~85% pass rate, the generation prompt
 is wrong and that needs to be known before generating hundreds more.
 
+### 2.12 Speaking is scored by two signals, because one is not enough
+
+Speech recognition cannot judge pronunciation. Whisper decodes to the most probable
+*text*, so a mispronounced tone comes back as the correct character — measured, not
+assumed: `small` returned 它的 for 他的, both *tā*. Scoring an attempt by its transcript
+alone would certify bad pronunciation as correct, which is worse than no feedback,
+because it is confidently wrong about the one thing that most needs correcting.
+
+So an attempt is measured twice:
+
+| signal | tool | answers |
+|---|---|---|
+| words | `faster-whisper` large-v3 | did I say the right words |
+| tones | `praat-parselmouth` pitch track | did I say them with the right pitch shape |
+
+The pitch half only works if it is speaker-invariant. A tone is a *relative* movement,
+and a male learner is compared against a female TTS voice roughly an octave up, so
+contours are converted to semitones relative to each speaker's own median and aligned
+with DTW. Validated before anything was built on it: the same sentence read by a female
+and a male voice scored 0.59 semitones apart, two different sentences 1.13, ranked
+correctly 18/20.
+
+Thresholds are **measured, not chosen**. Two natives reading the same sentence still
+differ, and that spread is the noise floor; a threshold below it marks correct speech
+as wrong, which destroys trust in the green marks as well as the red. `--calibrate`
+reports the distribution (p50 0.66, p85 1.25, p98 2.19 semitones over 209 syllables)
+and the thresholds sit at p85 and p98. Re-run it if the voices change.
+
+Two rules follow from what these signals mean:
+
+- **Words outrank tones when grading.** A wrong word is a recall failure and the
+  scheduler should act on it; a drifting tone on the right word is a motor skill, and
+  burying the word in the queue does not make the mouth learn faster.
+- **A first attempt is capped at `good`.** Repeating a sentence seconds after hearing
+  it is imitation, not production. `easy` on a new card means a fortnight, and a mouth
+  that has done something once does not remember how in two weeks.
+
+### 2.13 Listening gates speaking
+
+A word becomes eligible to speak only once its listening card exists. Without the gate
+the speak queue introduces its own vocabulary and asks for production of a word never
+heard — backwards for this learner's priority order, and the fastest way to drill in a
+mispronunciation before there is anything to compare it against.
+
+### 2.14 Speech scoring is local, and that is a privacy decision as much as a cost one
+
+Scoring runs on the GPU here (`pipeline/speech_server.py`, ~275ms per attempt, $0
+forever). Recordings of the learner's voice — and, later, of family speech around the
+house — never leave the machine. That holds by construction rather than by policy,
+which is the only version of it worth relying on.
+
+The model lives in a separate process because loading large-v3 takes ~50 seconds;
+paying that per attempt would be intolerable, paying it once at startup is invisible.
+If the service is not running the API reports speaking as unavailable and the UI says
+how to start it, rather than failing in a way that looks like a bug.
+
 ---
 
 ## 3. Data model
@@ -378,10 +434,26 @@ above real time for short utterances — so **the entire speaking-feedback phase
 $0 and never leaves the machine.** Local STT is the default plan for phase 4, with
 Azure Pronunciation Assessment as a comparison point rather than a dependency.
 
+**Measured, 2026-08-10** (`pipeline/check_gpu_speech.py`, against our own clips where
+the ground truth is exact):
+
+| | accuracy | latency |
+|---|---|---|
+| `small` on GPU | 11/12 | 90ms |
+| `large-v3` on GPU | 12/12 | 185ms |
+| `small` on CPU | 11/12 | 860ms |
+
+`large-v3` it is — 185ms is inside the threshold where feedback feels immediate, and
+3GB of fp16 weights leaves most of the 16GB free. End to end through the API, including
+upload and pitch analysis, an attempt costs ~275ms warm.
+
 Two practical notes:
-- Blackwell (sm_120) needs a recent CTranslate2 / cuDNN build. Check GPU support
-  before assuming the install works; CPU fallback on a 7800X3D is still usable for
-  short clips.
+- Blackwell (sm_120) works, with ctranslate2 4.8.1 + cuDNN 9.24 from the pip
+  `nvidia-*-cu12` wheels. Windows needs `os.add_dll_directory` for those — since 3.8 it
+  does not search PATH for extension DLLs, and `speech_score.py` registers them itself
+  so the service starts from any shell. CPU fallback on a 7800X3D is still usable.
+- Models cache to `D:/ml-cache/huggingface`. `large-v3` alone is 3GB and the C: drive
+  on this machine does not have room for it.
 - Local TTS is *not* recommended — open Mandarin TTS quality is well below Azure's
   neural voices, and Azure's free tier already covers the corpus. Keep TTS remote,
   STT local.
@@ -417,16 +489,16 @@ mandarin-teacher/
 │  └─ web/                         # Vite + React + Tailwind
 │     └─ src/features/{drill,capture,stats}/
 │
-├─ pipeline/                       # Python
-│  ├─ day0_validate.py             # throwaway phase-0 validation script
+├─ pipeline/                       # Python — offline content, plus the speech scorer
+│  ├─ day0_validate.py             # sentence generation + TTS + review page
+│  ├─ merge_expansion.py           # ← vocabulary-constraint enforcement (§2.11)
+│  ├─ build_tones.py               # tone minimal-pair clips
+│  ├─ resolve_captures.py          # English capture → verified Mandarin (needs API key)
+│  ├─ speech_score.py              # scoring library: whisper + pitch (§2.12)
+│  ├─ speech_server.py             # resident model, localhost:8790 (§2.14)
+│  ├─ check_gpu_speech.py          # regression: is CUDA transcription still working
+│  ├─ check_gpu_pitch.py           # regression: is the contour metric still valid
 │  ├─ requirements.txt
-│  ├─ src/pipeline/
-│  │  ├─ sources/hsk.py            # ingest word lists
-│  │  ├─ segment.py                # segmentation + pinyin
-│  │  ├─ generate.py               # LLM sentence generation (Batch API)
-│  │  ├─ verify.py                 # ← vocabulary-constraint enforcement
-│  │  ├─ tts.py                    # Azure batch synthesis
-│  │  └─ load.py                   # write to SQLite / D1
 │  └─ data/
 │     ├─ seed_vocab.json           # phase-0 seed list
 │     ├─ raw/                      # HSK lists, frequency lists (vendored)

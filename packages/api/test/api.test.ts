@@ -86,8 +86,8 @@ const post = async (path: string, body?: unknown) => {
 };
 
 describe('health and sessions', () => {
-  it('reports healthy', async () => {
-    assert.deepEqual((await get('/api/health')).body, { ok: true });
+  it('reports healthy, and says whether speaking is available', async () => {
+    assert.deepEqual((await get('/api/health')).body, { ok: true, speech: false });
   });
 
   it('opens and closes a session', async () => {

@@ -17,6 +17,7 @@ import {
   gradeAuto,
   gradeCommit,
   gradeDictation,
+  gradeSpeak,
   hskCoverage,
   introductionQueue,
   medianLatency,
@@ -41,6 +42,31 @@ export interface ToneSet {
   words: ToneWord[];
 }
 
+/** One syllable of a spoken attempt, as measured by pipeline/speech_score.py. */
+export interface ScoredSyllable {
+  char: string;
+  said: string | null;
+  tone: number;
+  correct: boolean;
+  distance: number | null;
+  verdict: 'good' | 'close' | 'off' | 'wrong' | 'missing' | 'unscored';
+  learner: number[];
+  reference: number[];
+}
+
+export interface SpeechScore {
+  transcript: string;
+  target: string;
+  syllables: ScoredSyllable[];
+  totalSyllables: number;
+  correctSyllables: number;
+  toneErrors: number;
+  scoredSyllables: number;
+  meanToneDistance: number | null;
+  elapsedMs?: number;
+  referenceUsed?: string | null;
+}
+
 export interface Deps {
   db: Db;
   /** Injectable so tests can control the clock. */
@@ -51,6 +77,21 @@ export interface Deps {
    * their reps are logged as events with no card attached.
    */
   tones?: ToneSet[];
+  /**
+   * Sends a recording to the local scoring service (pipeline/speech_server.py).
+   *
+   * Injected rather than imported so the API keeps no opinion about how scoring
+   * happens, and so tests can exercise the speaking route without a GPU. Absent
+   * means speaking is unavailable, which the route reports plainly instead of
+   * failing in a way that looks like a bug.
+   */
+  scoreSpeech?: (input: {
+    audio: ArrayBuffer;
+    mimeType: string;
+    hanzi: string;
+    pinyin: string;
+    reference: string | null;
+  }) => Promise<SpeechScore>;
 }
 
 type Outcome =
@@ -101,10 +142,10 @@ const HAN = /[一-鿿㐀-䶿]/;
 const startOfToday = (now: Date) =>
   new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
 
-export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
+export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech }: Deps) {
   const app = new Hono();
 
-  app.get('/api/health', (c) => c.json({ ok: true }));
+  app.get('/api/health', (c) => c.json({ ok: true, speech: Boolean(scoreSpeech) }));
 
   app.get('/api/tones', (c) => c.json({ sets: tones }));
 
@@ -203,8 +244,22 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
 
     const introducedToday = await q.introducedSince(db, startOfToday(at), modality);
 
+    // Listening comes first, and that ordering is enforced here rather than left to
+    // habit: a word is only eligible to be spoken once its listening card exists.
+    // Otherwise the speak queue would introduce brand-new vocabulary on its own and
+    // ask for production of a word that has never been heard — backwards for this
+    // learner, and the fastest route to drilling a mispronunciation into place.
+    let candidates = concepts;
+    if (modality === 'speak') {
+      const heard = await q.loadCards(db, 'listen');
+      const ready = new Set(
+        heard.filter((k) => k.introducedAt !== null).map((k) => k.conceptId),
+      );
+      candidates = concepts.filter((x) => ready.has(x.id));
+    }
+
     const action = nextAction({
-      concepts,
+      concepts: candidates,
       cards,
       modality,
       utteranceCount: counts,
@@ -219,7 +274,8 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
       due: dueNow,
       introducedToday,
       introduced: cards.filter((k) => k.introducedAt !== null).length,
-      total: concepts.length,
+      // Eligible concepts, not all of them — for speaking that is what has been heard.
+      total: candidates.length,
     };
 
     if (action.type === 'idle') {
@@ -231,7 +287,7 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
         null,
       );
       const remainingNew = introductionQueue(
-        { concepts, cards, modality, utteranceCount: counts },
+        { concepts: candidates, cards, modality, utteranceCount: counts },
         1,
       ).length;
       return c.json({
@@ -340,6 +396,112 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
       dueAt: result.card.dueAt,
       intervalDays: Math.round((result.intervalMs / 86_400_000) * 10) / 10,
       retentionAtDue: Math.round(result.retentionAtDue * 100) / 100,
+    });
+  });
+
+  /**
+   * Score one spoken attempt, grade it, and log it.
+   *
+   * The browser uploads a recording and the target; it never sees a grade it could
+   * have influenced. Two measurements come back from the scorer and both are kept:
+   * which words were recognised, and how far each syllable's pitch contour sat from
+   * a native reading. The second is the whole reason this exists — whisper decodes to
+   * the likeliest text and will hand back the right character for a mispronounced
+   * tone, so transcription alone would quietly certify bad pronunciation as correct.
+   *
+   * Failures here are reported as 503 rather than 500: the scoring service being
+   * down is an operational state with an obvious remedy, not a bug in the app.
+   */
+  app.post('/api/speak', async (c) => {
+    if (!scoreSpeech) {
+      return c.json(
+        { error: 'Speech scoring is not running. Start it with: npm run speech' },
+        503,
+      );
+    }
+
+    const form = await c.req.formData();
+    const audio = form.get('audio');
+    const conceptId = Number(form.get('conceptId'));
+    const utteranceId = form.get('utteranceId') ? Number(form.get('utteranceId')) : null;
+
+    if (!(audio instanceof File) || !Number.isFinite(conceptId) || !utteranceId) {
+      return c.json({ error: 'audio, conceptId and utteranceId are required' }, 400);
+    }
+
+    const utterance = await q.loadUtteranceDetail(db, utteranceId);
+    if (!utterance) return c.json({ error: 'unknown utterance' }, 404);
+
+    // Score against the clip actually heard when there is one, so prosody and speed
+    // match what was being imitated. Otherwise any native reading of the sentence.
+    const audioId = form.get('audioId') ? Number(form.get('audioId')) : null;
+    const heard = utterance.clips.find((x) => x.id === audioId) ?? utterance.clips[0];
+
+    let score: SpeechScore;
+    try {
+      score = await scoreSpeech({
+        audio: await audio.arrayBuffer(),
+        mimeType: audio.type || 'audio/webm',
+        hanzi: utterance.hanzi,
+        pinyin: utterance.pinyin,
+        reference: heard ? heard.url.replace(/^\/audio\//, '') : null,
+      });
+    } catch (e) {
+      return c.json({ error: `Scoring failed: ${(e as Error).message}` }, 503);
+    }
+
+    const replays = Number(form.get('replays') ?? 0);
+    const measured = gradeSpeak({
+      correctSyllables: score.correctSyllables,
+      totalSyllables: score.totalSyllables,
+      toneErrors: score.toneErrors,
+      scoredSyllables: score.scoredSyllables,
+      replays,
+    });
+
+    const existing = (await q.loadCards(db, 'speak')).find((k) => k.conceptId === conceptId);
+
+    // A first attempt is never worth `easy`. Saying a word correctly once, immediately
+    // after hearing it, is imitation rather than production — FSRS reads `easy` on a
+    // new card as a fortnight, and a mouth that has done something once does not
+    // remember how in two weeks. Same reasoning as First Exposure on the listening side.
+    const grade: Grade = !existing && measured === 'easy' ? 'good' : measured;
+    const before = existing ?? newCard(conceptId, 'speak', now());
+    const result = review(before, grade, now());
+    const cardId = await q.saveCard(db, result.card);
+
+    await q.insertEvent(db, {
+      ts: now().getTime(),
+      sessionId: form.get('sessionId') ? Number(form.get('sessionId')) : null,
+      kind: 'review',
+      conceptId,
+      cardId,
+      utteranceId,
+      audioId: heard?.id ?? null,
+      modality: 'speak',
+      exerciseType: 'shadow',
+      result: grade,
+      replays,
+      // The contours are dropped before logging — they are hundreds of floats per
+      // attempt, useful for drawing the feedback once and worthless afterwards. The
+      // verdicts are what a later analysis would want.
+      payload: {
+        transcript: score.transcript,
+        correctSyllables: score.correctSyllables,
+        totalSyllables: score.totalSyllables,
+        toneErrors: score.toneErrors,
+        scoredSyllables: score.scoredSyllables,
+        meanToneDistance: score.meanToneDistance,
+        verdicts: score.syllables.map((s) => s.verdict),
+      },
+    });
+
+    return c.json({
+      grade,
+      dueAt: result.card.dueAt,
+      intervalDays: Math.round((result.intervalMs / 86_400_000) * 10) / 10,
+      retentionAtDue: Math.round(result.retentionAtDue * 100) / 100,
+      score,
     });
   });
 

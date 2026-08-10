@@ -41,8 +41,54 @@ const tones = existsSync(tonesManifest)
   : [];
 if (!tones.length) console.warn('No tone drills — run: python pipeline/build_tones.py');
 
+/**
+ * Client for the local speech scorer (pipeline/speech_server.py).
+ *
+ * A separate process because loading large-v3 takes about fifty seconds; keeping it
+ * resident there means an attempt costs a few hundred milliseconds instead. If it is
+ * not running, `scoreSpeech` stays undefined and the API reports speaking as
+ * unavailable rather than failing per request.
+ */
+const SPEECH_URL = process.env.MT_SPEECH_URL ?? 'http://127.0.0.1:8790';
+
+async function speechAvailable(): Promise<boolean> {
+  try {
+    const res = await fetch(`${SPEECH_URL}/health`, {
+      signal: AbortSignal.timeout(1500),
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
+const scoreSpeech = async (input: {
+  audio: ArrayBuffer;
+  mimeType: string;
+  hanzi: string;
+  pinyin: string;
+  reference: string | null;
+}) => {
+  const form = new FormData();
+  form.set('audio', new Blob([input.audio], { type: input.mimeType }), 'attempt.webm');
+  form.set('hanzi', input.hanzi);
+  form.set('pinyin', input.pinyin);
+  if (input.reference) form.set('reference', input.reference);
+
+  // Generous, because the very first attempt after startup can still be loading the
+  // model. Steady state is well under a second.
+  const res = await fetch(`${SPEECH_URL}/score`, {
+    method: 'POST',
+    body: form,
+    signal: AbortSignal.timeout(120_000),
+  });
+  if (!res.ok) throw new Error(`speech service ${res.status}: ${await res.text()}`);
+  return res.json() as Promise<Awaited<ReturnType<NonNullable<Parameters<typeof createApp>[0]['scoreSpeech']>>>>;
+};
+
 const db = new NodeDb(DB_PATH);
-const app = createApp({ db, tones });
+const speechUp = await speechAvailable();
+const app = createApp({ db, tones, scoreSpeech: speechUp ? scoreSpeech : undefined });
 
 // serveStatic resolves relative to cwd, so express the audio directory that way.
 const audioRoot = relative(process.cwd(), AUDIO_DIR).replaceAll('\\', '/');
@@ -79,6 +125,11 @@ const server = serve({ fetch: app.fetch, port: PORT }, (info) => {
       `${counts.clips} clips · ${counts.events} events logged`,
   );
   console.log(`  audio served from ${audioRoot}`);
+  console.log(
+    speechUp
+      ? `  speaking enabled — scorer at ${SPEECH_URL}`
+      : `  speaking disabled — no scorer at ${SPEECH_URL}. Start it with: npm run speech`,
+  );
 });
 
 // A stale server on the port is the most likely startup failure, and the default

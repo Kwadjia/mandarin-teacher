@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { FLUENT_MS, LABOURED_MS, gradeAuto, gradeCommit, gradeDictation } from '../src/index.ts';
+import {
+  FLUENT_MS,
+  LABOURED_MS,
+  gradeAuto,
+  gradeCommit,
+  gradeDictation,
+  gradeSpeak,
+} from '../src/index.ts';
 
 describe('gradeCommit', () => {
   const base = { gotIt: true, replays: 0, latencyMs: 3000, committedBeforeReveal: true };
@@ -48,6 +55,60 @@ describe('gradeAuto', () => {
 
   it('gives good for correct but unhurried', () => {
     expect(gradeAuto({ correct: true, replays: 0, latencyMs: 9000 })).toBe('good');
+  });
+});
+
+describe('gradeSpeak', () => {
+  /** Everything said correctly and every measured syllable in tune, by default. */
+  const s = (o: Partial<Parameters<typeof gradeSpeak>[0]> = {}) =>
+    gradeSpeak({
+      correctSyllables: 5,
+      totalSyllables: 5,
+      toneErrors: 0,
+      scoredSyllables: 5,
+      replays: 0,
+      ...o,
+    });
+
+  it('gives easy for a flawless unaided attempt', () => {
+    expect(s()).toBe('easy');
+  });
+
+  it('fails an attempt that mostly did not land', () => {
+    expect(s({ correctSyllables: 2 })).toBe('again');
+  });
+
+  it('treats a single wrong word as hard rather than a failure', () => {
+    expect(s({ correctSyllables: 4 })).toBe('hard');
+  });
+
+  // The ordering that matters: a wrong word is a recall failure the scheduler should
+  // act on; a drifting tone on the right word is a motor skill, and burying the word
+  // in the queue does not make the mouth learn faster.
+  it('ranks a wrong word below a wrong tone', () => {
+    expect(s({ correctSyllables: 3 })).toBe('again');
+    expect(s({ toneErrors: 5 })).toBe('hard');
+  });
+
+  it('tolerates the odd tone slip', () => {
+    expect(s({ toneErrors: 1 })).toBe('good');
+  });
+
+  it('downgrades an attempt that needed the native clip twice', () => {
+    expect(s({ replays: 2 })).toBe('good');
+  });
+
+  // Roughly 8% of syllables are unmeasurable — too short, or unvoiced. Scoring tone
+  // errors against the whole sentence instead of the measured part would silently
+  // flatter every attempt.
+  it('judges tone errors against measured syllables, not the whole sentence', () => {
+    expect(s({ toneErrors: 1, scoredSyllables: 5 })).toBe('good');
+    expect(s({ toneErrors: 1, scoredSyllables: 2 })).toBe('hard');
+  });
+
+  it('does not divide by zero when no syllable could be measured', () => {
+    expect(s({ toneErrors: 0, scoredSyllables: 0 })).toBe('easy');
+    expect(s({ totalSyllables: 0, correctSyllables: 0, scoredSyllables: 0 })).toBe('again');
   });
 });
 

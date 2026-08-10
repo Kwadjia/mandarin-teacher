@@ -15,7 +15,9 @@
     "api:dev": "npm run dev -w @mt/api",
     "build:web": "npm run build -w @mt/web",
     "study": "npm run build:web && npm run api",
-    "web": "npm run dev -w @mt/web"
+    "web": "npm run dev -w @mt/web",
+    "speech": ".venv\\Scripts\\python.exe pipeline/speech_server.py",
+    "speech:calibrate": ".venv\\Scripts\\python.exe pipeline/speech_score.py --calibrate"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

@@ -58,6 +58,46 @@ export function gradeAuto(o: AutoOutcome): Grade {
   return 'good';
 }
 
+export interface SpeakOutcome {
+  /** Syllables whose character the recogniser matched. */
+  correctSyllables: number;
+  totalSyllables: number;
+  /** Said correctly but with the wrong pitch shape. Whisper cannot see these. */
+  toneErrors: number;
+  /** Syllables a pitch contour could actually be measured for. */
+  scoredSyllables: number;
+  /** Replays of the native clip before speaking. */
+  replays: number;
+}
+
+/**
+ * Speaking, from measurements produced by pipeline/speech_score.py.
+ *
+ * Words first, tones second, and deliberately so. Saying the wrong word is a failure
+ * of recall — the thing a scheduler exists to fix. A tone that drifts on the right
+ * word is a motor skill that improves with reps, and demoting it to `again` would
+ * bury the word in the queue for a problem more practice will not solve any faster.
+ *
+ * `toneErrors` is judged as a share of the syllables actually measured, never of the
+ * whole sentence. Roughly 8% of syllables cannot be scored — too short, or unvoiced —
+ * and counting those as passes would quietly inflate every grade.
+ */
+export function gradeSpeak(o: SpeakOutcome): Grade {
+  if (o.totalSyllables === 0) return 'again';
+  const said = o.correctSyllables / o.totalSyllables;
+
+  // Sentences here run 4–8 syllables, so one wrong word in five is a slip worth a
+  // `hard`, while two is not really the sentence any more.
+  if (said < 0.7) return 'again';
+  if (said < 1) return 'hard';
+
+  // Every word right from here on; tones decide the rest.
+  const toneRate = o.scoredSyllables > 0 ? o.toneErrors / o.scoredSyllables : 0;
+  if (toneRate > 0.34) return 'hard';
+  if (o.replays >= 2) return 'good';
+  return toneRate === 0 && o.replays === 0 ? 'easy' : 'good';
+}
+
 export interface DictationOutcome {
   correctSyllables: number;
   /** Right syllable, wrong tone. Counted separately — it is the interesting failure. */
