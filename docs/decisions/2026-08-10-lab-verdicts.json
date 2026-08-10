@@ -1,0 +1,194 @@
+[
+  {
+    "id": "listen-commit",
+    "name": "Listen & Commit",
+    "modality": "listen",
+    "auto_graded": false,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "meaning-match",
+    "name": "Meaning Match",
+    "modality": "listen",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "dictation",
+    "name": "Pinyin Dictation",
+    "modality": "listen",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": "This is REALLY hard for me but seems like a great exercise"
+  },
+  {
+    "id": "which-one",
+    "name": "Which One?",
+    "modality": "listen",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "cloze",
+    "name": "Listening Cloze",
+    "modality": "listen",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "speed",
+    "name": "Speed Ladder",
+    "modality": "listen",
+    "auto_graded": false,
+    "verdict": "cut",
+    "note": ""
+  },
+  {
+    "id": "say-it",
+    "name": "Say It",
+    "modality": "speak",
+    "auto_graded": false,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "shadow",
+    "name": "Shadow",
+    "modality": "speak",
+    "auto_graded": false,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "read-sprint",
+    "name": "Reading Sprint",
+    "modality": "read",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "immersion",
+    "name": "Immersion",
+    "modality": "listen",
+    "auto_graded": false,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "tone-id",
+    "name": "Tone ID",
+    "modality": "listen",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": "This one is surprisingly helpful"
+  },
+  {
+    "id": "minimal-pairs",
+    "name": "Minimal Pairs",
+    "modality": "listen",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "same-diff",
+    "name": "Same or Different?",
+    "modality": "listen",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "voice-roulette",
+    "name": "Voice Roulette",
+    "modality": "listen",
+    "auto_graded": false,
+    "verdict": "cut",
+    "note": ""
+  },
+  {
+    "id": "story",
+    "name": "Story Mode",
+    "modality": "listen",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "speed-round",
+    "name": "Speed Round",
+    "modality": "listen",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "flash",
+    "name": "Flash Recognition",
+    "modality": "read",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "trad-simp",
+    "name": "Traditional ↔ Simplified",
+    "modality": "read",
+    "auto_graded": true,
+    "verdict": "cut",
+    "note": ""
+  },
+  {
+    "id": "build-sentence",
+    "name": "Build the Sentence",
+    "modality": "read",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "mixed",
+    "name": "▶ Mixed Session",
+    "modality": "session",
+    "auto_graded": false,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "dashboard",
+    "name": "◧ Progress",
+    "modality": "session",
+    "auto_graded": false,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "first-exposure",
+    "name": "First Exposure",
+    "modality": "listen",
+    "auto_graded": false,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "capture",
+    "name": "Add Mandarin",
+    "modality": "input",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  },
+  {
+    "id": "grammar-sense",
+    "name": "Grammar Sense",
+    "modality": "read",
+    "auto_graded": true,
+    "verdict": "keep",
+    "note": ""
+  }
+]

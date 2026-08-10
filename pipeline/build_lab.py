@@ -272,37 +272,75 @@ EX['meaning-match'] = {
   }
 };
 
+// Difficulty is persisted — dictation at full difficulty is unusable for a beginner,
+// and an exercise you cannot attempt teaches nothing.
+let DICT_LEVEL = localStorage.getItem('dict-level') || 'tones';
 EX['dictation'] = {
   name:'Pinyin Dictation', mod:'listen', auto:true,
-  blurb:'Hear it, type it in tone-numbered pinyin (bao3 bao3 shui4 jiao4 le5). This is the '+
-        'only exercise that directly trains tone discrimination, it is deterministically '+
-        'auto-gradable with zero AI, and it gives per-syllable feedback. Strongest candidate '+
-        'for the phase-2 headline drill.',
-  tags:['listening','tones','auto-graded'],
+  blurb:'Hear it, write it in tone-numbered pinyin. Deterministically auto-gradable with '+
+        'zero AI, per-syllable feedback, and the only sentence-level drill that forces you '+
+        'to resolve every tone. Three difficulty levels — start at Tones Only, where the '+
+        'syllables are given and you supply just the numbers.',
+  tags:['listening','tones','auto-graded','graded difficulty'],
   run(el){
-    const it = nextItem(), c = clip(it);
-    el.innerHTML = `<div class="big"><button class="b p play" id="pl">▶</button>
+    let it, tries=0;
+    // At the easiest level, prefer short sentences.
+    do{ it=nextItem(); tries++; }while(DICT_LEVEL==='tones' && it.n.length>6 && tries<25);
+    const c = clip(it);
+    const bare = it.n.map(s=>s.replace(/[0-5]$/,''));
+    const LEVELS = [
+      ['tones','Tones only','syllables given — type just the tone numbers'],
+      ['first','First letters','first letter of each syllable given'],
+      ['full','Full pinyin','type everything'],
+    ];
+    const hintFor = {
+      tones: bare.join(' '),
+      first: bare.map(s=>s[0]+'…').join(' '),
+      full: '',
+    };
+    const ph = {
+      tones: 'just the numbers: '+bare.map(()=>'_').join('').replace(/_/g,'#').slice(0,bare.length),
+      first: 'bao3 bao3 shui4 …',
+      full: 'bao3 bao3 shui4 jiao4 le5',
+    };
+    el.innerHTML = `<div class="rate" id="lv"></div>
+      <div class="big"><button class="b p play" id="pl">▶</button>
       <span class="muted">${voiceLabel(c)} · ${it.n.length} syllables</span></div>
-      <input class="t" id="in" autocomplete="off" spellcheck="false"
-             placeholder="space-separated, tone numbers: bao3 bao3 shui4 jiao4 le5">
+      ${hintFor[DICT_LEVEL]?`<p class="hz sm" style="font-family:ui-monospace,monospace;font-size:1.2rem">${hintFor[DICT_LEVEL]}</p>`:''}
+      <input class="t" id="in" autocomplete="off" spellcheck="false" placeholder="${ph[DICT_LEVEL]}">
       <div class="big"><button class="b p" id="ck">Check</button></div>
-      <p class="hint">Neutral tone = 5, or just omit the number. ü is typed v.</p>
-      <div id="out"></div>`;
+      <p class="hint" id="lh"></p><div id="out"></div>`;
+    LEVELS.forEach(([k,label,desc])=>{
+      const b=document.createElement('button'); b.className='b'; b.textContent=label;
+      b.setAttribute('aria-current', k===DICT_LEVEL);
+      b.onclick=()=>{ DICT_LEVEL=k; localStorage.setItem('dict-level',k); start('dictation'); };
+      $('#lv').appendChild(b);
+    });
+    $('#lh').textContent = LEVELS.find(l=>l[0]===DICT_LEVEL)[2] +
+      ' · neutral tone = 5 or omit · ü is typed v';
     play(c.f); S.t0 = performance.now(); $('#in').focus();
     $('#pl').onclick = ()=>{S.replays++; play(c.f);};
     const check = ()=>{
-      const g = gradeSyllables($('#in').value, it.n);
+      let g;
+      if(DICT_LEVEL==='tones'){
+        // Accept "33445" or "3 3 4 4 5" — reconstruct full syllables from the digits.
+        const digits=($('#in').value.match(/[1-5]/g)||[]);
+        g = gradeSyllables(bare.map((s,i)=>s+(digits[i]||'')).join(' '), it.n);
+      } else {
+        g = gradeSyllables($('#in').value, it.n);
+      }
       const right = g.filter(x=>x.cls==='ok').length;
       const toneOnly = g.filter(x=>x.cls==='tone').length;
-      emit({result: right===it.n.length?'good':(right>=it.n.length*.6?'hard':'again'),
+      emit({exercise_type:'dictation_'+DICT_LEVEL,
+            result: right===it.n.length?'good':(right>=it.n.length*.6?'hard':'again'),
             latency_ms:elapsed(), replays:S.replays,
-            payload:{correct:right, tone_errors:toneOnly, total:it.n.length}});
+            payload:{level:DICT_LEVEL, correct:right, tone_errors:toneOnly, total:it.n.length}});
       $('#out').innerHTML =
         `<p>${g.map(x=>`<span class="syl ${x.cls}">${x.r}</span>`).join('')}</p>`+
         `<p class="hint">${right}/${it.n.length} exact`+
         (toneOnly?` · <b style="color:#b8860b">${toneOnly} right syllable, wrong tone</b>`:'')+
         `</p>`+reveal(it)+
-        `<p class="hint">Note: neutral-tone conventions differ between Taiwan and the mainland `+
+        `<p class="hint">Neutral-tone conventions differ between Taiwan and the mainland `+
         `(bǎobǎo vs bǎobao), so a 3-vs-5 mismatch may be a variety difference, not an error.</p>`+
         `<div class="big"><button class="b p" onclick="start('dictation')">Next →</button></div>`;
     };

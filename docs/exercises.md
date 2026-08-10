@@ -1,5 +1,13 @@
 # Exercise Catalog
 
+> **Reviewed 2026-08-10 — 21 keep, 3 cut.** Verdicts and the resulting build order are
+> in [`decisions/2026-08-10-exercise-selection.md`](decisions/2026-08-10-exercise-selection.md).
+> Short version: keep/cut turned out to be the wrong axis (all 24 already exist and cost
+> nothing to keep), so it was re-read as sequencing. Speed Ladder, Voice Roulette and
+> Traditional ↔ Simplified were cut as *modes* but their functions were folded into the
+> core loop. Dictation gained difficulty levels after coming back "REALLY hard".
+> The "My read" column below is my pre-review opinion, kept for the record.
+
 24 playable prototypes in `pipeline/out/lab/index.html`. Every one runs on the real
 corpus and the real audio — nothing here is a mockup except the progress view.
 
@@ -38,7 +46,7 @@ systematically optimistic.
 | Exercise | Trains | Graded | My read |
 |---|---|---|---|
 | **Listen & Commit** | Core recognition loop | Self | **MVP.** The whole product in one screen. Commit-before-reveal is what keeps the data honest. |
-| **Pinyin Dictation** | Tone + segmental precision | **Auto** | **Highest conviction after the core loop.** Most information per rep of anything here, deterministically gradable, and the only sentence-level drill that forces tones. Phase 2 headline. |
+| **Pinyin Dictation** | Tone + segmental precision | **Auto** | **Kept — now with three difficulty levels.** Came back "REALLY hard", which is right for a beginner asked to produce segmentals *and* tones from scratch. Default is now **Tones Only**: syllables given, type just the numbers. Still phase 2, but now attemptable. |
 | **Listening Cloze** | Parsing a word out of connected speech | **Auto** | **Strong.** Closest drill to real listening — you cannot pattern-match the whole sentence. |
 | **Voice Roulette** | Robustness across speakers | Self | **Cheap and valuable.** Literally just randomising clips you already have. Guards against understanding one voice only. |
 | **Meaning Match** | Recognition, low difficulty | **Auto** | Keep, but only for freshly introduced words. Too easy to be worth a mature card's time. |
