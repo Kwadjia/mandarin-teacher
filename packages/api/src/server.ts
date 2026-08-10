@@ -72,13 +72,30 @@ const counts = db.raw
   )
   .get() as Record<string, number>;
 
-serve({ fetch: app.fetch, port: PORT }, (info) => {
+const server = serve({ fetch: app.fetch, port: PORT }, (info) => {
   console.log(`mandarin-teacher api  http://localhost:${info.port}`);
   console.log(
     `  ${counts.concepts} concepts · ${counts.utterances} utterances · ` +
       `${counts.clips} clips · ${counts.events} events logged`,
   );
   console.log(`  audio served from ${audioRoot}`);
+});
+
+// A stale server on the port is the most likely startup failure, and the default
+// unhandled-'error' stack trace buries what to do about it.
+server.on('error', (err: NodeJS.ErrnoException) => {
+  if (err.code === 'EADDRINUSE') {
+    console.error(
+      `Port ${PORT} is already in use — an older server is probably still running.\n` +
+        `  Windows:  Get-NetTCPConnection -LocalPort ${PORT} -State Listen | ` +
+        `ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }\n` +
+        `  or run on another port:  PORT=8788 npm run api`,
+    );
+  } else {
+    console.error(err);
+  }
+  db.close();
+  process.exit(1);
 });
 
 for (const sig of ['SIGINT', 'SIGTERM'] as const) {
