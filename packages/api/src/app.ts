@@ -94,6 +94,9 @@ function toGrade(o: Outcome): Grade {
   }
 }
 
+/** Any CJK ideograph means the text is Mandarin rather than a translation request. */
+const HAN = /[一-鿿㐀-䶿]/;
+
 const startOfToday = (now: Date) =>
   new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
 
@@ -355,6 +358,29 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
     if (!text) return c.json({ error: 'text is required' }, 400);
 
     const id = await q.addCapture(db, text, body.capturedBy ?? null);
+
+    // Two different jobs share this box. Mandarin in is a capture — segment it
+    // against what is known. English in is a *request* — "how do I say this" — and
+    // segmenting it produces one bogus unknown word per Latin letter, which is
+    // exactly what it did before this check existed.
+    if (!HAN.test(text)) {
+      await q.insertEvent(db, {
+        ts: Date.now(),
+        sessionId: null,
+        kind: 'capture',
+        payload: { captureId: id, language: 'en', pendingTranslation: true },
+      });
+      return c.json({
+        captureId: id,
+        text,
+        language: 'en' as const,
+        pendingTranslation: true,
+        known: [],
+        unknown: [],
+        knownFraction: 0,
+      });
+    }
+
     const vocab = await q.knownHeadwords(db);
     const byHeadword = new Map(vocab.map((v) => [v.headword, v.id]));
     const { tokens, unknown } = segment(text, byHeadword.keys());
@@ -363,12 +389,14 @@ export function createApp({ db, now = () => new Date(), tones = [] }: Deps) {
       ts: Date.now(),
       sessionId: null,
       kind: 'capture',
-      payload: { captureId: id, known: tokens.length, unknown: unknown.length },
+      payload: { captureId: id, language: 'zh', known: tokens.length, unknown: unknown.length },
     });
 
     return c.json({
       captureId: id,
       text,
+      language: 'zh' as const,
+      pendingTranslation: false,
       known: [...new Set(tokens)].map((t) => ({ headword: t, conceptId: byHeadword.get(t)! })),
       unknown: [...new Set(unknown)],
       knownFraction:

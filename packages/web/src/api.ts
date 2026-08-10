@@ -80,6 +80,9 @@ export interface ToneSet {
 export interface CaptureResponse {
   captureId: number;
   text: string;
+  /** 'en' means it is a translation request rather than a capture. */
+  language: 'zh' | 'en';
+  pendingTranslation: boolean;
   known: { headword: string; conceptId: number }[];
   unknown: string[];
   knownFraction: number;

@@ -2,11 +2,17 @@ import { useEffect, useState } from 'react';
 import { api, type CaptureResponse } from './api.ts';
 
 /**
- * Add Mandarin — the family-capture surface.
+ * Add Mandarin — two jobs in one box.
  *
- * The raw text is stored the moment it is submitted, before any analysis. Nothing
- * blocks the person typing it in, because the whole value of this surface is that
- * it costs nothing to use when Jasmine says something worth keeping.
+ *   Mandarin in → a capture. Segmented against what you already know.
+ *   English in  → a request: "how do I say this". Queued for the pipeline to
+ *                 translate, because the person most likely to use this cannot
+ *                 type Mandarin.
+ *
+ * Either way the raw text is stored the moment it is submitted, before any
+ * analysis. Nothing blocks the person typing, because the whole value of this
+ * surface is that it costs nothing to use when Jasmine says something worth
+ * keeping — or when you want to say something and cannot.
  */
 export function Capture() {
   const [text, setText] = useState('');
@@ -35,16 +41,17 @@ export function Capture() {
 
   return (
     <div>
-      <p className="label">Heard something worth keeping?</p>
+      <p className="label">Heard something worth keeping — or want to say something?</p>
       <p className="mt-1 text-sm text-stone-500">
-        Type or paste it. It is saved immediately and segmented against what you already know.
+        Mandarin gets segmented against what you already know. English is queued as a
+        request and translated by the pipeline. Either way it is saved immediately.
       </p>
 
       <div className="mt-4 flex flex-wrap gap-2">
         <input
           className="input flex-1 text-xl"
           value={text}
-          placeholder="宝宝该睡觉了"
+          placeholder="宝宝该睡觉了  ·  or: how do I say 'time for a nap'"
           onChange={(e) => setText(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === 'Enter') void submit();
@@ -61,7 +68,21 @@ export function Capture() {
         </button>
       </div>
 
-      {result && (
+      {result?.language === 'en' && (
+        <div className="mt-6 rounded-xl border border-amber-700/40 bg-amber-700/5 p-4">
+          <p className="text-lg">“{result.text}”</p>
+          <p className="mt-2 text-sm text-stone-500">
+            Queued as a translation request. The pipeline will produce natural Mandarin for
+            it — Taiwan variety, reusing vocabulary you already have where it can — then add
+            the new words and generate audio.
+          </p>
+          <p className="mt-2 text-xs text-stone-500">
+            Run <code>python pipeline/resolve_captures.py</code> to process the queue.
+          </p>
+        </div>
+      )}
+
+      {result && result.language !== 'en' && (
         <div className="mt-6 rounded-xl border border-stone-200 p-4 dark:border-stone-800">
           <p className="text-2xl">
             {result.known.length + result.unknown.length === 0 ? (

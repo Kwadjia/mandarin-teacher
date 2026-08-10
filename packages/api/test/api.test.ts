@@ -317,3 +317,39 @@ describe('POST /api/capture', () => {
     assert.equal(body[0].raw_text, '奶奶来了');
   });
 });
+
+describe('capture handles both directions', () => {
+  // English in is a *request* ("how do I say this"), not a capture. Segmenting it
+  // produced one bogus unknown word per Latin letter — 22 of them for a single
+  // sentence — until the language check existed.
+  it('queues English for translation instead of segmenting it into letters', async () => {
+    const { body } = await post('/api/capture', {
+      text: 'What do you want for dinner?',
+      capturedBy: 'arthur',
+    });
+    assert.equal(body.language, 'en');
+    assert.equal(body.pendingTranslation, true);
+    assert.deepEqual(body.unknown, []);
+    assert.deepEqual(body.known, []);
+  });
+
+  it('still segments Mandarin', async () => {
+    const { body } = await post('/api/capture', { text: '宝宝睡觉了' });
+    assert.equal(body.language, 'zh');
+    assert.equal(body.pendingTranslation, false);
+    assert.ok(body.known.length > 0);
+  });
+
+  it('treats mixed text containing any Han character as Mandarin', async () => {
+    const { body } = await post('/api/capture', { text: 'she said 宝宝 a lot' });
+    assert.equal(body.language, 'zh');
+  });
+
+  it('stores the raw text either way', async () => {
+    const { body } = await post('/api/capture', { text: 'how do I say goodnight' });
+    const row = db.raw.prepare('SELECT raw_text FROM capture WHERE id = ?').get(body.captureId) as {
+      raw_text: string;
+    };
+    assert.equal(row.raw_text, 'how do I say goodnight');
+  });
+});
