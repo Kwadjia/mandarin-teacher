@@ -1,5 +1,22 @@
-# Phase 0 — deliberately minimal.
 # Verification uses a greedy longest-match tokenizer against the seed vocabulary
 # rather than a segmenter, so there is no jieba/pkuseg dependency yet.
 anthropic>=0.116.0
 httpx>=0.27.0
+edge-tts>=7.2.0
+opencc-python-reimplemented>=0.1.7
+
+# Speech scoring — runs locally on the GPU, no API, no per-call cost.
+# Two independent signals, because neither one alone is enough:
+#   faster-whisper    did I say the right words
+#   praat-parselmouth did I say them with the right tones (whisper cannot tell —
+#                     it decodes to the likeliest text and repairs bad tones)
+faster-whisper>=1.2.0
+praat-parselmouth>=0.4.7
+soundfile>=0.14.0
+numpy>=2.0
+
+# Windows needs these explicitly for CTranslate2 to find CUDA; on Linux the
+# ctranslate2 wheel usually resolves them itself. Verified on an RTX 5070 Ti
+# (Blackwell, sm_120) with driver 595.79.
+nvidia-cublas-cu12
+nvidia-cudnn-cu12
