@@ -34,6 +34,8 @@ interface SentenceEntry {
   hanzi?: string;
   hanzi_trad?: string;
   pinyin?: string;
+  /** Tone-numbered syllables from pipeline/add_syllables.py; absent if unverifiable. */
+  pinyin_syllables?: string;
   gloss_en?: string;
 }
 interface ClipEntry {
@@ -147,12 +149,14 @@ function main(): void {
   }
 
   const upsertUtterance = db.raw.prepare(`
-    INSERT INTO utterance (hanzi, hanzi_trad, pinyin, gloss_en, source, status, created_at)
-    VALUES (?, ?, ?, ?, 'generated', 'approved', ?)
+    INSERT INTO utterance (hanzi, hanzi_trad, pinyin, pinyin_syllables, gloss_en,
+                           source, status, created_at)
+    VALUES (?, ?, ?, ?, ?, 'generated', 'approved', ?)
     ON CONFLICT (hanzi) DO UPDATE SET
-      hanzi_trad = excluded.hanzi_trad,
-      pinyin     = excluded.pinyin,
-      gloss_en   = excluded.gloss_en
+      hanzi_trad       = excluded.hanzi_trad,
+      pinyin           = excluded.pinyin,
+      pinyin_syllables = excluded.pinyin_syllables,
+      gloss_en         = excluded.gloss_en
     RETURNING id
   `);
   const clearLinks = db.raw.prepare('DELETE FROM utterance_concept WHERE utterance_id = ?');
@@ -177,6 +181,9 @@ function main(): void {
       s.hanzi,
       s.hanzi_trad ?? s.hanzi,
       s.pinyin,
+      // Null when add_syllables.py could not verify the split. Such a sentence is
+      // simply not offered for dictation, rather than offered with a wrong answer key.
+      s.pinyin_syllables ?? null,
       s.gloss_en,
       now,
     ) as { id: number };

@@ -19,6 +19,8 @@ export interface UtteranceDetail {
   hanzi: string;
   hanziTrad: string;
   pinyin: string;
+  /** Tone-numbered syllables for dictation; null when the split was unverifiable. */
+  pinyinSyllables: string | null;
   glossEn: string;
   clips: ClipDetail[];
 }
@@ -113,7 +115,11 @@ export async function loadUtteranceDetail(
     hanzi_trad: string;
     pinyin: string;
     gloss_en: string;
-  }>('SELECT id, hanzi, hanzi_trad, pinyin, gloss_en FROM utterance WHERE id = ?', id);
+    pinyin_syllables: string | null;
+  }>(
+    'SELECT id, hanzi, hanzi_trad, pinyin, pinyin_syllables, gloss_en FROM utterance WHERE id = ?',
+    id,
+  );
   if (!u) return undefined;
 
   const clips = await db.all<{
@@ -129,6 +135,7 @@ export async function loadUtteranceDetail(
     hanzi: u.hanzi,
     hanziTrad: u.hanzi_trad,
     pinyin: u.pinyin,
+    pinyinSyllables: u.pinyin_syllables,
     glossEn: u.gloss_en,
     clips: clips.map((c) => ({
       id: c.id,
@@ -395,4 +402,34 @@ export async function listCaptures(db: Db, limit = 50) {
 
 export async function knownHeadwords(db: Db): Promise<{ headword: string; id: number }[]> {
   return db.all<{ headword: string; id: number }>('SELECT id, headword FROM concept');
+}
+
+/**
+ * A sentence suitable for dictation: every word in it already introduced, and a
+ * verified syllable split to grade against.
+ *
+ * Restricted to fully-known sentences because dictation demands every syllable at once
+ * — an unknown word in the middle makes the whole item unanswerable, and the learner
+ * cannot tell whether they misheard a tone or simply never met the word. Ordered by
+ * least recently heard so the same handful do not repeat.
+ */
+export async function pickDictation(
+  db: Db,
+  introducedConceptIds: number[],
+): Promise<{ id: number } | undefined> {
+  if (!introducedConceptIds.length) return undefined;
+  const list = introducedConceptIds.join(',');
+  return db.first<{ id: number }>(`
+    SELECT u.id
+    FROM utterance u
+    JOIN utterance_concept uc ON uc.utterance_id = u.id
+    WHERE u.status = 'approved' AND u.pinyin_syllables IS NOT NULL
+    GROUP BY u.id
+    HAVING count(*) = sum(CASE WHEN uc.concept_id IN (${list}) THEN 1 ELSE 0 END)
+    ORDER BY COALESCE(
+      (SELECT max(ts) FROM event e
+        WHERE e.utterance_id = u.id AND e.exercise_type = 'dictation'), 0
+    ), u.id
+    LIMIT 1
+  `);
 }

@@ -1,0 +1,21 @@
+-- Per-syllable pinyin, for dictation.
+--
+-- `utterance.pinyin` is written in words — "bǎobao shuìjiào le" is three
+-- space-separated tokens for five syllables — because that is how a human reads it.
+-- Dictation has to grade syllable by syllable, and word-grouped pinyin cannot be split
+-- back apart reliably: 西安 is xī'ān but 先 is xiān, and the apostrophe is not always
+-- written. Splitting it in the app would guess wrong on exactly the words worth
+-- drilling.
+--
+-- So the pipeline computes it once, per character, and stores it here. Format is
+-- space-separated tone-numbered syllables aligned one-to-one with the hanzi:
+--
+--   宝宝睡觉了  →  bao3 bao3 shui4 jiao4 le5
+--
+-- Neutral tone is 5 rather than absent, so every syllable has the same shape and a
+-- missing tone in the learner's answer is unambiguous rather than possibly-neutral.
+--
+-- Nullable: a sentence added before this ran, or one the tagger could not handle, is
+-- simply not offered for dictation rather than being offered with a wrong answer key.
+
+ALTER TABLE utterance ADD COLUMN pinyin_syllables TEXT;

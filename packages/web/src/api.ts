@@ -180,6 +180,38 @@ export interface CaptureResponse {
   knownFraction: number;
 }
 
+/** One dictation item — audio only. The text would be the answer key. */
+export type DictationItem =
+  | { type: 'item'; utteranceId: number; syllableCount: number; clips: Clip[]; dueNow: number }
+  | { type: 'idle'; reason: string };
+
+export interface DictationSyllable {
+  expected: string;
+  given: string | null;
+  correct: boolean;
+  verdict: 'correct' | 'tone' | 'wrong' | 'missing';
+}
+
+export interface DictationResult {
+  grade: Grade;
+  check: {
+    syllables: DictationSyllable[];
+    totalSyllables: number;
+    correctSyllables: number;
+    toneErrors: number;
+    extra: number;
+  };
+  hanzi: string;
+  hanziTrad: string;
+  pinyin: string;
+  glossEn: string;
+}
+
+export interface ToneReport {
+  perTone: { tone: number; correct: number; total: number; heardAs: Record<number, number> }[];
+  attempts: number;
+}
+
 async function json<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(path, {
     ...init,
@@ -217,6 +249,17 @@ export const api = {
   health: () => json<{ ok: boolean; speech: boolean }>('/api/health'),
 
   plan: (maxNew?: number) => json<Plan>('/api/plan' + (maxNew ? `?maxNew=${maxNew}` : '')),
+
+  /** Audio only — the sentence text is withheld until the answer is submitted. */
+  dictation: () => json<DictationItem>('/api/dictation'),
+  dictationAnswer: (body: {
+    sessionId: number | null;
+    utteranceId: number;
+    answer: string;
+    replays: number;
+    latencyMs: number | null;
+  }) => json<DictationResult>('/api/dictation', { method: 'POST', body: JSON.stringify(body) }),
+  toneReport: () => json<ToneReport>('/api/tone-report'),
 
   /**
    * Upload one spoken attempt. Multipart rather than JSON so the recording goes up as
@@ -274,3 +317,5 @@ export const api = {
       '/api/captures',
     ),
 };
+
+

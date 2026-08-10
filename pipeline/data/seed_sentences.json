@@ -5,637 +5,743 @@
       "hanzi": "宝宝睡觉了。",
       "pinyin": "bǎobao shuìjiào le",
       "gloss_en": "The baby's asleep.",
-      "hanzi_trad": "寶寶睡覺了。"
+      "hanzi_trad": "寶寶睡覺了。",
+      "pinyin_syllables": "bao3 bao5 shui4 jiao4 le5"
     },
     {
       "hanzi": "宝宝饿了。",
       "pinyin": "bǎobao è le",
       "gloss_en": "The baby's hungry.",
-      "hanzi_trad": "寶寶餓了。"
+      "hanzi_trad": "寶寶餓了。",
+      "pinyin_syllables": "bao3 bao5 e4 le5"
     },
     {
       "hanzi": "宝宝哭了。",
       "pinyin": "bǎobao kū le",
       "gloss_en": "The baby's crying.",
-      "hanzi_trad": "寶寶哭了。"
+      "hanzi_trad": "寶寶哭了。",
+      "pinyin_syllables": "bao3 bao5 ku1 le5"
     },
     {
       "hanzi": "宝宝笑了！",
       "pinyin": "bǎobao xiào le",
       "gloss_en": "The baby smiled!",
-      "hanzi_trad": "寶寶笑了！"
+      "hanzi_trad": "寶寶笑了！",
+      "pinyin_syllables": "bao3 bao5 xiao4 le5"
     },
     {
       "hanzi": "宝宝不哭。",
       "pinyin": "bǎobao bù kū",
       "gloss_en": "Don't cry, baby.",
-      "hanzi_trad": "寶寶不哭。"
+      "hanzi_trad": "寶寶不哭。",
+      "pinyin_syllables": "bao3 bao5 bu4 ku1"
     },
     {
       "hanzi": "宝宝要喝奶。",
       "pinyin": "bǎobao yào hēnǎi",
       "gloss_en": "The baby wants milk.",
-      "hanzi_trad": "寶寶要喝奶。"
+      "hanzi_trad": "寶寶要喝奶。",
+      "pinyin_syllables": "bao3 bao5 yao4 he1 nai3"
     },
     {
       "hanzi": "宝宝喝奶了吗？",
       "pinyin": "bǎobao hēnǎi le ma?",
       "gloss_en": "Has the baby fed yet?",
-      "hanzi_trad": "寶寶喝奶了嗎？"
+      "hanzi_trad": "寶寶喝奶了嗎？",
+      "pinyin_syllables": "bao3 bao5 he1 nai3 le5 ma5"
     },
     {
       "hanzi": "奶瓶在哪里？",
       "pinyin": "nǎipíng zài nǎlǐ?",
       "gloss_en": "Where's the bottle?",
-      "hanzi_trad": "奶瓶在哪裡？"
+      "hanzi_trad": "奶瓶在哪裡？",
+      "pinyin_syllables": "nai3 ping2 zai4 na3 li3"
     },
     {
       "hanzi": "我去买奶瓶。",
       "pinyin": "wǒ qù mǎi nǎipíng",
       "gloss_en": "I'm going to buy bottles.",
-      "hanzi_trad": "我去買奶瓶。"
+      "hanzi_trad": "我去買奶瓶。",
+      "pinyin_syllables": "wo3 qu4 mai3 nai3 ping2"
     },
     {
       "hanzi": "换尿布吧。",
       "pinyin": "huàn niàobù ba",
       "gloss_en": "Let's change the diaper.",
-      "hanzi_trad": "換尿布吧。"
+      "hanzi_trad": "換尿布吧。",
+      "pinyin_syllables": "huan4 niao4 bu4 ba5"
     },
     {
       "hanzi": "尿布在哪里？",
       "pinyin": "niàobù zài nǎlǐ?",
       "gloss_en": "Where are the diapers?",
-      "hanzi_trad": "尿布在哪裡？"
+      "hanzi_trad": "尿布在哪裡？",
+      "pinyin_syllables": "niao4 bu4 zai4 na3 li3"
     },
     {
       "hanzi": "我换尿布。",
       "pinyin": "wǒ huàn niàobù",
       "gloss_en": "I'll change the diaper.",
-      "hanzi_trad": "我換尿布。"
+      "hanzi_trad": "我換尿布。",
+      "pinyin_syllables": "wo3 huan4 niao4 bu4"
     },
     {
       "hanzi": "宝宝的尿布换了吗？",
       "pinyin": "bǎobao de niàobù huàn le ma?",
       "gloss_en": "Has the baby been changed?",
-      "hanzi_trad": "寶寶的尿布換了嗎？"
+      "hanzi_trad": "寶寶的尿布換了嗎？",
+      "pinyin_syllables": "bao3 bao5 de5 niao4 bu4 huan4 le5 ma5"
     },
     {
       "hanzi": "你抱宝宝吧。",
       "pinyin": "nǐ bào bǎobao ba",
       "gloss_en": "You hold the baby.",
-      "hanzi_trad": "你抱寶寶吧。"
+      "hanzi_trad": "你抱寶寶吧。",
+      "pinyin_syllables": "ni3 bao4 bao3 bao5 ba5"
     },
     {
       "hanzi": "我要抱宝宝。",
       "pinyin": "wǒ yào bào bǎobao",
       "gloss_en": "I want to hold the baby.",
-      "hanzi_trad": "我要抱寶寶。"
+      "hanzi_trad": "我要抱寶寶。",
+      "pinyin_syllables": "wo3 yao4 bao4 bao3 bao5"
     },
     {
       "hanzi": "谁抱宝宝？",
       "pinyin": "shéi bào bǎobao?",
       "gloss_en": "Who's holding the baby?",
-      "hanzi_trad": "誰抱寶寶？"
+      "hanzi_trad": "誰抱寶寶？",
+      "pinyin_syllables": "shei2 bao4 bao3 bao5"
     },
     {
       "hanzi": "宝宝喜欢奶奶。",
       "pinyin": "bǎobao xǐhuan nǎinai",
       "gloss_en": "The baby likes Grandma.",
-      "hanzi_trad": "寶寶喜歡奶奶。"
+      "hanzi_trad": "寶寶喜歡奶奶。",
+      "pinyin_syllables": "bao3 bao5 xi3 huan5 nai3 nai5"
     },
     {
       "hanzi": "奶奶抱宝宝。",
       "pinyin": "nǎinai bào bǎobao",
       "gloss_en": "Grandma's holding the baby.",
-      "hanzi_trad": "奶奶抱寶寶。"
+      "hanzi_trad": "奶奶抱寶寶。",
+      "pinyin_syllables": "nai3 nai5 bao4 bao3 bao5"
     },
     {
       "hanzi": "奶奶来了。",
       "pinyin": "nǎinai lái le",
       "gloss_en": "Grandma's here.",
-      "hanzi_trad": "奶奶來了。"
+      "hanzi_trad": "奶奶來了。",
+      "pinyin_syllables": "nai3 nai5 lai2 le5"
     },
     {
       "hanzi": "奶奶很喜欢宝宝。",
       "pinyin": "nǎinai hěn xǐhuan bǎobao",
       "gloss_en": "Grandma really loves the baby.",
-      "hanzi_trad": "奶奶很喜歡寶寶。"
+      "hanzi_trad": "奶奶很喜歡寶寶。",
+      "pinyin_syllables": "nai3 nai5 hen3 xi3 huan5 bao3 bao5"
     },
     {
       "hanzi": "明天奶奶来我们家。",
       "pinyin": "míngtiān nǎinai lái wǒmen jiā",
       "gloss_en": "Grandma's coming over tomorrow.",
-      "hanzi_trad": "明天奶奶來我們家。"
+      "hanzi_trad": "明天奶奶來我們家。",
+      "pinyin_syllables": "ming2 tian1 nai3 nai5 lai2 wo3 men5 jia1"
     },
     {
       "hanzi": "宝宝现在睡觉。",
       "pinyin": "bǎobao xiànzài shuìjiào",
       "gloss_en": "The baby's sleeping right now.",
-      "hanzi_trad": "寶寶現在睡覺。"
+      "hanzi_trad": "寶寶現在睡覺。",
+      "pinyin_syllables": "bao3 bao5 xian4 zai4 shui4 jiao4"
     },
     {
       "hanzi": "宝宝晚上不睡觉。",
       "pinyin": "bǎobao wǎnshang bù shuìjiào",
       "gloss_en": "The baby doesn't sleep at night.",
-      "hanzi_trad": "寶寶晚上不睡覺。"
+      "hanzi_trad": "寶寶晚上不睡覺。",
+      "pinyin_syllables": "bao3 bao5 wan3 shang5 bu4 shui4 jiao4"
     },
     {
       "hanzi": "宝宝睡觉了吗？",
       "pinyin": "bǎobao shuìjiào le ma?",
       "gloss_en": "Is the baby asleep?",
-      "hanzi_trad": "寶寶睡覺了嗎？"
+      "hanzi_trad": "寶寶睡覺了嗎？",
+      "pinyin_syllables": "bao3 bao5 shui4 jiao4 le5 ma5"
     },
     {
       "hanzi": "宝宝今天很好。",
       "pinyin": "bǎobao jīntiān hěn hǎo",
       "gloss_en": "The baby's been good today.",
-      "hanzi_trad": "寶寶今天很好。"
+      "hanzi_trad": "寶寶今天很好。",
+      "pinyin_syllables": "bao3 bao5 jin1 tian1 hen3 hao3"
     },
     {
       "hanzi": "宝宝今天笑了很多。",
       "pinyin": "bǎobao jīntiān xiào le hěn duō",
       "gloss_en": "The baby smiled a lot today.",
-      "hanzi_trad": "寶寶今天笑了很多。"
+      "hanzi_trad": "寶寶今天笑了很多。",
+      "pinyin_syllables": "bao3 bao5 jin1 tian1 xiao4 le5 hen3 duo1"
     },
     {
       "hanzi": "我们的宝宝很小。",
       "pinyin": "wǒmen de bǎobao hěn xiǎo",
       "gloss_en": "Our baby is so small.",
-      "hanzi_trad": "我們的寶寶很小。"
+      "hanzi_trad": "我們的寶寶很小。",
+      "pinyin_syllables": "wo3 men5 de5 bao3 bao5 hen3 xiao3"
     },
     {
       "hanzi": "宝宝要什么？",
       "pinyin": "bǎobao yào shénme?",
       "gloss_en": "What does the baby want?",
-      "hanzi_trad": "寶寶要什麼？"
+      "hanzi_trad": "寶寶要什麼？",
+      "pinyin_syllables": "bao3 bao5 yao4 shen2 me5"
     },
     {
       "hanzi": "宝宝在哭吗？",
       "pinyin": "bǎobao zài kū ma?",
       "gloss_en": "Is the baby crying?",
-      "hanzi_trad": "寶寶在哭嗎？"
+      "hanzi_trad": "寶寶在哭嗎？",
+      "pinyin_syllables": "bao3 bao5 zai4 ku1 ma5"
     },
     {
       "hanzi": "宝宝不喝奶。",
       "pinyin": "bǎobao bù hēnǎi",
       "gloss_en": "The baby won't feed.",
-      "hanzi_trad": "寶寶不喝奶。"
+      "hanzi_trad": "寶寶不喝奶。",
+      "pinyin_syllables": "bao3 bao5 bu4 he1 nai3"
     },
     {
       "hanzi": "宝宝饿了吗？",
       "pinyin": "bǎobao è le ma?",
       "gloss_en": "Is the baby hungry?",
-      "hanzi_trad": "寶寶餓了嗎？"
+      "hanzi_trad": "寶寶餓了嗎？",
+      "pinyin_syllables": "bao3 bao5 e4 le5 ma5"
     },
     {
       "hanzi": "宝宝安静了。",
       "pinyin": "bǎobao ānjìng le",
       "gloss_en": "The baby's settled.",
-      "hanzi_trad": "寶寶安靜了。"
+      "hanzi_trad": "寶寶安靜了。",
+      "pinyin_syllables": "bao3 bao5 an1 jing4 le5"
     },
     {
       "hanzi": "安静，宝宝睡觉。",
       "pinyin": "ānjìng, bǎobao shuìjiào",
       "gloss_en": "Quiet — the baby's sleeping.",
-      "hanzi_trad": "安靜，寶寶睡覺。"
+      "hanzi_trad": "安靜，寶寶睡覺。",
+      "pinyin_syllables": "an1 jing4 bao3 bao5 shui4 jiao4"
     },
     {
       "hanzi": "老婆，宝宝哭了。",
       "pinyin": "lǎopo, bǎobao kū le",
       "gloss_en": "Honey, the baby's crying.",
-      "hanzi_trad": "老婆，寶寶哭了。"
+      "hanzi_trad": "老婆，寶寶哭了。",
+      "pinyin_syllables": "lao3 po5 bao3 bao5 ku1 le5"
     },
     {
       "hanzi": "老婆，你累了吧？",
       "pinyin": "lǎopo, nǐ lèi le ba?",
       "gloss_en": "Honey, you're tired, aren't you?",
-      "hanzi_trad": "老婆，你累了吧？"
+      "hanzi_trad": "老婆，你累了吧？",
+      "pinyin_syllables": "lao3 po5 ni3 lei4 le5 ba5"
     },
     {
       "hanzi": "我很累。",
       "pinyin": "wǒ hěn lèi",
       "gloss_en": "I'm exhausted.",
-      "hanzi_trad": "我很累。"
+      "hanzi_trad": "我很累。",
+      "pinyin_syllables": "wo3 hen3 lei4"
     },
     {
       "hanzi": "我们都很累。",
       "pinyin": "wǒmen dōu hěn lèi",
       "gloss_en": "We're both exhausted.",
-      "hanzi_trad": "我們都很累。"
+      "hanzi_trad": "我們都很累。",
+      "pinyin_syllables": "wo3 men5 dou1 hen3 lei4"
     },
     {
       "hanzi": "我太累了。",
       "pinyin": "wǒ tài lèi le",
       "gloss_en": "I'm so tired.",
-      "hanzi_trad": "我太累了。"
+      "hanzi_trad": "我太累了。",
+      "pinyin_syllables": "wo3 tai4 lei4 le5"
     },
     {
       "hanzi": "儿子笑了。",
       "pinyin": "érzi xiào le",
       "gloss_en": "Our son smiled.",
-      "hanzi_trad": "兒子笑了。"
+      "hanzi_trad": "兒子笑了。",
+      "pinyin_syllables": "er2 zi5 xiao4 le5"
     },
     {
       "hanzi": "我们的儿子很好。",
       "pinyin": "wǒmen de érzi hěn hǎo",
       "gloss_en": "Our son is doing well.",
-      "hanzi_trad": "我們的兒子很好。"
+      "hanzi_trad": "我們的兒子很好。",
+      "pinyin_syllables": "wo3 men5 de5 er2 zi5 hen3 hao3"
     },
     {
       "hanzi": "我喜欢抱儿子。",
       "pinyin": "wǒ xǐhuan bào érzi",
       "gloss_en": "I love holding my son.",
-      "hanzi_trad": "我喜歡抱兒子。"
+      "hanzi_trad": "我喜歡抱兒子。",
+      "pinyin_syllables": "wo3 xi3 huan5 bao4 er2 zi5"
     },
     {
       "hanzi": "儿子饿了吧？",
       "pinyin": "érzi è le ba?",
       "gloss_en": "He's hungry, right?",
-      "hanzi_trad": "兒子餓了吧？"
+      "hanzi_trad": "兒子餓了吧？",
+      "pinyin_syllables": "er2 zi5 e4 le5 ba5"
     },
     {
       "hanzi": "我回家了。",
       "pinyin": "wǒ huí jiā le",
       "gloss_en": "I'm home.",
-      "hanzi_trad": "我回家了。"
+      "hanzi_trad": "我回家了。",
+      "pinyin_syllables": "wo3 hui2 jia1 le5"
     },
     {
       "hanzi": "你回家吗？",
       "pinyin": "nǐ huí jiā ma?",
       "gloss_en": "Are you coming home?",
-      "hanzi_trad": "你回家嗎？"
+      "hanzi_trad": "你回家嗎？",
+      "pinyin_syllables": "ni3 hui2 jia1 ma5"
     },
     {
       "hanzi": "我要去工作。",
       "pinyin": "wǒ yào qù gōngzuò",
       "gloss_en": "I have to go to work.",
-      "hanzi_trad": "我要去工作。"
+      "hanzi_trad": "我要去工作。",
+      "pinyin_syllables": "wo3 yao4 qu4 gong1 zuo4"
     },
     {
       "hanzi": "我今天不工作。",
       "pinyin": "wǒ jīntiān bù gōngzuò",
       "gloss_en": "I'm not working today.",
-      "hanzi_trad": "我今天不工作。"
+      "hanzi_trad": "我今天不工作。",
+      "pinyin_syllables": "wo3 jin1 tian1 bu4 gong1 zuo4"
     },
     {
       "hanzi": "我上午工作。",
       "pinyin": "wǒ shàngwǔ gōngzuò",
       "gloss_en": "I work in the morning.",
-      "hanzi_trad": "我上午工作。"
+      "hanzi_trad": "我上午工作。",
+      "pinyin_syllables": "wo3 shang4 wu3 gong1 zuo4"
     },
     {
       "hanzi": "我下午回家。",
       "pinyin": "wǒ xiàwǔ huí jiā",
       "gloss_en": "I'll be home in the afternoon.",
-      "hanzi_trad": "我下午回家。"
+      "hanzi_trad": "我下午回家。",
+      "pinyin_syllables": "wo3 xia4 wu3 hui2 jia1"
     },
     {
       "hanzi": "我明天不工作。",
       "pinyin": "wǒ míngtiān bù gōngzuò",
       "gloss_en": "I'm off tomorrow.",
-      "hanzi_trad": "我明天不工作。"
+      "hanzi_trad": "我明天不工作。",
+      "pinyin_syllables": "wo3 ming2 tian1 bu4 gong1 zuo4"
     },
     {
       "hanzi": "现在是晚上。",
       "pinyin": "xiànzài shì wǎnshang",
       "gloss_en": "It's evening now.",
-      "hanzi_trad": "現在是晚上。"
+      "hanzi_trad": "現在是晚上。",
+      "pinyin_syllables": "xian4 zai4 shi4 wan3 shang5"
     },
     {
       "hanzi": "我昨天很累。",
       "pinyin": "wǒ zuótiān hěn lèi",
       "gloss_en": "I was worn out yesterday.",
-      "hanzi_trad": "我昨天很累。"
+      "hanzi_trad": "我昨天很累。",
+      "pinyin_syllables": "wo3 zuo2 tian1 hen3 lei4"
     },
     {
       "hanzi": "我们的房子很大。",
       "pinyin": "wǒmen de fángzi hěn dà",
       "gloss_en": "Our house is big.",
-      "hanzi_trad": "我們的房子很大。"
+      "hanzi_trad": "我們的房子很大。",
+      "pinyin_syllables": "wo3 men5 de5 fang2 zi5 hen3 da4"
     },
     {
       "hanzi": "房子很安静。",
       "pinyin": "fángzi hěn ānjìng",
       "gloss_en": "The house is quiet.",
-      "hanzi_trad": "房子很安靜。"
+      "hanzi_trad": "房子很安靜。",
+      "pinyin_syllables": "fang2 zi5 hen3 an1 jing4"
     },
     {
       "hanzi": "狗在哪里？",
       "pinyin": "gǒu zài nǎlǐ?",
       "gloss_en": "Where's the dog?",
-      "hanzi_trad": "狗在哪裡？"
+      "hanzi_trad": "狗在哪裡？",
+      "pinyin_syllables": "gou3 zai4 na3 li3"
     },
     {
       "hanzi": "狗在家。",
       "pinyin": "gǒu zài jiā",
       "gloss_en": "The dog's at home.",
-      "hanzi_trad": "狗在家。"
+      "hanzi_trad": "狗在家。",
+      "pinyin_syllables": "gou3 zai4 jia1"
     },
     {
       "hanzi": "我们的狗很大。",
       "pinyin": "wǒmen de gǒu hěn dà",
       "gloss_en": "Our dog is big.",
-      "hanzi_trad": "我們的狗很大。"
+      "hanzi_trad": "我們的狗很大。",
+      "pinyin_syllables": "wo3 men5 de5 gou3 hen3 da4"
     },
     {
       "hanzi": "狗喜欢宝宝。",
       "pinyin": "gǒu xǐhuan bǎobao",
       "gloss_en": "The dog likes the baby.",
-      "hanzi_trad": "狗喜歡寶寶。"
+      "hanzi_trad": "狗喜歡寶寶。",
+      "pinyin_syllables": "gou3 xi3 huan5 bao3 bao5"
     },
     {
       "hanzi": "狗也累了。",
       "pinyin": "gǒu yě lèi le",
       "gloss_en": "The dog's tired too.",
-      "hanzi_trad": "狗也累了。"
+      "hanzi_trad": "狗也累了。",
+      "pinyin_syllables": "gou3 ye3 lei4 le5"
     },
     {
       "hanzi": "车在哪里？",
       "pinyin": "chē zài nǎlǐ?",
       "gloss_en": "Where's the car?",
-      "hanzi_trad": "車在哪裡？"
+      "hanzi_trad": "車在哪裡？",
+      "pinyin_syllables": "che1 zai4 na3 li3"
     },
     {
       "hanzi": "我买车了。",
       "pinyin": "wǒ mǎi chē le",
       "gloss_en": "I bought a car.",
-      "hanzi_trad": "我買車了。"
+      "hanzi_trad": "我買車了。",
+      "pinyin_syllables": "wo3 mai3 che1 le5"
     },
     {
       "hanzi": "我们去买菜吧。",
       "pinyin": "wǒmen qù mǎi cài ba",
       "gloss_en": "Let's go get groceries.",
-      "hanzi_trad": "我們去買菜吧。"
+      "hanzi_trad": "我們去買菜吧。",
+      "pinyin_syllables": "wo3 men5 qu4 mai3 cai4 ba5"
     },
     {
       "hanzi": "我去买菜。",
       "pinyin": "wǒ qù mǎi cài",
       "gloss_en": "I'm going grocery shopping.",
-      "hanzi_trad": "我去買菜。"
+      "hanzi_trad": "我去買菜。",
+      "pinyin_syllables": "wo3 qu4 mai3 cai4"
     },
     {
       "hanzi": "你去哪里？",
       "pinyin": "nǐ qù nǎlǐ?",
       "gloss_en": "Where are you going?",
-      "hanzi_trad": "你去哪裡？"
+      "hanzi_trad": "你去哪裡？",
+      "pinyin_syllables": "ni3 qu4 na3 li3"
     },
     {
       "hanzi": "我去买水。",
       "pinyin": "wǒ qù mǎi shuǐ",
       "gloss_en": "I'm going to buy water.",
-      "hanzi_trad": "我去買水。"
+      "hanzi_trad": "我去買水。",
+      "pinyin_syllables": "wo3 qu4 mai3 shui3"
     },
     {
       "hanzi": "谁在家？",
       "pinyin": "shéi zài jiā?",
       "gloss_en": "Who's home?",
-      "hanzi_trad": "誰在家？"
+      "hanzi_trad": "誰在家？",
+      "pinyin_syllables": "shei2 zai4 jia1"
     },
     {
       "hanzi": "妈妈在家。",
       "pinyin": "māma zài jiā",
       "gloss_en": "Mom's home.",
-      "hanzi_trad": "媽媽在家。"
+      "hanzi_trad": "媽媽在家。",
+      "pinyin_syllables": "ma1 ma5 zai4 jia1"
     },
     {
       "hanzi": "爸爸不在家。",
       "pinyin": "bàba bú zài jiā",
       "gloss_en": "Dad isn't home.",
-      "hanzi_trad": "爸爸不在家。"
+      "hanzi_trad": "爸爸不在家。",
+      "pinyin_syllables": "ba4 ba5 bu2 zai4 jia1"
     },
     {
       "hanzi": "爸爸妈妈都在。",
       "pinyin": "bàba māma dōu zài",
       "gloss_en": "Mom and Dad are both here.",
-      "hanzi_trad": "爸爸媽媽都在。"
+      "hanzi_trad": "爸爸媽媽都在。",
+      "pinyin_syllables": "ba4 ba5 ma1 ma5 dou1 zai4"
     },
     {
       "hanzi": "我在学习。",
       "pinyin": "wǒ zài xuéxí",
       "gloss_en": "I'm studying.",
-      "hanzi_trad": "我在學習。"
+      "hanzi_trad": "我在學習。",
+      "pinyin_syllables": "wo3 zai4 xue2 xi2"
     },
     {
       "hanzi": "我要学习。",
       "pinyin": "wǒ yào xuéxí",
       "gloss_en": "I need to study.",
-      "hanzi_trad": "我要學習。"
+      "hanzi_trad": "我要學習。",
+      "pinyin_syllables": "wo3 yao4 xue2 xi2"
     },
     {
       "hanzi": "我昨天学习了。",
       "pinyin": "wǒ zuótiān xuéxí le",
       "gloss_en": "I studied yesterday.",
-      "hanzi_trad": "我昨天學習了。"
+      "hanzi_trad": "我昨天學習了。",
+      "pinyin_syllables": "wo3 zuo2 tian1 xue2 xi2 le5"
     },
     {
       "hanzi": "你在做什么？",
       "pinyin": "nǐ zài zuò shénme?",
       "gloss_en": "What are you doing?",
-      "hanzi_trad": "你在做什麼？"
+      "hanzi_trad": "你在做什麼？",
+      "pinyin_syllables": "ni3 zai4 zuo4 shen2 me5"
     },
     {
       "hanzi": "我在做菜。",
       "pinyin": "wǒ zài zuò cài",
       "gloss_en": "I'm cooking.",
-      "hanzi_trad": "我在做菜。"
+      "hanzi_trad": "我在做菜。",
+      "pinyin_syllables": "wo3 zai4 zuo4 cai4"
     },
     {
       "hanzi": "我做了很多菜。",
       "pinyin": "wǒ zuò le hěn duō cài",
       "gloss_en": "I cooked a lot.",
-      "hanzi_trad": "我做了很多菜。"
+      "hanzi_trad": "我做了很多菜。",
+      "pinyin_syllables": "wo3 zuo4 le5 hen3 duo1 cai4"
     },
     {
       "hanzi": "你想吃什么？",
       "pinyin": "nǐ xiǎng chī shénme?",
       "gloss_en": "What do you want to eat?",
-      "hanzi_trad": "你想吃什麼？"
+      "hanzi_trad": "你想吃什麼？",
+      "pinyin_syllables": "ni3 xiang3 chi1 shen2 me5"
     },
     {
       "hanzi": "我想吃白饭。",
       "pinyin": "wǒ xiǎng chī báifàn",
       "gloss_en": "I want rice.",
-      "hanzi_trad": "我想吃白飯。"
+      "hanzi_trad": "我想吃白飯。",
+      "pinyin_syllables": "wo3 xiang3 chi1 bai2 fan4"
     },
     {
       "hanzi": "菜很好吃。",
       "pinyin": "cài hěn hǎochī",
       "gloss_en": "The food's really good.",
-      "hanzi_trad": "菜很好吃。"
+      "hanzi_trad": "菜很好吃。",
+      "pinyin_syllables": "cai4 hen3 hao3 chi1"
     },
     {
       "hanzi": "我不喝茶。",
       "pinyin": "wǒ bù hē chá",
       "gloss_en": "I don't drink tea.",
-      "hanzi_trad": "我不喝茶。"
+      "hanzi_trad": "我不喝茶。",
+      "pinyin_syllables": "wo3 bu4 he1 cha2"
     },
     {
       "hanzi": "我要喝水。",
       "pinyin": "wǒ yào hē shuǐ",
       "gloss_en": "I want some water.",
-      "hanzi_trad": "我要喝水。"
+      "hanzi_trad": "我要喝水。",
+      "pinyin_syllables": "wo3 yao4 he1 shui3"
     },
     {
       "hanzi": "你喝咖啡吗？",
       "pinyin": "nǐ hē kāfēi ma?",
       "gloss_en": "Do you want coffee?",
-      "hanzi_trad": "你喝咖啡嗎？"
+      "hanzi_trad": "你喝咖啡嗎？",
+      "pinyin_syllables": "ni3 he1 ka1 fei1 ma5"
     },
     {
       "hanzi": "我很喜欢咖啡。",
       "pinyin": "wǒ hěn xǐhuan kāfēi",
       "gloss_en": "I love coffee.",
-      "hanzi_trad": "我很喜歡咖啡。"
+      "hanzi_trad": "我很喜歡咖啡。",
+      "pinyin_syllables": "wo3 hen3 xi3 huan5 ka1 fei1"
     },
     {
       "hanzi": "我上午喝咖啡。",
       "pinyin": "wǒ shàngwǔ hē kāfēi",
       "gloss_en": "I drink coffee in the morning.",
-      "hanzi_trad": "我上午喝咖啡。"
+      "hanzi_trad": "我上午喝咖啡。",
+      "pinyin_syllables": "wo3 shang4 wu3 he1 ka1 fei1"
     },
     {
       "hanzi": "我们一起吃吧。",
       "pinyin": "wǒmen yìqǐ chī ba",
       "gloss_en": "Let's eat together.",
-      "hanzi_trad": "我們一起吃吧。"
+      "hanzi_trad": "我們一起吃吧。",
+      "pinyin_syllables": "wo3 men5 yi4 qi3 chi1 ba5"
     },
     {
       "hanzi": "你吃了吗？",
       "pinyin": "nǐ chī le ma?",
       "gloss_en": "Have you eaten?",
-      "hanzi_trad": "你吃了嗎？"
+      "hanzi_trad": "你吃了嗎？",
+      "pinyin_syllables": "ni3 chi1 le5 ma5"
     },
     {
       "hanzi": "我吃了。",
       "pinyin": "wǒ chī le",
       "gloss_en": "I've eaten.",
-      "hanzi_trad": "我吃了。"
+      "hanzi_trad": "我吃了。",
+      "pinyin_syllables": "wo3 chi1 le5"
     },
     {
       "hanzi": "我没吃。",
       "pinyin": "wǒ méi chī",
       "gloss_en": "I haven't eaten.",
-      "hanzi_trad": "我沒吃。"
+      "hanzi_trad": "我沒吃。",
+      "pinyin_syllables": "wo3 mei2 chi1"
     },
     {
       "hanzi": "太多了。",
       "pinyin": "tài duō le",
       "gloss_en": "That's too much.",
-      "hanzi_trad": "太多了。"
+      "hanzi_trad": "太多了。",
+      "pinyin_syllables": "tai4 duo1 le5"
     },
     {
       "hanzi": "水在哪里？",
       "pinyin": "shuǐ zài nǎlǐ?",
       "gloss_en": "Where's the water?",
-      "hanzi_trad": "水在哪裡？"
+      "hanzi_trad": "水在哪裡？",
+      "pinyin_syllables": "shui3 zai4 na3 li3"
     },
     {
       "hanzi": "我喜欢游戏。",
       "pinyin": "wǒ xǐhuan yóuxì",
       "gloss_en": "I like games.",
-      "hanzi_trad": "我喜歡遊戲。"
+      "hanzi_trad": "我喜歡遊戲。",
+      "pinyin_syllables": "wo3 xi3 huan5 you2 xi4"
     },
     {
       "hanzi": "我很喜欢这游戏。",
       "pinyin": "wǒ hěn xǐhuan zhè yóuxì",
       "gloss_en": "I really like this game.",
-      "hanzi_trad": "我很喜歡這遊戲。"
+      "hanzi_trad": "我很喜歡這遊戲。",
+      "pinyin_syllables": "wo3 hen3 xi3 huan5 zhe4 you2 xi4"
     },
     {
       "hanzi": "电脑在哪里？",
       "pinyin": "diànnǎo zài nǎlǐ?",
       "gloss_en": "Where's the computer?",
-      "hanzi_trad": "電腦在哪裡？"
+      "hanzi_trad": "電腦在哪裡？",
+      "pinyin_syllables": "dian4 nao3 zai4 na3 li3"
     },
     {
       "hanzi": "我的电脑很小。",
       "pinyin": "wǒ de diànnǎo hěn xiǎo",
       "gloss_en": "My computer is small.",
-      "hanzi_trad": "我的電腦很小。"
+      "hanzi_trad": "我的電腦很小。",
+      "pinyin_syllables": "wo3 de5 dian4 nao3 hen3 xiao3"
     },
     {
       "hanzi": "我要买电脑。",
       "pinyin": "wǒ yào mǎi diànnǎo",
       "gloss_en": "I want to buy a computer.",
-      "hanzi_trad": "我要買電腦。"
+      "hanzi_trad": "我要買電腦。",
+      "pinyin_syllables": "wo3 yao4 mai3 dian4 nao3"
     },
     {
       "hanzi": "我明天去健身。",
       "pinyin": "wǒ míngtiān qù jiànshēn",
       "gloss_en": "I'm going to the gym tomorrow.",
-      "hanzi_trad": "我明天去健身。"
+      "hanzi_trad": "我明天去健身。",
+      "pinyin_syllables": "wo3 ming2 tian1 qu4 jian4 shen1"
     },
     {
       "hanzi": "我今天没健身。",
       "pinyin": "wǒ jīntiān méi jiànshēn",
       "gloss_en": "I didn't work out today.",
-      "hanzi_trad": "我今天沒健身。"
+      "hanzi_trad": "我今天沒健身。",
+      "pinyin_syllables": "wo3 jin1 tian1 mei2 jian4 shen1"
     },
     {
       "hanzi": "我喜欢健身。",
       "pinyin": "wǒ xǐhuan jiànshēn",
       "gloss_en": "I like working out.",
-      "hanzi_trad": "我喜歡健身。"
+      "hanzi_trad": "我喜歡健身。",
+      "pinyin_syllables": "wo3 xi3 huan5 jian4 shen1"
     },
     {
       "hanzi": "你好！",
       "pinyin": "nǐhǎo!",
       "gloss_en": "Hello!",
-      "hanzi_trad": "你好！"
+      "hanzi_trad": "你好！",
+      "pinyin_syllables": "ni3 hao3"
     },
     {
       "hanzi": "你好吗？",
       "pinyin": "nǐ hǎo ma?",
       "gloss_en": "How are you?",
-      "hanzi_trad": "你好嗎？"
+      "hanzi_trad": "你好嗎？",
+      "pinyin_syllables": "ni3 hao3 ma5"
     },
     {
       "hanzi": "我很好，谢谢。",
       "pinyin": "wǒ hěn hǎo, xièxie",
       "gloss_en": "I'm good, thanks.",
-      "hanzi_trad": "我很好，謝謝。"
+      "hanzi_trad": "我很好，謝謝。",
+      "pinyin_syllables": "wo3 hen3 hao3 xie4 xie5"
     },
     {
       "hanzi": "谢谢你。",
       "pinyin": "xièxie nǐ",
       "gloss_en": "Thank you.",
-      "hanzi_trad": "謝謝你。"
+      "hanzi_trad": "謝謝你。",
+      "pinyin_syllables": "xie4 xie5 ni3"
     },
     {
       "hanzi": "再见！",
       "pinyin": "zàijiàn!",
       "gloss_en": "Bye!",
-      "hanzi_trad": "再見！"
+      "hanzi_trad": "再見！",
+      "pinyin_syllables": "zai4 jian4"
     },
     {
       "hanzi": "他是我的朋友。",
       "pinyin": "tā shì wǒ de péngyou",
       "gloss_en": "He's my friend.",
-      "hanzi_trad": "他是我的朋友。"
+      "hanzi_trad": "他是我的朋友。",
+      "pinyin_syllables": "ta1 shi4 wo3 de5 peng2 you5"
     },
     {
       "hanzi": "我朋友来了。",
       "pinyin": "wǒ péngyou lái le",
       "gloss_en": "My friend's here.",
-      "hanzi_trad": "我朋友來了。"
+      "hanzi_trad": "我朋友來了。",
+      "pinyin_syllables": "wo3 peng2 you5 lai2 le5"
     },
     {
       "hanzi": "我们是朋友。",
       "pinyin": "wǒmen shì péngyou",
       "gloss_en": "We're friends.",
-      "hanzi_trad": "我們是朋友。"
+      "hanzi_trad": "我們是朋友。",
+      "pinyin_syllables": "wo3 men5 shi4 peng2 you5"
     },
     {
       "hanzi": "谁是你的老师？",
       "pinyin": "shéi shì nǐ de lǎoshī?",
       "gloss_en": "Who's your teacher?",
-      "hanzi_trad": "誰是你的老師？"
+      "hanzi_trad": "誰是你的老師？",
+      "pinyin_syllables": "shei2 shi4 ni3 de5 lao3 shi1"
     },
     {
       "hanzi": "她是老师。",
       "pinyin": "tā shì lǎoshī",
       "gloss_en": "She's a teacher.",
-      "hanzi_trad": "她是老師。"
+      "hanzi_trad": "她是老師。",
+      "pinyin_syllables": "ta1 shi4 lao3 shi1"
     },
     {
       "_comment": "Gap-filling pass — targeted at concepts the first 106 sentences covered zero or one times. This is coverage-driven generation done by hand."
@@ -644,181 +750,211 @@
       "hanzi": "他是好人。",
       "pinyin": "tā shì hǎo rén",
       "gloss_en": "He's a good guy.",
-      "hanzi_trad": "他是好人。"
+      "hanzi_trad": "他是好人。",
+      "pinyin_syllables": "ta1 shi4 hao3 ren2"
     },
     {
       "hanzi": "我们家人很多。",
       "pinyin": "wǒmen jiārén hěn duō",
       "gloss_en": "We have a big family.",
-      "hanzi_trad": "我們家人很多。"
+      "hanzi_trad": "我們家人很多。",
+      "pinyin_syllables": "wo3 men5 jia1 ren2 hen3 duo1"
     },
     {
       "hanzi": "有人吗？",
       "pinyin": "yǒu rén ma?",
       "gloss_en": "Anyone home?",
-      "hanzi_trad": "有人嗎？"
+      "hanzi_trad": "有人嗎？",
+      "pinyin_syllables": "you3 ren2 ma5"
     },
     {
       "hanzi": "我会做菜。",
       "pinyin": "wǒ huì zuò cài",
       "gloss_en": "I can cook.",
-      "hanzi_trad": "我會做菜。"
+      "hanzi_trad": "我會做菜。",
+      "pinyin_syllables": "wo3 hui4 zuo4 cai4"
     },
     {
       "hanzi": "宝宝会笑了。",
       "pinyin": "bǎobao huì xiào le",
       "gloss_en": "The baby can smile now.",
-      "hanzi_trad": "寶寶會笑了。"
+      "hanzi_trad": "寶寶會笑了。",
+      "pinyin_syllables": "bao3 bao5 hui4 xiao4 le5"
     },
     {
       "hanzi": "你听！宝宝哭了。",
       "pinyin": "nǐ tīng! bǎobao kū le",
       "gloss_en": "Listen — the baby's crying.",
-      "hanzi_trad": "你聽！寶寶哭了。"
+      "hanzi_trad": "你聽！寶寶哭了。",
+      "pinyin_syllables": "ni3 ting1 bao3 bao5 ku1 le5"
     },
     {
       "hanzi": "我在听。",
       "pinyin": "wǒ zài tīng",
       "gloss_en": "I'm listening.",
-      "hanzi_trad": "我在聽。"
+      "hanzi_trad": "我在聽。",
+      "pinyin_syllables": "wo3 zai4 ting1"
     },
     {
       "hanzi": "你呢？",
       "pinyin": "nǐ ne?",
       "gloss_en": "And you?",
-      "hanzi_trad": "你呢？"
+      "hanzi_trad": "你呢？",
+      "pinyin_syllables": "ni3 ne5"
     },
     {
       "hanzi": "我的咖啡呢？",
       "pinyin": "wǒ de kāfēi ne?",
       "gloss_en": "Where'd my coffee go?",
-      "hanzi_trad": "我的咖啡呢？"
+      "hanzi_trad": "我的咖啡呢？",
+      "pinyin_syllables": "wo3 de5 ka1 fei1 ne5"
     },
     {
       "hanzi": "菜太少了。",
       "pinyin": "cài tài shǎo le",
       "gloss_en": "There's not enough food.",
-      "hanzi_trad": "菜太少了。"
+      "hanzi_trad": "菜太少了。",
+      "pinyin_syllables": "cai4 tai4 shao3 le5"
     },
     {
       "hanzi": "水很少。",
       "pinyin": "shuǐ hěn shǎo",
       "gloss_en": "There's hardly any water.",
-      "hanzi_trad": "水很少。"
+      "hanzi_trad": "水很少。",
+      "pinyin_syllables": "shui3 hen3 shao3"
     },
     {
       "hanzi": "怎么了？",
       "pinyin": "zěnme le?",
       "gloss_en": "What's wrong?",
-      "hanzi_trad": "怎麼了？"
+      "hanzi_trad": "怎麼了？",
+      "pinyin_syllables": "zen3 me5 le5"
     },
     {
       "hanzi": "你怎么了？",
       "pinyin": "nǐ zěnme le?",
       "gloss_en": "What's the matter?",
-      "hanzi_trad": "你怎麼了？"
+      "hanzi_trad": "你怎麼了？",
+      "pinyin_syllables": "ni3 zen3 me5 le5"
     },
     {
       "hanzi": "我有电脑。",
       "pinyin": "wǒ yǒu diànnǎo",
       "gloss_en": "I have a computer.",
-      "hanzi_trad": "我有電腦。"
+      "hanzi_trad": "我有電腦。",
+      "pinyin_syllables": "wo3 you3 dian4 nao3"
     },
     {
       "hanzi": "我们有狗。",
       "pinyin": "wǒmen yǒu gǒu",
       "gloss_en": "We have a dog.",
-      "hanzi_trad": "我們有狗。"
+      "hanzi_trad": "我們有狗。",
+      "pinyin_syllables": "wo3 men5 you3 gou3"
     },
     {
       "hanzi": "你看，宝宝笑了！",
       "pinyin": "nǐ kàn, bǎobao xiào le",
       "gloss_en": "Look, he's smiling!",
-      "hanzi_trad": "你看，寶寶笑了！"
+      "hanzi_trad": "你看，寶寶笑了！",
+      "pinyin_syllables": "ni3 kan4 bao3 bao5 xiao4 le5"
     },
     {
       "hanzi": "我在看宝宝。",
       "pinyin": "wǒ zài kàn bǎobao",
       "gloss_en": "I'm watching the baby.",
-      "hanzi_trad": "我在看寶寶。"
+      "hanzi_trad": "我在看寶寶。",
+      "pinyin_syllables": "wo3 zai4 kan4 bao3 bao5"
     },
     {
       "hanzi": "我能抱宝宝吗？",
       "pinyin": "wǒ néng bào bǎobao ma?",
       "gloss_en": "Can I hold the baby?",
-      "hanzi_trad": "我能抱寶寶嗎？"
+      "hanzi_trad": "我能抱寶寶嗎？",
+      "pinyin_syllables": "wo3 neng2 bao4 bao3 bao5 ma5"
     },
     {
       "hanzi": "你能来吗？",
       "pinyin": "nǐ néng lái ma?",
       "gloss_en": "Can you come?",
-      "hanzi_trad": "你能來嗎？"
+      "hanzi_trad": "你能來嗎？",
+      "pinyin_syllables": "ni3 neng2 lai2 ma5"
     },
     {
       "hanzi": "你说什么？",
       "pinyin": "nǐ shuō shénme?",
       "gloss_en": "What did you say?",
-      "hanzi_trad": "你說什麼？"
+      "hanzi_trad": "你說什麼？",
+      "pinyin_syllables": "ni3 shuo1 shen2 me5"
     },
     {
       "hanzi": "他说他很累。",
       "pinyin": "tā shuō tā hěn lèi",
       "gloss_en": "He says he's tired.",
-      "hanzi_trad": "他說他很累。"
+      "hanzi_trad": "他說他很累。",
+      "pinyin_syllables": "ta1 shuo1 ta1 hen3 lei4"
     },
     {
       "hanzi": "那是什么？",
       "pinyin": "nà shì shénme?",
       "gloss_en": "What's that?",
-      "hanzi_trad": "那是什麼？"
+      "hanzi_trad": "那是什麼？",
+      "pinyin_syllables": "na4 shi4 shen2 me5"
     },
     {
       "hanzi": "那是我的车。",
       "pinyin": "nà shì wǒ de chē",
       "gloss_en": "That's my car.",
-      "hanzi_trad": "那是我的車。"
+      "hanzi_trad": "那是我的車。",
+      "pinyin_syllables": "na4 shi4 wo3 de5 che1"
     },
     {
       "hanzi": "老师说什么？",
       "pinyin": "lǎoshī shuō shénme?",
       "gloss_en": "What did the teacher say?",
-      "hanzi_trad": "老師說什麼？"
+      "hanzi_trad": "老師說什麼？",
+      "pinyin_syllables": "lao3 shi1 shuo1 shen2 me5"
     },
     {
       "hanzi": "我上午喝茶，下午喝咖啡。",
       "pinyin": "wǒ shàngwǔ hē chá, xiàwǔ hē kāfēi",
       "gloss_en": "I drink tea in the morning and coffee in the afternoon.",
-      "hanzi_trad": "我上午喝茶，下午喝咖啡。"
+      "hanzi_trad": "我上午喝茶，下午喝咖啡。",
+      "pinyin_syllables": "wo3 shang4 wu3 he1 cha2 xia4 wu3 he1 ka1 fei1"
     },
     {
       "hanzi": "白饭在哪里？",
       "pinyin": "báifàn zài nǎlǐ?",
       "gloss_en": "Where's the rice?",
-      "hanzi_trad": "白飯在哪裡？"
+      "hanzi_trad": "白飯在哪裡？",
+      "pinyin_syllables": "bai2 fan4 zai4 na3 li3"
     },
     {
       "hanzi": "奶瓶太小了。",
       "pinyin": "nǎipíng tài xiǎo le",
       "gloss_en": "The bottle's too small.",
-      "hanzi_trad": "奶瓶太小了。"
+      "hanzi_trad": "奶瓶太小了。",
+      "pinyin_syllables": "nai3 ping2 tai4 xiao3 le5"
     },
     {
       "hanzi": "奶奶晚上来。",
       "pinyin": "nǎinai wǎnshang lái",
       "gloss_en": "Grandma's coming this evening.",
-      "hanzi_trad": "奶奶晚上來。"
+      "hanzi_trad": "奶奶晚上來。",
+      "pinyin_syllables": "nai3 nai5 wan3 shang5 lai2"
     },
     {
       "hanzi": "昨天晚上宝宝没睡觉。",
       "pinyin": "zuótiān wǎnshang bǎobao méi shuìjiào",
       "gloss_en": "The baby didn't sleep last night.",
-      "hanzi_trad": "昨天晚上寶寶沒睡覺。"
+      "hanzi_trad": "昨天晚上寶寶沒睡覺。",
+      "pinyin_syllables": "zuo2 tian1 wan3 shang5 bao3 bao5 mei2 shui4 jiao4"
     },
     {
       "hanzi": "我们一起看宝宝吧。",
       "pinyin": "wǒmen yìqǐ kàn bǎobao ba",
       "gloss_en": "Let's go check on the baby.",
-      "hanzi_trad": "我們一起看寶寶吧。"
+      "hanzi_trad": "我們一起看寶寶吧。",
+      "pinyin_syllables": "wo3 men5 yi4 qi3 kan4 bao3 bao5 ba5"
     },
     {
       "_comment": "HSK1 expansion pass — see expand_hsk1.py."
@@ -827,415 +963,484 @@
       "hanzi": "宝宝三个月了。",
       "pinyin": "bǎobao sān gè yuè le",
       "gloss_en": "The baby is three months old.",
-      "hanzi_trad": "寶寶三個月了。"
+      "hanzi_trad": "寶寶三個月了。",
+      "pinyin_syllables": "bao3 bao5 san1 ge4 yue4 le5"
     },
     {
       "hanzi": "宝宝今天很高兴。",
       "pinyin": "bǎobao jīntiān hěn gāoxìng",
       "gloss_en": "The baby's in a good mood today.",
-      "hanzi_trad": "寶寶今天很高興。"
+      "hanzi_trad": "寶寶今天很高興。",
+      "pinyin_syllables": "bao3 bao5 jin1 tian1 hen3 gao1 xing4"
     },
     {
       "hanzi": "宝宝很漂亮。",
       "pinyin": "bǎobao hěn piàoliang",
       "gloss_en": "The baby is beautiful.",
-      "hanzi_trad": "寶寶很漂亮。"
+      "hanzi_trad": "寶寶很漂亮。",
+      "pinyin_syllables": "bao3 bao5 hen3 piao4 liang5"
     },
     {
       "hanzi": "给宝宝换衣服吧。",
       "pinyin": "gěi bǎobao huàn yīfu ba",
       "gloss_en": "Let's change the baby's clothes.",
-      "hanzi_trad": "給寶寶換衣服吧。"
+      "hanzi_trad": "給寶寶換衣服吧。",
+      "pinyin_syllables": "gei3 bao3 bao5 huan4 yi1 fu5 ba5"
     },
     {
       "hanzi": "宝宝的衣服在哪里？",
       "pinyin": "bǎobao de yīfu zài nǎlǐ?",
       "gloss_en": "Where are the baby's clothes?",
-      "hanzi_trad": "寶寶的衣服在哪裡？"
+      "hanzi_trad": "寶寶的衣服在哪裡？",
+      "pinyin_syllables": "bao3 bao5 de5 yi1 fu5 zai4 na3 li3"
     },
     {
       "hanzi": "我给宝宝买了新衣服。",
       "pinyin": "wǒ gěi bǎobao mǎi le xīn yīfu",
       "gloss_en": "I bought the baby new clothes.",
-      "hanzi_trad": "我給寶寶買了新衣服。"
+      "hanzi_trad": "我給寶寶買了新衣服。",
+      "pinyin_syllables": "wo3 gei3 bao3 bao5 mai3 le5 xin1 yi1 fu5"
     },
     {
       "hanzi": "宝宝的名字很好。",
       "pinyin": "bǎobao de míngzi hěn hǎo",
       "gloss_en": "The baby has a nice name.",
-      "hanzi_trad": "寶寶的名字很好。"
+      "hanzi_trad": "寶寶的名字很好。",
+      "pinyin_syllables": "bao3 bao5 de5 ming2 zi5 hen3 hao3"
     },
     {
       "hanzi": "宝宝八点睡觉。",
       "pinyin": "bǎobao bā diǎn shuìjiào",
       "gloss_en": "The baby sleeps at eight.",
-      "hanzi_trad": "寶寶八點睡覺。"
+      "hanzi_trad": "寶寶八點睡覺。",
+      "pinyin_syllables": "bao3 bao5 ba1 dian3 shui4 jiao4"
     },
     {
       "hanzi": "我七点回家。",
       "pinyin": "wǒ qī diǎn huí jiā",
       "gloss_en": "I get home at seven.",
-      "hanzi_trad": "我七點回家。"
+      "hanzi_trad": "我七點回家。",
+      "pinyin_syllables": "wo3 qi1 dian3 hui2 jia1"
     },
     {
       "hanzi": "现在十点了。",
       "pinyin": "xiànzài shí diǎn le",
       "gloss_en": "It's ten o'clock.",
-      "hanzi_trad": "現在十點了。"
+      "hanzi_trad": "現在十點了。",
+      "pinyin_syllables": "xian4 zai4 shi2 dian3 le5"
     },
     {
       "hanzi": "你什么时候回家？",
       "pinyin": "nǐ shénme shíhou huí jiā?",
       "gloss_en": "When are you coming home?",
-      "hanzi_trad": "你什麼時候回家？"
+      "hanzi_trad": "你什麼時候回家？",
+      "pinyin_syllables": "ni3 shen2 me5 shi2 hou5 hui2 jia1"
     },
     {
       "hanzi": "这个星期我不工作。",
       "pinyin": "zhè gè xīngqí wǒ bù gōngzuò",
       "gloss_en": "I'm not working this week.",
-      "hanzi_trad": "這個星期我不工作。"
+      "hanzi_trad": "這個星期我不工作。",
+      "pinyin_syllables": "zhe4 ge4 xing1 qi2 wo3 bu4 gong1 zuo4"
     },
     {
       "hanzi": "今天是三号。",
       "pinyin": "jīntiān shì sān hào",
       "gloss_en": "Today is the third.",
-      "hanzi_trad": "今天是三號。"
+      "hanzi_trad": "今天是三號。",
+      "pinyin_syllables": "jin1 tian1 shi4 san1 hao4"
     },
     {
       "hanzi": "我们住在这个房子里。",
       "pinyin": "wǒmen zhù zài zhè gè fángzi lǐ",
       "gloss_en": "We live in this house.",
-      "hanzi_trad": "我們住在這個房子裡。"
+      "hanzi_trad": "我們住在這個房子裡。",
+      "pinyin_syllables": "wo3 men5 zhu4 zai4 zhe4 ge4 fang2 zi5 li3"
     },
     {
       "hanzi": "狗在房子里。",
       "pinyin": "gǒu zài fángzi lǐ",
       "gloss_en": "The dog's in the house.",
-      "hanzi_trad": "狗在房子裡。"
+      "hanzi_trad": "狗在房子裡。",
+      "pinyin_syllables": "gou3 zai4 fang2 zi5 li3"
     },
     {
       "hanzi": "东西在车上。",
       "pinyin": "dōngxi zài chē shàng",
       "gloss_en": "The stuff's in the car.",
-      "hanzi_trad": "東西在車上。"
+      "hanzi_trad": "東西在車上。",
+      "pinyin_syllables": "dong1 xi5 zai4 che1 shang4"
     },
     {
       "hanzi": "车在房子后面。",
       "pinyin": "chē zài fángzi hòumiàn",
       "gloss_en": "The car's behind the house.",
-      "hanzi_trad": "車在房子後面。"
+      "hanzi_trad": "車在房子後面。",
+      "pinyin_syllables": "che1 zai4 fang2 zi5 hou4 mian4"
     },
     {
       "hanzi": "商店在前面。",
       "pinyin": "shāngdiàn zài qiánmiàn",
       "gloss_en": "The shop is up ahead.",
-      "hanzi_trad": "商店在前面。"
+      "hanzi_trad": "商店在前面。",
+      "pinyin_syllables": "shang1 dian4 zai4 qian2 mian4"
     },
     {
       "hanzi": "我去商店买东西。",
       "pinyin": "wǒ qù shāngdiàn mǎi dōngxi",
       "gloss_en": "I'm going to the shop to buy things.",
-      "hanzi_trad": "我去商店買東西。"
+      "hanzi_trad": "我去商店買東西。",
+      "pinyin_syllables": "wo3 qu4 shang1 dian4 mai3 dong1 xi5"
     },
     {
       "hanzi": "我要买三个。",
       "pinyin": "wǒ yào mǎi sān gè",
       "gloss_en": "I want to buy three.",
-      "hanzi_trad": "我要買三個。"
+      "hanzi_trad": "我要買三個。",
+      "pinyin_syllables": "wo3 yao4 mai3 san1 ge4"
     },
     {
       "hanzi": "我没有钱了。",
       "pinyin": "wǒ méiyǒu qián le",
       "gloss_en": "I'm out of money.",
-      "hanzi_trad": "我沒有錢了。"
+      "hanzi_trad": "我沒有錢了。",
+      "pinyin_syllables": "wo3 mei2 you3 qian2 le5"
     },
     {
       "hanzi": "我要去医院。",
       "pinyin": "wǒ yào qù yīyuàn",
       "gloss_en": "I have to go to the hospital.",
-      "hanzi_trad": "我要去醫院。"
+      "hanzi_trad": "我要去醫院。",
+      "pinyin_syllables": "wo3 yao4 qu4 yi1 yuan4"
     },
     {
       "hanzi": "医生说宝宝很好。",
       "pinyin": "yīshēng shuō bǎobao hěn hǎo",
       "gloss_en": "The doctor says the baby's fine.",
-      "hanzi_trad": "醫生說寶寶很好。"
+      "hanzi_trad": "醫生說寶寶很好。",
+      "pinyin_syllables": "yi1 sheng1 shuo1 bao3 bao5 hen3 hao3"
     },
     {
       "hanzi": "我们明天去看医生。",
       "pinyin": "wǒmen míngtiān qù kàn yīshēng",
       "gloss_en": "We're seeing the doctor tomorrow.",
-      "hanzi_trad": "我們明天去看醫生。"
+      "hanzi_trad": "我們明天去看醫生。",
+      "pinyin_syllables": "wo3 men5 ming2 tian1 qu4 kan4 yi1 sheng1"
     },
     {
       "hanzi": "医院在学校后面。",
       "pinyin": "yīyuàn zài xuéxiào hòumiàn",
       "gloss_en": "The hospital is behind the school.",
-      "hanzi_trad": "醫院在學校後面。"
+      "hanzi_trad": "醫院在學校後面。",
+      "pinyin_syllables": "yi1 yuan4 zai4 xue2 xiao4 hou4 mian4"
     },
     {
       "hanzi": "我在学校工作。",
       "pinyin": "wǒ zài xuéxiào gōngzuò",
       "gloss_en": "I work at a school.",
-      "hanzi_trad": "我在學校工作。"
+      "hanzi_trad": "我在學校工作。",
+      "pinyin_syllables": "wo3 zai4 xue2 xiao4 gong1 zuo4"
     },
     {
       "hanzi": "他是学生。",
       "pinyin": "tā shì xuésheng",
       "gloss_en": "He's a student.",
-      "hanzi_trad": "他是學生。"
+      "hanzi_trad": "他是學生。",
+      "pinyin_syllables": "ta1 shi4 xue2 sheng5"
     },
     {
       "hanzi": "我的中文不好。",
       "pinyin": "wǒ de Zhōngwén bù hǎo",
       "gloss_en": "My Chinese isn't good.",
-      "hanzi_trad": "我的中文不好。"
+      "hanzi_trad": "我的中文不好。",
+      "pinyin_syllables": "wo3 de5 zhong1 wen2 bu4 hao3"
     },
     {
       "hanzi": "你的中文很好。",
       "pinyin": "nǐ de Zhōngwén hěn hǎo",
       "gloss_en": "Your Chinese is good.",
-      "hanzi_trad": "你的中文很好。"
+      "hanzi_trad": "你的中文很好。",
+      "pinyin_syllables": "ni3 de5 zhong1 wen2 hen3 hao3"
     },
     {
       "hanzi": "我要学习中文。",
       "pinyin": "wǒ yào xuéxí Zhōngwén",
       "gloss_en": "I want to learn Chinese.",
-      "hanzi_trad": "我要學習中文。"
+      "hanzi_trad": "我要學習中文。",
+      "pinyin_syllables": "wo3 yao4 xue2 xi2 zhong1 wen2"
     },
     {
       "hanzi": "她是中国人。",
       "pinyin": "tā shì Zhōngguó rén",
       "gloss_en": "She's Chinese.",
-      "hanzi_trad": "她是中國人。"
+      "hanzi_trad": "她是中國人。",
+      "pinyin_syllables": "ta1 shi4 zhong1 guo2 ren2"
     },
     {
       "hanzi": "我认识他。",
       "pinyin": "wǒ rènshi tā",
       "gloss_en": "I know him.",
-      "hanzi_trad": "我認識他。"
+      "hanzi_trad": "我認識他。",
+      "pinyin_syllables": "wo3 ren4 shi5 ta1"
     },
     {
       "hanzi": "我不认识那个人。",
       "pinyin": "wǒ bù rènshi nà gè rén",
       "gloss_en": "I don't know that person.",
-      "hanzi_trad": "我不認識那個人。"
+      "hanzi_trad": "我不認識那個人。",
+      "pinyin_syllables": "wo3 bu4 ren4 shi5 na4 ge4 ren2"
     },
     {
       "hanzi": "你叫什么名字？",
       "pinyin": "nǐ jiào shénme míngzi?",
       "gloss_en": "What's your name?",
-      "hanzi_trad": "你叫什麼名字？"
+      "hanzi_trad": "你叫什麼名字？",
+      "pinyin_syllables": "ni3 jiao4 shen2 me5 ming2 zi5"
     },
     {
       "hanzi": "请坐。",
       "pinyin": "qǐng zuò",
       "gloss_en": "Please sit.",
-      "hanzi_trad": "請坐。"
+      "hanzi_trad": "請坐。",
+      "pinyin_syllables": "qing3 zuo4"
     },
     {
       "hanzi": "请给我水。",
       "pinyin": "qǐng gěi wǒ shuǐ",
       "gloss_en": "Water, please.",
-      "hanzi_trad": "請給我水。"
+      "hanzi_trad": "請給我水。",
+      "pinyin_syllables": "qing3 gei3 wo3 shui3"
     },
     {
       "hanzi": "对不起。",
       "pinyin": "duìbuqǐ",
       "gloss_en": "Sorry.",
-      "hanzi_trad": "對不起。"
+      "hanzi_trad": "對不起。",
+      "pinyin_syllables": "dui4 bu5 qi3"
     },
     {
       "hanzi": "没关系。",
       "pinyin": "méiguānxi",
       "gloss_en": "It's fine.",
-      "hanzi_trad": "沒關係。"
+      "hanzi_trad": "沒關係。",
+      "pinyin_syllables": "mei2 guan1 xi5"
     },
     {
       "hanzi": "不客气。",
       "pinyin": "búkèqi",
       "gloss_en": "You're welcome.",
-      "hanzi_trad": "不客氣。"
+      "hanzi_trad": "不客氣。",
+      "pinyin_syllables": "bu2 ke4 qi5"
     },
     {
       "hanzi": "今天很热。",
       "pinyin": "jīntiān hěn rè",
       "gloss_en": "It's hot today.",
-      "hanzi_trad": "今天很熱。"
+      "hanzi_trad": "今天很熱。",
+      "pinyin_syllables": "jin1 tian1 hen3 re4"
     },
     {
       "hanzi": "水太热了。",
       "pinyin": "shuǐ tài rè le",
       "gloss_en": "The water's too hot.",
-      "hanzi_trad": "水太熱了。"
+      "hanzi_trad": "水太熱了。",
+      "pinyin_syllables": "shui3 tai4 re4 le5"
     },
     {
       "hanzi": "今天很冷。",
       "pinyin": "jīntiān hěn lěng",
       "gloss_en": "It's cold today.",
-      "hanzi_trad": "今天很冷。"
+      "hanzi_trad": "今天很冷。",
+      "pinyin_syllables": "jin1 tian1 hen3 leng3"
     },
     {
       "hanzi": "我很高兴。",
       "pinyin": "wǒ hěn gāoxìng",
       "gloss_en": "I'm happy.",
-      "hanzi_trad": "我很高興。"
+      "hanzi_trad": "我很高興。",
+      "pinyin_syllables": "wo3 hen3 gao1 xing4"
     },
     {
       "hanzi": "我们都很高兴。",
       "pinyin": "wǒmen dōu hěn gāoxìng",
       "gloss_en": "We're all happy.",
-      "hanzi_trad": "我們都很高興。"
+      "hanzi_trad": "我們都很高興。",
+      "pinyin_syllables": "wo3 men5 dou1 hen3 gao1 xing4"
     },
     {
       "hanzi": "这个房子很新。",
       "pinyin": "zhè gè fángzi hěn xīn",
       "gloss_en": "This house is new.",
-      "hanzi_trad": "這個房子很新。"
+      "hanzi_trad": "這個房子很新。",
+      "pinyin_syllables": "zhe4 ge4 fang2 zi5 hen3 xin1"
     },
     {
       "hanzi": "我在读书。",
       "pinyin": "wǒ zài dú shū",
       "gloss_en": "I'm reading.",
-      "hanzi_trad": "我在讀書。"
+      "hanzi_trad": "我在讀書。",
+      "pinyin_syllables": "wo3 zai4 du2 shu1"
     },
     {
       "hanzi": "我想读中文书。",
       "pinyin": "wǒ xiǎng dú Zhōngwén shū",
       "gloss_en": "I want to read Chinese books.",
-      "hanzi_trad": "我想讀中文書。"
+      "hanzi_trad": "我想讀中文書。",
+      "pinyin_syllables": "wo3 xiang3 du2 zhong1 wen2 shu1"
     },
     {
       "hanzi": "我不会写中文。",
       "pinyin": "wǒ bú huì xiě Zhōngwén",
       "gloss_en": "I can't write Chinese.",
-      "hanzi_trad": "我不會寫中文。"
+      "hanzi_trad": "我不會寫中文。",
+      "pinyin_syllables": "wo3 bu2 hui4 xie3 zhong1 wen2"
     },
     {
       "hanzi": "请写你的名字。",
       "pinyin": "qǐng xiě nǐ de míngzi",
       "gloss_en": "Please write your name.",
-      "hanzi_trad": "請寫你的名字。"
+      "hanzi_trad": "請寫你的名字。",
+      "pinyin_syllables": "qing3 xie3 ni3 de5 ming2 zi5"
     },
     {
       "hanzi": "我开车去工作。",
       "pinyin": "wǒ kāi chē qù gōngzuò",
       "gloss_en": "I drive to work.",
-      "hanzi_trad": "我開車去工作。"
+      "hanzi_trad": "我開車去工作。",
+      "pinyin_syllables": "wo3 kai1 che1 qu4 gong1 zuo4"
     },
     {
       "hanzi": "电视在哪里？",
       "pinyin": "diànshì zài nǎlǐ?",
       "gloss_en": "Where's the TV?",
-      "hanzi_trad": "電視在哪裡？"
+      "hanzi_trad": "電視在哪裡？",
+      "pinyin_syllables": "dian4 shi4 zai4 na3 li3"
     },
     {
       "hanzi": "我在看电视。",
       "pinyin": "wǒ zài kàn diànshì",
       "gloss_en": "I'm watching TV.",
-      "hanzi_trad": "我在看電視。"
+      "hanzi_trad": "我在看電視。",
+      "pinyin_syllables": "wo3 zai4 kan4 dian4 shi4"
     },
     {
       "hanzi": "宝宝喜欢看电视吗？",
       "pinyin": "bǎobao xǐhuan kàn diànshì ma?",
       "gloss_en": "Does the baby like watching TV?",
-      "hanzi_trad": "寶寶喜歡看電視嗎？"
+      "hanzi_trad": "寶寶喜歡看電視嗎？",
+      "pinyin_syllables": "bao3 bao5 xi3 huan5 kan4 dian4 shi4 ma5"
     },
     {
       "hanzi": "我找我的电话。",
       "pinyin": "wǒ zhǎo wǒ de diànhuà",
       "gloss_en": "I'm looking for my phone.",
-      "hanzi_trad": "我找我的電話。"
+      "hanzi_trad": "我找我的電話。",
+      "pinyin_syllables": "wo3 zhao3 wo3 de5 dian4 hua4"
     },
     {
       "hanzi": "你在找什么？",
       "pinyin": "nǐ zài zhǎo shénme?",
       "gloss_en": "What are you looking for?",
-      "hanzi_trad": "你在找什麼？"
+      "hanzi_trad": "你在找什麼？",
+      "pinyin_syllables": "ni3 zai4 zhao3 shen2 me5"
     },
     {
       "hanzi": "我和老婆一起去。",
       "pinyin": "wǒ hé lǎopo yìqǐ qù",
       "gloss_en": "My wife and I are going together.",
-      "hanzi_trad": "我和老婆一起去。"
+      "hanzi_trad": "我和老婆一起去。",
+      "pinyin_syllables": "wo3 he2 lao3 po5 yi4 qi3 qu4"
     },
     {
       "hanzi": "爸爸和妈妈都在家。",
       "pinyin": "bàba hé māma dōu zài jiā",
       "gloss_en": "Mom and Dad are both home.",
-      "hanzi_trad": "爸爸和媽媽都在家。"
+      "hanzi_trad": "爸爸和媽媽都在家。",
+      "pinyin_syllables": "ba4 ba5 he2 ma1 ma5 dou1 zai4 jia1"
     },
     {
       "hanzi": "我想玩游戏。",
       "pinyin": "wǒ xiǎng wán yóuxì",
       "gloss_en": "I want to play games.",
-      "hanzi_trad": "我想玩遊戲。"
+      "hanzi_trad": "我想玩遊戲。",
+      "pinyin_syllables": "wo3 xiang3 wan2 you2 xi4"
     },
     {
       "hanzi": "我晚上玩游戏。",
       "pinyin": "wǒ wǎnshang wán yóuxì",
       "gloss_en": "I play games in the evening.",
-      "hanzi_trad": "我晚上玩遊戲。"
+      "hanzi_trad": "我晚上玩遊戲。",
+      "pinyin_syllables": "wo3 wan3 shang5 wan2 you2 xi4"
     },
     {
       "hanzi": "宝宝在玩。",
       "pinyin": "bǎobao zài wán",
       "gloss_en": "The baby's playing.",
-      "hanzi_trad": "寶寶在玩。"
+      "hanzi_trad": "寶寶在玩。",
+      "pinyin_syllables": "bao3 bao5 zai4 wan2"
     },
     {
       "hanzi": "请坐在前面。",
       "pinyin": "qǐng zuò zài qiánmiàn",
       "gloss_en": "Please sit at the front.",
-      "hanzi_trad": "請坐在前面。"
+      "hanzi_trad": "請坐在前面。",
+      "pinyin_syllables": "qing3 zuo4 zai4 qian2 mian4"
     },
     {
       "hanzi": "狗在我后面。",
       "pinyin": "gǒu zài wǒ hòumiàn",
       "gloss_en": "The dog's behind me.",
-      "hanzi_trad": "狗在我後面。"
+      "hanzi_trad": "狗在我後面。",
+      "pinyin_syllables": "gou3 zai4 wo3 hou4 mian4"
     },
     {
       "hanzi": "五个人都来了。",
       "pinyin": "wǔ gè rén dōu lái le",
       "gloss_en": "All five people came.",
-      "hanzi_trad": "五個人都來了。"
+      "hanzi_trad": "五個人都來了。",
+      "pinyin_syllables": "wu3 ge4 ren2 dou1 lai2 le5"
     },
     {
       "hanzi": "我们家有四个人。",
       "pinyin": "wǒmen jiā yǒu sì gè rén",
       "gloss_en": "There are four people in our family.",
-      "hanzi_trad": "我們家有四個人。"
+      "hanzi_trad": "我們家有四個人。",
+      "pinyin_syllables": "wo3 men5 jia1 you3 si4 ge4 ren2"
     },
     {
       "hanzi": "这个女人是医生。",
       "pinyin": "zhè gè nǚ rén shì yīshēng",
       "gloss_en": "This woman is a doctor.",
-      "hanzi_trad": "這個女人是醫生。"
+      "hanzi_trad": "這個女人是醫生。",
+      "pinyin_syllables": "zhe4 ge4 nv3 ren2 shi4 yi1 sheng1"
     },
     {
       "hanzi": "那个男人是老师。",
       "pinyin": "nà gè nán rén shì lǎoshī",
       "gloss_en": "That man is a teacher.",
-      "hanzi_trad": "那個男人是老師。"
+      "hanzi_trad": "那個男人是老師。",
+      "pinyin_syllables": "na4 ge4 nan2 ren2 shi4 lao3 shi1"
     },
     {
       "hanzi": "六点了，我们吃吧。",
       "pinyin": "liù diǎn le, wǒmen chī ba",
       "gloss_en": "It's six — let's eat.",
-      "hanzi_trad": "六點了，我們吃吧。"
+      "hanzi_trad": "六點了，我們吃吧。",
+      "pinyin_syllables": "liu4 dian3 le5 wo3 men5 chi1 ba5"
     },
     {
       "hanzi": "我一个人在家。",
       "pinyin": "wǒ yí gè rén zài jiā",
       "gloss_en": "I'm home alone.",
-      "hanzi_trad": "我一個人在家。"
+      "hanzi_trad": "我一個人在家。",
+      "pinyin_syllables": "wo3 yi2 ge4 ren2 zai4 jia1"
     },
     {
       "hanzi": "九月很热。",
       "pinyin": "jiǔ yuè hěn rè",
       "gloss_en": "September is hot.",
-      "hanzi_trad": "九月很熱。"
+      "hanzi_trad": "九月很熱。",
+      "pinyin_syllables": "jiu3 yue4 hen3 re4"
     },
     {
       "_comment": "Gap-filling pass 2 — concepts with zero coverage after the HSK1 expansion."
@@ -1244,43 +1449,50 @@
       "hanzi": "请坐下。",
       "pinyin": "qǐng zuò xià",
       "gloss_en": "Please sit down.",
-      "hanzi_trad": "請坐下。"
+      "hanzi_trad": "請坐下。",
+      "pinyin_syllables": "qing3 zuo4 xia4"
     },
     {
       "hanzi": "我下星期去中国。",
       "pinyin": "wǒ xià xīngqí qù Zhōngguó",
       "gloss_en": "I'm going to China next week.",
-      "hanzi_trad": "我下星期去中國。"
+      "hanzi_trad": "我下星期去中國。",
+      "pinyin_syllables": "wo3 xia4 xing1 qi2 qu4 zhong1 guo2"
     },
     {
       "hanzi": "二月很冷。",
       "pinyin": "èr yuè hěn lěng",
       "gloss_en": "February is cold.",
-      "hanzi_trad": "二月很冷。"
+      "hanzi_trad": "二月很冷。",
+      "pinyin_syllables": "er4 yue4 hen3 leng3"
     },
     {
       "hanzi": "请给我十分钟。",
       "pinyin": "qǐng gěi wǒ shí fēnzhōng",
       "gloss_en": "Give me ten minutes.",
-      "hanzi_trad": "請給我十分鐘。"
+      "hanzi_trad": "請給我十分鐘。",
+      "pinyin_syllables": "qing3 gei3 wo3 shi2 fen1 zhong1"
     },
     {
       "hanzi": "我住在这里五年了。",
       "pinyin": "wǒ zhù zài zhèlǐ wǔ nián le",
       "gloss_en": "I've lived here five years.",
-      "hanzi_trad": "我住在這裡五年了。"
+      "hanzi_trad": "我住在這裡五年了。",
+      "pinyin_syllables": "wo3 zhu4 zai4 zhe4 li3 wu3 nian2 le5"
     },
     {
       "hanzi": "开车不要太快。",
       "pinyin": "kāi chē bú yào tài kuài",
       "gloss_en": "Don't drive too fast.",
-      "hanzi_trad": "開車不要太快。"
+      "hanzi_trad": "開車不要太快。",
+      "pinyin_syllables": "kai1 che1 bu2 yao4 tai4 kuai4"
     },
     {
       "hanzi": "请说慢一点。",
       "pinyin": "qǐng shuō màn yì diǎn",
       "gloss_en": "Please speak more slowly.",
-      "hanzi_trad": "請說慢一點。"
+      "hanzi_trad": "請說慢一點。",
+      "pinyin_syllables": "qing3 shuo1 man4 yi4 dian3"
     },
     {
       "_comment": "Expansion: HSK2 core — household, baby, food, health, time"
@@ -1289,1039 +1501,1212 @@
       "hanzi": "宝宝早上六点起床。",
       "pinyin": "bǎobao zǎoshang liù diǎn qǐchuáng",
       "gloss_en": "The baby gets up at six in the morning.",
-      "hanzi_trad": "寶寶早上六點起床。"
+      "hanzi_trad": "寶寶早上六點起床。",
+      "pinyin_syllables": "bao3 bao5 zao3 shang5 liu4 dian3 qi3 chuang2"
     },
     {
       "hanzi": "我们每天八点洗澡。",
       "pinyin": "wǒmen měitiān bā diǎn xǐzǎo",
       "gloss_en": "We bathe at eight every day.",
-      "hanzi_trad": "我們每天八點洗澡。"
+      "hanzi_trad": "我們每天八點洗澡。",
+      "pinyin_syllables": "wo3 men5 mei3 tian1 ba1 dian3 xi3 zao3"
     },
     {
       "hanzi": "我在哄宝宝。",
       "pinyin": "wǒ zài hǒng bǎobao",
       "gloss_en": "I'm settling the baby.",
-      "hanzi_trad": "我在哄寶寶。"
+      "hanzi_trad": "我在哄寶寶。",
+      "pinyin_syllables": "wo3 zai4 hong3 bao3 bao5"
     },
     {
       "hanzi": "你哄一下他。",
       "pinyin": "nǐ hǒng yíxià tā",
       "gloss_en": "Soothe him for a minute.",
-      "hanzi_trad": "你哄一下他。"
+      "hanzi_trad": "你哄一下他。",
+      "pinyin_syllables": "ni3 hong3 yi2 xia4 ta1"
     },
     {
       "hanzi": "我喂宝宝。",
       "pinyin": "wǒ wèi bǎobao",
       "gloss_en": "I'll feed the baby.",
-      "hanzi_trad": "我喂寶寶。"
+      "hanzi_trad": "我喂寶寶。",
+      "pinyin_syllables": "wo3 wei4 bao3 bao5"
     },
     {
       "hanzi": "奶粉在厨房。",
       "pinyin": "nǎifěn zài chúfáng",
       "gloss_en": "The formula's in the kitchen.",
-      "hanzi_trad": "奶粉在廚房。"
+      "hanzi_trad": "奶粉在廚房。",
+      "pinyin_syllables": "nai3 fen3 zai4 chu2 fang2"
     },
     {
       "hanzi": "我们没有奶粉了。",
       "pinyin": "wǒmen méiyǒu nǎifěn le",
       "gloss_en": "We're out of formula.",
-      "hanzi_trad": "我們沒有奶粉了。"
+      "hanzi_trad": "我們沒有奶粉了。",
+      "pinyin_syllables": "wo3 men5 mei2 you3 nai3 fen3 le5"
     },
     {
       "hanzi": "请拿一瓶牛奶。",
       "pinyin": "qǐng ná yì píng niúnǎi",
       "gloss_en": "Grab a bottle of milk.",
-      "hanzi_trad": "請拿一瓶牛奶。"
+      "hanzi_trad": "請拿一瓶牛奶。",
+      "pinyin_syllables": "qing3 na2 yi4 ping2 niu2 nai3"
     },
     {
       "hanzi": "他的玩具在床上。",
       "pinyin": "tā de wánjù zài chuáng shàng",
       "gloss_en": "His toy's on the bed.",
-      "hanzi_trad": "他的玩具在床上。"
+      "hanzi_trad": "他的玩具在床上。",
+      "pinyin_syllables": "ta1 de5 wan2 ju4 zai4 chuang2 shang4"
     },
     {
       "hanzi": "宝宝在玩玩具。",
       "pinyin": "bǎobao zài wán wánjù",
       "gloss_en": "The baby's playing with a toy.",
-      "hanzi_trad": "寶寶在玩玩具。"
+      "hanzi_trad": "寶寶在玩玩具。",
+      "pinyin_syllables": "bao3 bao5 zai4 wan2 wan2 ju4"
     },
     {
       "hanzi": "别让他哭。",
       "pinyin": "bié ràng tā kū",
       "gloss_en": "Don't let him cry.",
-      "hanzi_trad": "別讓他哭。"
+      "hanzi_trad": "別讓他哭。",
+      "pinyin_syllables": "bie2 rang4 ta1 ku1"
     },
     {
       "hanzi": "他为什么哭？",
       "pinyin": "tā wèishénme kū?",
       "gloss_en": "Why is he crying?",
-      "hanzi_trad": "他為什麼哭？"
+      "hanzi_trad": "他為什麼哭？",
+      "pinyin_syllables": "ta1 wei4 shen2 me5 ku1"
     },
     {
       "hanzi": "因为他饿了。",
       "pinyin": "yīnwèi tā è le",
       "gloss_en": "Because he's hungry.",
-      "hanzi_trad": "因為他餓了。"
+      "hanzi_trad": "因為他餓了。",
+      "pinyin_syllables": "yin1 wei4 ta1 e4 le5"
     },
     {
       "hanzi": "他饿了，所以哭了。",
       "pinyin": "tā è le, suǒyǐ kū le",
       "gloss_en": "He's hungry, so he cried.",
-      "hanzi_trad": "他餓了，所以哭了。"
+      "hanzi_trad": "他餓了，所以哭了。",
+      "pinyin_syllables": "ta1 e4 le5 suo3 yi3 ku1 le5"
     },
     {
       "hanzi": "我很累，但是很高兴。",
       "pinyin": "wǒ hěn lèi, dànshì hěn gāoxìng",
       "gloss_en": "I'm tired but happy.",
-      "hanzi_trad": "我很累，但是很高興。"
+      "hanzi_trad": "我很累，但是很高興。",
+      "pinyin_syllables": "wo3 hen3 lei4 dan4 shi4 hen3 gao1 xing4"
     },
     {
       "hanzi": "如果他哭，你就抱他。",
       "pinyin": "rúguǒ tā kū, nǐ jiù bào tā",
       "gloss_en": "If he cries, pick him up.",
-      "hanzi_trad": "如果他哭，你就抱他。"
+      "hanzi_trad": "如果他哭，你就抱他。",
+      "pinyin_syllables": "ru2 guo3 ta1 ku1 ni3 jiu4 bao4 ta1"
     },
     {
       "hanzi": "我帮你。",
       "pinyin": "wǒ bāng nǐ",
       "gloss_en": "I'll help you.",
-      "hanzi_trad": "我幫你。"
+      "hanzi_trad": "我幫你。",
+      "pinyin_syllables": "wo3 bang1 ni3"
     },
     {
       "hanzi": "你可以帮我一下吗？",
       "pinyin": "nǐ kěyǐ bāng wǒ yíxià ma?",
       "gloss_en": "Can you give me a hand?",
-      "hanzi_trad": "你可以幫我一下嗎？"
+      "hanzi_trad": "你可以幫我一下嗎？",
+      "pinyin_syllables": "ni3 ke3 yi3 bang1 wo3 yi2 xia4 ma5"
     },
     {
       "hanzi": "等一下。",
       "pinyin": "děng yíxià",
       "gloss_en": "Hold on a second.",
-      "hanzi_trad": "等一下。"
+      "hanzi_trad": "等一下。",
+      "pinyin_syllables": "deng3 yi2 xia4"
     },
     {
       "hanzi": "请等我。",
       "pinyin": "qǐng děng wǒ",
       "gloss_en": "Please wait for me.",
-      "hanzi_trad": "請等我。"
+      "hanzi_trad": "請等我。",
+      "pinyin_syllables": "qing3 deng3 wo3"
     },
     {
       "hanzi": "我知道了。",
       "pinyin": "wǒ zhīdào le",
       "gloss_en": "Got it.",
-      "hanzi_trad": "我知道了。"
+      "hanzi_trad": "我知道了。",
+      "pinyin_syllables": "wo3 zhi1 dao4 le5"
     },
     {
       "hanzi": "我不知道。",
       "pinyin": "wǒ bù zhīdào",
       "gloss_en": "I don't know.",
-      "hanzi_trad": "我不知道。"
+      "hanzi_trad": "我不知道。",
+      "pinyin_syllables": "wo3 bu4 zhi1 dao4"
     },
     {
       "hanzi": "你知道他在哪里吗？",
       "pinyin": "nǐ zhīdào tā zài nǎlǐ ma?",
       "gloss_en": "Do you know where he is?",
-      "hanzi_trad": "你知道他在哪裡嗎？"
+      "hanzi_trad": "你知道他在哪裡嗎？",
+      "pinyin_syllables": "ni3 zhi1 dao4 ta1 zai4 na3 li3 ma5"
     },
     {
       "hanzi": "我觉得他饿了。",
       "pinyin": "wǒ juéde tā è le",
       "gloss_en": "I think he's hungry.",
-      "hanzi_trad": "我覺得他餓了。"
+      "hanzi_trad": "我覺得他餓了。",
+      "pinyin_syllables": "wo3 jue2 de5 ta1 e4 le5"
     },
     {
       "hanzi": "你觉得怎么样？",
       "pinyin": "nǐ juéde zěnmeyàng?",
       "gloss_en": "What do you think?",
-      "hanzi_trad": "你覺得怎麼樣？"
+      "hanzi_trad": "你覺得怎麼樣？",
+      "pinyin_syllables": "ni3 jue2 de5 zen3 me5 yang4"
     },
     {
       "hanzi": "我需要休息。",
       "pinyin": "wǒ xūyào xiūxi",
       "gloss_en": "I need a rest.",
-      "hanzi_trad": "我需要休息。"
+      "hanzi_trad": "我需要休息。",
+      "pinyin_syllables": "wo3 xu1 yao4 xiu1 xi5"
     },
     {
       "hanzi": "你应该休息一下。",
       "pinyin": "nǐ yīnggāi xiūxi yíxià",
       "gloss_en": "You should take a break.",
-      "hanzi_trad": "你應該休息一下。"
+      "hanzi_trad": "你應該休息一下。",
+      "pinyin_syllables": "ni3 ying1 gai1 xiu1 xi5 yi2 xia4"
     },
     {
       "hanzi": "我们应该走了。",
       "pinyin": "wǒmen yīnggāi zǒu le",
       "gloss_en": "We should get going.",
-      "hanzi_trad": "我們應該走了。"
+      "hanzi_trad": "我們應該走了。",
+      "pinyin_syllables": "wo3 men5 ying1 gai1 zou3 le5"
     },
     {
       "hanzi": "我可以进来吗？",
       "pinyin": "wǒ kěyǐ jìnlái ma?",
       "gloss_en": "May I come in?",
-      "hanzi_trad": "我可以進來嗎？"
+      "hanzi_trad": "我可以進來嗎？",
+      "pinyin_syllables": "wo3 ke3 yi3 jin4 lai2 ma5"
     },
     {
       "hanzi": "请进来。",
       "pinyin": "qǐng jìnlái",
       "gloss_en": "Come in.",
-      "hanzi_trad": "請進來。"
+      "hanzi_trad": "請進來。",
+      "pinyin_syllables": "qing3 jin4 lai2"
     },
     {
       "hanzi": "我们出去走走。",
       "pinyin": "wǒmen chūqù zǒu zǒu",
       "gloss_en": "Let's go out for a walk.",
-      "hanzi_trad": "我們出去走走。"
+      "hanzi_trad": "我們出去走走。",
+      "pinyin_syllables": "wo3 men5 chu1 qu4 zou3 zou3"
     },
     {
       "hanzi": "外面在下雨。",
       "pinyin": "wàimiàn zài xiàyǔ",
       "gloss_en": "It's raining outside.",
-      "hanzi_trad": "外面在下雨。"
+      "hanzi_trad": "外面在下雨。",
+      "pinyin_syllables": "wai4 mian4 zai4 xia4 yu3"
     },
     {
       "hanzi": "今天天气很好。",
       "pinyin": "jīntiān tiānqì hěn hǎo",
       "gloss_en": "The weather's nice today.",
-      "hanzi_trad": "今天天氣很好。"
+      "hanzi_trad": "今天天氣很好。",
+      "pinyin_syllables": "jin1 tian1 tian1 qi4 hen3 hao3"
     },
     {
       "hanzi": "今天天气怎么样？",
       "pinyin": "jīntiān tiānqì zěnmeyàng?",
       "gloss_en": "What's the weather like today?",
-      "hanzi_trad": "今天天氣怎麼樣？"
+      "hanzi_trad": "今天天氣怎麼樣？",
+      "pinyin_syllables": "jin1 tian1 tian1 qi4 zen3 me5 yang4"
     },
     {
       "hanzi": "太阳很大。",
       "pinyin": "tàiyáng hěn dà",
       "gloss_en": "The sun's strong.",
-      "hanzi_trad": "太陽很大。"
+      "hanzi_trad": "太陽很大。",
+      "pinyin_syllables": "tai4 yang2 hen3 da4"
     },
     {
       "hanzi": "我们去公园吧。",
       "pinyin": "wǒmen qù gōngyuán ba",
       "gloss_en": "Let's go to the park.",
-      "hanzi_trad": "我們去公園吧。"
+      "hanzi_trad": "我們去公園吧。",
+      "pinyin_syllables": "wo3 men5 qu4 gong1 yuan2 ba5"
     },
     {
       "hanzi": "我去超市买东西。",
       "pinyin": "wǒ qù chāoshì mǎi dōngxi",
       "gloss_en": "I'm going to the supermarket.",
-      "hanzi_trad": "我去超市買東西。"
+      "hanzi_trad": "我去超市買東西。",
+      "pinyin_syllables": "wo3 qu4 chao1 shi4 mai3 dong1 xi5"
     },
     {
       "hanzi": "超市里有水果吗？",
       "pinyin": "chāoshì lǐ yǒu shuǐguǒ ma?",
       "gloss_en": "Does the supermarket have fruit?",
-      "hanzi_trad": "超市裡有水果嗎？"
+      "hanzi_trad": "超市裡有水果嗎？",
+      "pinyin_syllables": "chao1 shi4 li3 you3 shui3 guo3 ma5"
     },
     {
       "hanzi": "我要买苹果和香蕉。",
       "pinyin": "wǒ yào mǎi píngguǒ hé xiāngjiāo",
       "gloss_en": "I want to buy apples and bananas.",
-      "hanzi_trad": "我要買蘋果和香蕉。"
+      "hanzi_trad": "我要買蘋果和香蕉。",
+      "pinyin_syllables": "wo3 yao4 mai3 ping2 guo3 he2 xiang1 jiao1"
     },
     {
       "hanzi": "这些苹果很便宜。",
       "pinyin": "zhè xiē píngguǒ hěn piányi",
       "gloss_en": "These apples are cheap.",
-      "hanzi_trad": "這些蘋果很便宜。"
+      "hanzi_trad": "這些蘋果很便宜。",
+      "pinyin_syllables": "zhe4 xie1 ping2 guo3 hen3 pian2 yi5"
     },
     {
       "hanzi": "这个太贵了。",
       "pinyin": "zhè gè tài guì le",
       "gloss_en": "This is too expensive.",
-      "hanzi_trad": "這個太貴了。"
+      "hanzi_trad": "這個太貴了。",
+      "pinyin_syllables": "zhe4 ge4 tai4 gui4 le5"
     },
     {
       "hanzi": "多少钱？",
       "pinyin": "duōshao qián?",
       "gloss_en": "How much is it?",
-      "hanzi_trad": "多少錢？"
+      "hanzi_trad": "多少錢？",
+      "pinyin_syllables": "duo1 shao5 qian2"
     },
     {
       "hanzi": "早饭吃什么？",
       "pinyin": "zǎofàn chī shénme?",
       "gloss_en": "What's for breakfast?",
-      "hanzi_trad": "早飯吃什麼？"
+      "hanzi_trad": "早飯吃什麼？",
+      "pinyin_syllables": "zao3 fan4 chi1 shen2 me5"
     },
     {
       "hanzi": "早饭有鸡蛋和面包。",
       "pinyin": "zǎofàn yǒu jīdàn hé miànbāo",
       "gloss_en": "Breakfast is eggs and bread.",
-      "hanzi_trad": "早飯有雞蛋和麵包。"
+      "hanzi_trad": "早飯有雞蛋和麵包。",
+      "pinyin_syllables": "zao3 fan4 you3 ji1 dan4 he2 mian4 bao1"
     },
     {
       "hanzi": "午饭吃面条吧。",
       "pinyin": "wǔfàn chī miàntiáo ba",
       "gloss_en": "Let's have noodles for lunch.",
-      "hanzi_trad": "午飯吃麵條吧。"
+      "hanzi_trad": "午飯吃麵條吧。",
+      "pinyin_syllables": "wu3 fan4 chi1 mian4 tiao2 ba5"
     },
     {
       "hanzi": "晚饭我做鱼。",
       "pinyin": "wǎnfàn wǒ zuò yú",
       "gloss_en": "I'll make fish for dinner.",
-      "hanzi_trad": "晚飯我做魚。"
+      "hanzi_trad": "晚飯我做魚。",
+      "pinyin_syllables": "wan3 fan4 wo3 zuo4 yu2"
     },
     {
       "hanzi": "我不吃肉。",
       "pinyin": "wǒ bù chī ròu",
       "gloss_en": "I don't eat meat.",
-      "hanzi_trad": "我不吃肉。"
+      "hanzi_trad": "我不吃肉。",
+      "pinyin_syllables": "wo3 bu4 chi1 rou4"
     },
     {
       "hanzi": "汤有点热。",
       "pinyin": "tāng yǒudiǎn rè",
       "gloss_en": "The soup's a bit hot.",
-      "hanzi_trad": "湯有點熱。"
+      "hanzi_trad": "湯有點熱。",
+      "pinyin_syllables": "tang1 you3 dian3 re4"
     },
     {
       "hanzi": "这个汤真好吃。",
       "pinyin": "zhè gè tāng zhēn hǎochī",
       "gloss_en": "This soup is really good.",
-      "hanzi_trad": "這個湯真好吃。"
+      "hanzi_trad": "這個湯真好吃。",
+      "pinyin_syllables": "zhe4 ge4 tang1 zhen1 hao3 chi1"
     },
     {
       "hanzi": "我要一杯水。",
       "pinyin": "wǒ yào yì bēi shuǐ",
       "gloss_en": "I'd like a glass of water.",
-      "hanzi_trad": "我要一杯水。"
+      "hanzi_trad": "我要一杯水。",
+      "pinyin_syllables": "wo3 yao4 yi4 bei1 shui3"
     },
     {
       "hanzi": "请给我一杯茶。",
       "pinyin": "qǐng gěi wǒ yì bēi chá",
       "gloss_en": "A cup of tea, please.",
-      "hanzi_trad": "請給我一杯茶。"
+      "hanzi_trad": "請給我一杯茶。",
+      "pinyin_syllables": "qing3 gei3 wo3 yi4 bei1 cha2"
     },
     {
       "hanzi": "我早上喝一杯咖啡。",
       "pinyin": "wǒ zǎoshang hē yì bēi kāfēi",
       "gloss_en": "I have a coffee in the morning.",
-      "hanzi_trad": "我早上喝一杯咖啡。"
+      "hanzi_trad": "我早上喝一杯咖啡。",
+      "pinyin_syllables": "wo3 zao3 shang5 he1 yi4 bei1 ka1 fei1"
     },
     {
       "hanzi": "我中午回家。",
       "pinyin": "wǒ zhōngwǔ huí jiā",
       "gloss_en": "I come home at noon.",
-      "hanzi_trad": "我中午回家。"
+      "hanzi_trad": "我中午回家。",
+      "pinyin_syllables": "wo3 zhong1 wu3 hui2 jia1"
     },
     {
       "hanzi": "我八点上班。",
       "pinyin": "wǒ bā diǎn shàngbān",
       "gloss_en": "I start work at eight.",
-      "hanzi_trad": "我八點上班。"
+      "hanzi_trad": "我八點上班。",
+      "pinyin_syllables": "wo3 ba1 dian3 shang4 ban1"
     },
     {
       "hanzi": "我五点下班。",
       "pinyin": "wǒ wǔ diǎn xiàbān",
       "gloss_en": "I finish work at five.",
-      "hanzi_trad": "我五點下班。"
+      "hanzi_trad": "我五點下班。",
+      "pinyin_syllables": "wo3 wu3 dian3 xia4 ban1"
     },
     {
       "hanzi": "今天我很忙。",
       "pinyin": "jīntiān wǒ hěn máng",
       "gloss_en": "I'm busy today.",
-      "hanzi_trad": "今天我很忙。"
+      "hanzi_trad": "今天我很忙。",
+      "pinyin_syllables": "jin1 tian1 wo3 hen3 mang2"
     },
     {
       "hanzi": "我今天不忙。",
       "pinyin": "wǒ jīntiān bù máng",
       "gloss_en": "I'm not busy today.",
-      "hanzi_trad": "我今天不忙。"
+      "hanzi_trad": "我今天不忙。",
+      "pinyin_syllables": "wo3 jin1 tian1 bu4 mang2"
     },
     {
       "hanzi": "我在家上班。",
       "pinyin": "wǒ zài jiā shàngbān",
       "gloss_en": "I work from home.",
-      "hanzi_trad": "我在家上班。"
+      "hanzi_trad": "我在家上班。",
+      "pinyin_syllables": "wo3 zai4 jia1 shang4 ban1"
     },
     {
       "hanzi": "我下班以后去健身。",
       "pinyin": "wǒ xiàbān yǐhòu qù jiànshēn",
       "gloss_en": "I go to the gym after work.",
-      "hanzi_trad": "我下班以後去健身。"
+      "hanzi_trad": "我下班以後去健身。",
+      "pinyin_syllables": "wo3 xia4 ban1 yi3 hou4 qu4 jian4 shen1"
     },
     {
       "hanzi": "我每天跑步。",
       "pinyin": "wǒ měitiān pǎobù",
       "gloss_en": "I run every day.",
-      "hanzi_trad": "我每天跑步。"
+      "hanzi_trad": "我每天跑步。",
+      "pinyin_syllables": "wo3 mei3 tian1 pao3 bu4"
     },
     {
       "hanzi": "运动很重要。",
       "pinyin": "yùndòng hěn zhòngyào",
       "gloss_en": "Exercise is important.",
-      "hanzi_trad": "運動很重要。"
+      "hanzi_trad": "運動很重要。",
+      "pinyin_syllables": "yun4 dong4 hen3 zhong4 yao4"
     },
     {
       "hanzi": "我以前每天运动。",
       "pinyin": "wǒ yǐqián měitiān yùndòng",
       "gloss_en": "I used to exercise every day.",
-      "hanzi_trad": "我以前每天運動。"
+      "hanzi_trad": "我以前每天運動。",
+      "pinyin_syllables": "wo3 yi3 qian2 mei3 tian1 yun4 dong4"
     },
     {
       "hanzi": "有了宝宝以后，我很少运动。",
       "pinyin": "yǒu le bǎobao yǐhòu, wǒ hěn shǎo yùndòng",
       "gloss_en": "Since the baby, I barely exercise.",
-      "hanzi_trad": "有了寶寶以後，我很少運動。"
+      "hanzi_trad": "有了寶寶以後，我很少運動。",
+      "pinyin_syllables": "you3 le5 bao3 bao5 yi3 hou4 wo3 hen3 shao3 yun4 dong4"
     },
     {
       "hanzi": "我晚上玩一个小时游戏。",
       "pinyin": "wǒ wǎnshang wán yí gè xiǎoshí yóuxì",
       "gloss_en": "I play games for an hour in the evening.",
-      "hanzi_trad": "我晚上玩一個小時遊戲。"
+      "hanzi_trad": "我晚上玩一個小時遊戲。",
+      "pinyin_syllables": "wo3 wan3 shang5 wan2 yi2 ge4 xiao3 shi2 you2 xi4"
     },
     {
       "hanzi": "我在看视频。",
       "pinyin": "wǒ zài kàn shìpín",
       "gloss_en": "I'm watching a video.",
-      "hanzi_trad": "我在看影片。"
+      "hanzi_trad": "我在看影片。",
+      "pinyin_syllables": "wo3 zai4 kan4 shi4 pin2"
     },
     {
       "hanzi": "我的手机在桌子上。",
       "pinyin": "wǒ de shǒujī zài zhuōzi shàng",
       "gloss_en": "My phone's on the table.",
-      "hanzi_trad": "我的手機在桌子上。"
+      "hanzi_trad": "我的手機在桌子上。",
+      "pinyin_syllables": "wo3 de5 shou3 ji1 zai4 zhuo1 zi5 shang4"
     },
     {
       "hanzi": "你的手机呢？",
       "pinyin": "nǐ de shǒujī ne?",
       "gloss_en": "Where's your phone?",
-      "hanzi_trad": "你的手機呢？"
+      "hanzi_trad": "你的手機呢？",
+      "pinyin_syllables": "ni3 de5 shou3 ji1 ne5"
     },
     {
       "hanzi": "请开灯。",
       "pinyin": "qǐng kāi dēng",
       "gloss_en": "Turn the light on, please.",
-      "hanzi_trad": "請開燈。"
+      "hanzi_trad": "請開燈。",
+      "pinyin_syllables": "qing3 kai1 deng1"
     },
     {
       "hanzi": "请开门。",
       "pinyin": "qǐng kāi mén",
       "gloss_en": "Please open the door.",
-      "hanzi_trad": "請開門。"
+      "hanzi_trad": "請開門。",
+      "pinyin_syllables": "qing3 kai1 men2"
     },
     {
       "hanzi": "窗户很干净。",
       "pinyin": "chuānghu hěn gānjìng",
       "gloss_en": "The windows are clean.",
-      "hanzi_trad": "窗戶很乾淨。"
+      "hanzi_trad": "窗戶很乾淨。",
+      "pinyin_syllables": "chuang1 hu5 hen3 gan1 jing4"
     },
     {
       "hanzi": "房间很干净。",
       "pinyin": "fángjiān hěn gānjìng",
       "gloss_en": "The room is clean.",
-      "hanzi_trad": "房間很乾淨。"
+      "hanzi_trad": "房間很乾淨。",
+      "pinyin_syllables": "fang2 jian1 hen3 gan1 jing4"
     },
     {
       "hanzi": "宝宝的房间很小。",
       "pinyin": "bǎobao de fángjiān hěn xiǎo",
       "gloss_en": "The baby's room is small.",
-      "hanzi_trad": "寶寶的房間很小。"
+      "hanzi_trad": "寶寶的房間很小。",
+      "pinyin_syllables": "bao3 bao5 de5 fang2 jian1 hen3 xiao3"
     },
     {
       "hanzi": "书在桌子上。",
       "pinyin": "shū zài zhuōzi shàng",
       "gloss_en": "The book's on the table.",
-      "hanzi_trad": "書在桌子上。"
+      "hanzi_trad": "書在桌子上。",
+      "pinyin_syllables": "shu1 zai4 zhuo1 zi5 shang4"
     },
     {
       "hanzi": "我买了一本书。",
       "pinyin": "wǒ mǎi le yì běn shū",
       "gloss_en": "I bought a book.",
-      "hanzi_trad": "我買了一本書。"
+      "hanzi_trad": "我買了一本書。",
+      "pinyin_syllables": "wo3 mai3 le5 yi4 ben3 shu1"
     },
     {
       "hanzi": "这本书很难。",
       "pinyin": "zhè běn shū hěn nán",
       "gloss_en": "This book is hard.",
-      "hanzi_trad": "這本書很難。"
+      "hanzi_trad": "這本書很難。",
+      "pinyin_syllables": "zhe4 ben3 shu1 hen3 nan2"
     },
     {
       "hanzi": "中文很难。",
       "pinyin": "Zhōngwén hěn nán",
       "gloss_en": "Chinese is hard.",
-      "hanzi_trad": "中文很難。"
+      "hanzi_trad": "中文很難。",
+      "pinyin_syllables": "zhong1 wen2 hen3 nan2"
     },
     {
       "hanzi": "中文不容易。",
       "pinyin": "Zhōngwén bù róngyì",
       "gloss_en": "Chinese isn't easy.",
-      "hanzi_trad": "中文不容易。"
+      "hanzi_trad": "中文不容易。",
+      "pinyin_syllables": "zhong1 wen2 bu4 rong2 yi4"
     },
     {
       "hanzi": "我每天学习中文。",
       "pinyin": "wǒ měitiān xuéxí Zhōngwén",
       "gloss_en": "I study Chinese every day.",
-      "hanzi_trad": "我每天學習中文。"
+      "hanzi_trad": "我每天學習中文。",
+      "pinyin_syllables": "wo3 mei3 tian1 xue2 xi2 zhong1 wen2"
     },
     {
       "hanzi": "说话慢一点。",
       "pinyin": "shuōhuà màn yìdiǎn",
       "gloss_en": "Speak a bit slower.",
-      "hanzi_trad": "說話慢一點。"
+      "hanzi_trad": "說話慢一點。",
+      "pinyin_syllables": "shuo1 hua4 man4 yi4 dian3"
     },
     {
       "hanzi": "请你说慢一点。",
       "pinyin": "qǐng nǐ shuō màn yìdiǎn",
       "gloss_en": "Please speak more slowly.",
-      "hanzi_trad": "請你說慢一點。"
+      "hanzi_trad": "請你說慢一點。",
+      "pinyin_syllables": "qing3 ni3 shuo1 man4 yi4 dian3"
     },
     {
       "hanzi": "他说话很快。",
       "pinyin": "tā shuōhuà hěn kuài",
       "gloss_en": "He talks fast.",
-      "hanzi_trad": "他說話很快。"
+      "hanzi_trad": "他說話很快。",
+      "pinyin_syllables": "ta1 shuo1 hua4 hen3 kuai4"
     },
     {
       "hanzi": "宝宝还不会说话。",
       "pinyin": "bǎobao hái bú huì shuōhuà",
       "gloss_en": "The baby can't talk yet.",
-      "hanzi_trad": "寶寶還不會說話。"
+      "hanzi_trad": "寶寶還不會說話。",
+      "pinyin_syllables": "bao3 bao5 hai2 bu2 hui4 shuo1 hua4"
     },
     {
       "hanzi": "他会说中文。",
       "pinyin": "tā huì shuō Zhōngwén",
       "gloss_en": "He can speak Chinese.",
-      "hanzi_trad": "他會說中文。"
+      "hanzi_trad": "他會說中文。",
+      "pinyin_syllables": "ta1 hui4 shuo1 zhong1 wen2"
     },
     {
       "hanzi": "我说错了。",
       "pinyin": "wǒ shuō cuò le",
       "gloss_en": "I said it wrong.",
-      "hanzi_trad": "我說錯了。"
+      "hanzi_trad": "我說錯了。",
+      "pinyin_syllables": "wo3 shuo1 cuo4 le5"
     },
     {
       "hanzi": "对了。",
       "pinyin": "duì le",
       "gloss_en": "That's right.",
-      "hanzi_trad": "對了。"
+      "hanzi_trad": "對了。",
+      "pinyin_syllables": "dui4 le5"
     },
     {
       "hanzi": "不对。",
       "pinyin": "bú duì",
       "gloss_en": "That's wrong.",
-      "hanzi_trad": "不對。"
+      "hanzi_trad": "不對。",
+      "pinyin_syllables": "bu2 dui4"
     },
     {
       "hanzi": "没问题。",
       "pinyin": "méi wèntí",
       "gloss_en": "No problem.",
-      "hanzi_trad": "沒問題。"
+      "hanzi_trad": "沒問題。",
+      "pinyin_syllables": "mei2 wen4 ti2"
     },
     {
       "hanzi": "有问题吗？",
       "pinyin": "yǒu wèntí ma?",
       "gloss_en": "Any questions?",
-      "hanzi_trad": "有問題嗎？"
+      "hanzi_trad": "有問題嗎？",
+      "pinyin_syllables": "you3 wen4 ti2 ma5"
     },
     {
       "hanzi": "这是一个问题。",
       "pinyin": "zhè shì yí gè wèntí",
       "gloss_en": "That's a problem.",
-      "hanzi_trad": "這是一個問題。"
+      "hanzi_trad": "這是一個問題。",
+      "pinyin_syllables": "zhe4 shi4 yi2 ge4 wen4 ti2"
     },
     {
       "hanzi": "有办法吗？",
       "pinyin": "yǒu bànfǎ ma?",
       "gloss_en": "Is there a way?",
-      "hanzi_trad": "有辦法嗎？"
+      "hanzi_trad": "有辦法嗎？",
+      "pinyin_syllables": "you3 ban4 fa3 ma5"
     },
     {
       "hanzi": "我有一件事情。",
       "pinyin": "wǒ yǒu yí jiàn shìqing",
       "gloss_en": "There's something I need to mention.",
-      "hanzi_trad": "我有一件事情。"
+      "hanzi_trad": "我有一件事情。",
+      "pinyin_syllables": "wo3 you3 yi2 jian4 shi4 qing5"
     },
     {
       "hanzi": "这件事情很重要。",
       "pinyin": "zhè jiàn shìqing hěn zhòngyào",
       "gloss_en": "This matter is important.",
-      "hanzi_trad": "這件事情很重要。"
+      "hanzi_trad": "這件事情很重要。",
+      "pinyin_syllables": "zhe4 jian4 shi4 qing5 hen3 zhong4 yao4"
     },
     {
       "hanzi": "宝宝生病了。",
       "pinyin": "bǎobao shēngbìng le",
       "gloss_en": "The baby's sick.",
-      "hanzi_trad": "寶寶生病了。"
+      "hanzi_trad": "寶寶生病了。",
+      "pinyin_syllables": "bao3 bao5 sheng1 bing4 le5"
     },
     {
       "hanzi": "他发烧了。",
       "pinyin": "tā fāshāo le",
       "gloss_en": "He has a fever.",
-      "hanzi_trad": "他發燒了。"
+      "hanzi_trad": "他發燒了。",
+      "pinyin_syllables": "ta1 fa1 shao1 le5"
     },
     {
       "hanzi": "我们要去医院。",
       "pinyin": "wǒmen yào qù yīyuàn",
       "gloss_en": "We need to go to the hospital.",
-      "hanzi_trad": "我們要去醫院。"
+      "hanzi_trad": "我們要去醫院。",
+      "pinyin_syllables": "wo3 men5 yao4 qu4 yi1 yuan4"
     },
     {
       "hanzi": "医生给了我们药。",
       "pinyin": "yīshēng gěi le wǒmen yào",
       "gloss_en": "The doctor gave us medicine.",
-      "hanzi_trad": "醫生給了我們藥。"
+      "hanzi_trad": "醫生給了我們藥。",
+      "pinyin_syllables": "yi1 sheng1 gei3 le5 wo3 men5 yao4"
     },
     {
       "hanzi": "我有点疼。",
       "pinyin": "wǒ yǒudiǎn téng",
       "gloss_en": "I'm a bit sore.",
-      "hanzi_trad": "我有點疼。"
+      "hanzi_trad": "我有點疼。",
+      "pinyin_syllables": "wo3 you3 dian3 teng2"
     },
     {
       "hanzi": "你舒服吗？",
       "pinyin": "nǐ shūfu ma?",
       "gloss_en": "Are you feeling okay?",
-      "hanzi_trad": "你舒服嗎？"
+      "hanzi_trad": "你舒服嗎？",
+      "pinyin_syllables": "ni3 shu1 fu5 ma5"
     },
     {
       "hanzi": "我不舒服。",
       "pinyin": "wǒ bù shūfu",
       "gloss_en": "I don't feel well.",
-      "hanzi_trad": "我不舒服。"
+      "hanzi_trad": "我不舒服。",
+      "pinyin_syllables": "wo3 bu4 shu1 fu5"
     },
     {
       "hanzi": "这个床很舒服。",
       "pinyin": "zhè gè chuáng hěn shūfu",
       "gloss_en": "This bed is comfortable.",
-      "hanzi_trad": "這個床很舒服。"
+      "hanzi_trad": "這個床很舒服。",
+      "pinyin_syllables": "zhe4 ge4 chuang2 hen3 shu1 fu5"
     },
     {
       "hanzi": "这个地方很安全。",
       "pinyin": "zhè gè dìfang hěn ānquán",
       "gloss_en": "This place is safe.",
-      "hanzi_trad": "這個地方很安全。"
+      "hanzi_trad": "這個地方很安全。",
+      "pinyin_syllables": "zhe4 ge4 di4 fang5 hen3 an1 quan2"
     },
     {
       "hanzi": "别大声说话。",
       "pinyin": "bié dàshēng shuōhuà",
       "gloss_en": "Don't talk loudly.",
-      "hanzi_trad": "別大聲說話。"
+      "hanzi_trad": "別大聲說話。",
+      "pinyin_syllables": "bie2 da4 sheng1 shuo1 hua4"
     },
     {
       "hanzi": "宝宝在睡觉，请安静。",
       "pinyin": "bǎobao zài shuìjiào, qǐng ānjìng",
       "gloss_en": "The baby's sleeping, please be quiet.",
-      "hanzi_trad": "寶寶在睡覺，請安靜。"
+      "hanzi_trad": "寶寶在睡覺，請安靜。",
+      "pinyin_syllables": "bao3 bao5 zai4 shui4 jiao4 qing3 an1 jing4"
     },
     {
       "hanzi": "我们家有一只狗。",
       "pinyin": "wǒmen jiā yǒu yì zhī gǒu",
       "gloss_en": "We have a dog.",
-      "hanzi_trad": "我們家有一隻狗。"
+      "hanzi_trad": "我們家有一隻狗。",
+      "pinyin_syllables": "wo3 men5 jia1 you3 yi4 zhi1 gou3"
     },
     {
       "hanzi": "狗跟宝宝一样大。",
       "pinyin": "gǒu gēn bǎobao yíyàng dà",
       "gloss_en": "The dog is as big as the baby.",
-      "hanzi_trad": "狗跟寶寶一樣大。"
+      "hanzi_trad": "狗跟寶寶一樣大。",
+      "pinyin_syllables": "gou3 gen1 bao3 bao5 yi2 yang4 da4"
     },
     {
       "hanzi": "狗比宝宝大。",
       "pinyin": "gǒu bǐ bǎobao dà",
       "gloss_en": "The dog is bigger than the baby.",
-      "hanzi_trad": "狗比寶寶大。"
+      "hanzi_trad": "狗比寶寶大。",
+      "pinyin_syllables": "gou3 bi3 bao3 bao5 da4"
     },
     {
       "hanzi": "我跟你一起去。",
       "pinyin": "wǒ gēn nǐ yìqǐ qù",
       "gloss_en": "I'll go with you.",
-      "hanzi_trad": "我跟你一起去。"
+      "hanzi_trad": "我跟你一起去。",
+      "pinyin_syllables": "wo3 gen1 ni3 yi4 qi3 qu4"
     },
     {
       "hanzi": "我跟奶奶说了。",
       "pinyin": "wǒ gēn nǎinai shuō le",
       "gloss_en": "I told Grandma.",
-      "hanzi_trad": "我跟奶奶說了。"
+      "hanzi_trad": "我跟奶奶說了。",
+      "pinyin_syllables": "wo3 gen1 nai3 nai5 shuo1 le5"
     },
     {
       "hanzi": "奶奶最喜欢宝宝。",
       "pinyin": "nǎinai zuì xǐhuan bǎobao",
       "gloss_en": "Grandma loves the baby most.",
-      "hanzi_trad": "奶奶最喜歡寶寶。"
+      "hanzi_trad": "奶奶最喜歡寶寶。",
+      "pinyin_syllables": "nai3 nai5 zui4 xi3 huan5 bao3 bao5"
     },
     {
       "hanzi": "我最喜欢这个。",
       "pinyin": "wǒ zuì xǐhuan zhè gè",
       "gloss_en": "I like this one best.",
-      "hanzi_trad": "我最喜歡這個。"
+      "hanzi_trad": "我最喜歡這個。",
+      "pinyin_syllables": "wo3 zui4 xi3 huan5 zhe4 ge4"
     },
     {
       "hanzi": "他非常高兴。",
       "pinyin": "tā fēicháng gāoxìng",
       "gloss_en": "He's extremely happy.",
-      "hanzi_trad": "他非常高興。"
+      "hanzi_trad": "他非常高興。",
+      "pinyin_syllables": "ta1 fei1 chang2 gao1 xing4"
     },
     {
       "hanzi": "大家都很累。",
       "pinyin": "dàjiā dōu hěn lèi",
       "gloss_en": "Everyone's tired.",
-      "hanzi_trad": "大家都很累。"
+      "hanzi_trad": "大家都很累。",
+      "pinyin_syllables": "da4 jia1 dou1 hen3 lei4"
     },
     {
       "hanzi": "大家好。",
       "pinyin": "dàjiā hǎo",
       "gloss_en": "Hello everyone.",
-      "hanzi_trad": "大家好。"
+      "hanzi_trad": "大家好。",
+      "pinyin_syllables": "da4 jia1 hao3"
     },
     {
       "hanzi": "我自己做。",
       "pinyin": "wǒ zìjǐ zuò",
       "gloss_en": "I'll do it myself.",
-      "hanzi_trad": "我自己做。"
+      "hanzi_trad": "我自己做。",
+      "pinyin_syllables": "wo3 zi4 ji3 zuo4"
     },
     {
       "hanzi": "他自己吃。",
       "pinyin": "tā zìjǐ chī",
       "gloss_en": "He eats by himself.",
-      "hanzi_trad": "他自己吃。"
+      "hanzi_trad": "他自己吃。",
+      "pinyin_syllables": "ta1 zi4 ji3 chi1"
     },
     {
       "hanzi": "这是别人的。",
       "pinyin": "zhè shì biérén de",
       "gloss_en": "That's someone else's.",
-      "hanzi_trad": "這是別人的。"
+      "hanzi_trad": "這是別人的。",
+      "pinyin_syllables": "zhe4 shi4 bie2 ren2 de5"
     },
     {
       "hanzi": "孩子在外面玩。",
       "pinyin": "háizi zài wàimiàn wán",
       "gloss_en": "The child's playing outside.",
-      "hanzi_trad": "孩子在外面玩。"
+      "hanzi_trad": "孩子在外面玩。",
+      "pinyin_syllables": "hai2 zi5 zai4 wai4 mian4 wan2"
     },
     {
       "hanzi": "我有一个孩子。",
       "pinyin": "wǒ yǒu yí gè háizi",
       "gloss_en": "I have one child.",
-      "hanzi_trad": "我有一個孩子。"
+      "hanzi_trad": "我有一個孩子。",
+      "pinyin_syllables": "wo3 you3 yi2 ge4 hai2 zi5"
     },
     {
       "hanzi": "我姐姐来了。",
       "pinyin": "wǒ jiějie lái le",
       "gloss_en": "My sister's here.",
-      "hanzi_trad": "我姐姐來了。"
+      "hanzi_trad": "我姐姐來了。",
+      "pinyin_syllables": "wo3 jie3 jie5 lai2 le5"
     },
     {
       "hanzi": "我哥哥很忙。",
       "pinyin": "wǒ gēge hěn máng",
       "gloss_en": "My older brother is busy.",
-      "hanzi_trad": "我哥哥很忙。"
+      "hanzi_trad": "我哥哥很忙。",
+      "pinyin_syllables": "wo3 ge1 ge5 hen3 mang2"
     },
     {
       "hanzi": "我弟弟在学校。",
       "pinyin": "wǒ dìdi zài xuéxiào",
       "gloss_en": "My younger brother is at school.",
-      "hanzi_trad": "我弟弟在學校。"
+      "hanzi_trad": "我弟弟在學校。",
+      "pinyin_syllables": "wo3 di4 di5 zai4 xue2 xiao4"
     },
     {
       "hanzi": "我妹妹是老师。",
       "pinyin": "wǒ mèimei shì lǎoshī",
       "gloss_en": "My younger sister is a teacher.",
-      "hanzi_trad": "我妹妹是老師。"
+      "hanzi_trad": "我妹妹是老師。",
+      "pinyin_syllables": "wo3 mei4 mei5 shi4 lao3 shi1"
     },
     {
       "hanzi": "这是我女儿。",
       "pinyin": "zhè shì wǒ nǚ'ér",
       "gloss_en": "This is my daughter.",
-      "hanzi_trad": "這是我女兒。"
+      "hanzi_trad": "這是我女兒。",
+      "pinyin_syllables": "zhe4 shi4 wo3 nv3 er2"
     },
     {
       "hanzi": "我送你回家。",
       "pinyin": "wǒ sòng nǐ huí jiā",
       "gloss_en": "I'll take you home.",
-      "hanzi_trad": "我送你回家。"
+      "hanzi_trad": "我送你回家。",
+      "pinyin_syllables": "wo3 song4 ni3 hui2 jia1"
     },
     {
       "hanzi": "奶奶送了一件衣服。",
       "pinyin": "nǎinai sòng le yí jiàn yīfu",
       "gloss_en": "Grandma gave us some clothes.",
-      "hanzi_trad": "奶奶送了一件衣服。"
+      "hanzi_trad": "奶奶送了一件衣服。",
+      "pinyin_syllables": "nai3 nai5 song4 le5 yi2 jian4 yi1 fu5"
     },
     {
       "hanzi": "给宝宝穿衣服。",
       "pinyin": "gěi bǎobao chuān yīfu",
       "gloss_en": "Get the baby dressed.",
-      "hanzi_trad": "給寶寶穿衣服。"
+      "hanzi_trad": "給寶寶穿衣服。",
+      "pinyin_syllables": "gei3 bao3 bao5 chuan1 yi1 fu5"
     },
     {
       "hanzi": "这件衣服很贵。",
       "pinyin": "zhè jiàn yīfu hěn guì",
       "gloss_en": "These clothes are expensive.",
-      "hanzi_trad": "這件衣服很貴。"
+      "hanzi_trad": "這件衣服很貴。",
+      "pinyin_syllables": "zhe4 jian4 yi1 fu5 hen3 gui4"
     },
     {
       "hanzi": "我洗了衣服。",
       "pinyin": "wǒ xǐ le yīfu",
       "gloss_en": "I did the laundry.",
-      "hanzi_trad": "我洗了衣服。"
+      "hanzi_trad": "我洗了衣服。",
+      "pinyin_syllables": "wo3 xi3 le5 yi1 fu5"
     },
     {
       "hanzi": "我准备好了。",
       "pinyin": "wǒ zhǔnbèi hǎo le",
       "gloss_en": "I'm ready.",
-      "hanzi_trad": "我準備好了。"
+      "hanzi_trad": "我準備好了。",
+      "pinyin_syllables": "wo3 zhun3 bei4 hao3 le5"
     },
     {
       "hanzi": "我在准备晚饭。",
       "pinyin": "wǒ zài zhǔnbèi wǎnfàn",
       "gloss_en": "I'm making dinner.",
-      "hanzi_trad": "我在準備晚飯。"
+      "hanzi_trad": "我在準備晚飯。",
+      "pinyin_syllables": "wo3 zai4 zhun3 bei4 wan3 fan4"
     },
     {
       "hanzi": "我们开始吧。",
       "pinyin": "wǒmen kāishǐ ba",
       "gloss_en": "Let's start.",
-      "hanzi_trad": "我們開始吧。"
+      "hanzi_trad": "我們開始吧。",
+      "pinyin_syllables": "wo3 men5 kai1 shi3 ba5"
     },
     {
       "hanzi": "我吃完了。",
       "pinyin": "wǒ chī wán le",
       "gloss_en": "I've finished eating.",
-      "hanzi_trad": "我吃完了。"
+      "hanzi_trad": "我吃完了。",
+      "pinyin_syllables": "wo3 chi1 wan2 le5"
     },
     {
       "hanzi": "你做完了吗？",
       "pinyin": "nǐ zuò wán le ma?",
       "gloss_en": "Are you done?",
-      "hanzi_trad": "你做完了嗎？"
+      "hanzi_trad": "你做完了嗎？",
+      "pinyin_syllables": "ni3 zuo4 wan2 le5 ma5"
     },
     {
       "hanzi": "我看完了这本书。",
       "pinyin": "wǒ kàn wán le zhè běn shū",
       "gloss_en": "I finished this book.",
-      "hanzi_trad": "我看完了這本書。"
+      "hanzi_trad": "我看完了這本書。",
+      "pinyin_syllables": "wo3 kan4 wan2 le5 zhe4 ben3 shu1"
     },
     {
       "hanzi": "狗跑出去了。",
       "pinyin": "gǒu pǎo chūqù le",
       "gloss_en": "The dog ran outside.",
-      "hanzi_trad": "狗跑出去了。"
+      "hanzi_trad": "狗跑出去了。",
+      "pinyin_syllables": "gou3 pao3 chu1 qu4 le5"
     },
     {
       "hanzi": "我要走了。",
       "pinyin": "wǒ yào zǒu le",
       "gloss_en": "I'm heading off.",
-      "hanzi_trad": "我要走了。"
+      "hanzi_trad": "我要走了。",
+      "pinyin_syllables": "wo3 yao4 zou3 le5"
     },
     {
       "hanzi": "他才三个月。",
       "pinyin": "tā cái sān gè yuè",
       "gloss_en": "He's only three months old.",
-      "hanzi_trad": "他才三個月。"
+      "hanzi_trad": "他才三個月。",
+      "pinyin_syllables": "ta1 cai2 san1 ge4 yue4"
     },
     {
       "hanzi": "我十点才睡觉。",
       "pinyin": "wǒ shí diǎn cái shuìjiào",
       "gloss_en": "I didn't get to bed until ten.",
-      "hanzi_trad": "我十點才睡覺。"
+      "hanzi_trad": "我十點才睡覺。",
+      "pinyin_syllables": "wo3 shi2 dian3 cai2 shui4 jiao4"
     },
     {
       "hanzi": "现在还早。",
       "pinyin": "xiànzài hái zǎo",
       "gloss_en": "It's still early.",
-      "hanzi_trad": "現在還早。"
+      "hanzi_trad": "現在還早。",
+      "pinyin_syllables": "xian4 zai4 hai2 zao3"
     },
     {
       "hanzi": "已经很晚了。",
       "pinyin": "yǐjīng hěn wǎn le",
       "gloss_en": "It's already late.",
-      "hanzi_trad": "已經很晚了。"
+      "hanzi_trad": "已經很晚了。",
+      "pinyin_syllables": "yi3 jing1 hen3 wan3 le5"
     },
     {
       "hanzi": "我每天很早起床。",
       "pinyin": "wǒ měitiān hěn zǎo qǐchuáng",
       "gloss_en": "I get up early every day.",
-      "hanzi_trad": "我每天很早起床。"
+      "hanzi_trad": "我每天很早起床。",
+      "pinyin_syllables": "wo3 mei3 tian1 hen3 zao3 qi3 chuang2"
     },
     {
       "hanzi": "我没有时间。",
       "pinyin": "wǒ méiyǒu shíjiān",
       "gloss_en": "I don't have time.",
-      "hanzi_trad": "我沒有時間。"
+      "hanzi_trad": "我沒有時間。",
+      "pinyin_syllables": "wo3 mei2 you3 shi2 jian1"
     },
     {
       "hanzi": "你有时间吗？",
       "pinyin": "nǐ yǒu shíjiān ma?",
       "gloss_en": "Do you have a minute?",
-      "hanzi_trad": "你有時間嗎？"
+      "hanzi_trad": "你有時間嗎？",
+      "pinyin_syllables": "ni3 you3 shi2 jian1 ma5"
     },
     {
       "hanzi": "这次我做。",
       "pinyin": "zhè cì wǒ zuò",
       "gloss_en": "I'll do it this time.",
-      "hanzi_trad": "這次我做。"
+      "hanzi_trad": "這次我做。",
+      "pinyin_syllables": "zhe4 ci4 wo3 zuo4"
     },
     {
       "hanzi": "下次吧。",
       "pinyin": "xià cì ba",
       "gloss_en": "Next time.",
-      "hanzi_trad": "下次吧。"
+      "hanzi_trad": "下次吧。",
+      "pinyin_syllables": "xia4 ci4 ba5"
     },
     {
       "hanzi": "你要茶还是咖啡？",
       "pinyin": "nǐ yào chá háishi kāfēi?",
       "gloss_en": "Tea or coffee?",
-      "hanzi_trad": "你要茶還是咖啡？"
+      "hanzi_trad": "你要茶還是咖啡？",
+      "pinyin_syllables": "ni3 yao4 cha2 hai2 shi5 ka1 fei1"
     },
     {
       "hanzi": "今天或者明天都可以。",
       "pinyin": "jīntiān huòzhě míngtiān dōu kěyǐ",
       "gloss_en": "Today or tomorrow both work.",
-      "hanzi_trad": "今天或者明天都可以。"
+      "hanzi_trad": "今天或者明天都可以。",
+      "pinyin_syllables": "jin1 tian1 huo4 zhe3 ming2 tian1 dou1 ke3 yi3"
     },
     {
       "hanzi": "哪个是你的？",
       "pinyin": "nǎ gè shì nǐ de?",
       "gloss_en": "Which one is yours?",
-      "hanzi_trad": "哪個是你的？"
+      "hanzi_trad": "哪個是你的？",
+      "pinyin_syllables": "na3 ge4 shi4 ni3 de5"
     },
     {
       "hanzi": "你在哪个房间？",
       "pinyin": "nǐ zài nǎ gè fángjiān?",
       "gloss_en": "Which room are you in?",
-      "hanzi_trad": "你在哪個房間？"
+      "hanzi_trad": "你在哪個房間？",
+      "pinyin_syllables": "ni3 zai4 na3 ge4 fang2 jian1"
     },
     {
       "hanzi": "这些是宝宝的。",
       "pinyin": "zhè xiē shì bǎobao de",
       "gloss_en": "These are the baby's.",
-      "hanzi_trad": "這些是寶寶的。"
+      "hanzi_trad": "這些是寶寶的。",
+      "pinyin_syllables": "zhe4 xie1 shi4 bao3 bao5 de5"
     },
     {
       "hanzi": "我买了一些水果。",
       "pinyin": "wǒ mǎi le yì xiē shuǐguǒ",
       "gloss_en": "I bought some fruit.",
-      "hanzi_trad": "我買了一些水果。"
+      "hanzi_trad": "我買了一些水果。",
+      "pinyin_syllables": "wo3 mai3 le5 yi4 xie1 shui3 guo3"
     },
     {
       "hanzi": "我坐在椅子上。",
       "pinyin": "wǒ zuò zài yǐzi shàng",
       "gloss_en": "I'm sitting on the chair.",
-      "hanzi_trad": "我坐在椅子上。"
+      "hanzi_trad": "我坐在椅子上。",
+      "pinyin_syllables": "wo3 zuo4 zai4 yi3 zi5 shang4"
     },
     {
       "hanzi": "请坐这张椅子。",
       "pinyin": "qǐng zuò zhè zhāng yǐzi",
       "gloss_en": "Sit in this chair.",
-      "hanzi_trad": "請坐這張椅子。"
+      "hanzi_trad": "請坐這張椅子。",
+      "pinyin_syllables": "qing3 zuo4 zhe4 zhang1 yi3 zi5"
     },
     {
       "hanzi": "宝宝在床上。",
       "pinyin": "bǎobao zài chuáng shàng",
       "gloss_en": "The baby's on the bed.",
-      "hanzi_trad": "寶寶在床上。"
+      "hanzi_trad": "寶寶在床上。",
+      "pinyin_syllables": "bao3 bao5 zai4 chuang2 shang4"
     },
     {
       "hanzi": "我要上床睡觉了。",
       "pinyin": "wǒ yào shàng chuáng shuìjiào le",
       "gloss_en": "I'm going to bed.",
-      "hanzi_trad": "我要上床睡覺了。"
+      "hanzi_trad": "我要上床睡覺了。",
+      "pinyin_syllables": "wo3 yao4 shang4 chuang2 shui4 jiao4 le5"
     },
     {
       "hanzi": "音乐太大声了。",
       "pinyin": "yīnyuè tài dàshēng le",
       "gloss_en": "The music's too loud.",
-      "hanzi_trad": "音樂太大聲了。"
+      "hanzi_trad": "音樂太大聲了。",
+      "pinyin_syllables": "yin1 yue4 tai4 da4 sheng1 le5"
     },
     {
       "hanzi": "宝宝喜欢听音乐。",
       "pinyin": "bǎobao xǐhuan tīng yīnyuè",
       "gloss_en": "The baby likes listening to music.",
-      "hanzi_trad": "寶寶喜歡聽音樂。"
+      "hanzi_trad": "寶寶喜歡聽音樂。",
+      "pinyin_syllables": "bao3 bao5 xi3 huan5 ting1 yin1 yue4"
     },
     {
       "hanzi": "他喜欢这个音乐。",
       "pinyin": "tā xǐhuan zhè gè yīnyuè",
       "gloss_en": "He likes this music.",
-      "hanzi_trad": "他喜歡這個音樂。"
+      "hanzi_trad": "他喜歡這個音樂。",
+      "pinyin_syllables": "ta1 xi3 huan5 zhe4 ge4 yin1 yue4"
     },
     {
       "hanzi": "我亲了宝宝。",
       "pinyin": "wǒ qīn le bǎobao",
       "gloss_en": "I kissed the baby.",
-      "hanzi_trad": "我親了寶寶。"
+      "hanzi_trad": "我親了寶寶。",
+      "pinyin_syllables": "wo3 qin1 le5 bao3 bao5"
     },
     {
       "hanzi": "这个很长。",
       "pinyin": "zhè gè hěn cháng",
       "gloss_en": "This one is long.",
-      "hanzi_trad": "這個很長。"
+      "hanzi_trad": "這個很長。",
+      "pinyin_syllables": "zhe4 ge4 hen3 chang2"
     },
     {
       "hanzi": "时间很短。",
       "pinyin": "shíjiān hěn duǎn",
       "gloss_en": "There isn't much time.",
-      "hanzi_trad": "時間很短。"
+      "hanzi_trad": "時間很短。",
+      "pinyin_syllables": "shi2 jian1 hen3 duan3"
     },
     {
       "hanzi": "我每天工作八个小时。",
       "pinyin": "wǒ měitiān gōngzuò bā gè xiǎoshí",
       "gloss_en": "I work eight hours a day.",
-      "hanzi_trad": "我每天工作八個小時。"
+      "hanzi_trad": "我每天工作八個小時。",
+      "pinyin_syllables": "wo3 mei3 tian1 gong1 zuo4 ba1 ge4 xiao3 shi2"
     },
     {
       "hanzi": "每个孩子都不一样。",
       "pinyin": "měi gè háizi dōu bù yíyàng",
       "gloss_en": "Every child is different.",
-      "hanzi_trad": "每個孩子都不一樣。"
+      "hanzi_trad": "每個孩子都不一樣。",
+      "pinyin_syllables": "mei3 ge4 hai2 zi5 dou1 bu4 yi2 yang4"
     },
     {
       "hanzi": "真的吗？",
       "pinyin": "zhēn de ma?",
       "gloss_en": "Really?",
-      "hanzi_trad": "真的嗎？"
+      "hanzi_trad": "真的嗎？",
+      "pinyin_syllables": "zhen1 de5 ma5"
     },
     {
       "hanzi": "他真好。",
       "pinyin": "tā zhēn hǎo",
       "gloss_en": "He's really nice.",
-      "hanzi_trad": "他真好。"
+      "hanzi_trad": "他真好。",
+      "pinyin_syllables": "ta1 zhen1 hao3"
     },
     {
       "hanzi": "这个地方很漂亮。",
       "pinyin": "zhè gè dìfang hěn piàoliang",
       "gloss_en": "This place is beautiful.",
-      "hanzi_trad": "這個地方很漂亮。"
+      "hanzi_trad": "這個地方很漂亮。",
+      "pinyin_syllables": "zhe4 ge4 di4 fang5 hen3 piao4 liang5"
     },
     {
       "hanzi": "你在哪个地方？",
       "pinyin": "nǐ zài nǎ gè dìfang?",
       "gloss_en": "Whereabouts are you?",
-      "hanzi_trad": "你在哪個地方？"
+      "hanzi_trad": "你在哪個地方？",
+      "pinyin_syllables": "ni3 zai4 na3 ge4 di4 fang5"
     },
     {
       "hanzi": "厨房里有水。",
       "pinyin": "chúfáng lǐ yǒu shuǐ",
       "gloss_en": "There's water in the kitchen.",
-      "hanzi_trad": "廚房裡有水。"
+      "hanzi_trad": "廚房裡有水。",
+      "pinyin_syllables": "chu2 fang2 li3 you3 shui3"
     },
     {
       "hanzi": "我在厨房做菜。",
       "pinyin": "wǒ zài chúfáng zuò cài",
       "gloss_en": "I'm cooking in the kitchen.",
-      "hanzi_trad": "我在廚房做菜。"
+      "hanzi_trad": "我在廚房做菜。",
+      "pinyin_syllables": "wo3 zai4 chu2 fang2 zuo4 cai4"
     },
     {
       "hanzi": "宝宝跟奶奶在一起。",
       "pinyin": "bǎobao gēn nǎinai zài yìqǐ",
       "gloss_en": "The baby's with Grandma.",
-      "hanzi_trad": "寶寶跟奶奶在一起。"
+      "hanzi_trad": "寶寶跟奶奶在一起。",
+      "pinyin_syllables": "bao3 bao5 gen1 nai3 nai5 zai4 yi4 qi3"
     },
     {
       "hanzi": "老婆下班了吗？",
       "pinyin": "lǎopo xiàbān le ma?",
       "gloss_en": "Is my wife off work?",
-      "hanzi_trad": "老婆下班了嗎？"
+      "hanzi_trad": "老婆下班了嗎？",
+      "pinyin_syllables": "lao3 po5 xia4 ban1 le5 ma5"
     },
     {
       "hanzi": "她已经下班了。",
       "pinyin": "tā yǐjīng xiàbān le",
       "gloss_en": "She's already finished work.",
-      "hanzi_trad": "她已經下班了。"
+      "hanzi_trad": "她已經下班了。",
+      "pinyin_syllables": "ta1 yi3 jing1 xia4 ban1 le5"
     },
     {
       "hanzi": "我还在上班。",
       "pinyin": "wǒ hái zài shàngbān",
       "gloss_en": "I'm still at work.",
-      "hanzi_trad": "我還在上班。"
+      "hanzi_trad": "我還在上班。",
+      "pinyin_syllables": "wo3 hai2 zai4 shang4 ban1"
     },
     {
       "_comment": "Expansion: HSK2 patch — common words the first batch assumed but never declared"
@@ -2330,331 +2715,386 @@
       "hanzi": "宝宝已经睡了。",
       "pinyin": "bǎobao yǐjīng shuì le",
       "gloss_en": "The baby's already asleep.",
-      "hanzi_trad": "寶寶已經睡了。"
+      "hanzi_trad": "寶寶已經睡了。",
+      "pinyin_syllables": "bao3 bao5 yi3 jing1 shui4 le5"
     },
     {
       "hanzi": "宝宝还没睡。",
       "pinyin": "bǎobao hái méi shuì",
       "gloss_en": "The baby isn't asleep yet.",
-      "hanzi_trad": "寶寶還沒睡。"
+      "hanzi_trad": "寶寶還沒睡。",
+      "pinyin_syllables": "bao3 bao5 hai2 mei2 shui4"
     },
     {
       "hanzi": "宝宝正在睡午觉。",
       "pinyin": "bǎobao zhèngzài shuì wǔjiào",
       "gloss_en": "The baby's having a nap.",
-      "hanzi_trad": "寶寶正在睡午覺。"
+      "hanzi_trad": "寶寶正在睡午覺。",
+      "pinyin_syllables": "bao3 bao5 zheng4 zai4 shui4 wu3 jiao4"
     },
     {
       "hanzi": "宝宝睡了两个小时。",
       "pinyin": "bǎobao shuì le liǎng gè xiǎoshí",
       "gloss_en": "The baby slept for two hours.",
-      "hanzi_trad": "寶寶睡了兩個小時。"
+      "hanzi_trad": "寶寶睡了兩個小時。",
+      "pinyin_syllables": "bao3 bao5 shui4 le5 liang3 ge4 xiao3 shi2"
     },
     {
       "hanzi": "我睡了四个小时。",
       "pinyin": "wǒ shuì le sì gè xiǎoshí",
       "gloss_en": "I slept four hours.",
-      "hanzi_trad": "我睡了四個小時。"
+      "hanzi_trad": "我睡了四個小時。",
+      "pinyin_syllables": "wo3 shui4 le5 si4 ge4 xiao3 shi2"
     },
     {
       "hanzi": "我希望他睡得好。",
       "pinyin": "wǒ xīwàng tā shuì de hǎo",
       "gloss_en": "I hope he sleeps well.",
-      "hanzi_trad": "我希望他睡得好。"
+      "hanzi_trad": "我希望他睡得好。",
+      "pinyin_syllables": "wo3 xi1 wang4 ta1 shui4 de5 hao3"
     },
     {
       "hanzi": "我想睡觉，可是宝宝还没睡。",
       "pinyin": "wǒ xiǎng shuìjiào, kěshì bǎobao hái méi shuì",
       "gloss_en": "I want to sleep, but the baby isn't down yet.",
-      "hanzi_trad": "我想睡覺，可是寶寶還沒睡。"
+      "hanzi_trad": "我想睡覺，可是寶寶還沒睡。",
+      "pinyin_syllables": "wo3 xiang3 shui4 jiao4 ke3 shi4 bao3 bao5 hai2 mei2 shui4"
     },
     {
       "hanzi": "该给宝宝洗澡了。",
       "pinyin": "gāi gěi bǎobao xǐzǎo le",
       "gloss_en": "It's time to bathe the baby.",
-      "hanzi_trad": "該給寶寶洗澡了。"
+      "hanzi_trad": "該給寶寶洗澡了。",
+      "pinyin_syllables": "gai1 gei3 bao3 bao5 xi3 zao3 le5"
     },
     {
       "hanzi": "宝宝该睡觉了。",
       "pinyin": "bǎobao gāi shuìjiào le",
       "gloss_en": "It's time for the baby to sleep.",
-      "hanzi_trad": "寶寶該睡覺了。"
+      "hanzi_trad": "寶寶該睡覺了。",
+      "pinyin_syllables": "bao3 bao5 gai1 shui4 jiao4 le5"
     },
     {
       "hanzi": "我该走了。",
       "pinyin": "wǒ gāi zǒu le",
       "gloss_en": "I should get going.",
-      "hanzi_trad": "我該走了。"
+      "hanzi_trad": "我該走了。",
+      "pinyin_syllables": "wo3 gai1 zou3 le5"
     },
     {
       "hanzi": "你喂过他了吗？",
       "pinyin": "nǐ wèi guò tā le ma?",
       "gloss_en": "Have you fed him?",
-      "hanzi_trad": "你餵過他了嗎？"
+      "hanzi_trad": "你餵過他了嗎？",
+      "pinyin_syllables": "ni3 wei4 guo4 ta1 le5 ma5"
     },
     {
       "hanzi": "我去过中国。",
       "pinyin": "wǒ qù guò Zhōngguó",
       "gloss_en": "I've been to China.",
-      "hanzi_trad": "我去過中國。"
+      "hanzi_trad": "我去過中國。",
+      "pinyin_syllables": "wo3 qu4 guo4 zhong1 guo2"
     },
     {
       "hanzi": "我没吃过这个。",
       "pinyin": "wǒ méi chī guò zhè gè",
       "gloss_en": "I've never eaten this.",
-      "hanzi_trad": "我沒吃過這個。"
+      "hanzi_trad": "我沒吃過這個。",
+      "pinyin_syllables": "wo3 mei2 chi1 guo4 zhe4 ge4"
     },
     {
       "hanzi": "我去过两次。",
       "pinyin": "wǒ qù guò liǎng cì",
       "gloss_en": "I've been twice.",
-      "hanzi_trad": "我去過兩次。"
+      "hanzi_trad": "我去過兩次。",
+      "pinyin_syllables": "wo3 qu4 guo4 liang3 ci4"
     },
     {
       "hanzi": "宝宝喝了一瓶奶。",
       "pinyin": "bǎobao hē le yì píng nǎi",
       "gloss_en": "The baby drank a whole bottle.",
-      "hanzi_trad": "寶寶喝了一瓶奶。"
+      "hanzi_trad": "寶寶喝了一瓶奶。",
+      "pinyin_syllables": "bao3 bao5 he1 le5 yi4 ping2 nai3"
     },
     {
       "hanzi": "他不喝奶。",
       "pinyin": "tā bù hē nǎi",
       "gloss_en": "He won't take milk.",
-      "hanzi_trad": "他不喝奶。"
+      "hanzi_trad": "他不喝奶。",
+      "pinyin_syllables": "ta1 bu4 he1 nai3"
     },
     {
       "hanzi": "我马上就来。",
       "pinyin": "wǒ mǎshàng jiù lái",
       "gloss_en": "I'll be right there.",
-      "hanzi_trad": "我馬上就來。"
+      "hanzi_trad": "我馬上就來。",
+      "pinyin_syllables": "wo3 ma3 shang4 jiu4 lai2"
     },
     {
       "hanzi": "我马上回来。",
       "pinyin": "wǒ mǎshàng huí lái",
       "gloss_en": "I'll be right back.",
-      "hanzi_trad": "我馬上回來。"
+      "hanzi_trad": "我馬上回來。",
+      "pinyin_syllables": "wo3 ma3 shang4 hui2 lai2"
     },
     {
       "hanzi": "你要几个？",
       "pinyin": "nǐ yào jǐ gè?",
       "gloss_en": "How many do you want?",
-      "hanzi_trad": "你要幾個？"
+      "hanzi_trad": "你要幾個？",
+      "pinyin_syllables": "ni3 yao4 ji3 ge4"
     },
     {
       "hanzi": "你几点走？",
       "pinyin": "nǐ jǐ diǎn zǒu?",
       "gloss_en": "What time are you leaving?",
-      "hanzi_trad": "你幾點走？"
+      "hanzi_trad": "你幾點走？",
+      "pinyin_syllables": "ni3 ji3 dian3 zou3"
     },
     {
       "hanzi": "现在几点？",
       "pinyin": "xiànzài jǐ diǎn?",
       "gloss_en": "What time is it?",
-      "hanzi_trad": "現在幾點？"
+      "hanzi_trad": "現在幾點？",
+      "pinyin_syllables": "xian4 zai4 ji3 dian3"
     },
     {
       "hanzi": "他几岁？",
       "pinyin": "tā jǐ suì?",
       "gloss_en": "How old is he?",
-      "hanzi_trad": "他幾歲？"
+      "hanzi_trad": "他幾歲？",
+      "pinyin_syllables": "ta1 ji3 sui4"
     },
     {
       "hanzi": "宝宝一岁了。",
       "pinyin": "bǎobao yí suì le",
       "gloss_en": "The baby's one now.",
-      "hanzi_trad": "寶寶一歲了。"
+      "hanzi_trad": "寶寶一歲了。",
+      "pinyin_syllables": "bao3 bao5 yi2 sui4 le5"
     },
     {
       "hanzi": "我三十五岁。",
       "pinyin": "wǒ sān shí wǔ suì",
       "gloss_en": "I'm thirty-five.",
-      "hanzi_trad": "我三十五歲。"
+      "hanzi_trad": "我三十五歲。",
+      "pinyin_syllables": "wo3 san1 shi2 wu3 sui4"
     },
     {
       "hanzi": "这两个一样。",
       "pinyin": "zhè liǎng gè yíyàng",
       "gloss_en": "These two are the same.",
-      "hanzi_trad": "這兩個一樣。"
+      "hanzi_trad": "這兩個一樣。",
+      "pinyin_syllables": "zhe4 liang3 ge4 yi2 yang4"
     },
     {
       "hanzi": "我有两个孩子。",
       "pinyin": "wǒ yǒu liǎng gè háizi",
       "gloss_en": "I have two children.",
-      "hanzi_trad": "我有兩個孩子。"
+      "hanzi_trad": "我有兩個孩子。",
+      "pinyin_syllables": "wo3 you3 liang3 ge4 hai2 zi5"
     },
     {
       "hanzi": "我们两个都很累。",
       "pinyin": "wǒmen liǎng gè dōu hěn lèi",
       "gloss_en": "We're both exhausted.",
-      "hanzi_trad": "我們兩個都很累。"
+      "hanzi_trad": "我們兩個都很累。",
+      "pinyin_syllables": "wo3 men5 liang3 ge4 dou1 hen3 lei4"
     },
     {
       "hanzi": "他跑得很快。",
       "pinyin": "tā pǎo de hěn kuài",
       "gloss_en": "He runs fast.",
-      "hanzi_trad": "他跑得很快。"
+      "hanzi_trad": "他跑得很快。",
+      "pinyin_syllables": "ta1 pao3 de5 hen3 kuai4"
     },
     {
       "hanzi": "他说得太快了。",
       "pinyin": "tā shuō de tài kuài le",
       "gloss_en": "He talks too fast.",
-      "hanzi_trad": "他說得太快了。"
+      "hanzi_trad": "他說得太快了。",
+      "pinyin_syllables": "ta1 shuo1 de5 tai4 kuai4 le5"
     },
     {
       "hanzi": "你说得对。",
       "pinyin": "nǐ shuō de duì",
       "gloss_en": "You're right.",
-      "hanzi_trad": "你說得對。"
+      "hanzi_trad": "你說得對。",
+      "pinyin_syllables": "ni3 shuo1 de5 dui4"
     },
     {
       "hanzi": "宝宝吃得很慢。",
       "pinyin": "bǎobao chī de hěn màn",
       "gloss_en": "The baby eats slowly.",
-      "hanzi_trad": "寶寶吃得很慢。"
+      "hanzi_trad": "寶寶吃得很慢。",
+      "pinyin_syllables": "bao3 bao5 chi1 de5 hen3 man4"
     },
     {
       "hanzi": "他睡得很早。",
       "pinyin": "tā shuì de hěn zǎo",
       "gloss_en": "He goes to sleep early.",
-      "hanzi_trad": "他睡得很早。"
+      "hanzi_trad": "他睡得很早。",
+      "pinyin_syllables": "ta1 shui4 de5 hen3 zao3"
     },
     {
       "hanzi": "请把书放在桌子上。",
       "pinyin": "qǐng bǎ shū fàng zài zhuōzi shàng",
       "gloss_en": "Please put the book on the table.",
-      "hanzi_trad": "請把書放在桌子上。"
+      "hanzi_trad": "請把書放在桌子上。",
+      "pinyin_syllables": "qing3 ba3 shu1 fang4 zai4 zhuo1 zi5 shang4"
     },
     {
       "hanzi": "把灯关了。",
       "pinyin": "bǎ dēng guān le",
       "gloss_en": "Turn the light off.",
-      "hanzi_trad": "把燈關了。"
+      "hanzi_trad": "把燈關了。",
+      "pinyin_syllables": "ba3 deng1 guan1 le5"
     },
     {
       "hanzi": "请把门关上。",
       "pinyin": "qǐng bǎ mén guān shàng",
       "gloss_en": "Please close the door.",
-      "hanzi_trad": "請把門關上。"
+      "hanzi_trad": "請把門關上。",
+      "pinyin_syllables": "qing3 ba3 men2 guan1 shang4"
     },
     {
       "hanzi": "请关门。",
       "pinyin": "qǐng guān mén",
       "gloss_en": "Close the door, please.",
-      "hanzi_trad": "請關門。"
+      "hanzi_trad": "請關門。",
+      "pinyin_syllables": "qing3 guan1 men2"
     },
     {
       "hanzi": "请关灯。",
       "pinyin": "qǐng guān dēng",
       "gloss_en": "Turn off the light, please.",
-      "hanzi_trad": "請關燈。"
+      "hanzi_trad": "請關燈。",
+      "pinyin_syllables": "qing3 guan1 deng1"
     },
     {
       "hanzi": "把玩具给他。",
       "pinyin": "bǎ wánjù gěi tā",
       "gloss_en": "Give him the toy.",
-      "hanzi_trad": "把玩具給他。"
+      "hanzi_trad": "把玩具給他。",
+      "pinyin_syllables": "ba3 wan2 ju4 gei3 ta1"
     },
     {
       "hanzi": "请洗手。",
       "pinyin": "qǐng xǐ shǒu",
       "gloss_en": "Please wash your hands.",
-      "hanzi_trad": "請洗手。"
+      "hanzi_trad": "請洗手。",
+      "pinyin_syllables": "qing3 xi3 shou3"
     },
     {
       "hanzi": "宝宝的手很小。",
       "pinyin": "bǎobao de shǒu hěn xiǎo",
       "gloss_en": "The baby's hands are tiny.",
-      "hanzi_trad": "寶寶的手很小。"
+      "hanzi_trad": "寶寶的手很小。",
+      "pinyin_syllables": "bao3 bao5 de5 shou3 hen3 xiao3"
     },
     {
       "hanzi": "我的头很疼。",
       "pinyin": "wǒ de tóu hěn téng",
       "gloss_en": "My head hurts.",
-      "hanzi_trad": "我的頭很疼。"
+      "hanzi_trad": "我的頭很疼。",
+      "pinyin_syllables": "wo3 de5 tou2 hen3 teng2"
     },
     {
       "hanzi": "宝宝非常可爱。",
       "pinyin": "bǎobao fēicháng kě'ài",
       "gloss_en": "The baby is so cute.",
-      "hanzi_trad": "寶寶非常可愛。"
+      "hanzi_trad": "寶寶非常可愛。",
+      "pinyin_syllables": "bao3 bao5 fei1 chang2 ke3 ai4"
     },
     {
       "hanzi": "他真可爱。",
       "pinyin": "tā zhēn kě'ài",
       "gloss_en": "He's really cute.",
-      "hanzi_trad": "他真可愛。"
+      "hanzi_trad": "他真可愛。",
+      "pinyin_syllables": "ta1 zhen1 ke3 ai4"
     },
     {
       "hanzi": "孩子们在外面玩。",
       "pinyin": "háizi men zài wàimiàn wán",
       "gloss_en": "The children are playing outside.",
-      "hanzi_trad": "孩子們在外面玩。"
+      "hanzi_trad": "孩子們在外面玩。",
+      "pinyin_syllables": "hai2 zi5 men5 zai4 wai4 mian4 wan2"
     },
     {
       "hanzi": "他们都在家。",
       "pinyin": "tāmen dōu zài jiā",
       "gloss_en": "They're all home.",
-      "hanzi_trad": "他們都在家。"
+      "hanzi_trad": "他們都在家。",
+      "pinyin_syllables": "ta1 men5 dou1 zai4 jia1"
     },
     {
       "hanzi": "他们两个一样。",
       "pinyin": "tāmen liǎng gè yíyàng",
       "gloss_en": "The two of them are alike.",
-      "hanzi_trad": "他們兩個一樣。"
+      "hanzi_trad": "他們兩個一樣。",
+      "pinyin_syllables": "ta1 men5 liang3 ge4 yi2 yang4"
     },
     {
       "hanzi": "我姐姐有两个孩子。",
       "pinyin": "wǒ jiějie yǒu liǎng gè háizi",
       "gloss_en": "My sister has two children.",
-      "hanzi_trad": "我姐姐有兩個孩子。"
+      "hanzi_trad": "我姐姐有兩個孩子。",
+      "pinyin_syllables": "wo3 jie3 jie5 you3 liang3 ge4 hai2 zi5"
     },
     {
       "hanzi": "我哥哥住在这里。",
       "pinyin": "wǒ gēge zhù zài zhè lǐ",
       "gloss_en": "My brother lives here.",
-      "hanzi_trad": "我哥哥住在這裡。"
+      "hanzi_trad": "我哥哥住在這裡。",
+      "pinyin_syllables": "wo3 ge1 ge5 zhu4 zai4 zhe4 li3"
     },
     {
       "hanzi": "我女儿三岁。",
       "pinyin": "wǒ nǚ'ér sān suì",
       "gloss_en": "My daughter is three.",
-      "hanzi_trad": "我女兒三歲。"
+      "hanzi_trad": "我女兒三歲。",
+      "pinyin_syllables": "wo3 nv3 er2 san1 sui4"
     },
     {
       "hanzi": "我们家有三只狗。",
       "pinyin": "wǒmen jiā yǒu sān zhī gǒu",
       "gloss_en": "We have three dogs.",
-      "hanzi_trad": "我們家有三隻狗。"
+      "hanzi_trad": "我們家有三隻狗。",
+      "pinyin_syllables": "wo3 men5 jia1 you3 san1 zhi1 gou3"
     },
     {
       "hanzi": "这里很安全。",
       "pinyin": "zhè lǐ hěn ānquán",
       "gloss_en": "It's safe here.",
-      "hanzi_trad": "這裡很安全。"
+      "hanzi_trad": "這裡很安全。",
+      "pinyin_syllables": "zhe4 li3 hen3 an1 quan2"
     },
     {
       "hanzi": "宝宝的房间在那里。",
       "pinyin": "bǎobao de fángjiān zài nà lǐ",
       "gloss_en": "The baby's room is over there.",
-      "hanzi_trad": "寶寶的房間在那裡。"
+      "hanzi_trad": "寶寶的房間在那裡。",
+      "pinyin_syllables": "bao3 bao5 de5 fang2 jian1 zai4 na4 li3"
     },
     {
       "hanzi": "时间过得很快。",
       "pinyin": "shíjiān guò de hěn kuài",
       "gloss_en": "Time goes by fast.",
-      "hanzi_trad": "時間過得很快。"
+      "hanzi_trad": "時間過得很快。",
+      "pinyin_syllables": "shi2 jian1 guo4 de5 hen3 kuai4"
     },
     {
       "hanzi": "医生说他没事。",
       "pinyin": "yīshēng shuō tā méi shì",
       "gloss_en": "The doctor says he's fine.",
-      "hanzi_trad": "醫生說他沒事。"
+      "hanzi_trad": "醫生說他沒事。",
+      "pinyin_syllables": "yi1 sheng1 shuo1 ta1 mei2 shi4"
     },
     {
       "hanzi": "没事。",
       "pinyin": "méi shì",
       "gloss_en": "It's fine / no worries.",
-      "hanzi_trad": "沒事。"
+      "hanzi_trad": "沒事。",
+      "pinyin_syllables": "mei2 shi4"
     },
     {
       "_comment": "Expansion: Gap fill — second and third sentences for thinly-covered words"
@@ -2663,571 +3103,666 @@
       "hanzi": "我在上网。",
       "pinyin": "wǒ zài shàngwǎng",
       "gloss_en": "I'm online.",
-      "hanzi_trad": "我在上網。"
+      "hanzi_trad": "我在上網。",
+      "pinyin_syllables": "wo3 zai4 shang4 wang3"
     },
     {
       "hanzi": "他每天上网。",
       "pinyin": "tā měitiān shàngwǎng",
       "gloss_en": "He's online every day.",
-      "hanzi_trad": "他每天上網。"
+      "hanzi_trad": "他每天上網。",
+      "pinyin_syllables": "ta1 mei3 tian1 shang4 wang3"
     },
     {
       "hanzi": "我上网买东西。",
       "pinyin": "wǒ shàngwǎng mǎi dōngxi",
       "gloss_en": "I shop online.",
-      "hanzi_trad": "我上網買東西。"
+      "hanzi_trad": "我上網買東西。",
+      "pinyin_syllables": "wo3 shang4 wang3 mai3 dong1 xi5"
     },
     {
       "hanzi": "七点了，我们吃晚饭吧。",
       "pinyin": "qī diǎn le, wǒmen chī wǎnfàn ba",
       "gloss_en": "It's seven — let's have dinner.",
-      "hanzi_trad": "七點了，我們吃晚飯吧。"
+      "hanzi_trad": "七點了，我們吃晚飯吧。",
+      "pinyin_syllables": "qi1 dian3 le5 wo3 men5 chi1 wan3 fan4 ba5"
     },
     {
       "hanzi": "他七个月了。",
       "pinyin": "tā qī gè yuè le",
       "gloss_en": "He's seven months old.",
-      "hanzi_trad": "他七個月了。"
+      "hanzi_trad": "他七個月了。",
+      "pinyin_syllables": "ta1 qi1 ge4 yue4 le5"
     },
     {
       "hanzi": "外面下雨了。",
       "pinyin": "wàimiàn xiàyǔ le",
       "gloss_en": "It's started raining.",
-      "hanzi_trad": "外面下雨了。"
+      "hanzi_trad": "外面下雨了。",
+      "pinyin_syllables": "wai4 mian4 xia4 yu3 le5"
     },
     {
       "hanzi": "下雨了，我们不出去。",
       "pinyin": "xiàyǔ le, wǒmen bù chūqù",
       "gloss_en": "It's raining, we won't go out.",
-      "hanzi_trad": "下雨了，我們不出去。"
+      "hanzi_trad": "下雨了，我們不出去。",
+      "pinyin_syllables": "xia4 yu3 le5 wo3 men5 bu4 chu1 qu4"
     },
     {
       "hanzi": "谢谢你。不客气。",
       "pinyin": "xièxie nǐ. búkèqi",
       "gloss_en": "Thank you. — You're welcome.",
-      "hanzi_trad": "謝謝你。不客氣。"
+      "hanzi_trad": "謝謝你。不客氣。",
+      "pinyin_syllables": "xie4 xie5 ni3 bu2 ke4 qi5"
     },
     {
       "hanzi": "中午我很忙。",
       "pinyin": "zhōngwǔ wǒ hěn máng",
       "gloss_en": "I'm busy at midday.",
-      "hanzi_trad": "中午我很忙。"
+      "hanzi_trad": "中午我很忙。",
+      "pinyin_syllables": "zhong1 wu3 wo3 hen3 mang2"
     },
     {
       "hanzi": "中午宝宝睡午觉。",
       "pinyin": "zhōngwǔ bǎobao shuì wǔjiào",
       "gloss_en": "The baby naps at midday.",
-      "hanzi_trad": "中午寶寶睡午覺。"
+      "hanzi_trad": "中午寶寶睡午覺。",
+      "pinyin_syllables": "zhong1 wu3 bao3 bao5 shui4 wu3 jiao4"
     },
     {
       "hanzi": "你为什么不吃？",
       "pinyin": "nǐ wèishénme bù chī?",
       "gloss_en": "Why aren't you eating?",
-      "hanzi_trad": "你為什麼不吃？"
+      "hanzi_trad": "你為什麼不吃？",
+      "pinyin_syllables": "ni3 wei4 shen2 me5 bu4 chi1"
     },
     {
       "hanzi": "现在九点了。",
       "pinyin": "xiànzài jiǔ diǎn le",
       "gloss_en": "It's nine o'clock.",
-      "hanzi_trad": "現在九點了。"
+      "hanzi_trad": "現在九點了。",
+      "pinyin_syllables": "xian4 zai4 jiu3 dian3 le5"
     },
     {
       "hanzi": "我也很累。",
       "pinyin": "wǒ yě hěn lèi",
       "gloss_en": "I'm tired too.",
-      "hanzi_trad": "我也很累。"
+      "hanzi_trad": "我也很累。",
+      "pinyin_syllables": "wo3 ye3 hen3 lei4"
     },
     {
       "hanzi": "宝宝也想玩。",
       "pinyin": "bǎobao yě xiǎng wán",
       "gloss_en": "The baby wants to play too.",
-      "hanzi_trad": "寶寶也想玩。"
+      "hanzi_trad": "寶寶也想玩。",
+      "pinyin_syllables": "bao3 bao5 ye3 xiang3 wan2"
     },
     {
       "hanzi": "我也不知道。",
       "pinyin": "wǒ yě bù zhīdào",
       "gloss_en": "I don't know either.",
-      "hanzi_trad": "我也不知道。"
+      "hanzi_trad": "我也不知道。",
+      "pinyin_syllables": "wo3 ye3 bu4 zhi1 dao4"
     },
     {
       "hanzi": "我有两个哥哥。",
       "pinyin": "wǒ yǒu liǎng gè gēge",
       "gloss_en": "I have two older brothers.",
-      "hanzi_trad": "我有兩個哥哥。"
+      "hanzi_trad": "我有兩個哥哥。",
+      "pinyin_syllables": "wo3 you3 liang3 ge4 ge1 ge5"
     },
     {
       "hanzi": "奶奶亲了宝宝。",
       "pinyin": "nǎinai qīn le bǎobao",
       "gloss_en": "Grandma kissed the baby.",
-      "hanzi_trad": "奶奶親了寶寶。"
+      "hanzi_trad": "奶奶親了寶寶。",
+      "pinyin_syllables": "nai3 nai5 qin1 le5 bao3 bao5"
     },
     {
       "hanzi": "以前我不会说中文。",
       "pinyin": "yǐqián wǒ bú huì shuō Zhōngwén",
       "gloss_en": "I couldn't speak Chinese before.",
-      "hanzi_trad": "以前我不會說中文。"
+      "hanzi_trad": "以前我不會說中文。",
+      "pinyin_syllables": "yi3 qian2 wo3 bu2 hui4 shuo1 zhong1 wen2"
     },
     {
       "hanzi": "以前这里有一个公园。",
       "pinyin": "yǐqián zhè lǐ yǒu yí gè gōngyuán",
       "gloss_en": "There used to be a park here.",
-      "hanzi_trad": "以前這裡有一個公園。"
+      "hanzi_trad": "以前這裡有一個公園。",
+      "pinyin_syllables": "yi3 qian2 zhe4 li3 you3 yi2 ge4 gong1 yuan2"
     },
     {
       "hanzi": "我想去，但是没有时间。",
       "pinyin": "wǒ xiǎng qù, dànshì méiyǒu shíjiān",
       "gloss_en": "I'd like to go, but I don't have time.",
-      "hanzi_trad": "我想去，但是沒有時間。"
+      "hanzi_trad": "我想去，但是沒有時間。",
+      "pinyin_syllables": "wo3 xiang3 qu4 dan4 shi4 mei2 you3 shi2 jian1"
     },
     {
       "hanzi": "他很累，但是很高兴。",
       "pinyin": "tā hěn lèi, dànshì hěn gāoxìng",
       "gloss_en": "He's tired but happy.",
-      "hanzi_trad": "他很累，但是很高興。"
+      "hanzi_trad": "他很累，但是很高興。",
+      "pinyin_syllables": "ta1 hen3 lei4 dan4 shi4 hen3 gao1 xing4"
     },
     {
       "hanzi": "这个很便宜。",
       "pinyin": "zhè gè hěn piányi",
       "gloss_en": "This one's cheap.",
-      "hanzi_trad": "這個很便宜。"
+      "hanzi_trad": "這個很便宜。",
+      "pinyin_syllables": "zhe4 ge4 hen3 pian2 yi5"
     },
     {
       "hanzi": "水果很便宜。",
       "pinyin": "shuǐguǒ hěn piányi",
       "gloss_en": "Fruit is cheap.",
-      "hanzi_trad": "水果很便宜。"
+      "hanzi_trad": "水果很便宜。",
+      "pinyin_syllables": "shui3 guo3 hen3 pian2 yi5"
     },
     {
       "hanzi": "公园在超市后面。",
       "pinyin": "gōngyuán zài chāoshì hòumiàn",
       "gloss_en": "The park is behind the supermarket.",
-      "hanzi_trad": "公園在超市後面。"
+      "hanzi_trad": "公園在超市後面。",
+      "pinyin_syllables": "gong1 yuan2 zai4 chao1 shi4 hou4 mian4"
     },
     {
       "hanzi": "我们在公园。",
       "pinyin": "wǒmen zài gōngyuán",
       "gloss_en": "We're at the park.",
-      "hanzi_trad": "我們在公園。"
+      "hanzi_trad": "我們在公園。",
+      "pinyin_syllables": "wo3 men5 zai4 gong1 yuan2"
     },
     {
       "hanzi": "好，再见。",
       "pinyin": "hǎo, zàijiàn",
       "gloss_en": "Okay, bye.",
-      "hanzi_trad": "好，再見。"
+      "hanzi_trad": "好，再見。",
+      "pinyin_syllables": "hao3 zai4 jian4"
     },
     {
       "hanzi": "等我五分钟。",
       "pinyin": "děng wǒ wǔ fēnzhōng",
       "gloss_en": "Give me five minutes.",
-      "hanzi_trad": "等我五分鐘。"
+      "hanzi_trad": "等我五分鐘。",
+      "pinyin_syllables": "deng3 wo3 wu3 fen1 zhong1"
     },
     {
       "hanzi": "十分钟以后我下班。",
       "pinyin": "shí fēnzhōng yǐhòu wǒ xiàbān",
       "gloss_en": "I finish work in ten minutes.",
-      "hanzi_trad": "十分鐘以後我下班。"
+      "hanzi_trad": "十分鐘以後我下班。",
+      "pinyin_syllables": "shi2 fen1 zhong1 yi3 hou4 wo3 xia4 ban1"
     },
     {
       "hanzi": "别人怎么说？",
       "pinyin": "biérén zěnme shuō?",
       "gloss_en": "What do other people say?",
-      "hanzi_trad": "別人怎麼說？"
+      "hanzi_trad": "別人怎麼說？",
+      "pinyin_syllables": "bie2 ren2 zen3 me5 shuo1"
     },
     {
       "hanzi": "这是别人的东西。",
       "pinyin": "zhè shì biérén de dōngxi",
       "gloss_en": "That's someone else's.",
-      "hanzi_trad": "這是別人的東西。"
+      "hanzi_trad": "這是別人的東西。",
+      "pinyin_syllables": "zhe4 shi4 bie2 ren2 de5 dong1 xi5"
     },
     {
       "hanzi": "我有一个办法。",
       "pinyin": "wǒ yǒu yí gè bànfǎ",
       "gloss_en": "I have an idea.",
-      "hanzi_trad": "我有一個辦法。"
+      "hanzi_trad": "我有一個辦法。",
+      "pinyin_syllables": "wo3 you3 yi2 ge4 ban4 fa3"
     },
     {
       "hanzi": "没有办法。",
       "pinyin": "méiyǒu bànfǎ",
       "gloss_en": "There's nothing to be done.",
-      "hanzi_trad": "沒有辦法。"
+      "hanzi_trad": "沒有辦法。",
+      "pinyin_syllables": "mei2 you3 ban4 fa3"
     },
     {
       "hanzi": "他午觉睡了一个小时。",
       "pinyin": "tā wǔjiào shuì le yí gè xiǎoshí",
       "gloss_en": "He napped for an hour.",
-      "hanzi_trad": "他午覺睡了一個小時。"
+      "hanzi_trad": "他午覺睡了一個小時。",
+      "pinyin_syllables": "ta1 wu3 jiao4 shui4 le5 yi2 ge4 xiao3 shi2"
     },
     {
       "hanzi": "午饭吃什么？",
       "pinyin": "wǔfàn chī shénme?",
       "gloss_en": "What's for lunch?",
-      "hanzi_trad": "午飯吃什麼？"
+      "hanzi_trad": "午飯吃什麼？",
+      "pinyin_syllables": "wu3 fan4 chi1 shen2 me5"
     },
     {
       "hanzi": "我在做午饭。",
       "pinyin": "wǒ zài zuò wǔfàn",
       "gloss_en": "I'm making lunch.",
-      "hanzi_trad": "我在做午飯。"
+      "hanzi_trad": "我在做午飯。",
+      "pinyin_syllables": "wo3 zai4 zuo4 wu3 fan4"
     },
     {
       "hanzi": "宝宝发烧了吗？",
       "pinyin": "bǎobao fāshāo le ma?",
       "gloss_en": "Does the baby have a fever?",
-      "hanzi_trad": "寶寶發燒了嗎？"
+      "hanzi_trad": "寶寶發燒了嗎？",
+      "pinyin_syllables": "bao3 bao5 fa1 shao1 le5 ma5"
     },
     {
       "hanzi": "他没有发烧。",
       "pinyin": "tā méiyǒu fāshāo",
       "gloss_en": "He doesn't have a fever.",
-      "hanzi_trad": "他沒有發燒。"
+      "hanzi_trad": "他沒有發燒。",
+      "pinyin_syllables": "ta1 mei2 you3 fa1 shao1"
     },
     {
       "hanzi": "他叫什么？",
       "pinyin": "tā jiào shénme?",
       "gloss_en": "What's he called?",
-      "hanzi_trad": "他叫什麼？"
+      "hanzi_trad": "他叫什麼？",
+      "pinyin_syllables": "ta1 jiao4 shen2 me5"
     },
     {
       "hanzi": "我叫他起床。",
       "pinyin": "wǒ jiào tā qǐchuáng",
       "gloss_en": "I'll get him up.",
-      "hanzi_trad": "我叫他起床。"
+      "hanzi_trad": "我叫他起床。",
+      "pinyin_syllables": "wo3 jiao4 ta1 qi3 chuang2"
     },
     {
       "hanzi": "我想去，可是太晚了。",
       "pinyin": "wǒ xiǎng qù, kěshì tài wǎn le",
       "gloss_en": "I'd like to, but it's too late.",
-      "hanzi_trad": "我想去，可是太晚了。"
+      "hanzi_trad": "我想去，可是太晚了。",
+      "pinyin_syllables": "wo3 xiang3 qu4 ke3 shi4 tai4 wan3 le5"
     },
     {
       "hanzi": "今天几号？",
       "pinyin": "jīntiān jǐ hào?",
       "gloss_en": "What's the date today?",
-      "hanzi_trad": "今天幾號？"
+      "hanzi_trad": "今天幾號？",
+      "pinyin_syllables": "jin1 tian1 ji3 hao4"
     },
     {
       "hanzi": "五月十号。",
       "pinyin": "wǔ yuè shí hào",
       "gloss_en": "May the tenth.",
-      "hanzi_trad": "五月十號。"
+      "hanzi_trad": "五月十號。",
+      "pinyin_syllables": "wu3 yue4 shi2 hao4"
     },
     {
       "hanzi": "因为下雨，我们没出去。",
       "pinyin": "yīnwèi xiàyǔ, wǒmen méi chūqù",
       "gloss_en": "We didn't go out because it rained.",
-      "hanzi_trad": "因為下雨，我們沒出去。"
+      "hanzi_trad": "因為下雨，我們沒出去。",
+      "pinyin_syllables": "yin1 wei4 xia4 yu3 wo3 men5 mei2 chu1 qu4"
     },
     {
       "hanzi": "这个多少钱？",
       "pinyin": "zhè gè duōshao qián?",
       "gloss_en": "How much is this?",
-      "hanzi_trad": "這個多少錢？"
+      "hanzi_trad": "這個多少錢？",
+      "pinyin_syllables": "zhe4 ge4 duo1 shao5 qian2"
     },
     {
       "hanzi": "你有多少？",
       "pinyin": "nǐ yǒu duōshao?",
       "gloss_en": "How many do you have?",
-      "hanzi_trad": "你有多少？"
+      "hanzi_trad": "你有多少？",
+      "pinyin_syllables": "ni3 you3 duo1 shao5"
     },
     {
       "hanzi": "今天太阳很好。",
       "pinyin": "jīntiān tàiyáng hěn hǎo",
       "gloss_en": "It's lovely and sunny today.",
-      "hanzi_trad": "今天太陽很好。"
+      "hanzi_trad": "今天太陽很好。",
+      "pinyin_syllables": "jin1 tian1 tai4 yang2 hen3 hao3"
     },
     {
       "hanzi": "宝宝的头很大。",
       "pinyin": "bǎobao de tóu hěn dà",
       "gloss_en": "The baby has a big head.",
-      "hanzi_trad": "寶寶的頭很大。"
+      "hanzi_trad": "寶寶的頭很大。",
+      "pinyin_syllables": "bao3 bao5 de5 tou2 hen3 da4"
     },
     {
       "hanzi": "我头疼。",
       "pinyin": "wǒ tóu téng",
       "gloss_en": "I have a headache.",
-      "hanzi_trad": "我頭疼。"
+      "hanzi_trad": "我頭疼。",
+      "pinyin_syllables": "wo3 tou2 teng2"
     },
     {
       "hanzi": "那个女人是医生。",
       "pinyin": "nà gè nǚ rén shì yīshēng",
       "gloss_en": "That woman is a doctor.",
-      "hanzi_trad": "那個女人是醫生。"
+      "hanzi_trad": "那個女人是醫生。",
+      "pinyin_syllables": "na4 ge4 nv3 ren2 shi4 yi1 sheng1"
     },
     {
       "hanzi": "他不喝牛奶。",
       "pinyin": "tā bù hē niúnǎi",
       "gloss_en": "He doesn't drink milk.",
-      "hanzi_trad": "他不喝牛奶。"
+      "hanzi_trad": "他不喝牛奶。",
+      "pinyin_syllables": "ta1 bu4 he1 niu2 nai3"
     },
     {
       "hanzi": "请给我一瓶牛奶。",
       "pinyin": "qǐng gěi wǒ yì píng niúnǎi",
       "gloss_en": "A bottle of milk, please.",
-      "hanzi_trad": "請給我一瓶牛奶。"
+      "hanzi_trad": "請給我一瓶牛奶。",
+      "pinyin_syllables": "qing3 gei3 wo3 yi4 ping2 niu2 nai3"
     },
     {
       "hanzi": "如果你累了，就休息。",
       "pinyin": "rúguǒ nǐ lèi le, jiù xiūxi",
       "gloss_en": "If you're tired, take a rest.",
-      "hanzi_trad": "如果你累了，就休息。"
+      "hanzi_trad": "如果你累了，就休息。",
+      "pinyin_syllables": "ru2 guo3 ni3 lei4 le5 jiu4 xiu1 xi5"
     },
     {
       "hanzi": "如果没有时间，明天也可以。",
       "pinyin": "rúguǒ méiyǒu shíjiān, míngtiān yě kěyǐ",
       "gloss_en": "If there's no time, tomorrow works too.",
-      "hanzi_trad": "如果沒有時間，明天也可以。"
+      "hanzi_trad": "如果沒有時間，明天也可以。",
+      "pinyin_syllables": "ru2 guo3 mei2 you3 shi2 jian1 ming2 tian1 ye3 ke3 yi3"
     },
     {
       "hanzi": "我妹妹有一个孩子。",
       "pinyin": "wǒ mèimei yǒu yí gè háizi",
       "gloss_en": "My younger sister has a child.",
-      "hanzi_trad": "我妹妹有一個孩子。"
+      "hanzi_trad": "我妹妹有一個孩子。",
+      "pinyin_syllables": "wo3 mei4 mei5 you3 yi2 ge4 hai2 zi5"
     },
     {
       "hanzi": "学生们在学校。",
       "pinyin": "xuésheng men zài xuéxiào",
       "gloss_en": "The students are at school.",
-      "hanzi_trad": "學生們在學校。"
+      "hanzi_trad": "學生們在學校。",
+      "pinyin_syllables": "xue2 sheng5 men5 zai4 xue2 xiao4"
     },
     {
       "hanzi": "这个很容易。",
       "pinyin": "zhè gè hěn róngyì",
       "gloss_en": "This is easy.",
-      "hanzi_trad": "這個很容易。"
+      "hanzi_trad": "這個很容易。",
+      "pinyin_syllables": "zhe4 ge4 hen3 rong2 yi4"
     },
     {
       "hanzi": "说中文不容易。",
       "pinyin": "shuō Zhōngwén bù róngyì",
       "gloss_en": "Speaking Chinese isn't easy.",
-      "hanzi_trad": "說中文不容易。"
+      "hanzi_trad": "說中文不容易。",
+      "pinyin_syllables": "shuo1 zhong1 wen2 bu4 rong2 yi4"
     },
     {
       "hanzi": "对不起，我来晚了。",
       "pinyin": "duìbuqǐ, wǒ lái wǎn le",
       "gloss_en": "Sorry, I'm late.",
-      "hanzi_trad": "對不起，我來晚了。"
+      "hanzi_trad": "對不起，我來晚了。",
+      "pinyin_syllables": "dui4 bu5 qi3 wo3 lai2 wan3 le5"
     },
     {
       "hanzi": "我希望明天天气好。",
       "pinyin": "wǒ xīwàng míngtiān tiānqì hǎo",
       "gloss_en": "I hope the weather's good tomorrow.",
-      "hanzi_trad": "我希望明天天氣好。"
+      "hanzi_trad": "我希望明天天氣好。",
+      "pinyin_syllables": "wo3 xi1 wang4 ming2 tian1 tian1 qi4 hao3"
     },
     {
       "hanzi": "我在这里工作了两年。",
       "pinyin": "wǒ zài zhè lǐ gōngzuò le liǎng nián",
       "gloss_en": "I've worked here two years.",
-      "hanzi_trad": "我在這裡工作了兩年。"
+      "hanzi_trad": "我在這裡工作了兩年。",
+      "pinyin_syllables": "wo3 zai4 zhe4 li3 gong1 zuo4 le5 liang3 nian2"
     },
     {
       "hanzi": "我们什么时候开始？",
       "pinyin": "wǒmen shénme shíhou kāishǐ?",
       "gloss_en": "When do we start?",
-      "hanzi_trad": "我們什麼時候開始？"
+      "hanzi_trad": "我們什麼時候開始？",
+      "pinyin_syllables": "wo3 men5 shen2 me5 shi2 hou5 kai1 shi3"
     },
     {
       "hanzi": "我弟弟也来。",
       "pinyin": "wǒ dìdi yě lái",
       "gloss_en": "My younger brother's coming too.",
-      "hanzi_trad": "我弟弟也來。"
+      "hanzi_trad": "我弟弟也來。",
+      "pinyin_syllables": "wo3 di4 di5 ye3 lai2"
     },
     {
       "hanzi": "请给我一张。",
       "pinyin": "qǐng gěi wǒ yì zhāng",
       "gloss_en": "Give me one, please.",
-      "hanzi_trad": "請給我一張。"
+      "hanzi_trad": "請給我一張。",
+      "pinyin_syllables": "qing3 gei3 wo3 yi4 zhang1"
     },
     {
       "hanzi": "你要茶或者水？",
       "pinyin": "nǐ yào chá huòzhě shuǐ?",
       "gloss_en": "Tea or water?",
-      "hanzi_trad": "你要茶或者水？"
+      "hanzi_trad": "你要茶或者水？",
+      "pinyin_syllables": "ni3 yao4 cha2 huo4 zhe3 shui3"
     },
     {
       "hanzi": "他生病了，所以没上班。",
       "pinyin": "tā shēngbìng le, suǒyǐ méi shàngbān",
       "gloss_en": "He was ill, so he didn't go to work.",
-      "hanzi_trad": "他生病了，所以沒上班。"
+      "hanzi_trad": "他生病了，所以沒上班。",
+      "pinyin_syllables": "ta1 sheng1 bing4 le5 suo3 yi3 mei2 shang4 ban1"
     },
     {
       "hanzi": "请拿一件衣服。",
       "pinyin": "qǐng ná yí jiàn yīfu",
       "gloss_en": "Grab a piece of clothing.",
-      "hanzi_trad": "請拿一件衣服。"
+      "hanzi_trad": "請拿一件衣服。",
+      "pinyin_syllables": "qing3 na2 yi2 jian4 yi1 fu5"
     },
     {
       "hanzi": "他拿了我的手机。",
       "pinyin": "tā ná le wǒ de shǒujī",
       "gloss_en": "He took my phone.",
-      "hanzi_trad": "他拿了我的手機。"
+      "hanzi_trad": "他拿了我的手機。",
+      "pinyin_syllables": "ta1 na2 le5 wo3 de5 shou3 ji1"
     },
     {
       "hanzi": "我把玩具放在床上。",
       "pinyin": "wǒ bǎ wánjù fàng zài chuáng shàng",
       "gloss_en": "I put the toy on the bed.",
-      "hanzi_trad": "我把玩具放在床上。"
+      "hanzi_trad": "我把玩具放在床上。",
+      "pinyin_syllables": "wo3 ba3 wan2 ju4 fang4 zai4 chuang2 shang4"
     },
     {
       "hanzi": "你什么时候来？",
       "pinyin": "nǐ shénme shíhou lái?",
       "gloss_en": "When are you coming?",
-      "hanzi_trad": "你什麼時候來？"
+      "hanzi_trad": "你什麼時候來？",
+      "pinyin_syllables": "ni3 shen2 me5 shi2 hou5 lai2"
     },
     {
       "hanzi": "今天我回来得很晚。",
       "pinyin": "jīntiān wǒ huí lái de hěn wǎn",
       "gloss_en": "I got back late today.",
-      "hanzi_trad": "今天我回來得很晚。"
+      "hanzi_trad": "今天我回來得很晚。",
+      "pinyin_syllables": "jin1 tian1 wo3 hui2 lai2 de5 hen3 wan3"
     },
     {
       "hanzi": "他正在洗澡。",
       "pinyin": "tā zhèngzài xǐzǎo",
       "gloss_en": "He's in the bath.",
-      "hanzi_trad": "他正在洗澡。"
+      "hanzi_trad": "他正在洗澡。",
+      "pinyin_syllables": "ta1 zheng4 zai4 xi3 zao3"
     },
     {
       "hanzi": "每个人都不一样。",
       "pinyin": "měi gè rén dōu bù yíyàng",
       "gloss_en": "Everyone is different.",
-      "hanzi_trad": "每個人都不一樣。"
+      "hanzi_trad": "每個人都不一樣。",
+      "pinyin_syllables": "mei3 ge4 ren2 dou1 bu4 yi2 yang4"
     },
     {
       "hanzi": "今天比昨天热。",
       "pinyin": "jīntiān bǐ zuótiān rè",
       "gloss_en": "Today's hotter than yesterday.",
-      "hanzi_trad": "今天比昨天熱。"
+      "hanzi_trad": "今天比昨天熱。",
+      "pinyin_syllables": "jin1 tian1 bi3 zuo2 tian1 re4"
     },
     {
       "hanzi": "对不起。没关系。",
       "pinyin": "duìbuqǐ. méiguānxi",
       "gloss_en": "Sorry. — It's fine.",
-      "hanzi_trad": "對不起。沒關係。"
+      "hanzi_trad": "對不起。沒關係。",
+      "pinyin_syllables": "dui4 bu5 qi3 mei2 guan1 xi5"
     },
     {
       "hanzi": "孩子生病了。",
       "pinyin": "háizi shēngbìng le",
       "gloss_en": "The child is ill.",
-      "hanzi_trad": "孩子生病了。"
+      "hanzi_trad": "孩子生病了。",
+      "pinyin_syllables": "hai2 zi5 sheng1 bing4 le5"
     },
     {
       "hanzi": "电话在桌子上。",
       "pinyin": "diànhuà zài zhuōzi shàng",
       "gloss_en": "The phone's on the table.",
-      "hanzi_trad": "電話在桌子上。"
+      "hanzi_trad": "電話在桌子上。",
+      "pinyin_syllables": "dian4 hua4 zai4 zhuo1 zi5 shang4"
     },
     {
       "hanzi": "这个太短了。",
       "pinyin": "zhè gè tài duǎn le",
       "gloss_en": "This one's too short.",
-      "hanzi_trad": "這個太短了。"
+      "hanzi_trad": "這個太短了。",
+      "pinyin_syllables": "zhe4 ge4 tai4 duan3 le5"
     },
     {
       "hanzi": "他穿了新衣服。",
       "pinyin": "tā chuān le xīn yīfu",
       "gloss_en": "He's wearing new clothes.",
-      "hanzi_trad": "他穿了新衣服。"
+      "hanzi_trad": "他穿了新衣服。",
+      "pinyin_syllables": "ta1 chuan1 le5 xin1 yi1 fu5"
     },
     {
       "hanzi": "请关窗户。",
       "pinyin": "qǐng guān chuānghu",
       "gloss_en": "Please close the window.",
-      "hanzi_trad": "請關窗戶。"
+      "hanzi_trad": "請關窗戶。",
+      "pinyin_syllables": "qing3 guan1 chuang1 hu5"
     },
     {
       "hanzi": "我不吃鱼，也不吃肉。",
       "pinyin": "wǒ bù chī yú, yě bù chī ròu",
       "gloss_en": "I don't eat fish or meat.",
-      "hanzi_trad": "我不吃魚，也不吃肉。"
+      "hanzi_trad": "我不吃魚，也不吃肉。",
+      "pinyin_syllables": "wo3 bu4 chi1 yu2 ye3 bu4 chi1 rou4"
     },
     {
       "hanzi": "宝宝吃药了吗？",
       "pinyin": "bǎobao chī yào le ma?",
       "gloss_en": "Has the baby had his medicine?",
-      "hanzi_trad": "寶寶吃藥了嗎？"
+      "hanzi_trad": "寶寶吃藥了嗎？",
+      "pinyin_syllables": "bao3 bao5 chi1 yao4 le5 ma5"
     },
     {
       "hanzi": "我看了一个视频。",
       "pinyin": "wǒ kàn le yí gè shìpín",
       "gloss_en": "I watched a video.",
-      "hanzi_trad": "我看了一個影片。"
+      "hanzi_trad": "我看了一個影片。",
+      "pinyin_syllables": "wo3 kan4 le5 yi2 ge4 shi4 pin2"
     },
     {
       "hanzi": "让他休息。",
       "pinyin": "ràng tā xiūxi",
       "gloss_en": "Let him rest.",
-      "hanzi_trad": "讓他休息。"
+      "hanzi_trad": "讓他休息。",
+      "pinyin_syllables": "rang4 ta1 xiu1 xi5"
     },
     {
       "hanzi": "让我看看。",
       "pinyin": "ràng wǒ kàn kàn",
       "gloss_en": "Let me have a look.",
-      "hanzi_trad": "讓我看看。"
+      "hanzi_trad": "讓我看看。",
+      "pinyin_syllables": "rang4 wo3 kan4 kan4"
     },
     {
       "hanzi": "我早上去跑步。",
       "pinyin": "wǒ zǎoshang qù pǎobù",
       "gloss_en": "I go running in the morning.",
-      "hanzi_trad": "我早上去跑步。"
+      "hanzi_trad": "我早上去跑步。",
+      "pinyin_syllables": "wo3 zao3 shang5 qu4 pao3 bu4"
     },
     {
       "hanzi": "你还是不知道吗？",
       "pinyin": "nǐ háishi bù zhīdào ma?",
       "gloss_en": "You still don't know?",
-      "hanzi_trad": "你還是不知道嗎？"
+      "hanzi_trad": "你還是不知道嗎？",
+      "pinyin_syllables": "ni3 hai2 shi5 bu4 zhi1 dao4 ma5"
     },
     {
       "hanzi": "我做错了。",
       "pinyin": "wǒ zuò cuò le",
       "gloss_en": "I did it wrong.",
-      "hanzi_trad": "我做錯了。"
+      "hanzi_trad": "我做錯了。",
+      "pinyin_syllables": "wo3 zuo4 cuo4 le5"
     },
     {
       "hanzi": "时间很长。",
       "pinyin": "shíjiān hěn cháng",
       "gloss_en": "It's a long time.",
-      "hanzi_trad": "時間很長。"
+      "hanzi_trad": "時間很長。",
+      "pinyin_syllables": "shi2 jian1 hen3 chang2"
     },
     {
       "hanzi": "我需要一点时间。",
       "pinyin": "wǒ xūyào yìdiǎn shíjiān",
       "gloss_en": "I need a little time.",
-      "hanzi_trad": "我需要一點時間。"
+      "hanzi_trad": "我需要一點時間。",
+      "pinyin_syllables": "wo3 xu1 yao4 yi4 dian3 shi2 jian1"
     },
     {
       "hanzi": "你需要什么？",
       "pinyin": "nǐ xūyào shénme?",
       "gloss_en": "What do you need?",
-      "hanzi_trad": "你需要什麼？"
+      "hanzi_trad": "你需要什麼？",
+      "pinyin_syllables": "ni3 xu1 yao4 shen2 me5"
     },
     {
       "hanzi": "早饭我吃面包。",
       "pinyin": "zǎofàn wǒ chī miànbāo",
       "gloss_en": "I have bread for breakfast.",
-      "hanzi_trad": "早飯我吃麵包。"
+      "hanzi_trad": "早飯我吃麵包。",
+      "pinyin_syllables": "zao3 fan4 wo3 chi1 mian4 bao1"
     },
     {
       "hanzi": "我想吃面条。",
       "pinyin": "wǒ xiǎng chī miàntiáo",
       "gloss_en": "I want noodles.",
-      "hanzi_trad": "我想吃麵條。"
+      "hanzi_trad": "我想吃麵條。",
+      "pinyin_syllables": "wo3 xiang3 chi1 mian4 tiao2"
     },
     {
       "hanzi": "宝宝喜欢吃香蕉。",
       "pinyin": "bǎobao xǐhuan chī xiāngjiāo",
       "gloss_en": "The baby likes bananas.",
-      "hanzi_trad": "寶寶喜歡吃香蕉。"
+      "hanzi_trad": "寶寶喜歡吃香蕉。",
+      "pinyin_syllables": "bao3 bao5 xi3 huan5 chi1 xiang1 jiao1"
     },
     {
       "hanzi": "晚饭有鱼。",
       "pinyin": "wǎnfàn yǒu yú",
       "gloss_en": "There's fish for dinner.",
-      "hanzi_trad": "晚飯有魚。"
+      "hanzi_trad": "晚飯有魚。",
+      "pinyin_syllables": "wan3 fan4 you3 yu2"
     },
     {
       "hanzi": "我早上吃两个鸡蛋。",
       "pinyin": "wǒ zǎoshang chī liǎng gè jīdàn",
       "gloss_en": "I eat two eggs in the morning.",
-      "hanzi_trad": "我早上吃兩個雞蛋。"
+      "hanzi_trad": "我早上吃兩個雞蛋。",
+      "pinyin_syllables": "wo3 zao3 shang5 chi1 liang3 ge4 ji1 dan4"
     },
     {
       "_comment": "Expansion: HSK3a — people, places, daily life, and the modifiers that make sentences longer"
@@ -3235,642 +3770,770 @@
     {
       "hanzi": "我要照顾宝宝。",
       "pinyin": "wǒ yào zhàogù bǎobao",
-      "gloss_en": "I'm going to look after the baby."
+      "gloss_en": "I'm going to look after the baby.",
+      "pinyin_syllables": "wo3 yao4 zhao4 gu4 bao3 bao5"
     },
     {
       "hanzi": "奶奶很会照顾孩子。",
       "pinyin": "nǎinai hěn huì zhàogù háizi",
-      "gloss_en": "Nainai is very good with children."
+      "gloss_en": "Nainai is very good with children.",
+      "pinyin_syllables": "nai3 nai5 hen3 hui4 zhao4 gu4 hai2 zi5"
     },
     {
       "hanzi": "谁照顾狗？",
       "pinyin": "shéi zhàogù gǒu?",
-      "gloss_en": "Who's looking after the dog?"
+      "gloss_en": "Who's looking after the dog?",
+      "pinyin_syllables": "shei2 zhao4 gu4 gou3"
     },
     {
       "hanzi": "我们要一起照顾他。",
       "pinyin": "wǒmen yào yìqǐ zhàogù tā",
-      "gloss_en": "We'll look after him together."
+      "gloss_en": "We'll look after him together.",
+      "pinyin_syllables": "wo3 men5 yao4 yi4 qi3 zhao4 gu4 ta1"
     },
     {
       "hanzi": "宝宝一直哭。",
       "pinyin": "bǎobao yìzhí kū",
-      "gloss_en": "The baby's been crying non-stop."
+      "gloss_en": "The baby's been crying non-stop.",
+      "pinyin_syllables": "bao3 bao5 yi4 zhi2 ku1"
     },
     {
       "hanzi": "他一直在睡觉。",
       "pinyin": "tā yìzhí zài shuìjiào",
-      "gloss_en": "He's been sleeping the whole time."
+      "gloss_en": "He's been sleeping the whole time.",
+      "pinyin_syllables": "ta1 yi4 zhi2 zai4 shui4 jiao4"
     },
     {
       "hanzi": "我一直很想去中国。",
       "pinyin": "wǒ yìzhí hěn xiǎng qù Zhōngguó",
-      "gloss_en": "I've always wanted to go to China."
+      "gloss_en": "I've always wanted to go to China.",
+      "pinyin_syllables": "wo3 yi4 zhi2 hen3 xiang3 qu4 zhong1 guo2"
     },
     {
       "hanzi": "他终于睡了。",
       "pinyin": "tā zhōngyú shuì le",
-      "gloss_en": "He's finally asleep."
+      "gloss_en": "He's finally asleep.",
+      "pinyin_syllables": "ta1 zhong1 yu2 shui4 le5"
     },
     {
       "hanzi": "我们终于回家了。",
       "pinyin": "wǒmen zhōngyú huí jiā le",
-      "gloss_en": "We're finally home."
+      "gloss_en": "We're finally home.",
+      "pinyin_syllables": "wo3 men5 zhong1 yu2 hui2 jia1 le5"
     },
     {
       "hanzi": "我先洗澡，然后睡觉。",
       "pinyin": "wǒ xiān xǐzǎo, ránhòu shuìjiào",
-      "gloss_en": "I'll shower first, then sleep."
+      "gloss_en": "I'll shower first, then sleep.",
+      "pinyin_syllables": "wo3 xian1 xi3 zao3 ran2 hou4 shui4 jiao4"
     },
     {
       "hanzi": "先喂宝宝，然后换尿布。",
       "pinyin": "xiān wèi bǎobao, ránhòu huàn niàobù",
-      "gloss_en": "Feed the baby first, then change the nappy."
+      "gloss_en": "Feed the baby first, then change the nappy.",
+      "pinyin_syllables": "xian1 wei4 bao3 bao5 ran2 hou4 huan4 niao4 bu4"
     },
     {
       "hanzi": "他又哭了。",
       "pinyin": "tā yòu kū le",
-      "gloss_en": "He's crying again."
+      "gloss_en": "He's crying again.",
+      "pinyin_syllables": "ta1 you4 ku1 le5"
     },
     {
       "hanzi": "我又累又饿。",
       "pinyin": "wǒ yòu lèi yòu è",
-      "gloss_en": "I'm both tired and hungry."
+      "gloss_en": "I'm both tired and hungry.",
+      "pinyin_syllables": "wo3 you4 lei4 you4 e4"
     },
     {
       "hanzi": "明天再说吧。",
       "pinyin": "míngtiān zài shuō ba",
-      "gloss_en": "Let's talk about it tomorrow."
+      "gloss_en": "Let's talk about it tomorrow.",
+      "pinyin_syllables": "ming2 tian1 zai4 shuo1 ba5"
     },
     {
       "hanzi": "请再说一次。",
       "pinyin": "qǐng zài shuō yí cì",
-      "gloss_en": "Please say that again."
+      "gloss_en": "Please say that again.",
+      "pinyin_syllables": "qing3 zai4 shuo1 yi2 ci4"
     },
     {
       "hanzi": "今天比昨天更热。",
       "pinyin": "jīntiān bǐ zuótiān gèng rè",
-      "gloss_en": "Today's even hotter than yesterday."
+      "gloss_en": "Today's even hotter than yesterday.",
+      "pinyin_syllables": "jin1 tian1 bi3 zuo2 tian1 geng4 re4"
     },
     {
       "hanzi": "这个更好。",
       "pinyin": "zhè ge gèng hǎo",
-      "gloss_en": "This one's better."
+      "gloss_en": "This one's better.",
+      "pinyin_syllables": "zhe4 ge5 geng4 hao3"
     },
     {
       "hanzi": "他比我更累。",
       "pinyin": "tā bǐ wǒ gèng lèi",
-      "gloss_en": "He's even more tired than me."
+      "gloss_en": "He's even more tired than me.",
+      "pinyin_syllables": "ta1 bi3 wo3 geng4 lei4"
     },
     {
       "hanzi": "我忘记了。",
       "pinyin": "wǒ wàngjì le",
-      "gloss_en": "I forgot."
+      "gloss_en": "I forgot.",
+      "pinyin_syllables": "wo3 wang4 ji4 le5"
     },
     {
       "hanzi": "别忘记买牛奶。",
       "pinyin": "bié wàngjì mǎi niúnǎi",
-      "gloss_en": "Don't forget to buy milk."
+      "gloss_en": "Don't forget to buy milk.",
+      "pinyin_syllables": "bie2 wang4 ji4 mai3 niu2 nai3"
     },
     {
       "hanzi": "我忘记他的名字了。",
       "pinyin": "wǒ wàngjì tā de míngzi le",
-      "gloss_en": "I've forgotten his name."
+      "gloss_en": "I've forgotten his name.",
+      "pinyin_syllables": "wo3 wang4 ji4 ta1 de5 ming2 zi5 le5"
     },
     {
       "hanzi": "你记得他吗？",
       "pinyin": "nǐ jìde tā ma?",
-      "gloss_en": "Do you remember him?"
+      "gloss_en": "Do you remember him?",
+      "pinyin_syllables": "ni3 ji4 de5 ta1 ma5"
     },
     {
       "hanzi": "我记得这个地方。",
       "pinyin": "wǒ jìde zhè ge dìfang",
-      "gloss_en": "I remember this place."
+      "gloss_en": "I remember this place.",
+      "pinyin_syllables": "wo3 ji4 de5 zhe4 ge5 di4 fang5"
     },
     {
       "hanzi": "我不记得了。",
       "pinyin": "wǒ bú jìde le",
-      "gloss_en": "I don't remember."
+      "gloss_en": "I don't remember.",
+      "pinyin_syllables": "wo3 bu2 ji4 de5 le5"
     },
     {
       "hanzi": "我很担心他。",
       "pinyin": "wǒ hěn dānxīn tā",
-      "gloss_en": "I'm worried about him."
+      "gloss_en": "I'm worried about him.",
+      "pinyin_syllables": "wo3 hen3 dan1 xin1 ta1"
     },
     {
       "hanzi": "别担心。",
       "pinyin": "bié dānxīn",
-      "gloss_en": "Don't worry."
+      "gloss_en": "Don't worry.",
+      "pinyin_syllables": "bie2 dan1 xin1"
     },
     {
       "hanzi": "妈妈很担心宝宝。",
       "pinyin": "māma hěn dānxīn bǎobao",
-      "gloss_en": "Mum's worried about the baby."
+      "gloss_en": "Mum's worried about the baby.",
+      "pinyin_syllables": "ma1 ma5 hen3 dan1 xin1 bao3 bao5"
     },
     {
       "hanzi": "你为什么着急？",
       "pinyin": "nǐ wèishénme zháojí?",
-      "gloss_en": "Why are you in such a hurry?"
+      "gloss_en": "Why are you in such a hurry?",
+      "pinyin_syllables": "ni3 wei4 shen2 me5 zhao2 ji2"
     },
     {
       "hanzi": "别着急，还有时间。",
       "pinyin": "bié zháojí, hái yǒu shíjiān",
-      "gloss_en": "Don't rush, there's still time."
+      "gloss_en": "Don't rush, there's still time.",
+      "pinyin_syllables": "bie2 zhao2 ji2 hai2 you3 shi2 jian1"
     },
     {
       "hanzi": "宝宝害怕狗。",
       "pinyin": "bǎobao hàipà gǒu",
-      "gloss_en": "The baby's scared of dogs."
+      "gloss_en": "The baby's scared of dogs.",
+      "pinyin_syllables": "bao3 bao5 hai4 pa4 gou3"
     },
     {
       "hanzi": "我不害怕。",
       "pinyin": "wǒ bú hàipà",
-      "gloss_en": "I'm not scared."
+      "gloss_en": "I'm not scared.",
+      "pinyin_syllables": "wo3 bu2 hai4 pa4"
     },
     {
       "hanzi": "他生气了。",
       "pinyin": "tā shēngqì le",
-      "gloss_en": "He's angry."
+      "gloss_en": "He's angry.",
+      "pinyin_syllables": "ta1 sheng1 qi4 le5"
     },
     {
       "hanzi": "你别生气。",
       "pinyin": "nǐ bié shēngqì",
-      "gloss_en": "Don't be angry."
+      "gloss_en": "Don't be angry.",
+      "pinyin_syllables": "ni3 bie2 sheng1 qi4"
     },
     {
       "hanzi": "我很难过。",
       "pinyin": "wǒ hěn nánguò",
-      "gloss_en": "I feel awful."
+      "gloss_en": "I feel awful.",
+      "pinyin_syllables": "wo3 hen3 nan2 guo4"
     },
     {
       "hanzi": "他很满意。",
       "pinyin": "tā hěn mǎnyì",
-      "gloss_en": "He's happy with it."
+      "gloss_en": "He's happy with it.",
+      "pinyin_syllables": "ta1 hen3 man3 yi4"
     },
     {
       "hanzi": "宝宝很健康。",
       "pinyin": "bǎobao hěn jiànkāng",
-      "gloss_en": "The baby's healthy."
+      "gloss_en": "The baby's healthy.",
+      "pinyin_syllables": "bao3 bao5 hen3 jian4 kang1"
     },
     {
       "hanzi": "医生说他很健康。",
       "pinyin": "yīshēng shuō tā hěn jiànkāng",
-      "gloss_en": "The doctor says he's healthy."
+      "gloss_en": "The doctor says he's healthy.",
+      "pinyin_syllables": "yi1 sheng1 shuo1 ta1 hen3 jian4 kang1"
     },
     {
       "hanzi": "多运动对健康好。",
       "pinyin": "duō yùndòng duì jiànkāng hǎo",
-      "gloss_en": "Exercise is good for your health."
+      "gloss_en": "Exercise is good for your health.",
+      "pinyin_syllables": "duo1 yun4 dong4 dui4 jian4 kang1 hao3"
     },
     {
       "hanzi": "这个孩子很聪明。",
       "pinyin": "zhè ge háizi hěn cōngming",
-      "gloss_en": "This child is clever."
+      "gloss_en": "This child is clever.",
+      "pinyin_syllables": "zhe4 ge5 hai2 zi5 hen3 cong1 ming5"
     },
     {
       "hanzi": "我儿子很聪明。",
       "pinyin": "wǒ érzi hěn cōngming",
-      "gloss_en": "My son is clever."
+      "gloss_en": "My son is clever.",
+      "pinyin_syllables": "wo3 er2 zi5 hen3 cong1 ming5"
     },
     {
       "hanzi": "她很认真。",
       "pinyin": "tā hěn rènzhēn",
-      "gloss_en": "She's very conscientious."
+      "gloss_en": "She's very conscientious.",
+      "pinyin_syllables": "ta1 hen3 ren4 zhen1"
     },
     {
       "hanzi": "这个很简单。",
       "pinyin": "zhè ge hěn jiǎndān",
-      "gloss_en": "This is simple."
+      "gloss_en": "This is simple.",
+      "pinyin_syllables": "zhe4 ge5 hen3 jian3 dan1"
     },
     {
       "hanzi": "中文不简单。",
       "pinyin": "Zhōngwén bù jiǎndān",
-      "gloss_en": "Chinese isn't simple."
+      "gloss_en": "Chinese isn't simple.",
+      "pinyin_syllables": "zhong1 wen2 bu4 jian3 dan1"
     },
     {
       "hanzi": "很奇怪。",
       "pinyin": "hěn qíguài",
-      "gloss_en": "That's strange."
+      "gloss_en": "That's strange.",
+      "pinyin_syllables": "hen3 qi2 guai4"
     },
     {
       "hanzi": "他很年轻。",
       "pinyin": "tā hěn niánqīng",
-      "gloss_en": "He's young."
+      "gloss_en": "He's young.",
+      "pinyin_syllables": "ta1 hen3 nian2 qing1"
     },
     {
       "hanzi": "我渴了。",
       "pinyin": "wǒ kě le",
-      "gloss_en": "I'm thirsty."
+      "gloss_en": "I'm thirsty.",
+      "pinyin_syllables": "wo3 ke3 le5"
     },
     {
       "hanzi": "宝宝渴了吗？",
       "pinyin": "bǎobao kě le ma?",
-      "gloss_en": "Is the baby thirsty?"
+      "gloss_en": "Is the baby thirsty?",
+      "pinyin_syllables": "bao3 bao5 ke3 le5 ma5"
     },
     {
       "hanzi": "这个太甜了。",
       "pinyin": "zhè ge tài tián le",
-      "gloss_en": "This is too sweet."
+      "gloss_en": "This is too sweet.",
+      "pinyin_syllables": "zhe4 ge5 tai4 tian2 le5"
     },
     {
       "hanzi": "水果很甜。",
       "pinyin": "shuǐguǒ hěn tián",
-      "gloss_en": "The fruit is sweet."
+      "gloss_en": "The fruit is sweet.",
+      "pinyin_syllables": "shui3 guo3 hen3 tian2"
     },
     {
       "hanzi": "我买了一个蛋糕。",
       "pinyin": "wǒ mǎi le yí ge dàngāo",
-      "gloss_en": "I bought a cake."
+      "gloss_en": "I bought a cake.",
+      "pinyin_syllables": "wo3 mai3 le5 yi2 ge5 dan4 gao1"
     },
     {
       "hanzi": "这个蛋糕很甜。",
       "pinyin": "zhè ge dàngāo hěn tián",
-      "gloss_en": "This cake is sweet."
+      "gloss_en": "This cake is sweet.",
+      "pinyin_syllables": "zhe4 ge5 dan4 gao1 hen3 tian2"
     },
     {
       "hanzi": "我想喝果汁。",
       "pinyin": "wǒ xiǎng hē guǒzhī",
-      "gloss_en": "I'd like some juice."
+      "gloss_en": "I'd like some juice.",
+      "pinyin_syllables": "wo3 xiang3 he1 guo3 zhi1"
     },
     {
       "hanzi": "西瓜很甜。",
       "pinyin": "xīguā hěn tián",
-      "gloss_en": "The watermelon is sweet."
+      "gloss_en": "The watermelon is sweet.",
+      "pinyin_syllables": "xi1 gua1 hen3 tian2"
     },
     {
       "hanzi": "这是给你的礼物。",
       "pinyin": "zhè shì gěi nǐ de lǐwù",
-      "gloss_en": "This is a gift for you."
+      "gloss_en": "This is a gift for you.",
+      "pinyin_syllables": "zhe4 shi4 gei3 ni3 de5 li3 wu4"
     },
     {
       "hanzi": "谢谢你的礼物。",
       "pinyin": "xièxie nǐ de lǐwù",
-      "gloss_en": "Thank you for the gift."
+      "gloss_en": "Thank you for the gift.",
+      "pinyin_syllables": "xie4 xie5 ni3 de5 li3 wu4"
     },
     {
       "hanzi": "我们看照片吧。",
       "pinyin": "wǒmen kàn zhàopiàn ba",
-      "gloss_en": "Let's look at the photos."
+      "gloss_en": "Let's look at the photos.",
+      "pinyin_syllables": "wo3 men5 kan4 zhao4 pian4 ba5"
     },
     {
       "hanzi": "这张照片很漂亮。",
       "pinyin": "zhè zhāng zhàopiàn hěn piàoliang",
-      "gloss_en": "This photo is lovely."
+      "gloss_en": "This photo is lovely.",
+      "pinyin_syllables": "zhe4 zhang1 zhao4 pian4 hen3 piao4 liang5"
     },
     {
       "hanzi": "我的眼镜在哪里？",
       "pinyin": "wǒ de yǎnjìng zài nǎlǐ?",
-      "gloss_en": "Where are my glasses?"
+      "gloss_en": "Where are my glasses?",
+      "pinyin_syllables": "wo3 de5 yan3 jing4 zai4 na3 li3"
     },
     {
       "hanzi": "他的鞋很新。",
       "pinyin": "tā de xié hěn xīn",
-      "gloss_en": "His shoes are new."
+      "gloss_en": "His shoes are new.",
+      "pinyin_syllables": "ta1 de5 xie2 hen3 xin1"
     },
     {
       "hanzi": "请穿鞋。",
       "pinyin": "qǐng chuān xié",
-      "gloss_en": "Put your shoes on."
+      "gloss_en": "Put your shoes on.",
+      "pinyin_syllables": "qing3 chuan1 xie2"
     },
     {
       "hanzi": "宝宝的帽子很可爱。",
       "pinyin": "bǎobao de màozi hěn kě'ài",
-      "gloss_en": "The baby's hat is adorable."
+      "gloss_en": "The baby's hat is adorable.",
+      "pinyin_syllables": "bao3 bao5 de5 mao4 zi5 hen3 ke3 ai4"
     },
     {
       "hanzi": "牛奶在冰箱里。",
       "pinyin": "niúnǎi zài bīngxiāng lǐ",
-      "gloss_en": "The milk's in the fridge."
+      "gloss_en": "The milk's in the fridge.",
+      "pinyin_syllables": "niu2 nai3 zai4 bing1 xiang1 li3"
     },
     {
       "hanzi": "请把菜放在冰箱里。",
       "pinyin": "qǐng bǎ cài fàng zài bīngxiāng lǐ",
-      "gloss_en": "Please put the food in the fridge."
+      "gloss_en": "Please put the food in the fridge.",
+      "pinyin_syllables": "qing3 ba3 cai4 fang4 zai4 bing1 xiang1 li3"
     },
     {
       "hanzi": "请开空调。",
       "pinyin": "qǐng kāi kōngtiáo",
-      "gloss_en": "Please turn on the air conditioning."
+      "gloss_en": "Please turn on the air conditioning.",
+      "pinyin_syllables": "qing3 kai1 kong1 tiao2"
     },
     {
       "hanzi": "洗手间在哪里？",
       "pinyin": "xǐshǒujiān zài nǎlǐ?",
-      "gloss_en": "Where's the bathroom?"
+      "gloss_en": "Where's the bathroom?",
+      "pinyin_syllables": "xi3 shou3 jian1 zai4 na3 li3"
     },
     {
       "hanzi": "他在客厅玩。",
       "pinyin": "tā zài kètīng wán",
-      "gloss_en": "He's playing in the living room."
+      "gloss_en": "He's playing in the living room.",
+      "pinyin_syllables": "ta1 zai4 ke4 ting1 wan2"
     },
     {
       "hanzi": "我们的邻居很好。",
       "pinyin": "wǒmen de línjū hěn hǎo",
-      "gloss_en": "Our neighbours are nice."
+      "gloss_en": "Our neighbours are nice.",
+      "pinyin_syllables": "wo3 men5 de5 lin2 ju1 hen3 hao3"
     },
     {
       "hanzi": "今天有客人来。",
       "pinyin": "jīntiān yǒu kèrén lái",
-      "gloss_en": "We have guests coming today."
+      "gloss_en": "We have guests coming today.",
+      "pinyin_syllables": "jin1 tian1 you3 ke4 ren2 lai2"
     },
     {
       "hanzi": "我要去银行。",
       "pinyin": "wǒ yào qù yínháng",
-      "gloss_en": "I need to go to the bank."
+      "gloss_en": "I need to go to the bank.",
+      "pinyin_syllables": "wo3 yao4 qu4 yin2 hang2"
     },
     {
       "hanzi": "银行在哪里？",
       "pinyin": "yínháng zài nǎlǐ?",
-      "gloss_en": "Where's the bank?"
+      "gloss_en": "Where's the bank?",
+      "pinyin_syllables": "yin2 hang2 zai4 na3 li3"
     },
     {
       "hanzi": "我坐地铁上班。",
       "pinyin": "wǒ zuò dìtiě shàngbān",
-      "gloss_en": "I take the subway to work."
+      "gloss_en": "I take the subway to work.",
+      "pinyin_syllables": "wo3 zuo4 di4 tie3 shang4 ban1"
     },
     {
       "hanzi": "我今天有会议。",
       "pinyin": "wǒ jīntiān yǒu huìyì",
-      "gloss_en": "I have a meeting today."
+      "gloss_en": "I have a meeting today.",
+      "pinyin_syllables": "wo3 jin1 tian1 you3 hui4 yi4"
     },
     {
       "hanzi": "我在办公室。",
       "pinyin": "wǒ zài bàngōngshì",
-      "gloss_en": "I'm at the office."
+      "gloss_en": "I'm at the office.",
+      "pinyin_syllables": "wo3 zai4 ban4 gong1 shi4"
     },
     {
       "hanzi": "这是一个好机会。",
       "pinyin": "zhè shì yí ge hǎo jīhuì",
-      "gloss_en": "This is a good opportunity."
+      "gloss_en": "This is a good opportunity.",
+      "pinyin_syllables": "zhe4 shi4 yi2 ge5 hao3 ji1 hui4"
     },
     {
       "hanzi": "你可以选择。",
       "pinyin": "nǐ kěyǐ xuǎnzé",
-      "gloss_en": "You can choose."
+      "gloss_en": "You can choose.",
+      "pinyin_syllables": "ni3 ke3 yi3 xuan3 ze2"
     },
     {
       "hanzi": "我决定了。",
       "pinyin": "wǒ juédìng le",
-      "gloss_en": "I've decided."
+      "gloss_en": "I've decided.",
+      "pinyin_syllables": "wo3 jue2 ding4 le5"
     },
     {
       "hanzi": "我们决定住在这里。",
       "pinyin": "wǒmen juédìng zhù zài zhè lǐ",
-      "gloss_en": "We've decided to live here."
+      "gloss_en": "We've decided to live here.",
+      "pinyin_syllables": "wo3 men5 jue2 ding4 zhu4 zai4 zhe4 li3"
     },
     {
       "hanzi": "我同意。",
       "pinyin": "wǒ tóngyì",
-      "gloss_en": "I agree."
+      "gloss_en": "I agree.",
+      "pinyin_syllables": "wo3 tong2 yi4"
     },
     {
       "hanzi": "我不同意。",
       "pinyin": "wǒ bù tóngyì",
-      "gloss_en": "I don't agree."
+      "gloss_en": "I don't agree.",
+      "pinyin_syllables": "wo3 bu4 tong2 yi4"
     },
     {
       "hanzi": "你打算做什么？",
       "pinyin": "nǐ dǎsuàn zuò shénme?",
-      "gloss_en": "What are you planning to do?"
+      "gloss_en": "What are you planning to do?",
+      "pinyin_syllables": "ni3 da3 suan4 zuo4 shen2 me5"
     },
     {
       "hanzi": "这是我的习惯。",
       "pinyin": "zhè shì wǒ de xíguàn",
-      "gloss_en": "It's a habit of mine."
+      "gloss_en": "It's a habit of mine.",
+      "pinyin_syllables": "zhe4 shi4 wo3 de5 xi2 guan4"
     },
     {
       "hanzi": "我每天锻炼。",
       "pinyin": "wǒ měitiān duànliàn",
-      "gloss_en": "I exercise every day."
+      "gloss_en": "I exercise every day.",
+      "pinyin_syllables": "wo3 mei3 tian1 duan4 lian4"
     },
     {
       "hanzi": "我们去散步吧。",
       "pinyin": "wǒmen qù sànbù ba",
-      "gloss_en": "Let's go for a walk."
+      "gloss_en": "Let's go for a walk.",
+      "pinyin_syllables": "wo3 men5 qu4 san4 bu4 ba5"
     },
     {
       "hanzi": "他喜欢游泳。",
       "pinyin": "tā xǐhuan yóuyǒng",
-      "gloss_en": "He likes swimming."
+      "gloss_en": "He likes swimming.",
+      "pinyin_syllables": "ta1 xi3 huan5 you2 yong3"
     },
     {
       "hanzi": "宝宝喜欢唱歌。",
       "pinyin": "bǎobao xǐhuan chànggē",
-      "gloss_en": "The baby likes singing."
+      "gloss_en": "The baby likes singing.",
+      "pinyin_syllables": "bao3 bao5 xi3 huan5 chang4 ge1"
     },
     {
       "hanzi": "我要打扫房间。",
       "pinyin": "wǒ yào dǎsǎo fángjiān",
-      "gloss_en": "I need to clean the room."
+      "gloss_en": "I need to clean the room.",
+      "pinyin_syllables": "wo3 yao4 da3 sao3 fang2 jian1"
     },
     {
       "hanzi": "请帮我搬桌子。",
       "pinyin": "qǐng bāng wǒ bān zhuōzi",
-      "gloss_en": "Please help me move the table."
+      "gloss_en": "Please help me move the table.",
+      "pinyin_syllables": "qing3 bang1 wo3 ban1 zhuo1 zi5"
     },
     {
       "hanzi": "我可以借你的书吗？",
       "pinyin": "wǒ kěyǐ jiè nǐ de shū ma?",
-      "gloss_en": "May I borrow your book?"
+      "gloss_en": "May I borrow your book?",
+      "pinyin_syllables": "wo3 ke3 yi3 jie4 ni3 de5 shu1 ma5"
     },
     {
       "hanzi": "请带宝宝出去。",
       "pinyin": "qǐng dài bǎobao chūqù",
-      "gloss_en": "Please take the baby outside."
+      "gloss_en": "Please take the baby outside.",
+      "pinyin_syllables": "qing3 dai4 bao3 bao5 chu1 qu4"
     },
     {
       "hanzi": "我去接他。",
       "pinyin": "wǒ qù jiē tā",
-      "gloss_en": "I'll go pick him up."
+      "gloss_en": "I'll go pick him up.",
+      "pinyin_syllables": "wo3 qu4 jie1 ta1"
     },
     {
       "hanzi": "请接电话。",
       "pinyin": "qǐng jiē diànhuà",
-      "gloss_en": "Please answer the phone."
+      "gloss_en": "Please answer the phone.",
+      "pinyin_syllables": "qing3 jie1 dian4 hua4"
     },
     {
       "hanzi": "我今天遇到他了。",
       "pinyin": "wǒ jīntiān yùdào tā le",
-      "gloss_en": "I ran into him today."
+      "gloss_en": "I ran into him today.",
+      "pinyin_syllables": "wo3 jin1 tian1 yu4 dao4 ta1 le5"
     },
     {
       "hanzi": "我发现了一个问题。",
       "pinyin": "wǒ fāxiàn le yí ge wèntí",
-      "gloss_en": "I've found a problem."
+      "gloss_en": "I've found a problem.",
+      "pinyin_syllables": "wo3 fa1 xian4 le5 yi2 ge5 wen4 ti2"
     },
     {
       "hanzi": "我相信你。",
       "pinyin": "wǒ xiāngxìn nǐ",
-      "gloss_en": "I believe you."
+      "gloss_en": "I believe you.",
+      "pinyin_syllables": "wo3 xiang1 xin4 ni3"
     },
     {
       "hanzi": "我们要解决这个问题。",
       "pinyin": "wǒmen yào jiějué zhè ge wèntí",
-      "gloss_en": "We need to solve this problem."
+      "gloss_en": "We need to solve this problem.",
+      "pinyin_syllables": "wo3 men5 yao4 jie3 jue2 zhe4 ge5 wen4 ti2"
     },
     {
       "hanzi": "我完成了。",
       "pinyin": "wǒ wánchéng le",
-      "gloss_en": "I've finished it."
+      "gloss_en": "I've finished it.",
+      "pinyin_syllables": "wo3 wan2 cheng2 le5"
     },
     {
       "hanzi": "请继续。",
       "pinyin": "qǐng jìxù",
-      "gloss_en": "Please carry on."
+      "gloss_en": "Please carry on.",
+      "pinyin_syllables": "qing3 ji4 xu4"
     },
     {
       "hanzi": "会议结束了。",
       "pinyin": "huìyì jiéshù le",
-      "gloss_en": "The meeting's over."
+      "gloss_en": "The meeting's over.",
+      "pinyin_syllables": "hui4 yi4 jie2 shu4 le5"
     },
     {
       "hanzi": "我想参加。",
       "pinyin": "wǒ xiǎng cānjiā",
-      "gloss_en": "I'd like to take part."
+      "gloss_en": "I'd like to take part.",
+      "pinyin_syllables": "wo3 xiang3 can1 jia1"
     },
     {
       "hanzi": "她教中文。",
       "pinyin": "tā jiāo Zhōngwén",
-      "gloss_en": "She teaches Chinese."
+      "gloss_en": "She teaches Chinese.",
+      "pinyin_syllables": "ta1 jiao1 zhong1 wen2"
     },
     {
       "hanzi": "请教我。",
       "pinyin": "qǐng jiāo wǒ",
-      "gloss_en": "Please teach me."
+      "gloss_en": "Please teach me.",
+      "pinyin_syllables": "qing3 jiao1 wo3"
     },
     {
       "hanzi": "他没有回答。",
       "pinyin": "tā méiyǒu huídá",
-      "gloss_en": "He didn't answer."
+      "gloss_en": "He didn't answer.",
+      "pinyin_syllables": "ta1 mei2 you3 hui2 da2"
     },
     {
       "hanzi": "我感觉很好。",
       "pinyin": "wǒ gǎnjué hěn hǎo",
-      "gloss_en": "I feel good."
+      "gloss_en": "I feel good.",
+      "pinyin_syllables": "wo3 gan3 jue2 hen3 hao3"
     },
     {
       "hanzi": "你感觉怎么样？",
       "pinyin": "nǐ gǎnjué zěnmeyàng?",
-      "gloss_en": "How do you feel?"
+      "gloss_en": "How do you feel?",
+      "pinyin_syllables": "ni3 gan3 jue2 zen3 me5 yang4"
     },
     {
       "hanzi": "这里很热闹。",
       "pinyin": "zhè lǐ hěn rènao",
-      "gloss_en": "It's lively here."
+      "gloss_en": "It's lively here.",
+      "pinyin_syllables": "zhe4 li3 hen3 re4 nao5"
     },
     {
       "hanzi": "这里很方便。",
       "pinyin": "zhè lǐ hěn fāngbiàn",
-      "gloss_en": "It's convenient here."
+      "gloss_en": "It's convenient here.",
+      "pinyin_syllables": "zhe4 li3 hen3 fang1 bian4"
     },
     {
       "hanzi": "我听不清楚。",
       "pinyin": "wǒ tīng bù qīngchu",
-      "gloss_en": "I can't hear clearly."
+      "gloss_en": "I can't hear clearly.",
+      "pinyin_syllables": "wo3 ting1 bu4 qing1 chu5"
     },
     {
       "hanzi": "请说清楚。",
       "pinyin": "qǐng shuō qīngchu",
-      "gloss_en": "Please speak clearly."
+      "gloss_en": "Please speak clearly.",
+      "pinyin_syllables": "qing3 shuo1 qing1 chu5"
     },
     {
       "hanzi": "我特别喜欢这个。",
       "pinyin": "wǒ tèbié xǐhuan zhè ge",
-      "gloss_en": "I especially like this one."
+      "gloss_en": "I especially like this one.",
+      "pinyin_syllables": "wo3 te4 bie2 xi3 huan5 zhe4 ge5"
     },
     {
       "hanzi": "你一定要来。",
       "pinyin": "nǐ yídìng yào lái",
-      "gloss_en": "You must come."
+      "gloss_en": "You must come.",
+      "pinyin_syllables": "ni3 yi2 ding4 yao4 lai2"
     },
     {
       "hanzi": "我必须走了。",
       "pinyin": "wǒ bìxū zǒu le",
-      "gloss_en": "I have to go."
+      "gloss_en": "I have to go.",
+      "pinyin_syllables": "wo3 bi4 xu1 zou3 le5"
     },
     {
       "hanzi": "他可能来。",
       "pinyin": "tā kěnéng lái",
-      "gloss_en": "He might come."
+      "gloss_en": "He might come.",
+      "pinyin_syllables": "ta1 ke3 neng2 lai2"
     },
     {
       "hanzi": "当然可以。",
       "pinyin": "dāngrán kěyǐ",
-      "gloss_en": "Of course."
+      "gloss_en": "Of course.",
+      "pinyin_syllables": "dang1 ran2 ke3 yi3"
     },
     {
       "hanzi": "其实我不知道。",
       "pinyin": "qíshí wǒ bù zhīdào",
-      "gloss_en": "Actually, I don't know."
+      "gloss_en": "Actually, I don't know.",
+      "pinyin_syllables": "qi2 shi2 wo3 bu4 zhi1 dao4"
     },
     {
       "hanzi": "他总是很忙。",
       "pinyin": "tā zǒngshì hěn máng",
-      "gloss_en": "He's always busy."
+      "gloss_en": "He's always busy.",
+      "pinyin_syllables": "ta1 zong3 shi4 hen3 mang2"
     },
     {
       "hanzi": "我经常想你。",
       "pinyin": "wǒ jīngcháng xiǎng nǐ",
-      "gloss_en": "I think of you often."
+      "gloss_en": "I think of you often.",
+      "pinyin_syllables": "wo3 jing1 chang2 xiang3 ni3"
     },
     {
       "hanzi": "他刚才走了。",
       "pinyin": "tā gāngcái zǒu le",
-      "gloss_en": "He left just now."
+      "gloss_en": "He left just now.",
+      "pinyin_syllables": "ta1 gang1 cai2 zou3 le5"
     },
     {
       "hanzi": "差不多了。",
       "pinyin": "chàbuduō le",
-      "gloss_en": "That's about right."
+      "gloss_en": "That's about right.",
+      "pinyin_syllables": "cha4 bu5 duo1 le5"
     },
     {
       "hanzi": "他们差不多一样。",
       "pinyin": "tāmen chàbuduō yíyàng",
-      "gloss_en": "They're about the same."
+      "gloss_en": "They're about the same.",
+      "pinyin_syllables": "ta1 men5 cha4 bu5 duo1 yi2 yang4"
     },
     {
       "hanzi": "虽然很累，但是很高兴。",
       "pinyin": "suīrán hěn lèi, dànshì hěn gāoxìng",
-      "gloss_en": "Tired, but happy."
+      "gloss_en": "Tired, but happy.",
+      "pinyin_syllables": "sui1 ran2 hen3 lei4 dan4 shi4 hen3 gao1 xing4"
     },
     {
       "hanzi": "还有其他的吗？",
       "pinyin": "hái yǒu qítā de ma?",
-      "gloss_en": "Are there any others?"
+      "gloss_en": "Are there any others?",
+      "pinyin_syllables": "hai2 you3 qi2 ta1 de5 ma5"
     },
     {
       "hanzi": "这个城市很大。",
       "pinyin": "zhè ge chéngshì hěn dà",
-      "gloss_en": "This city is big."
+      "gloss_en": "This city is big.",
+      "pinyin_syllables": "zhe4 ge5 cheng2 shi4 hen3 da4"
     },
     {
       "hanzi": "我看新闻。",
       "pinyin": "wǒ kàn xīnwén",
-      "gloss_en": "I watch the news."
+      "gloss_en": "I watch the news.",
+      "pinyin_syllables": "wo3 kan4 xin1 wen2"
     },
     {
       "hanzi": "我们的关系很好。",
       "pinyin": "wǒmen de guānxi hěn hǎo",
-      "gloss_en": "We get on well."
+      "gloss_en": "We get on well.",
+      "pinyin_syllables": "wo3 men5 de5 guan1 xi5 hen3 hao3"
     },
     {
       "hanzi": "这里的环境很好。",
       "pinyin": "zhè lǐ de huánjìng hěn hǎo",
-      "gloss_en": "The surroundings here are nice."
+      "gloss_en": "The surroundings here are nice.",
+      "pinyin_syllables": "zhe4 li3 de5 huan2 jing4 hen3 hao3"
     },
     {
       "hanzi": "我想去旅游。",
       "pinyin": "wǒ xiǎng qù lǚyóu",
-      "gloss_en": "I'd like to travel."
+      "gloss_en": "I'd like to travel.",
+      "pinyin_syllables": "wo3 xiang3 qu4 lv3 you2"
     },
     {
       "hanzi": "他住在三楼。",
       "pinyin": "tā zhù zài sān lóu",
-      "gloss_en": "He lives on the third floor."
+      "gloss_en": "He lives on the third floor.",
+      "pinyin_syllables": "ta1 zhu4 zai4 san1 lou2"
     },
     {
       "hanzi": "我需要一张地图。",
       "pinyin": "wǒ xūyào yì zhāng dìtú",
-      "gloss_en": "I need a map."
+      "gloss_en": "I need a map.",
+      "pinyin_syllables": "wo3 xu1 yao4 yi4 zhang1 di4 tu2"
     },
     {
       "_comment": "Expansion: HSK3b — the standalone words the first batch assumed, plus more level 3"
@@ -3878,362 +4541,434 @@
     {
       "hanzi": "我终于找到了。",
       "pinyin": "wǒ zhōngyú zhǎo dào le",
-      "gloss_en": "I finally found it."
+      "gloss_en": "I finally found it.",
+      "pinyin_syllables": "wo3 zhong1 yu2 zhao3 dao4 le5"
     },
     {
       "hanzi": "我们先吃饭，然后出去。",
       "pinyin": "wǒmen xiān chī fàn, ránhòu chūqù",
-      "gloss_en": "Let's eat first, then go out."
+      "gloss_en": "Let's eat first, then go out.",
+      "pinyin_syllables": "wo3 men5 xian1 chi1 fan4 ran2 hou4 chu1 qu4"
     },
     {
       "hanzi": "我打算学中文。",
       "pinyin": "wǒ dǎsuàn xué Zhōngwén",
-      "gloss_en": "I plan to learn Chinese."
+      "gloss_en": "I plan to learn Chinese.",
+      "pinyin_syllables": "wo3 da3 suan4 xue2 zhong1 wen2"
     },
     {
       "hanzi": "我学中文。",
       "pinyin": "wǒ xué Zhōngwén",
-      "gloss_en": "I'm learning Chinese."
+      "gloss_en": "I'm learning Chinese.",
+      "pinyin_syllables": "wo3 xue2 zhong1 wen2"
     },
     {
       "hanzi": "吃饭了。",
       "pinyin": "chī fàn le",
-      "gloss_en": "Dinner's ready."
+      "gloss_en": "Dinner's ready.",
+      "pinyin_syllables": "chi1 fan4 le5"
     },
     {
       "hanzi": "他到了吗？",
       "pinyin": "tā dào le ma?",
-      "gloss_en": "Has he arrived?"
+      "gloss_en": "Has he arrived?",
+      "pinyin_syllables": "ta1 dao4 le5 ma5"
     },
     {
       "hanzi": "我到家了。",
       "pinyin": "wǒ dào jiā le",
-      "gloss_en": "I'm home."
+      "gloss_en": "I'm home.",
+      "pinyin_syllables": "wo3 dao4 jia1 le5"
     },
     {
       "hanzi": "宝宝在我旁边。",
       "pinyin": "bǎobao zài wǒ pángbiān",
-      "gloss_en": "The baby's next to me."
+      "gloss_en": "The baby's next to me.",
+      "pinyin_syllables": "bao3 bao5 zai4 wo3 pang2 bian1"
     },
     {
       "hanzi": "狗在床旁边。",
       "pinyin": "gǒu zài chuáng pángbiān",
-      "gloss_en": "The dog's beside the bed."
+      "gloss_en": "The dog's beside the bed.",
+      "pinyin_syllables": "gou3 zai4 chuang2 pang2 bian1"
     },
     {
       "hanzi": "超市在附近。",
       "pinyin": "chāoshì zài fùjìn",
-      "gloss_en": "The supermarket's nearby."
+      "gloss_en": "The supermarket's nearby.",
+      "pinyin_syllables": "chao1 shi4 zai4 fu4 jin4"
     },
     {
       "hanzi": "医院在对面。",
       "pinyin": "yīyuàn zài duìmiàn",
-      "gloss_en": "The hospital's opposite."
+      "gloss_en": "The hospital's opposite.",
+      "pinyin_syllables": "yi1 yuan4 zai4 dui4 mian4"
     },
     {
       "hanzi": "学校很近。",
       "pinyin": "xuéxiào hěn jìn",
-      "gloss_en": "The school is close."
+      "gloss_en": "The school is close.",
+      "pinyin_syllables": "xue2 xiao4 hen3 jin4"
     },
     {
       "hanzi": "机场很远。",
       "pinyin": "jīchǎng hěn yuǎn",
-      "gloss_en": "The airport is far."
+      "gloss_en": "The airport is far.",
+      "pinyin_syllables": "ji1 chang3 hen3 yuan3"
     },
     {
       "hanzi": "他坐在中间。",
       "pinyin": "tā zuò zài zhōngjiān",
-      "gloss_en": "He's sitting in the middle."
+      "gloss_en": "He's sitting in the middle.",
+      "pinyin_syllables": "ta1 zuo4 zai4 zhong1 jian1"
     },
     {
       "hanzi": "外面在下雪。",
       "pinyin": "wàimiàn zài xiàxuě",
-      "gloss_en": "It's snowing outside."
+      "gloss_en": "It's snowing outside.",
+      "pinyin_syllables": "wai4 mian4 zai4 xia4 xue3"
     },
     {
       "hanzi": "今天刮风。",
       "pinyin": "jīntiān guāfēng",
-      "gloss_en": "It's windy today."
+      "gloss_en": "It's windy today.",
+      "pinyin_syllables": "jin1 tian1 gua1 feng1"
     },
     {
       "hanzi": "今天天气很晴。",
       "pinyin": "jīntiān tiānqì hěn qíng",
-      "gloss_en": "It's clear today."
+      "gloss_en": "It's clear today.",
+      "pinyin_syllables": "jin1 tian1 tian1 qi4 hen3 qing2"
     },
     {
       "hanzi": "我们家有一只猫。",
       "pinyin": "wǒmen jiā yǒu yì zhī māo",
-      "gloss_en": "We have a cat."
+      "gloss_en": "We have a cat.",
+      "pinyin_syllables": "wo3 men5 jia1 you3 yi4 zhi1 mao1"
     },
     {
       "hanzi": "宝宝喜欢动物。",
       "pinyin": "bǎobao xǐhuan dòngwù",
-      "gloss_en": "The baby likes animals."
+      "gloss_en": "The baby likes animals.",
+      "pinyin_syllables": "bao3 bao5 xi3 huan5 dong4 wu4"
     },
     {
       "hanzi": "外面有鸟。",
       "pinyin": "wàimiàn yǒu niǎo",
-      "gloss_en": "There are birds outside."
+      "gloss_en": "There are birds outside.",
+      "pinyin_syllables": "wai4 mian4 you3 niao3"
     },
     {
       "hanzi": "公园里有很多树。",
       "pinyin": "gōngyuán lǐ yǒu hěn duō shù",
-      "gloss_en": "There are lots of trees in the park."
+      "gloss_en": "There are lots of trees in the park.",
+      "pinyin_syllables": "gong1 yuan2 li3 you3 hen3 duo1 shu4"
     },
     {
       "hanzi": "这些花很漂亮。",
       "pinyin": "zhè xiē huā hěn piàoliang",
-      "gloss_en": "These flowers are lovely."
+      "gloss_en": "These flowers are lovely.",
+      "pinyin_syllables": "zhe4 xie1 hua1 hen3 piao4 liang5"
     },
     {
       "hanzi": "他的声音很好听。",
       "pinyin": "tā de shēngyīn hěn hǎotīng",
-      "gloss_en": "His voice is nice."
+      "gloss_en": "His voice is nice.",
+      "pinyin_syllables": "ta1 de5 sheng1 yin1 hen3 hao3 ting1"
     },
     {
       "hanzi": "宝宝的声音很大。",
       "pinyin": "bǎobao de shēngyīn hěn dà",
-      "gloss_en": "The baby is loud."
+      "gloss_en": "The baby is loud.",
+      "pinyin_syllables": "bao3 bao5 de5 sheng1 yin1 hen3 da4"
     },
     {
       "hanzi": "你喜欢什么颜色？",
       "pinyin": "nǐ xǐhuan shénme yánsè?",
-      "gloss_en": "What colour do you like?"
+      "gloss_en": "What colour do you like?",
+      "pinyin_syllables": "ni3 xi3 huan5 shen2 me5 yan2 se4"
     },
     {
       "hanzi": "这件衣服是红的。",
       "pinyin": "zhè jiàn yīfu shì hóng de",
-      "gloss_en": "This piece of clothing is red."
+      "gloss_en": "This piece of clothing is red.",
+      "pinyin_syllables": "zhe4 jian4 yi1 fu5 shi4 hong2 de5"
     },
     {
       "hanzi": "他的车是黑的。",
       "pinyin": "tā de chē shì hēi de",
-      "gloss_en": "His car is black."
+      "gloss_en": "His car is black.",
+      "pinyin_syllables": "ta1 de5 che1 shi4 hei1 de5"
     },
     {
       "hanzi": "这个太重了。",
       "pinyin": "zhè ge tài zhòng le",
-      "gloss_en": "This is too heavy."
+      "gloss_en": "This is too heavy.",
+      "pinyin_syllables": "zhe4 ge5 tai4 zhong4 le5"
     },
     {
       "hanzi": "宝宝很轻。",
       "pinyin": "bǎobao hěn qīng",
-      "gloss_en": "The baby is light."
+      "gloss_en": "The baby is light.",
+      "pinyin_syllables": "bao3 bao5 hen3 qing1"
     },
     {
       "hanzi": "我饱了。",
       "pinyin": "wǒ bǎo le",
-      "gloss_en": "I'm full."
+      "gloss_en": "I'm full.",
+      "pinyin_syllables": "wo3 bao3 le5"
     },
     {
       "hanzi": "他的手很脏。",
       "pinyin": "tā de shǒu hěn zāng",
-      "gloss_en": "His hands are dirty."
+      "gloss_en": "His hands are dirty.",
+      "pinyin_syllables": "ta1 de5 shou3 hen3 zang1"
     },
     {
       "hanzi": "尿布湿了。",
       "pinyin": "niàobù shī le",
-      "gloss_en": "The nappy's wet."
+      "gloss_en": "The nappy's wet.",
+      "pinyin_syllables": "niao4 bu4 shi1 le5"
     },
     {
       "hanzi": "请擦桌子。",
       "pinyin": "qǐng cā zhuōzi",
-      "gloss_en": "Please wipe the table."
+      "gloss_en": "Please wipe the table.",
+      "pinyin_syllables": "qing3 ca1 zhuo1 zi5"
     },
     {
       "hanzi": "请刷牙。",
       "pinyin": "qǐng shuāyá",
-      "gloss_en": "Brush your teeth."
+      "gloss_en": "Brush your teeth.",
+      "pinyin_syllables": "qing3 shua1 ya2"
     },
     {
       "hanzi": "洗脸吧。",
       "pinyin": "xǐ liǎn ba",
-      "gloss_en": "Wash your face."
+      "gloss_en": "Wash your face.",
+      "pinyin_syllables": "xi3 lian3 ba5"
     },
     {
       "hanzi": "宝宝的眼睛很大。",
       "pinyin": "bǎobao de yǎnjing hěn dà",
-      "gloss_en": "The baby has big eyes."
+      "gloss_en": "The baby has big eyes.",
+      "pinyin_syllables": "bao3 bao5 de5 yan3 jing5 hen3 da4"
     },
     {
       "hanzi": "他的脚很小。",
       "pinyin": "tā de jiǎo hěn xiǎo",
-      "gloss_en": "His feet are tiny."
+      "gloss_en": "His feet are tiny.",
+      "pinyin_syllables": "ta1 de5 jiao3 hen3 xiao3"
     },
     {
       "hanzi": "我的身体很好。",
       "pinyin": "wǒ de shēntǐ hěn hǎo",
-      "gloss_en": "I'm in good health."
+      "gloss_en": "I'm in good health.",
+      "pinyin_syllables": "wo3 de5 shen1 ti3 hen3 hao3"
     },
     {
       "hanzi": "他是我的同事。",
       "pinyin": "tā shì wǒ de tóngshì",
-      "gloss_en": "He's my colleague."
+      "gloss_en": "He's my colleague.",
+      "pinyin_syllables": "ta1 shi4 wo3 de5 tong2 shi4"
     },
     {
       "hanzi": "她是我的同学。",
       "pinyin": "tā shì wǒ de tóngxué",
-      "gloss_en": "She's my classmate."
+      "gloss_en": "She's my classmate.",
+      "pinyin_syllables": "ta1 shi4 wo3 de5 tong2 xue2"
     },
     {
       "hanzi": "我的经理很忙。",
       "pinyin": "wǒ de jīnglǐ hěn máng",
-      "gloss_en": "My manager is busy."
+      "gloss_en": "My manager is busy.",
+      "pinyin_syllables": "wo3 de5 jing1 li3 hen3 mang2"
     },
     {
       "hanzi": "护士在医院工作。",
       "pinyin": "hùshi zài yīyuàn gōngzuò",
-      "gloss_en": "Nurses work at the hospital."
+      "gloss_en": "Nurses work at the hospital.",
+      "pinyin_syllables": "hu4 shi5 zai4 yi1 yuan4 gong1 zuo4"
     },
     {
       "hanzi": "请给我一本词典。",
       "pinyin": "qǐng gěi wǒ yì běn cídiǎn",
-      "gloss_en": "Please give me a dictionary."
+      "gloss_en": "Please give me a dictionary.",
+      "pinyin_syllables": "qing3 gei3 wo3 yi4 ben3 ci2 dian3"
     },
     {
       "hanzi": "我要做作业。",
       "pinyin": "wǒ yào zuò zuòyè",
-      "gloss_en": "I need to do homework."
+      "gloss_en": "I need to do homework.",
+      "pinyin_syllables": "wo3 yao4 zuo4 zuo4 ye4"
     },
     {
       "hanzi": "我明天有考试。",
       "pinyin": "wǒ míngtiān yǒu kǎoshì",
-      "gloss_en": "I have an exam tomorrow."
+      "gloss_en": "I have an exam tomorrow.",
+      "pinyin_syllables": "wo3 ming2 tian1 you3 kao3 shi4"
     },
     {
       "hanzi": "我很努力。",
       "pinyin": "wǒ hěn nǔlì",
-      "gloss_en": "I'm working hard."
+      "gloss_en": "I'm working hard.",
+      "pinyin_syllables": "wo3 hen3 nu3 li4"
     },
     {
       "hanzi": "请帮忙。",
       "pinyin": "qǐng bāngmáng",
-      "gloss_en": "Please help."
+      "gloss_en": "Please help.",
+      "pinyin_syllables": "qing3 bang1 mang2"
     },
     {
       "hanzi": "谢谢你的帮忙。",
       "pinyin": "xièxie nǐ de bāngmáng",
-      "gloss_en": "Thanks for your help."
+      "gloss_en": "Thanks for your help.",
+      "pinyin_syllables": "xie4 xie5 ni3 de5 bang1 mang2"
     },
     {
       "hanzi": "他很关心宝宝。",
       "pinyin": "tā hěn guānxīn bǎobao",
-      "gloss_en": "He cares a lot about the baby."
+      "gloss_en": "He cares a lot about the baby.",
+      "pinyin_syllables": "ta1 hen3 guan1 xin1 bao3 bao5"
     },
     {
       "hanzi": "我爱你。",
       "pinyin": "wǒ ài nǐ",
-      "gloss_en": "I love you."
+      "gloss_en": "I love you.",
+      "pinyin_syllables": "wo3 ai4 ni3"
     },
     {
       "hanzi": "我爱我的家。",
       "pinyin": "wǒ ài wǒ de jiā",
-      "gloss_en": "I love my family."
+      "gloss_en": "I love my family.",
+      "pinyin_syllables": "wo3 ai4 wo3 de5 jia1"
     },
     {
       "hanzi": "我们结婚了。",
       "pinyin": "wǒmen jiéhūn le",
-      "gloss_en": "We're married."
+      "gloss_en": "We're married.",
+      "pinyin_syllables": "wo3 men5 jie2 hun1 le5"
     },
     {
       "hanzi": "生活很好。",
       "pinyin": "shēnghuó hěn hǎo",
-      "gloss_en": "Life is good."
+      "gloss_en": "Life is good.",
+      "pinyin_syllables": "sheng1 huo2 hen3 hao3"
     },
     {
       "hanzi": "这是什么意思？",
       "pinyin": "zhè shì shénme yìsi?",
-      "gloss_en": "What does this mean?"
+      "gloss_en": "What does this mean?",
+      "pinyin_syllables": "zhe4 shi4 shen2 me5 yi4 si5"
     },
     {
       "hanzi": "很有意思。",
       "pinyin": "hěn yǒuyìsi",
-      "gloss_en": "That's interesting."
+      "gloss_en": "That's interesting.",
+      "pinyin_syllables": "hen3 you3 yi4 si5"
     },
     {
       "hanzi": "这个菜很好吃。",
       "pinyin": "zhè ge cài hěn hǎochī",
-      "gloss_en": "This dish is tasty."
+      "gloss_en": "This dish is tasty.",
+      "pinyin_syllables": "zhe4 ge5 cai4 hen3 hao3 chi1"
     },
     {
       "hanzi": "这个节目很好看。",
       "pinyin": "zhè ge jiémù hěn hǎokàn",
-      "gloss_en": "This programme is good."
+      "gloss_en": "This programme is good.",
+      "pinyin_syllables": "zhe4 ge5 jie2 mu4 hen3 hao3 kan4"
     },
     {
       "hanzi": "我给宝宝讲故事。",
       "pinyin": "wǒ gěi bǎobao jiǎng gùshi",
-      "gloss_en": "I tell the baby a story."
+      "gloss_en": "I tell the baby a story.",
+      "pinyin_syllables": "wo3 gei3 bao3 bao5 jiang3 gu4 shi5"
     },
     {
       "hanzi": "他骑自行车。",
       "pinyin": "tā qí zìxíngchē",
-      "gloss_en": "He rides a bicycle."
+      "gloss_en": "He rides a bicycle.",
+      "pinyin_syllables": "ta1 qi2 zi4 xing2 che1"
     },
     {
       "hanzi": "宝宝会站了。",
       "pinyin": "bǎobao huì zhàn le",
-      "gloss_en": "The baby can stand now."
+      "gloss_en": "The baby can stand now.",
+      "pinyin_syllables": "bao3 bao5 hui4 zhan4 le5"
     },
     {
       "hanzi": "他会跳。",
       "pinyin": "tā huì tiào",
-      "gloss_en": "He can jump."
+      "gloss_en": "He can jump.",
+      "pinyin_syllables": "ta1 hui4 tiao4"
     },
     {
       "hanzi": "她会唱歌。",
       "pinyin": "tā huì chànggē",
-      "gloss_en": "She can sing."
+      "gloss_en": "She can sing.",
+      "pinyin_syllables": "ta1 hui4 chang4 ge1"
     },
     {
       "hanzi": "东西掉了。",
       "pinyin": "dōngxi diào le",
-      "gloss_en": "It fell."
+      "gloss_en": "It fell.",
+      "pinyin_syllables": "dong1 xi5 diao4 le5"
     },
     {
       "hanzi": "请拉门。",
       "pinyin": "qǐng lā mén",
-      "gloss_en": "Please pull the door."
+      "gloss_en": "Please pull the door.",
+      "pinyin_syllables": "qing3 la1 men2"
     },
     {
       "hanzi": "请推门。",
       "pinyin": "qǐng tuī mén",
-      "gloss_en": "Please push the door."
+      "gloss_en": "Please push the door.",
+      "pinyin_syllables": "qing3 tui1 men2"
     },
     {
       "hanzi": "请抬一下。",
       "pinyin": "qǐng tái yíxià",
-      "gloss_en": "Please lift it a moment."
+      "gloss_en": "Please lift it a moment.",
+      "pinyin_syllables": "qing3 tai2 yi2 xia4"
     },
     {
       "hanzi": "他的样子很累。",
       "pinyin": "tā de yàngzi hěn lèi",
-      "gloss_en": "He looks tired."
+      "gloss_en": "He looks tired.",
+      "pinyin_syllables": "ta1 de5 yang4 zi5 hen3 lei4"
     },
     {
       "hanzi": "这里有两位客人。",
       "pinyin": "zhè lǐ yǒu liǎng wèi kèrén",
-      "gloss_en": "There are two guests here."
+      "gloss_en": "There are two guests here.",
+      "pinyin_syllables": "zhe4 li3 you3 liang3 wei4 ke4 ren2"
     },
     {
       "hanzi": "我要一双鞋。",
       "pinyin": "wǒ yào yì shuāng xié",
-      "gloss_en": "I want a pair of shoes."
+      "gloss_en": "I want a pair of shoes.",
+      "pinyin_syllables": "wo3 yao4 yi4 shuang1 xie2"
     },
     {
       "hanzi": "我要一条鱼。",
       "pinyin": "wǒ yào yì tiáo yú",
-      "gloss_en": "I'd like a fish."
+      "gloss_en": "I'd like a fish.",
+      "pinyin_syllables": "wo3 yao4 yi4 tiao2 yu2"
     },
     {
       "hanzi": "他说了很多话。",
       "pinyin": "tā shuō le hěn duō huà",
-      "gloss_en": "He said a lot."
+      "gloss_en": "He said a lot.",
+      "pinyin_syllables": "ta1 shuo1 le5 hen3 duo1 hua4"
     },
     {
       "hanzi": "宝宝会说话了。",
       "pinyin": "bǎobao huì shuōhuà le",
-      "gloss_en": "The baby can talk now."
+      "gloss_en": "The baby can talk now.",
+      "pinyin_syllables": "bao3 bao5 hui4 shuo1 hua4 le5"
     },
     {
       "_comment": "Expansion: HSK3c — sentences for the 37 words that had none"
@@ -4241,312 +4976,374 @@
     {
       "hanzi": "这只猫很胖。",
       "pinyin": "zhè zhī māo hěn pàng",
-      "gloss_en": "This cat is chubby."
+      "gloss_en": "This cat is chubby.",
+      "pinyin_syllables": "zhe4 zhi1 mao1 hen3 pang4"
     },
     {
       "hanzi": "宝宝的脸很胖。",
       "pinyin": "bǎobao de liǎn hěn pàng",
-      "gloss_en": "The baby has chubby cheeks."
+      "gloss_en": "The baby has chubby cheeks.",
+      "pinyin_syllables": "bao3 bao5 de5 lian3 hen3 pang4"
     },
     {
       "hanzi": "这个菜很好吃而且很便宜。",
       "pinyin": "zhè ge cài hěn hǎochī érqiě hěn piányi",
-      "gloss_en": "This dish is tasty and cheap."
+      "gloss_en": "This dish is tasty and cheap.",
+      "pinyin_syllables": "zhe4 ge5 cai4 hen3 hao3 chi1 er2 qie3 hen3 pian2 yi5"
     },
     {
       "hanzi": "他很聪明而且很努力。",
       "pinyin": "tā hěn cōngming érqiě hěn nǔlì",
-      "gloss_en": "He's clever and hard-working."
+      "gloss_en": "He's clever and hard-working.",
+      "pinyin_syllables": "ta1 hen3 cong1 ming5 er2 qie3 hen3 nu3 li4"
     },
     {
       "hanzi": "这个房子很大而且很干净。",
       "pinyin": "zhè ge fángzi hěn dà érqiě hěn gānjìng",
-      "gloss_en": "This house is big and clean."
+      "gloss_en": "This house is big and clean.",
+      "pinyin_syllables": "zhe4 ge5 fang2 zi5 hen3 da4 er2 qie3 hen3 gan1 jing4"
     },
     {
       "hanzi": "世界很大。",
       "pinyin": "shìjiè hěn dà",
-      "gloss_en": "The world is big."
+      "gloss_en": "The world is big.",
+      "pinyin_syllables": "shi4 jie4 hen3 da4"
     },
     {
       "hanzi": "我想看世界。",
       "pinyin": "wǒ xiǎng kàn shìjiè",
-      "gloss_en": "I want to see the world."
+      "gloss_en": "I want to see the world.",
+      "pinyin_syllables": "wo3 xiang3 kan4 shi4 jie4"
     },
     {
       "hanzi": "中国是一个大国家。",
       "pinyin": "Zhōngguó shì yí ge dà guójiā",
-      "gloss_en": "China is a big country."
+      "gloss_en": "China is a big country.",
+      "pinyin_syllables": "zhong1 guo2 shi4 yi2 ge5 da4 guo2 jia1"
     },
     {
       "hanzi": "你是哪个国家的人？",
       "pinyin": "nǐ shì nǎ ge guójiā de rén?",
-      "gloss_en": "Which country are you from?"
+      "gloss_en": "Which country are you from?",
+      "pinyin_syllables": "ni3 shi4 na3 ge5 guo2 jia1 de5 ren2"
     },
     {
       "hanzi": "我喜欢中国文化。",
       "pinyin": "wǒ xǐhuan Zhōngguó wénhuà",
-      "gloss_en": "I like Chinese culture."
+      "gloss_en": "I like Chinese culture.",
+      "pinyin_syllables": "wo3 xi3 huan5 zhong1 guo2 wen2 hua4"
     },
     {
       "hanzi": "文化很重要。",
       "pinyin": "wénhuà hěn zhòngyào",
-      "gloss_en": "Culture matters."
+      "gloss_en": "Culture matters.",
+      "pinyin_syllables": "wen2 hua4 hen3 zhong4 yao4"
     },
     {
       "hanzi": "这是什么种的狗？",
       "pinyin": "zhè shì shénme zhǒng de gǒu?",
-      "gloss_en": "What kind of dog is this?"
+      "gloss_en": "What kind of dog is this?",
+      "pinyin_syllables": "zhe4 shi4 shen2 me5 zhong3 de5 gou3"
     },
     {
       "hanzi": "我喜欢这种茶。",
       "pinyin": "wǒ xǐhuan zhè zhǒng chá",
-      "gloss_en": "I like this kind of tea."
+      "gloss_en": "I like this kind of tea.",
+      "pinyin_syllables": "wo3 xi3 huan5 zhe4 zhong3 cha2"
     },
     {
       "hanzi": "有两种。",
       "pinyin": "yǒu liǎng zhǒng",
-      "gloss_en": "There are two kinds."
+      "gloss_en": "There are two kinds.",
+      "pinyin_syllables": "you3 liang3 zhong3"
     },
     {
       "hanzi": "他站在我这边。",
       "pinyin": "tā zhàn zài wǒ zhè biān",
-      "gloss_en": "He's standing on my side."
+      "gloss_en": "He's standing on my side.",
+      "pinyin_syllables": "ta1 zhan4 zai4 wo3 zhe4 bian1"
     },
     {
       "hanzi": "河的那边有一个公园。",
       "pinyin": "hé de nà biān yǒu yí ge gōngyuán",
-      "gloss_en": "There's a park on the other side of the river."
+      "gloss_en": "There's a park on the other side of the river.",
+      "pinyin_syllables": "he2 de5 na4 bian1 you3 yi2 ge5 gong1 yuan2"
     },
     {
       "hanzi": "北方很冷。",
       "pinyin": "běifāng hěn lěng",
-      "gloss_en": "The north is cold."
+      "gloss_en": "The north is cold.",
+      "pinyin_syllables": "bei3 fang1 hen3 leng3"
     },
     {
       "hanzi": "他是北方人。",
       "pinyin": "tā shì běifāng rén",
-      "gloss_en": "He's a northerner."
+      "gloss_en": "He's a northerner.",
+      "pinyin_syllables": "ta1 shi4 bei3 fang1 ren2"
     },
     {
       "hanzi": "南边很热。",
       "pinyin": "nán biān hěn rè",
-      "gloss_en": "The south is hot."
+      "gloss_en": "The south is hot.",
+      "pinyin_syllables": "nan2 bian1 hen3 re4"
     },
     {
       "hanzi": "我住在城市的南边。",
       "pinyin": "wǒ zhù zài chéngshì de nán biān",
-      "gloss_en": "I live on the south side of the city."
+      "gloss_en": "I live on the south side of the city.",
+      "pinyin_syllables": "wo3 zhu4 zai4 cheng2 shi4 de5 nan2 bian1"
     },
     {
       "hanzi": "医院在东边。",
       "pinyin": "yīyuàn zài dōng biān",
-      "gloss_en": "The hospital is on the east side."
+      "gloss_en": "The hospital is on the east side.",
+      "pinyin_syllables": "yi1 yuan4 zai4 dong1 bian1"
     },
     {
       "hanzi": "超市在西边。",
       "pinyin": "chāoshì zài xī biān",
-      "gloss_en": "The supermarket is on the west side."
+      "gloss_en": "The supermarket is on the west side.",
+      "pinyin_syllables": "chao1 shi4 zai4 xi1 bian1"
     },
     {
       "hanzi": "学校在城市的西边。",
       "pinyin": "xuéxiào zài chéngshì de xī biān",
-      "gloss_en": "The school is on the west side of the city."
+      "gloss_en": "The school is on the west side of the city.",
+      "pinyin_syllables": "xue2 xiao4 zai4 cheng2 shi4 de5 xi1 bian1"
     },
     {
       "hanzi": "一年有四个季节。",
       "pinyin": "yì nián yǒu sì ge jìjié",
-      "gloss_en": "There are four seasons in a year."
+      "gloss_en": "There are four seasons in a year.",
+      "pinyin_syllables": "yi4 nian2 you3 si4 ge5 ji4 jie2"
     },
     {
       "hanzi": "你喜欢哪个季节？",
       "pinyin": "nǐ xǐhuan nǎ ge jìjié?",
-      "gloss_en": "Which season do you like?"
+      "gloss_en": "Which season do you like?",
+      "pinyin_syllables": "ni3 xi3 huan5 na3 ge5 ji4 jie2"
     },
     {
       "hanzi": "今天天气很阴。",
       "pinyin": "jīntiān tiānqì hěn yīn",
-      "gloss_en": "It's overcast today."
+      "gloss_en": "It's overcast today.",
+      "pinyin_syllables": "jin1 tian1 tian1 qi4 hen3 yin1"
     },
     {
       "hanzi": "河很长。",
       "pinyin": "hé hěn cháng",
-      "gloss_en": "The river is long."
+      "gloss_en": "The river is long.",
+      "pinyin_syllables": "he2 hen3 chang2"
     },
     {
       "hanzi": "我们去河边散步。",
       "pinyin": "wǒmen qù hé biān sànbù",
-      "gloss_en": "Let's walk by the river."
+      "gloss_en": "Let's walk by the river.",
+      "pinyin_syllables": "wo3 men5 qu4 he2 bian1 san4 bu4"
     },
     {
       "hanzi": "我想去山上。",
       "pinyin": "wǒ xiǎng qù shān shàng",
-      "gloss_en": "I'd like to go up the mountain."
+      "gloss_en": "I'd like to go up the mountain.",
+      "pinyin_syllables": "wo3 xiang3 qu4 shan1 shang4"
     },
     {
       "hanzi": "山上有很多树。",
       "pinyin": "shān shàng yǒu hěn duō shù",
-      "gloss_en": "There are many trees on the mountain."
+      "gloss_en": "There are many trees on the mountain.",
+      "pinyin_syllables": "shan1 shang4 you3 hen3 duo1 shu4"
     },
     {
       "hanzi": "草是绿的。",
       "pinyin": "cǎo shì lǜ de",
-      "gloss_en": "The grass is green."
+      "gloss_en": "The grass is green.",
+      "pinyin_syllables": "cao3 shi4 lv4 de5"
     },
     {
       "hanzi": "宝宝在草上玩。",
       "pinyin": "bǎobao zài cǎo shàng wán",
-      "gloss_en": "The baby's playing on the grass."
+      "gloss_en": "The baby's playing on the grass.",
+      "pinyin_syllables": "bao3 bao5 zai4 cao3 shang4 wan2"
     },
     {
       "hanzi": "这件衣服是白的。",
       "pinyin": "zhè jiàn yīfu shì bái de",
-      "gloss_en": "This piece of clothing is white."
+      "gloss_en": "This piece of clothing is white.",
+      "pinyin_syllables": "zhe4 jian4 yi1 fu5 shi4 bai2 de5"
     },
     {
       "hanzi": "白的还是黑的？",
       "pinyin": "bái de háishi hēi de?",
-      "gloss_en": "White or black?"
+      "gloss_en": "White or black?",
+      "pinyin_syllables": "bai2 de5 hai2 shi5 hei1 de5"
     },
     {
       "hanzi": "我喜欢蓝的。",
       "pinyin": "wǒ xǐhuan lán de",
-      "gloss_en": "I like the blue one."
+      "gloss_en": "I like the blue one.",
+      "pinyin_syllables": "wo3 xi3 huan5 lan2 de5"
     },
     {
       "hanzi": "他的车是蓝的。",
       "pinyin": "tā de chē shì lán de",
-      "gloss_en": "His car is blue."
+      "gloss_en": "His car is blue.",
+      "pinyin_syllables": "ta1 de5 che1 shi4 lan2 de5"
     },
     {
       "hanzi": "我要绿的。",
       "pinyin": "wǒ yào lǜ de",
-      "gloss_en": "I want the green one."
+      "gloss_en": "I want the green one.",
+      "pinyin_syllables": "wo3 yao4 lv4 de5"
     },
     {
       "hanzi": "树是绿的。",
       "pinyin": "shù shì lǜ de",
-      "gloss_en": "The trees are green."
+      "gloss_en": "The trees are green.",
+      "pinyin_syllables": "shu4 shi4 lv4 de5"
     },
     {
       "hanzi": "奶瓶是满的。",
       "pinyin": "nǎipíng shì mǎn de",
-      "gloss_en": "The bottle is full."
+      "gloss_en": "The bottle is full.",
+      "pinyin_syllables": "nai3 ping2 shi4 man3 de5"
     },
     {
       "hanzi": "房间是空的。",
       "pinyin": "fángjiān shì kōng de",
-      "gloss_en": "The room is empty."
+      "gloss_en": "The room is empty.",
+      "pinyin_syllables": "fang2 jian1 shi4 kong1 de5"
     },
     {
       "hanzi": "他说了一个笑话。",
       "pinyin": "tā shuō le yí ge xiàohua",
-      "gloss_en": "He told a joke."
+      "gloss_en": "He told a joke.",
+      "pinyin_syllables": "ta1 shuo1 le5 yi2 ge5 xiao4 hua5"
     },
     {
       "hanzi": "这个笑话很有意思。",
       "pinyin": "zhè ge xiàohua hěn yǒuyìsi",
-      "gloss_en": "That joke is funny."
+      "gloss_en": "That joke is funny.",
+      "pinyin_syllables": "zhe4 ge5 xiao4 hua5 hen3 you3 yi4 si5"
     },
     {
       "hanzi": "他是司机。",
       "pinyin": "tā shì sījī",
-      "gloss_en": "He's a driver."
+      "gloss_en": "He's a driver.",
+      "pinyin_syllables": "ta1 shi4 si1 ji1"
     },
     {
       "hanzi": "司机在车里等。",
       "pinyin": "sījī zài chē lǐ děng",
-      "gloss_en": "The driver's waiting in the car."
+      "gloss_en": "The driver's waiting in the car.",
+      "pinyin_syllables": "si1 ji1 zai4 che1 li3 deng3"
     },
     {
       "hanzi": "服务员给我们水。",
       "pinyin": "fúwùyuán gěi wǒmen shuǐ",
-      "gloss_en": "The waiter gives us water."
+      "gloss_en": "The waiter gives us water.",
+      "pinyin_syllables": "fu2 wu4 yuan2 gei3 wo3 men5 shui3"
     },
     {
       "hanzi": "校长是一位老师。",
       "pinyin": "xiàozhǎng shì yí wèi lǎoshī",
-      "gloss_en": "The headteacher is a teacher."
+      "gloss_en": "The headteacher is a teacher.",
+      "pinyin_syllables": "xiao4 zhang3 shi4 yi2 wei4 lao3 shi1"
     },
     {
       "hanzi": "校长在学校。",
       "pinyin": "xiàozhǎng zài xuéxiào",
-      "gloss_en": "The headteacher is at the school."
+      "gloss_en": "The headteacher is at the school.",
+      "pinyin_syllables": "xiao4 zhang3 zai4 xue2 xiao4"
     },
     {
       "hanzi": "这是我的铅笔。",
       "pinyin": "zhè shì wǒ de qiānbǐ",
-      "gloss_en": "This is my pencil."
+      "gloss_en": "This is my pencil.",
+      "pinyin_syllables": "zhe4 shi4 wo3 de5 qian1 bi3"
     },
     {
       "hanzi": "铅笔在桌子上。",
       "pinyin": "qiānbǐ zài zhuōzi shàng",
-      "gloss_en": "The pencil's on the table."
+      "gloss_en": "The pencil's on the table.",
+      "pinyin_syllables": "qian1 bi3 zai4 zhuo1 zi5 shang4"
     },
     {
       "hanzi": "请看黑板。",
       "pinyin": "qǐng kàn hēibǎn",
-      "gloss_en": "Please look at the blackboard."
+      "gloss_en": "Please look at the blackboard.",
+      "pinyin_syllables": "qing3 kan4 hei1 ban3"
     },
     {
       "hanzi": "黑板是黑的。",
       "pinyin": "hēibǎn shì hēi de",
-      "gloss_en": "The blackboard is black."
+      "gloss_en": "The blackboard is black.",
+      "pinyin_syllables": "hei1 ban3 shi4 hei1 de5"
     },
     {
       "hanzi": "他的成绩很好。",
       "pinyin": "tā de chéngjì hěn hǎo",
-      "gloss_en": "His grades are good."
+      "gloss_en": "His grades are good.",
+      "pinyin_syllables": "ta1 de5 cheng2 ji4 hen3 hao3"
     },
     {
       "hanzi": "我的成绩不太好。",
       "pinyin": "wǒ de chéngjì bú tài hǎo",
-      "gloss_en": "My grades aren't great."
+      "gloss_en": "My grades aren't great.",
+      "pinyin_syllables": "wo3 de5 cheng2 ji4 bu2 tai4 hao3"
     },
     {
       "hanzi": "他的中文水平很好。",
       "pinyin": "tā de Zhōngwén shuǐpíng hěn hǎo",
-      "gloss_en": "His Chinese is at a good level."
+      "gloss_en": "His Chinese is at a good level.",
+      "pinyin_syllables": "ta1 de5 zhong1 wen2 shui3 ping2 hen3 hao3"
     },
     {
       "hanzi": "感谢你的帮忙。",
       "pinyin": "gǎnxiè nǐ de bāngmáng",
-      "gloss_en": "Thank you for your help."
+      "gloss_en": "Thank you for your help.",
+      "pinyin_syllables": "gan3 xie4 ni3 de5 bang1 mang2"
     },
     {
       "hanzi": "我很感谢你。",
       "pinyin": "wǒ hěn gǎnxiè nǐ",
-      "gloss_en": "I'm very grateful to you."
+      "gloss_en": "I'm very grateful to you.",
+      "pinyin_syllables": "wo3 hen3 gan3 xie4 ni3"
     },
     {
       "hanzi": "请唱一个。",
       "pinyin": "qǐng chàng yí ge",
-      "gloss_en": "Please sing one."
+      "gloss_en": "Please sing one.",
+      "pinyin_syllables": "qing3 chang4 yi2 ge5"
     },
     {
       "hanzi": "妈妈给宝宝唱。",
       "pinyin": "māma gěi bǎobao chàng",
-      "gloss_en": "Mum sings to the baby."
+      "gloss_en": "Mum sings to the baby.",
+      "pinyin_syllables": "ma1 ma5 gei3 bao3 bao5 chang4"
     },
     {
       "hanzi": "宝宝的耳朵很小。",
       "pinyin": "bǎobao de ěrduo hěn xiǎo",
-      "gloss_en": "The baby's ears are tiny."
+      "gloss_en": "The baby's ears are tiny.",
+      "pinyin_syllables": "bao3 bao5 de5 er3 duo5 hen3 xiao3"
     },
     {
       "hanzi": "我的耳朵疼。",
       "pinyin": "wǒ de ěrduo téng",
-      "gloss_en": "My ear hurts."
+      "gloss_en": "My ear hurts.",
+      "pinyin_syllables": "wo3 de5 er3 duo5 teng2"
     },
     {
       "hanzi": "宝宝的嘴很小。",
       "pinyin": "bǎobao de zuǐ hěn xiǎo",
-      "gloss_en": "The baby's mouth is tiny."
+      "gloss_en": "The baby's mouth is tiny.",
+      "pinyin_syllables": "bao3 bao5 de5 zui3 hen3 xiao3"
     },
     {
       "hanzi": "他的嘴里有东西。",
       "pinyin": "tā de zuǐ lǐ yǒu dōngxi",
-      "gloss_en": "He has something in his mouth."
+      "gloss_en": "He has something in his mouth.",
+      "pinyin_syllables": "ta1 de5 zui3 li3 you3 dong1 xi5"
     },
     {
       "_comment": "Expansion: HSK3d — 天, and the four seasons that needed it"
@@ -4554,67 +5351,80 @@
     {
       "hanzi": "春天很舒服。",
       "pinyin": "chūn tiān hěn shūfu",
-      "gloss_en": "Spring is pleasant."
+      "gloss_en": "Spring is pleasant.",
+      "pinyin_syllables": "chun1 tian1 hen3 shu1 fu5"
     },
     {
       "hanzi": "春天有很多花。",
       "pinyin": "chūn tiān yǒu hěn duō huā",
-      "gloss_en": "There are lots of flowers in spring."
+      "gloss_en": "There are lots of flowers in spring.",
+      "pinyin_syllables": "chun1 tian1 you3 hen3 duo1 hua1"
     },
     {
       "hanzi": "我喜欢春天。",
       "pinyin": "wǒ xǐhuan chūn tiān",
-      "gloss_en": "I like spring."
+      "gloss_en": "I like spring.",
+      "pinyin_syllables": "wo3 xi3 huan5 chun1 tian1"
     },
     {
       "hanzi": "夏天很热。",
       "pinyin": "xià tiān hěn rè",
-      "gloss_en": "Summer is hot."
+      "gloss_en": "Summer is hot.",
+      "pinyin_syllables": "xia4 tian1 hen3 re4"
     },
     {
       "hanzi": "夏天我们去游泳。",
       "pinyin": "xià tiān wǒmen qù yóuyǒng",
-      "gloss_en": "In summer we go swimming."
+      "gloss_en": "In summer we go swimming.",
+      "pinyin_syllables": "xia4 tian1 wo3 men5 qu4 you2 yong3"
     },
     {
       "hanzi": "秋天很舒服。",
       "pinyin": "qiū tiān hěn shūfu",
-      "gloss_en": "Autumn is pleasant."
+      "gloss_en": "Autumn is pleasant.",
+      "pinyin_syllables": "qiu1 tian1 hen3 shu1 fu5"
     },
     {
       "hanzi": "秋天的天气很好。",
       "pinyin": "qiū tiān de tiānqì hěn hǎo",
-      "gloss_en": "The weather in autumn is good."
+      "gloss_en": "The weather in autumn is good.",
+      "pinyin_syllables": "qiu1 tian1 de5 tian1 qi4 hen3 hao3"
     },
     {
       "hanzi": "冬天很冷。",
       "pinyin": "dōng tiān hěn lěng",
-      "gloss_en": "Winter is cold."
+      "gloss_en": "Winter is cold.",
+      "pinyin_syllables": "dong1 tian1 hen3 leng3"
     },
     {
       "hanzi": "冬天会下雪。",
       "pinyin": "dōng tiān huì xiàxuě",
-      "gloss_en": "It snows in winter."
+      "gloss_en": "It snows in winter.",
+      "pinyin_syllables": "dong1 tian1 hui4 xia4 xue3"
     },
     {
       "hanzi": "天很蓝。",
       "pinyin": "tiān hěn lán",
-      "gloss_en": "The sky is blue."
+      "gloss_en": "The sky is blue.",
+      "pinyin_syllables": "tian1 hen3 lan2"
     },
     {
       "hanzi": "阴天我不想出去。",
       "pinyin": "yīn tiān wǒ bù xiǎng chūqù",
-      "gloss_en": "On an overcast day I don't want to go out."
+      "gloss_en": "On an overcast day I don't want to go out.",
+      "pinyin_syllables": "yin1 tian1 wo3 bu4 xiang3 chu1 qu4"
     },
     {
       "hanzi": "这个杯很满。",
       "pinyin": "zhè ge bēi hěn mǎn",
-      "gloss_en": "This cup is full."
+      "gloss_en": "This cup is full.",
+      "pinyin_syllables": "zhe4 ge5 bei1 hen3 man3"
     },
     {
       "hanzi": "这个瓶是空的。",
       "pinyin": "zhè ge píng shì kōng de",
-      "gloss_en": "This bottle is empty."
+      "gloss_en": "This bottle is empty.",
+      "pinyin_syllables": "zhe4 ge5 ping2 shi4 kong1 de5"
     }
   ]
 }

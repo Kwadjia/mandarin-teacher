@@ -14,11 +14,13 @@ import { Hono } from 'hono';
 import type { Db } from '@mt/schema';
 import { segment } from '@mt/schema';
 import {
+  checkDictation,
   gradeAuto,
   gradeCommit,
   gradeDictation,
   gradeSpeak,
   hskCoverage,
+  tonePerformance,
   computeStreak,
   dailyTarget,
   introductionQueue,
@@ -675,6 +677,137 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
         remainingNew: states.find((s) => s.modality === 'listen')?.newAvailable ?? 0,
       },
     });
+  });
+
+  /**
+   * One dictation item: audio and nothing else.
+   *
+   * The text is withheld deliberately. `/api/next` returns hanzi, pinyin and the gloss,
+   * which for this exercise would be the answer key — and the reveal gate (§2.9) is
+   * only meaningful if there is genuinely no path to the answer before committing.
+   * Only sentences with a verified syllable split are eligible, so a learner is never
+   * graded against a key the pipeline could not confirm.
+   */
+  app.get('/api/dictation', async (c) => {
+    const at = now();
+    const cards = await q.loadCards(db, 'listen');
+    const introduced = new Set(
+      cards.filter((k) => k.introducedAt !== null).map((k) => k.conceptId),
+    );
+    if (introduced.size === 0) {
+      return c.json({ type: 'idle', reason: 'Learn some words by listening first.' });
+    }
+
+    const pick = await q.pickDictation(db, [...introduced]);
+    if (!pick) {
+      return c.json({
+        type: 'idle',
+        reason: 'No sentence yet where you know every word — keep drilling.',
+      });
+    }
+
+    const detail = await q.loadUtteranceDetail(db, pick.id);
+    return c.json({
+      type: 'item',
+      utteranceId: pick.id,
+      // Length only. Knowing how many syllables to type is part of the task's framing,
+      // not a hint about which they are.
+      syllableCount: (detail?.pinyinSyllables ?? '').split(' ').filter(Boolean).length,
+      clips: detail?.clips ?? [],
+      dueNow: cards.filter((k) => k.introducedAt !== null && k.dueAt <= at.getTime()).length,
+    });
+  });
+
+  /**
+   * Grade one dictation attempt.
+   *
+   * The comparison happens here, from the raw typed answer, for the same reason every
+   * other grade does: the browser reports what happened and the server decides what it
+   * was worth. Sending the expected syllables to the client to diff would hand over the
+   * answer key and make the reveal gate decorative.
+   */
+  app.post('/api/dictation', async (c) => {
+    const body = (await c.req.json()) as {
+      sessionId?: number | null;
+      utteranceId: number;
+      answer: string;
+      replays?: number;
+      latencyMs?: number | null;
+    };
+
+    const detail = await q.loadUtteranceDetail(db, body.utteranceId);
+    if (!detail) return c.json({ error: 'unknown utterance' }, 404);
+    if (!detail.pinyinSyllables) return c.json({ error: 'no verified answer key' }, 409);
+
+    const expected = detail.pinyinSyllables.split(' ').filter(Boolean);
+    const check = checkDictation(expected, body.answer ?? '');
+    const replays = body.replays ?? 0;
+    const grade = gradeDictation({
+      correctSyllables: check.correctSyllables,
+      toneErrors: check.toneErrors,
+      totalSyllables: check.totalSyllables,
+      replays,
+    });
+
+    const at = now();
+    const conceptIds = await q.conceptIdsForUtterance(db, body.utteranceId);
+
+    // Dictation exercises the whole sentence, so every concept in it is reviewed —
+    // unlike the other drills, which target one word and log the rest as exposure.
+    for (const conceptId of new Set(conceptIds)) {
+      const existing = (await q.loadCards(db, 'listen')).find((k) => k.conceptId === conceptId);
+      if (!existing) continue; // never introduced — dictation does not introduce words
+      const result = review(existing, grade, at);
+      const cardId = await q.saveCard(db, result.card);
+      await q.insertEvent(db, {
+        ts: at.getTime(),
+        sessionId: body.sessionId ?? null,
+        kind: 'review',
+        conceptId,
+        cardId,
+        utteranceId: body.utteranceId,
+        modality: 'listen',
+        exerciseType: 'dictation',
+        result: grade,
+        latencyMs: body.latencyMs ?? null,
+        replays,
+        committedBeforeReveal: true,
+        payload: {
+          correctSyllables: check.correctSyllables,
+          totalSyllables: check.totalSyllables,
+          toneErrors: check.toneErrors,
+          // Per-syllable detail is what makes "which tone is the problem" answerable
+          // later; tone ID has been at chance for 31 reps without ever saying why.
+          syllables: check.syllables.map((s) => ({
+            expected: s.expected,
+            given: s.given,
+            verdict: s.verdict,
+          })),
+        },
+      });
+    }
+
+    return c.json({
+      grade,
+      check,
+      // Revealed only now, with the result.
+      hanzi: detail.hanzi,
+      hanziTrad: detail.hanziTrad,
+      pinyin: detail.pinyin,
+      glossEn: detail.glossEn,
+    });
+  });
+
+  /** Which tones are actually going wrong, from the dictation log. */
+  app.get('/api/tone-report', async (c) => {
+    const rows = await db.all<{ payload: string }>(
+      `SELECT payload FROM event WHERE exercise_type = 'dictation' AND payload IS NOT NULL
+       ORDER BY ts DESC LIMIT 400`,
+    );
+    const syllables: Parameters<typeof tonePerformance>[0] = rows.flatMap(
+      (r) => JSON.parse(r.payload).syllables ?? [],
+    );
+    return c.json({ perTone: tonePerformance(syllables), attempts: rows.length });
   });
 
   app.get('/api/stats', async (c) => {

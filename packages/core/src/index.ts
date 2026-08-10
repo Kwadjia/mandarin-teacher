@@ -14,3 +14,4 @@ export * from './grading.ts';
 export * from './progress.ts';
 export * from './plan.ts';
 export * from './daily.ts';
+export * from './dictation.ts';

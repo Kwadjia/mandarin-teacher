@@ -1,19 +1,21 @@
 import { useCallback, useEffect, useState } from 'react';
 import { api } from './api.ts';
 import { Drill } from './Drill.tsx';
+import { Dictation } from './Dictation.tsx';
 import { Home } from './Home.tsx';
 import { Shadow } from './Shadow.tsx';
 import { ToneDrill } from './ToneDrill.tsx';
 import { Capture } from './Capture.tsx';
 import { Stats } from './Stats.tsx';
 
-type View = 'home' | 'drill' | 'speak' | 'tones' | 'capture' | 'stats';
+type View = 'home' | 'drill' | 'speak' | 'dictation' | 'tones' | 'capture' | 'stats';
 
 // Home first, then the priority order: listening, speaking (docs/design.md §1).
 const TABS: [View, string][] = [
   ['home', 'Today'],
   ['drill', 'Listen'],
   ['speak', 'Speak'],
+  ['dictation', 'Dictation'],
   ['tones', 'Tones'],
   ['capture', 'Add Mandarin'],
   ['stats', 'Progress'],
@@ -95,6 +97,9 @@ export function App() {
         )}
         {view === 'speak' && (
           <Shadow sessionId={sessionId} onAnswered={() => setAnswered((n) => n + 1)} />
+        )}
+        {view === 'dictation' && (
+          <Dictation sessionId={sessionId} onAnswered={() => setAnswered((n) => n + 1)} />
         )}
         {view === 'tones' && <ToneDrill sessionId={sessionId} />}
         {view === 'capture' && <Capture />}
