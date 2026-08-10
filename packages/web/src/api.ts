@@ -88,20 +88,28 @@ export interface ToneSet {
 /** One syllable of a spoken attempt, measured by the local scorer. */
 export interface ScoredSyllable {
   char: string;
-  /** What the recogniser heard here, or null if the syllable was not said at all. */
+  /** The character heard here, or null if the syllable was not said at all. */
   said: string | null;
-  /** Expected tone from the pinyin; 0 = neutral. */
+  /** Expected pinyin with a tone mark, e.g. 'niaoˋ'. */
+  pinyin: string;
+  /** Pinyin of what was heard. Same base with a different mark means a tone slip. */
+  saidPinyin: string | null;
+  /** Expected tone; 0 = neutral. */
   tone: number;
+  heardTone: number | null;
+  /** Right base syllable — the sound was right, whatever the tone did. */
   correct: boolean;
   /** Semitones from the native contour. Null when it could not be measured. */
   distance: number | null;
-  verdict: 'good' | 'close' | 'off' | 'wrong' | 'missing' | 'unscored';
+  verdict: 'good' | 'close' | 'tone' | 'wrong' | 'missing' | 'unscored';
   /** Pitch shapes for drawing, in semitones relative to each speaker's median. */
   learner: number[];
   reference: number[];
 }
 
 export interface SpeechScore {
+  unusable: boolean;
+  reason: string | null;
   transcript: string;
   target: string;
   syllables: ScoredSyllable[];
@@ -113,9 +121,10 @@ export interface SpeechScore {
   elapsedMs?: number;
 }
 
-export interface SpeakResponse extends AnswerResponse {
-  score: SpeechScore;
-}
+/** A recording that could not be scored is not graded at all — no card change. */
+export type SpeakResponse =
+  | ({ unusable: false; score: SpeechScore } & AnswerResponse)
+  | { unusable: true; reason: string | null; score: SpeechScore };
 
 export interface CaptureResponse {
   captureId: number;

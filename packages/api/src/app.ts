@@ -45,18 +45,29 @@ export interface ToneSet {
 /** One syllable of a spoken attempt, as measured by pipeline/speech_score.py. */
 export interface ScoredSyllable {
   char: string;
+  /** The character the recogniser heard here; null if the syllable was not said. */
   said: string | null;
+  /** Expected pinyin with a tone mark, e.g. 'niaoˋ'. */
+  pinyin: string;
+  /** Pinyin of what was heard — 'niaoˇ' against 'niaoˋ' is a tone error, not a word error. */
+  saidPinyin: string | null;
   tone: number;
+  heardTone: number | null;
+  /** Right base syllable: the sound landed, whatever happened to the tone. */
   correct: boolean;
   distance: number | null;
-  verdict: 'good' | 'close' | 'off' | 'wrong' | 'missing' | 'unscored';
+  verdict: 'good' | 'close' | 'tone' | 'wrong' | 'missing' | 'unscored';
   learner: number[];
   reference: number[];
 }
 
 export interface SpeechScore {
+  /** True when the recording could not be scored at all — see §2.12. */
+  unusable: boolean;
+  reason: string | null;
   transcript: string;
   target: string;
+  confidence?: number | null;
   syllables: ScoredSyllable[];
   totalSyllables: number;
   correctSyllables: number;
@@ -451,6 +462,34 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
     }
 
     const replays = Number(form.get('replays') ?? 0);
+    const sessionId = form.get('sessionId') ? Number(form.get('sessionId')) : null;
+
+    /**
+     * Nothing recognisable in the recording. Do not grade it and do not touch the card.
+     *
+     * Whisper hallucinates fluently on unclear input — real attempts came back as
+     * "99888" and "宝宝SOLA" — and grading those produced `again` on words that were
+     * very likely said correctly. A microphone problem must not be recorded as a
+     * failure to speak Mandarin: it corrupts the learner model with mistakes that were
+     * never made, and no amount of later practice explains the dip away.
+     *
+     * Logged as a `note` so the log still shows it happened, while every review query
+     * — counts, latencies, accuracy — filters on `kind = 'review'` and ignores it.
+     */
+    if (score.unusable) {
+      await q.insertEvent(db, {
+        ts: now().getTime(),
+        sessionId,
+        kind: 'note',
+        conceptId,
+        utteranceId,
+        modality: 'speak',
+        exerciseType: 'shadow',
+        payload: { unusable: true, reason: score.reason, transcript: score.transcript },
+      });
+      return c.json({ unusable: true, reason: score.reason, score });
+    }
+
     const measured = gradeSpeak({
       correctSyllables: score.correctSyllables,
       totalSyllables: score.totalSyllables,
@@ -472,7 +511,7 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
 
     await q.insertEvent(db, {
       ts: now().getTime(),
-      sessionId: form.get('sessionId') ? Number(form.get('sessionId')) : null,
+      sessionId,
       kind: 'review',
       conceptId,
       cardId,
@@ -497,6 +536,7 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
     });
 
     return c.json({
+      unusable: false,
       grade,
       dueAt: result.card.dueAt,
       intervalDays: Math.round((result.intervalMs / 86_400_000) * 10) / 10,

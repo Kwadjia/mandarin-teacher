@@ -20,16 +20,40 @@ import { useRecorder } from './useRecorder.ts';
 
 type Phase = 'listen' | 'recording' | 'scoring' | 'feedback';
 
+const TONE_NAME = ['neutral', 'high flat', 'rising', 'dipping', 'falling'];
+
+/**
+ * What each verdict means, said in words rather than implied by a colour.
+ *
+ * The first version labelled a mismatch "heard 鸟", which was accurate and useless —
+ * it never said whether that meant the wrong word or the wrong tone, and those call
+ * for completely different corrections.
+ */
 const VERDICT: Record<ScoredSyllable['verdict'], { cls: string; label: string }> = {
-  good: { cls: 'text-emerald-700 dark:text-emerald-400', label: 'on target' },
-  close: { cls: 'text-amber-700 dark:text-amber-400', label: 'close' },
-  off: { cls: 'text-rose-700 dark:text-rose-400', label: 'tone off' },
-  wrong: { cls: 'text-rose-700 dark:text-rose-400', label: 'wrong word' },
-  missing: { cls: 'text-stone-400 dark:text-stone-600', label: 'not said' },
-  unscored: { cls: 'text-stone-500', label: 'too short to measure' },
+  good: { cls: 'text-emerald-700 dark:text-emerald-400', label: 'right' },
+  close: { cls: 'text-amber-700 dark:text-amber-400', label: 'tone slightly off' },
+  tone: { cls: 'text-amber-700 dark:text-amber-500', label: 'right sound, wrong tone' },
+  wrong: { cls: 'text-rose-700 dark:text-rose-400', label: 'different word' },
+  missing: { cls: 'text-stone-400 dark:text-stone-600', label: "didn't catch this one" },
+  unscored: { cls: 'text-stone-500', label: 'said right; tone too short to measure' },
 };
 
-const TONE_NAME = ['neutral', 'high flat', 'rising', 'dipping', 'falling'];
+/** The one-line correction under each syllable. */
+function caption(s: ScoredSyllable): string {
+  switch (s.verdict) {
+    case 'tone':
+      // The specific, actionable case: the sound landed, the pitch did not.
+      return `said ${TONE_NAME[s.heardTone ?? 0]} · want ${TONE_NAME[s.tone]}`;
+    case 'wrong':
+      return `sounded like ${s.said ?? '?'}`;
+    case 'missing':
+      return 'not heard';
+    case 'close':
+      return `${TONE_NAME[s.tone]}, nearly`;
+    default:
+      return TONE_NAME[s.tone] ?? '';
+  }
+}
 
 /**
  * One syllable's pitch, learner against native.
@@ -128,8 +152,12 @@ export function Shadow({ sessionId, onAnswered }: Props) {
         });
         setResult(res);
         setPhase('feedback');
-        setReps((n) => n + 1);
-        onAnswered?.();
+        // An unscorable recording is not a rep. It changed no card, so counting it
+        // would overstate the session and trigger a pointless stats refresh.
+        if (!res.unusable) {
+          setReps((n) => n + 1);
+          onAnswered?.();
+        }
       } catch (e) {
         setError((e as Error).message);
         setPhase('listen');
@@ -293,39 +321,56 @@ export function Shadow({ sessionId, onAnswered }: Props) {
       {/* Feedback ───────────────────────────────────────────────────────── */}
       {phase === 'feedback' && result && utterance && (
         <div className="mt-8 border-t border-stone-200 pt-6 dark:border-stone-800">
-          <div className="flex items-baseline justify-between">
-            <p className="label">
-              {result.score.correctSyllables}/{result.score.totalSyllables} words
-              {result.score.scoredSyllables > 0 && (
-                <> · {result.score.toneErrors} tone{result.score.toneErrors === 1 ? '' : 's'} off</>
-              )}
-            </p>
-            <p className="text-sm text-stone-500">
-              graded <b className="text-stone-700 dark:text-stone-300">{result.grade}</b> · back in{' '}
-              {result.intervalDays < 1
-                ? `${Math.round(result.intervalDays * 24 * 60)} min`
-                : `${result.intervalDays} d`}
-            </p>
-          </div>
+          {result.unusable ? (
+            // Not graded, and the card is untouched. A microphone problem is not a
+            // failure to speak Mandarin and must not be recorded as one.
+            <div className="rounded-lg border border-amber-700/40 bg-amber-700/5 p-4">
+              <p className="font-medium">Couldn't make that out — not counted.</p>
+              <p className="mt-1 text-sm text-stone-500">
+                {result.reason}. Nothing was graded and the word is unchanged; just try again.
+              </p>
+            </div>
+          ) : (
+            <div className="flex items-baseline justify-between">
+              <p className="label">
+                {result.score.correctSyllables}/{result.score.totalSyllables} sounds right
+                {result.score.toneErrors > 0 && (
+                  <> · {result.score.toneErrors} tone{result.score.toneErrors === 1 ? '' : 's'} off</>
+                )}
+              </p>
+              <p className="text-sm text-stone-500">
+                graded <b className="text-stone-700 dark:text-stone-300">{result.grade}</b> · back in{' '}
+                {result.intervalDays < 1
+                  ? `${Math.round(result.intervalDays * 24 * 60)} min`
+                  : `${result.intervalDays} d`}
+              </p>
+            </div>
+          )}
 
-          <div className="mt-5 flex flex-wrap gap-x-5 gap-y-4">
-            {result.score.syllables.map((s, i) => {
-              const v = VERDICT[s.verdict];
-              return (
-                <div key={i} className={`flex flex-col items-center ${v.cls}`} title={v.label}>
-                  <span className="text-3xl leading-none">{s.char}</span>
-                  <Contour learner={s.learner} reference={s.reference} />
-                  <span className="mt-0.5 text-[0.65rem] uppercase tracking-wide">
-                    {s.verdict === 'wrong' ? `heard ${s.said}` : s.verdict === 'missing' ? '—' : TONE_NAME[s.tone]}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
+          {!result.unusable && (
+            <>
+              <div className="mt-5 flex flex-wrap gap-x-5 gap-y-4">
+                {result.score.syllables.map((s, i) => {
+                  const v = VERDICT[s.verdict];
+                  return (
+                    <div key={i} className={`flex flex-col items-center ${v.cls}`} title={v.label}>
+                      <span className="text-3xl leading-none">{s.char}</span>
+                      <span className="text-[0.7rem] opacity-70">{s.pinyin}</span>
+                      <Contour learner={s.learner} reference={s.reference} />
+                      <span className="mt-0.5 max-w-[7rem] text-center text-[0.65rem] leading-tight">
+                        {caption(s)}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
 
-          <p className="mt-5 text-sm text-stone-500">
-            heard <b className="text-stone-700 dark:text-stone-300">{result.score.transcript.trim()}</b>
-          </p>
+              <p className="mt-5 text-sm text-stone-500">
+                the recogniser heard{' '}
+                <b className="text-stone-700 dark:text-stone-300">{result.score.transcript.trim()}</b>
+              </p>
+            </>
+          )}
 
           <p className="hanzi mt-4">{utterance.hanziTrad}</p>
           <p className="pinyin">{utterance.pinyin}</p>

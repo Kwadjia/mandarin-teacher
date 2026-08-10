@@ -76,7 +76,10 @@ after(() => {
 const syllable = (char: string, verdict: string, correct = true) => ({
   char,
   said: correct ? char : '？',
+  pinyin: 'baoˇ',
+  saidPinyin: correct ? 'baoˇ' : 'ba4',
   tone: 3,
+  heardTone: 3,
   correct,
   distance: correct ? 0.4 : null,
   verdict,
@@ -90,6 +93,8 @@ function stub(overrides: Record<string, unknown> = {}) {
   const fn = async (input: any) => {
     calls.push(input);
     return {
+      unusable: false,
+      reason: null,
       transcript: '宝宝睡觉了',
       target: '宝宝睡觉了',
       syllables: [],
@@ -225,6 +230,92 @@ describe('POST /api/speak', () => {
       utteranceId: '99999',
     });
     assert.equal(status, 404);
+  });
+
+  /**
+   * The failure that mattered most in real use. Whisper hallucinates on unclear input —
+   * live attempts came back as "99888" and "宝宝SOLA" — and grading those wrote `again`
+   * against words that were probably said fine. A microphone problem must never be
+   * recorded as a failure to speak Mandarin.
+   */
+  it('does not grade or touch the card when the recording is unusable', async () => {
+    const cid = conceptIds[1]!;
+    const cardBefore = db.raw
+      .prepare("SELECT fsrs_state, due_at FROM card WHERE concept_id = ? AND modality = 'speak'")
+      .get(cid) as { fsrs_state: string; due_at: number } | undefined;
+    const reviewsBefore = (
+      db.raw
+        .prepare("SELECT count(*) AS n FROM event WHERE concept_id = ? AND kind = 'review'")
+        .get(cid) as { n: number }
+    ).n;
+
+    const { status, body } = await speak(
+      appWith(
+        stub({
+          unusable: true,
+          reason: 'no speech in the recording — check the microphone',
+          transcript: '',
+          totalSyllables: 0,
+          correctSyllables: 0,
+        }).fn,
+      ),
+      { conceptId: String(cid), utteranceId: String(utteranceId) },
+    );
+
+    assert.equal(status, 200);
+    assert.equal(body.unusable, true);
+    assert.match(body.reason, /no speech/);
+    assert.equal(body.grade, undefined, 'an unusable recording must not produce a grade');
+
+    const cardAfter = db.raw
+      .prepare("SELECT fsrs_state, due_at FROM card WHERE concept_id = ? AND modality = 'speak'")
+      .get(cid) as { fsrs_state: string; due_at: number } | undefined;
+    assert.deepEqual(cardAfter, cardBefore, 'the card must be untouched');
+
+    const reviewsAfter = (
+      db.raw
+        .prepare("SELECT count(*) AS n FROM event WHERE concept_id = ? AND kind = 'review'")
+        .get(cid) as { n: number }
+    ).n;
+    assert.equal(reviewsAfter, reviewsBefore, 'no review event should be written');
+
+    // It is still recorded, as a note — visible in the log, invisible to every stat,
+    // all of which filter on kind = 'review'.
+    const note = db.raw
+      .prepare("SELECT payload FROM event WHERE concept_id = ? AND kind = 'note' ORDER BY id DESC LIMIT 1")
+      .get(cid) as { payload: string } | undefined;
+    assert.ok(note, 'the attempt should be logged as a note');
+    assert.equal(JSON.parse(note!.payload).unusable, true);
+  });
+
+  it('counts a wrong tone on a correct sound as a tone error, not a wrong word', async () => {
+    const cid = conceptIds[2]!;
+    // 尿 heard as 鸟: same base syllable, tone 4 against tone 3.
+    const { body } = await speak(
+      appWith(
+        stub({
+          correctSyllables: 4,
+          totalSyllables: 4,
+          toneErrors: 1,
+          scoredSyllables: 4,
+          syllables: [
+            {
+              char: '尿', said: '鸟', pinyin: 'niaoˋ', saidPinyin: 'niaoˇ',
+              tone: 4, heardTone: 3, correct: true, distance: null,
+              verdict: 'tone', learner: [], reference: [],
+            },
+          ],
+        }).fn,
+      ),
+      { conceptId: String(cid), utteranceId: String(utteranceId) },
+    );
+
+    // Every sound landed, so this is not `again` — it is a tone to work on.
+    assert.equal(body.grade, 'good');
+    const row = db.raw
+      .prepare("SELECT payload FROM event WHERE concept_id = ? AND kind = 'review' ORDER BY id DESC LIMIT 1")
+      .get(cid) as { payload: string };
+    assert.deepEqual(JSON.parse(row.payload).verdicts, ['tone']);
   });
 
   it('surfaces a scorer crash as unavailable rather than a 500', async () => {

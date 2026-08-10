@@ -29,9 +29,10 @@ import json
 import os
 import subprocess
 import sys
-import unicodedata
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Any
 
 import numpy as np
 import parselmouth
@@ -119,37 +120,43 @@ def to_simplified(s: str) -> str:
     return _t2s.convert(s)
 
 
-TONE_VOWELS = {
-    "\u0304": 1,  # macron   ā
-    "\u0301": 2,  # acute    á
-    "\u030c": 3,  # caron    ǎ
-    "\u0300": 4,  # grave    à
-}
+def syllables(chars: str) -> list[tuple[str, int]]:
+    """(base syllable, tone) per character — 尿 → ('niao', 4), 鸟 → ('niao', 3).
 
+    Derived per character rather than parsed out of the corpus pinyin string, because
+    that string is written in words: "bǎobao shuìjiào le" is three space-separated
+    tokens for five characters, so splitting it on spaces misaligned the tone of every
+    multi-syllable word.
 
-def syllable_tones(pinyin: str) -> list[int]:
-    """Tone number per syllable, from the diacritics. 0 = neutral."""
-    out = []
-    for syl in pinyin.replace("'", " ").split():
-        tone = 0
-        for ch in unicodedata.normalize("NFD", syl):
-            if ch in TONE_VOWELS:
-                tone = TONE_VOWELS[ch]
-                break
-        out.append(tone)
+    Splitting base from tone is what lets a tone error be told apart from a wrong word.
+    Comparing characters cannot: 尿 heard as 鸟 is the right sound with the wrong tone,
+    but it scored as a wrong word and drew no tone feedback at all — on exactly the
+    syllable where tone feedback was the entire point.
+    """
+    from pypinyin import Style, lazy_pinyin
+
+    out: list[tuple[str, int]] = []
+    for ch in chars:
+        p = lazy_pinyin(ch, style=Style.TONE3, errors=lambda x: [x])[0]
+        if p and p[-1].isdigit():
+            out.append((p[:-1], int(p[-1])))
+        else:
+            out.append((p, 0))  # a neutral tone carries no digit
     return out
 
 
-def align(target: str, hyp: str) -> list[tuple[str, str | None, int | None]]:
-    """Levenshtein backtrace pairing each target character with what was said.
+def align(target: Sequence, hyp: Sequence) -> list[tuple[Any, Any | None, int | None]]:
+    """Levenshtein backtrace pairing each target element with what was said.
 
-    Returns (target char, spoken char or None, index into hyp or None). The index
-    matters: the backtrace skips inserted syllables without emitting a pair, so a
-    caller that tracked position with its own counter would drift after the first
-    insertion and attribute every later pitch contour to the wrong syllable.
+    Runs over base syllables rather than characters. For learner speech that matters:
+    a tone slip turns 尿 into 鸟, which as characters is a substitution but as syllables
+    is a match, so the alignment stays anchored instead of cascading into spurious
+    errors down the rest of the sentence.
 
-    Alignment is needed at all because a learner who drops or adds one syllable would
-    otherwise shift the whole rest of the sentence and read as entirely wrong.
+    Returns (target element, spoken element or None, index into hyp or None). The index
+    matters: the backtrace skips insertions without emitting a pair, so a caller that
+    tracked position with its own counter would drift after the first inserted syllable
+    and attribute every later pitch contour to the wrong one.
     """
     n, m = len(target), len(hyp)
     d = np.zeros((n + 1, m + 1), dtype=int)
@@ -223,17 +230,31 @@ def model():
     return _model
 
 
-def transcribe(wav: Path) -> tuple[str, list[tuple[str, float, float]]]:
-    """Transcript plus a (character, start, end) span for every character.
+def transcribe(wav: Path) -> tuple[str, list[tuple[str, float, float]], float]:
+    """Transcript, a (character, start, end) span per character, and mean confidence.
 
     Whisper's Chinese "words" are short multi-character chunks rather than syllables,
     so a chunk's duration is split evenly across its characters. Crude, but tones live
     on syllables and this is the granularity the feedback needs.
+
+    Confidence is returned because learner speech makes whisper hallucinate outright —
+    real attempts here came back as "99888" and "宝宝SOLA". Those are recogniser
+    failures, and grading them as if the learner had said nothing poisons the log with
+    failures that were never theirs.
     """
-    segs, _ = model().transcribe(str(wav), language="zh", beam_size=5, word_timestamps=True)
-    text, spans = [], []
+    segs, _ = model().transcribe(
+        str(wav),
+        language="zh",
+        beam_size=5,
+        word_timestamps=True,
+        # Each attempt is one short utterance; carrying context between them invites
+        # whisper to invent continuations of the previous sentence.
+        condition_on_previous_text=False,
+    )
+    text, spans, logprobs = [], [], []
     for seg in segs:
         text.append(seg.text)
+        logprobs.append(seg.avg_logprob)
         for w in seg.words or []:
             chars = [c for c in to_simplified(w.word) if _han(c)]
             if not chars:
@@ -241,7 +262,8 @@ def transcribe(wav: Path) -> tuple[str, list[tuple[str, float, float]]]:
             step = (w.end - w.start) / len(chars)
             for k, ch in enumerate(chars):
                 spans.append((ch, w.start + k * step, w.start + (k + 1) * step))
-    return to_simplified("".join(text)), spans
+    confidence = float(np.mean(logprobs)) if logprobs else -99.0
+    return to_simplified("".join(text)), spans, confidence
 
 
 def pitch_track(wav: Path) -> tuple[np.ndarray, np.ndarray]:
@@ -251,6 +273,11 @@ def pitch_track(wav: Path) -> tuple[np.ndarray, np.ndarray]:
     a tone actually is — without it a male learner scores as wrong on every syllable
     against a female reference.
     """
+    # Trimming leading silence from a recording of nothing leaves a zero-sample file,
+    # and Praat raises rather than returning an empty track. Clicking Speak and saying
+    # nothing is an ordinary thing to do, not a server error.
+    if wav.stat().st_size < 1024:
+        return np.array([]), np.array([])
     snd = parselmouth.Sound(str(wav))
     pitch = snd.to_pitch(pitch_floor=PITCH_FLOOR, pitch_ceiling=500.0)
     f0 = pitch.selected_array["frequency"]
@@ -294,94 +321,205 @@ def contour_distance(a: np.ndarray, b: np.ndarray) -> float:
 @dataclass
 class Syllable:
     char: str
+    """What the recogniser heard in this position, as a character."""
     said: str | None
+    """Expected pinyin, e.g. 'niào'. Shown so a tone error can be read, not guessed."""
+    pinyin: str
+    """Pinyin of what was actually heard, when it differs."""
+    saidPinyin: str | None
     tone: int
+    heardTone: int | None
+    """Right base syllable — the sound landed, whatever happened to the tone."""
     correct: bool
     distance: float | None = None
-    verdict: str = "unscored"  # good | close | off | wrong | missing | unscored
+    verdict: str = "unscored"  # good | close | tone | wrong | missing | unscored
     learner: list[float] = field(default_factory=list)
     reference: list[float] = field(default_factory=list)
 
 
+TONE_MARK = {0: "", 1: "ˉ", 2: "ˊ", 3: "ˇ", 4: "ˋ"}
+
+
+def _pretty(base: str, tone: int) -> str:
+    return f"{base}{TONE_MARK.get(tone, '')}"
+
+
 def reference(path: Path, target: str) -> dict:
-    """Per-character pitch contours for a native clip, cached.
+    """Per-position pitch contours for a native clip, cached.
 
     Cached because the same handful of clips are re-scored constantly and running
     whisper on the reference every attempt would double the latency for no new
-    information. Keyed on filename; regenerate the corpus and the key changes.
+    information.
+
+    Keyed on filename *and* target, because the contours are indexed by position in the
+    target rather than by anything intrinsic to the clip. Keying on the filename alone
+    meant one request that paired a clip with the wrong sentence cached a nearly empty
+    result and silently starved every later attempt on that clip of tone feedback.
     """
-    key = path.name
+    key = f"{path.name}|{target}"
     if key in _ref_cache:
         return _ref_cache[key]
     wav = to_wav(path, stem=f"ref_{path.stem}")
-    _, spans = transcribe(wav)
+    _, spans, _ = transcribe(wav)
     times, semis = pitch_track(wav)
-    by_char: dict[int, np.ndarray] = {}
+    by_pos: dict[int, np.ndarray] = {}
     hyp = "".join(c for c, _, _ in spans)
     # The reference is a native reading of the target, so its transcript should match;
-    # align anyway, since whisper can still drop or merge a character.
-    for i, (want, got, j) in enumerate(align(target, hyp)):
+    # align on syllables anyway, since whisper can still drop or merge a character.
+    want_syl = [b for b, _ in syllables(target)]
+    got_syl = [b for b, _ in syllables(hyp)]
+    for i, (want, got, j) in enumerate(align(want_syl, got_syl)):
         if got is None or j is None or want != got:
             continue
         _, t0, t1 = spans[j]
         c = span_contour(times, semis, t0, t1)
         if c is not None:
-            by_char[i] = c
-    _ref_cache[key] = by_char
-    return by_char
+            by_pos[i] = c
+    _ref_cache[key] = by_pos
+    return by_pos
+
+
+def _voiced_frames(wav: Path) -> int:
+    """How many frames carry pitch. A cheap "was that actually speech" check."""
+    times, _ = pitch_track(wav)
+    return len(times)
+
+
+# Whether the recording contains speech at all, decided by counting frames that carry
+# pitch. Measured across audio quality:
+#
+#   clean TTS       59 voiced frames, confidence -0.14
+#   degraded speech 45 voiced frames, confidence -0.18   (quiet, noisy, band-limited)
+#   pink noise       0 voiced frames, confidence -0.64   → whisper wrote "谢谢大家"
+#
+# Voiced frames separate cleanly; confidence does not. -0.64 against -0.18 leaves no
+# room for a threshold that rejects noise without also rejecting a real attempt
+# recorded across a room, and rejecting real attempts is much the worse failure.
+# Confidence is kept only as a loose backstop.
+MIN_VOICED_FRAMES = 10
+MIN_CONFIDENCE = -1.5
 
 
 def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
           reference_clip: Path | None) -> dict:
-    """Measure one spoken attempt. Returns measurements; grading happens in @mt/core."""
-    target = to_simplified("".join(c for c in target_hanzi if _han(c)))
-    tones = syllable_tones(target_pinyin)
+    """Measure one spoken attempt. Returns measurements; grading happens in @mt/core.
 
+    Matching is done on base syllables, not characters. A learner who says the right
+    sound with the wrong tone produces a different character — 尿 becomes 鸟 — and
+    calling that a wrong word is both wrong and useless, since it withholds tone
+    feedback exactly where it is needed. Comparing 'niao' to 'niao' identifies the
+    sound as correct and hands the tone to a separate judgement.
+
+    Tone is judged from two independent sources, and either can convict:
+      - the tone whisper implicitly heard, from the character it chose (4 vs 3 above).
+        Precise when it fires, but silent whenever the language model snaps back to the
+        expected word.
+      - the pitch contour against a native reading. Always available, noisier.
+    """
+    target = to_simplified("".join(c for c in target_hanzi if _han(c)))
     wav = to_wav(attempt)
-    transcript, spans = transcribe(wav)
+
+    def unusable(reason: str, transcript: str = "", confidence: float | None = None) -> dict:
+        """A recogniser failure is not a learner failure.
+
+        Returning this rather than a score lets the caller decline to grade. Whisper
+        hallucinates fluently on unclear input — real attempts came back as "99888" and
+        "宝宝SOLA", and pink noise produces "谢谢大家" — and logging those as 0/5 would
+        bury cards for mistakes that were never made.
+        """
+        return {
+            "unusable": True, "reason": reason, "transcript": transcript, "target": target,
+            "confidence": confidence, "syllables": [], "totalSyllables": 0,
+            "correctSyllables": 0, "toneErrors": 0, "scoredSyllables": 0,
+            "meanToneDistance": None,
+        }
+
+    # Checked before transcription, not after: this avoids the hallucination rather than
+    # filtering it, and skips the GPU work entirely when there is nothing to recognise.
     times, semis = pitch_track(wav)
+    if len(times) < MIN_VOICED_FRAMES:
+        return unusable("no speech in the recording — check the microphone")
+
+    transcript, spans, confidence = transcribe(wav)
+    hyp = "".join(c for c, _, _ in spans) or "".join(c for c in transcript if _han(c))
+    if not hyp:
+        return unusable("nothing recognisable as Mandarin", transcript, round(confidence, 2))
+    if confidence < MIN_CONFIDENCE:
+        return unusable("the recording was too unclear to score", transcript, round(confidence, 2))
+
     ref = reference(reference_clip, target) if reference_clip else {}
 
-    hyp = "".join(c for c, _, _ in spans) or "".join(c for c in transcript if _han(c))
-    pairs = align(target, hyp)
+    want_syl = syllables(target)
+    got_syl = syllables(hyp)
+    pairs = align([b for b, _ in want_syl], [b for b, _ in got_syl])
 
     out: list[Syllable] = []
     for i, (want, got, j) in enumerate(pairs):
-        tone = tones[i] if i < len(tones) else 0
-        if got is None:
-            out.append(Syllable(want, None, tone, False, verdict="missing"))
-            continue
-        correct = want == got
-        s = Syllable(want, got, tone, correct, verdict="good" if correct else "wrong")
+        base, tone = want_syl[i] if i < len(want_syl) else (str(want), 0)
+        char = target[i] if i < len(target) else str(want)
 
-        if correct and j is not None:
+        if got is None or j is None:
+            out.append(Syllable(char, None, _pretty(base, tone), None, tone, None, False,
+                                verdict="missing"))
+            continue
+
+        heard_base, heard_tone = got_syl[j]
+        heard_char = hyp[j] if j < len(hyp) else ""
+        right_sound = base == heard_base
+
+        s = Syllable(
+            char=char,
+            said=heard_char,
+            pinyin=_pretty(base, tone),
+            saidPinyin=_pretty(heard_base, heard_tone),
+            tone=tone,
+            heardTone=heard_tone,
+            correct=right_sound,
+            verdict="good" if right_sound else "wrong",
+        )
+
+        if right_sound:
             _, t0, t1 = spans[j]
             learner = span_contour(times, semis, t0, t1)
             if learner is not None and i in ref:
                 d = contour_distance(learner, ref[i])
                 s.distance = round(d, 2)
-                s.verdict = "good" if d <= GOOD_SEMITONES else ("close" if d <= BAD_SEMITONES else "off")
                 s.learner = [round(v, 2) for v in learner]
                 s.reference = [round(v, 2) for v in ref[i]]
-            else:
-                # Unvoiced, too short to measure, or no reference contour for this
-                # position. Say so rather than imply the syllable passed.
+
+            # Whisper picking a different-toned word is strong, specific evidence and
+            # outranks the contour. A neutral tone is excluded: it has no target shape,
+            # and whisper's neutral-vs-full choice is unreliable.
+            if tone and heard_tone and tone != heard_tone:
+                s.verdict = "tone"
+            elif s.distance is None:
                 s.verdict = "unscored"
+            elif s.distance > BAD_SEMITONES:
+                s.verdict = "tone"
+            elif s.distance > GOOD_SEMITONES:
+                s.verdict = "close"
+
         out.append(s)
 
-    scored = [s for s in out if s.distance is not None]
-    said_right = sum(1 for s in out if s.correct)
+    scored = [s for s in out if s.distance is not None or s.verdict == "tone"]
     return {
+        "unusable": False,
+        "reason": None,
         "transcript": transcript,
         "target": target,
+        "confidence": round(confidence, 2),
         "syllables": [vars(s) for s in out],
         "totalSyllables": len(out),
-        "correctSyllables": said_right,
-        # A syllable said correctly but with the wrong pitch shape. This is the number
-        # whisper alone can never produce, and the reason the pitch track exists.
-        "toneErrors": sum(1 for s in scored if s.verdict == "off"),
+        "correctSyllables": sum(1 for s in out if s.correct),
+        # Right sound, wrong tone. The number transcription alone cannot produce, and
+        # the reason both signals exist.
+        "toneErrors": sum(1 for s in out if s.verdict == "tone"),
         "scoredSyllables": len(scored),
-        "meanToneDistance": round(float(np.mean([s.distance for s in scored])), 2) if scored else None,
+        "meanToneDistance": (
+            round(float(np.mean([s.distance for s in scored if s.distance is not None])), 2)
+            if any(s.distance is not None for s in scored)
+            else None
+        ),
     }
 
 
@@ -463,7 +601,7 @@ def self_test() -> int:
     for i, s in enumerate(picks):
         r = score(clip(s, "zh-TW-YunJhe"), s["hanzi"], s["pinyin"], clip(s, "zh-TW-HsiaoChen"))
         marks = "".join(
-            {"good": "+", "close": "~", "off": "!", "wrong": "x", "missing": "_"}.get(y["verdict"], "?")
+            {"good": "+", "close": "~", "tone": "!", "wrong": "x", "missing": "_"}.get(y["verdict"], "?")
             for y in r["syllables"]
         )
         print(f"  MATCH {r['correctSyllables']}/{r['totalSyllables']} said · "

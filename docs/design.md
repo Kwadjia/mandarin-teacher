@@ -196,7 +196,25 @@ as wrong, which destroys trust in the green marks as well as the red. `--calibra
 reports the distribution (p50 0.66, p85 1.25, p98 2.19 semitones over 209 syllables)
 and the thresholds sit at p85 and p98. Re-run it if the voices change.
 
-Two rules follow from what these signals mean:
+**Matching is on base syllables, not characters.** This was learned the hard way from
+the first real session. A learner who says the right sound with the wrong tone produces
+a *different character* — 尿 `niao4` comes back as 鸟 `niao3` — and comparing characters
+called that a wrong word. Wrong, and worse than wrong: it withheld tone feedback on
+exactly the syllables where tone was the problem. Comparing `niao` to `niao` identifies
+the sound as correct and hands the tone to a separate judgement.
+
+That also makes whisper a *partial* tone signal after all, refining the claim above:
+the character it picks encodes the tone it perceived, so 鸟 for 尿 is precise evidence
+of a third tone where a fourth belonged. It is silent whenever the language model snaps
+back to the expected word, which is why the contour is still needed. Either source can
+convict; the character evidence outranks the contour when they disagree.
+
+Per-character pinyin comes from `pypinyin`, not from the corpus pinyin string — that
+string is written in words, so `"bǎobao shuìjiào le"` is three space-separated tokens
+for five characters, and splitting it on spaces misaligned the tone of every
+multi-syllable word.
+
+Three rules follow from what these signals mean:
 
 - **Words outrank tones when grading.** A wrong word is a recall failure and the
   scheduler should act on it; a drifting tone on the right word is a motor skill, and
@@ -204,6 +222,32 @@ Two rules follow from what these signals mean:
 - **A first attempt is capped at `good`.** Repeating a sentence seconds after hearing
   it is imitation, not production. `easy` on a new card means a fortnight, and a mouth
   that has done something once does not remember how in two weeks.
+- **An unscorable recording is not graded at all.** See below.
+
+### 2.12a A recogniser failure is not a learner failure
+
+Whisper hallucinates fluently on unclear input. Real attempts in the first session came
+back as `"99888"` and `"宝宝SOLA"`; pink noise produces a confident `"谢谢大家"`. Grading
+those wrote `again` against words that were very likely said correctly.
+
+This is the most damaging failure mode in the whole system, because it is invisible: it
+injects mistakes the learner never made into the one record that is supposed to be
+truth, and no amount of later practice explains the dip away.
+
+So an attempt is checked for speech *before* transcription — avoiding the hallucination
+rather than filtering it — by counting frames that carry pitch:
+
+| | voiced frames | whisper confidence |
+|---|---|---|
+| clean TTS | 59 | −0.14 |
+| degraded speech (quiet, noisy, band-limited) | 45 | −0.18 |
+| pink noise | 0 | −0.64 |
+
+Voiced frames separate cleanly; confidence does not — −0.64 against −0.18 leaves no
+room for a threshold that rejects noise without also rejecting a real attempt recorded
+across a room, and **rejecting real attempts is much the worse failure**. Below ten
+voiced frames the API returns `unusable`, changes no card, and logs a `note` rather
+than a `review`, so the attempt is visible in the log and invisible to every statistic.
 
 ### 2.13 Listening gates speaking
 
