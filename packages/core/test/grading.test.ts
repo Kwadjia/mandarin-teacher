@@ -82,11 +82,22 @@ describe('gradeSpeak', () => {
     expect(s({ correctSyllables: 4 })).toBe('hard');
   });
 
-  // The ordering that matters: a wrong word is a recall failure the scheduler should
-  // act on; a drifting tone on the right word is a motor skill, and burying the word
-  // in the queue does not make the mouth learn faster.
+  /**
+   * The recogniser is reliable on native speech and shaky on a beginner's — real
+   * attempts came back as "童谣不拔" for 换尿布吧. So `again` needs half the sentence
+   * wrong, not a third: an unfair `again` buries a word that may well have been said
+   * correctly and the log keeps it, while an over-generous `hard` costs one review.
+   */
+  it('needs half the sentence wrong before failing it outright', () => {
+    expect(s({ correctSyllables: 3 })).toBe('hard');
+    expect(s({ correctSyllables: 2 })).toBe('again');
+  });
+
+  // A wrong word is a recall failure the scheduler should act on; a drifting tone on
+  // the right word is a motor skill, and burying the word does not make the mouth
+  // learn faster.
   it('ranks a wrong word below a wrong tone', () => {
-    expect(s({ correctSyllables: 3 })).toBe('again');
+    expect(s({ correctSyllables: 2 })).toBe('again');
     expect(s({ toneErrors: 5 })).toBe('hard');
   });
 

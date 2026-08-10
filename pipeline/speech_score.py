@@ -85,18 +85,18 @@ MODEL_NAME = os.environ.get("MT_WHISPER_MODEL", "large-v3")
 PITCH_FLOOR = float(os.environ.get("MT_PITCH_FLOOR", "75"))
 MIN_FRAMES = int(os.environ.get("MT_MIN_FRAMES", "2"))
 
-# Measured, not guessed — `--calibrate` over 209 syllables from 40 sentences read by
-# both a female and a male native voice:
+# Measured, not guessed — `--calibrate` over 215 syllables from 40 sentences read by
+# both a female and a male native voice, using acoustic alignment:
 #
-#   p50 0.66   p75 1.02   p85 1.25   p90 1.47   p95 1.83   p98 2.19
+#   p50 0.58   p75 1.04   p85 1.29   p90 1.61   p95 2.05   p98 2.68
 #
 # That spread is the noise floor: two native speakers reading the same sentence
 # genuinely differ. Thresholds sit at p85 and p98 of it, so a native reading trips
-# "close" about 15% of the time and "off" about 2%. Erring tight would be the worse
-# mistake — a learner told they are wrong when they are right stops trusting the
-# green marks as well as the red ones. Re-run --calibrate if the voices change.
+# "close" about 15% of the time and "off" about 2%. Erring tight is the worse mistake —
+# a learner told they are wrong when they are right stops trusting the green marks as
+# well as the red ones. Re-run --calibrate after any change to alignment or voices.
 GOOD_SEMITONES = 1.3
-BAD_SEMITONES = 2.2
+BAD_SEMITONES = 2.7
 
 _model = None
 _t2s = None
@@ -367,6 +367,84 @@ def contour_distance(a: np.ndarray, b: np.ndarray) -> float:
     return float(cost[n, m] / (n + m))
 
 
+# ── alignment without recognition ───────────────────────────────────────────
+
+def mfcc(wav: Path) -> tuple[np.ndarray, float]:
+    """Per-frame spectral shape, normalised. Returns (frames x coeffs, step seconds).
+
+    c0 is dropped — it is overall energy, which tracks how close the microphone was
+    rather than what was said. Each remaining coefficient is z-scored over the
+    utterance, which removes a good deal of the speaker and channel difference and
+    leaves the shape of the sounds.
+    """
+    # Same zero-sample case pitch_track guards: silence-trimming a recording of nothing
+    # leaves an empty file, and Praat raises rather than returning empty.
+    if wav.stat().st_size < 1024:
+        return np.zeros((0, 12)), 0.005
+    m = parselmouth.Sound(str(wav)).to_mfcc(number_of_coefficients=12)
+    a = m.to_array()[1:].T  # frames x 12, dropping c0
+    sd = a.std(axis=0)
+    sd[sd == 0] = 1.0
+    return (a - a.mean(axis=0)) / sd, m.get_time_step()
+
+
+def dtw_map(a: np.ndarray, b: np.ndarray) -> np.ndarray:
+    """Warp path from a to b: for each frame of `a`, the matching frame index in `b`.
+
+    This is what makes tone feedback independent of recognition. Whisper is unreliable
+    on learner speech — it produced "童谣不拔" for 换尿布吧 — and every syllable it gets
+    wrong loses its pitch comparison, which is precisely where the feedback was needed.
+    Aligning the two recordings acoustically asks a different and much easier question:
+    not "what did he say", but "which part of his recording lines up with which part of
+    the native one".
+    """
+    n, m = len(a), len(b)
+    cost = np.full((n + 1, m + 1), np.inf)
+    cost[0, 0] = 0.0
+    for i in range(1, n + 1):
+        d = np.sqrt(((a[i - 1] - b) ** 2).sum(axis=1))
+        # Vectorising the inner recurrence is not possible — cost[i, j] depends on
+        # cost[i, j-1] — but at ~400 frames the Python loop costs a few milliseconds.
+        prev, cur = cost[i - 1], cost[i]
+        for j in range(1, m + 1):
+            cur[j] = d[j - 1] + min(prev[j], cur[j - 1], prev[j - 1])
+
+    out = np.zeros(n, dtype=int)
+    i, j = n, m
+    while i > 0 and j > 0:
+        out[i - 1] = j - 1
+        step = min(cost[i - 1, j], cost[i, j - 1], cost[i - 1, j - 1])
+        if step == cost[i - 1, j - 1]:
+            i, j = i - 1, j - 1
+        elif step == cost[i - 1, j]:
+            i -= 1
+        else:
+            j -= 1
+    return out
+
+
+def aligned_spans(attempt: Path, ref: Path, ref_spans: list[tuple[float, float]]):
+    """Map each reference syllable's time span onto the learner's own timeline.
+
+    The reference is a native recording, so whisper's boundaries on *it* are reliable.
+    Carrying those boundaries across the acoustic alignment gives per-syllable spans for
+    the learner without ever asking what the learner said.
+    """
+    a, step_a = mfcc(attempt)
+    b, step_b = mfcc(ref)
+    if len(a) < 4 or len(b) < 4:
+        return []
+    path = dtw_map(a, b)
+
+    out = []
+    for t0, t1 in ref_spans:
+        # Learner frames whose aligned reference frame falls inside this syllable.
+        lo, hi = int(t0 / step_b), int(t1 / step_b)
+        hit = np.nonzero((path >= lo) & (path <= hi))[0]
+        out.append((float(hit[0] * step_a), float(hit[-1] * step_a)) if len(hit) else None)
+    return out
+
+
 # ── scoring ─────────────────────────────────────────────────────────────────
 
 @dataclass
@@ -408,7 +486,8 @@ def reference(path: Path, target: str) -> dict:
     wav = to_wav(path, stem=f"ref_{path.stem}")
     _, spans, _ = transcribe(wav)
     times, semis = pitch_track(wav)
-    by_pos: dict[int, np.ndarray] = {}
+    contours: dict[int, np.ndarray] = {}
+    times_by_pos: dict[int, tuple[float, float]] = {}
     hyp = "".join(c for c, _, _ in spans)
     # The reference is a native reading of the target, so its transcript should match;
     # align on syllables anyway, since whisper can still drop or merge a character.
@@ -418,11 +497,15 @@ def reference(path: Path, target: str) -> dict:
         if got is None or j is None or want != got:
             continue
         _, t0, t1 = spans[j]
+        times_by_pos[i] = (t0, t1)
         c = span_contour(times, semis, t0, t1)
         if c is not None:
-            by_pos[i] = c
-    _ref_cache[key] = by_pos
-    return by_pos
+            contours[i] = c
+    # Spans are kept alongside the contours so the learner's own syllable boundaries
+    # can be derived by acoustic alignment, with no recognition of their speech.
+    out = {"contours": contours, "spans": times_by_pos, "wav": wav}
+    _ref_cache[key] = out
+    return out
 
 
 def _voiced_frames(wav: Path) -> int:
@@ -556,7 +639,18 @@ def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
             round(confidence, 2),
         )
 
-    ref = reference(reference_clip, target) if reference_clip else {}
+    ref = reference(reference_clip, target) if reference_clip else {"contours": {}, "spans": {}}
+
+    # Syllable boundaries on the learner's own timeline, obtained by aligning the two
+    # recordings acoustically rather than by trusting the transcript. This is what makes
+    # tone feedback survive a recognition failure: whisper returned "童谣不拔" for
+    # 换尿布吧 and every syllable it mangled previously lost its pitch comparison — which
+    # was exactly where the feedback was most wanted.
+    order = sorted(ref["spans"])
+    learner_spans: dict[int, tuple[float, float]] = {}
+    if order:
+        mapped = aligned_spans(wav, ref["wav"], [ref["spans"][i] for i in order])
+        learner_spans = {pos: sp for pos, sp in zip(order, mapped) if sp is not None}
 
     out: list[Syllable] = []
     for i, (want, got, j) in enumerate(pairs):
@@ -564,39 +658,41 @@ def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
         char = target[i] if i < len(target) else str(want)
 
         if got is None or j is None:
-            out.append(Syllable(char, None, pretty(char), None, tone, None, False,
-                                verdict="missing"))
-            continue
+            s = Syllable(char, None, pretty(char), None, tone, None, False, verdict="missing")
+        else:
+            heard_base, heard_tone = got_syl[j]
+            heard_char = hyp[j] if j < len(hyp) else ""
+            right_sound = base == heard_base
+            s = Syllable(
+                char=char,
+                said=heard_char,
+                pinyin=pretty(char),
+                saidPinyin=pretty(heard_char),
+                tone=tone,
+                heardTone=heard_tone,
+                correct=right_sound,
+                errorKind=None if right_sound
+                else error_kind((base, tone), (heard_base, heard_tone)),
+                verdict="good" if right_sound else "wrong",
+            )
 
-        heard_base, heard_tone = got_syl[j]
-        heard_char = hyp[j] if j < len(hyp) else ""
-        right_sound = base == heard_base
-
-        s = Syllable(
-            char=char,
-            said=heard_char,
-            pinyin=pretty(char),
-            saidPinyin=pretty(heard_char),
-            tone=tone,
-            heardTone=heard_tone,
-            correct=right_sound,
-            errorKind=None if right_sound else error_kind((base, tone), (heard_base, heard_tone)),
-            verdict="good" if right_sound else "wrong",
-        )
-
-        if right_sound:
-            _, t0, t1 = spans[j]
-            learner = span_contour(times, semis, t0, t1)
-            if learner is not None and i in ref:
-                d = contour_distance(learner, ref[i])
+        # Pitch is compared for *every* syllable, including ones the recogniser got
+        # wrong or missed entirely. The learner still made a sound in that position and
+        # its shape is still measurable; withholding that because whisper guessed the
+        # character wrong threw away the most useful feedback at the worst moment.
+        if i in learner_spans and i in ref["contours"]:
+            learner = span_contour(times, semis, *learner_spans[i])
+            if learner is not None:
+                d = contour_distance(learner, ref["contours"][i])
                 s.distance = round(d, 2)
                 s.learner = [round(v, 2) for v in learner]
-                s.reference = [round(v, 2) for v in ref[i]]
+                s.reference = [round(v, 2) for v in ref["contours"][i]]
 
-            # Whisper picking a different-toned word is strong, specific evidence and
-            # outranks the contour. A neutral tone is excluded: it has no target shape,
-            # and whisper's neutral-vs-full choice is unreliable.
-            if tone and heard_tone and tone != heard_tone:
+        if s.correct:
+            # Whisper choosing a different-toned word is strong, specific evidence and
+            # outranks the contour. Neutral tones are excluded: they have no target
+            # shape, and whisper's neutral-vs-full choice is unreliable.
+            if tone and s.heardTone and tone != s.heardTone:
                 s.verdict, s.errorKind = "tone", "tone"
             elif s.distance is None:
                 s.verdict = "unscored"
@@ -619,6 +715,7 @@ def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
             "confidence": round(confidence, 2), "unusable": False,
             "correct": sum(1 for s in out if s.correct), "total": len(out),
             "verdicts": [s.verdict for s in out],
+            "distances": [s.distance for s in out],
             "errorKinds": [s.errorKind for s in out],
             "heard": [s.saidPinyin for s in out],
             "want": [s.pinyin for s in out],

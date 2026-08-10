@@ -86,9 +86,16 @@ export function gradeSpeak(o: SpeakOutcome): Grade {
   if (o.totalSyllables === 0) return 'again';
   const said = o.correctSyllables / o.totalSyllables;
 
-  // Sentences here run 4–8 syllables, so one wrong word in five is a slip worth a
-  // `hard`, while two is not really the sentence any more.
-  if (said < 0.7) return 'again';
+  // The word signal is measured by a recogniser that is reliable on native speech and
+  // demonstrably shaky on a beginner's: across 34 real attempts it returned things like
+  // "童谣不拔" for 换尿布吧, and half of them scored below the confidence it gives pink
+  // noise. Attempts with no overlap at all are already refused upstream as unscorable,
+  // so what reaches here is a genuine attempt measured imprecisely.
+  //
+  // Hence `again` needs half the sentence to be wrong, not a third. An unfair `again`
+  // buries a word the learner may well have said correctly, and the log keeps it; an
+  // over-generous `hard` costs one extra review. The asymmetry is not close.
+  if (said < 0.5) return 'again';
   if (said < 1) return 'hard';
 
   // Every word right from here on; tones decide the rest.

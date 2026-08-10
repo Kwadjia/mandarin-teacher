@@ -79,6 +79,7 @@ def main() -> int:
                  "unusable": r["unusable"], "reason": r.get("reason"),
                  "correct": r["correctSyllables"], "total": r["totalSyllables"],
                  "verdicts": [s["verdict"] for s in r["syllables"]],
+                 "distances": [s["distance"] for s in r["syllables"]],
                  "errorKinds": [s["errorKind"] for s in r["syllables"]],
                  "heard": [s["saidPinyin"] for s in r["syllables"]],
                  "want": [s["pinyin"] for s in r["syllables"]]}
