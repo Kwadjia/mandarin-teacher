@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "node --experimental-strip-types --no-warnings --watch src/server.ts",
     "start": "node --experimental-strip-types --no-warnings src/server.ts",
+    "reset-cards": "node --experimental-strip-types --no-warnings src/reset-cards.ts",
     "test": "node --test --experimental-strip-types --no-warnings test/*.test.ts",
     "typecheck": "tsc --noEmit"
   },
