@@ -19,8 +19,13 @@ import {
   gradeDictation,
   gradeSpeak,
   hskCoverage,
+  computeStreak,
+  dailyTarget,
   introductionQueue,
+  levelFor,
   measurePace,
+  repPoints,
+  DAY_MINIMUM_REPS,
   medianLatency,
   newCard,
   nextAction,
@@ -607,6 +612,31 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
 
     const blocks = planSession({ states, paceMs });
 
+    // ── habit layer ─────────────────────────────────────────────────────────
+    // The binding constraint on this project is days used, not reps per day: 122 reps
+    // happened in one sitting, on one day. None of this needs to make a session harder.
+    const activity = await q.dailyActivity(db);
+    const perDay = new Map<string, number>();
+    let points = 0;
+    for (const row of activity) {
+      perDay.set(row.day, (perDay.get(row.day) ?? 0) + row.reps);
+      points +=
+        row.reps *
+        repPoints({
+          modality: (row.modality ?? 'listen') as Modality,
+          isNew: row.isNew === 1,
+          grade: (row.result ?? 'good') as Grade,
+        });
+    }
+    const localToday = new Date(at.getTime() - at.getTimezoneOffset() * 60_000)
+      .toISOString()
+      .slice(0, 10);
+    const activeDays = new Set(
+      [...perDay].filter(([, n]) => n >= DAY_MINIMUM_REPS).map(([d]) => d),
+    );
+    const doneToday = perDay.get(localToday) ?? 0;
+    const plannedReps = blocks.reduce((n, b) => n + b.reps, 0);
+
     const listenCards = heard;
     const coverage = hskCoverage(concepts, listenCards, 'listen', at);
     const toneRow = await db.first<{ ok: number; n: number }>(
@@ -614,10 +644,19 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
        FROM event WHERE exercise_type = 'tone_id'`,
     );
 
+    // Day index so the phrase is stable for a day and different tomorrow.
+    const dayIndex = Math.floor(at.getTime() / 86_400_000);
+
     return c.json({
       blocks,
       totalMs: planDuration(blocks),
       states,
+      streak: computeStreak({ activeDays, today: localToday }),
+      target: dailyTarget(plannedReps, doneToday),
+      points: { total: points, ...levelFor(points) },
+      // A phrase to say to an actual person today. The strongest asset here is not a
+      // counter, it is a fluent speaker in the same house.
+      phrase: await q.phraseOfTheDay(db, 'listen', dayIndex),
       standing: {
         // Three counts that mean different things and were being conflated. `solid`
         // uses the retention test — predicted 85% recall at a fortnight — so it is

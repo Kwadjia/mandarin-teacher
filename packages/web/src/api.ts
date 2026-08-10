@@ -140,6 +140,13 @@ export interface PlanBlock {
 export interface Plan {
   blocks: PlanBlock[];
   totalMs: number | null;
+  /** Consecutive active days. Forgives one miss a week — a newborn is arriving. */
+  streak: { days: number; todayDone: boolean; graceUsed: number };
+  /** Taken from the schedule, not a round number. */
+  target: { reps: number; done: number; met: boolean; planCleared: boolean };
+  points: { total: number; level: number; into: number; span: number };
+  /** A sentence to say to an actual person today, from words already known. */
+  phrase: { hanzi: string; hanziTrad: string; pinyin: string; glossEn: string } | null;
   states: {
     modality: Modality;
     due: number;

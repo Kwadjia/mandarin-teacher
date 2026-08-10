@@ -43,12 +43,62 @@ export function Home({ onGo }: Props) {
   if (error) return <p className="text-rose-700 dark:text-rose-400">{error}</p>;
   if (!plan) return <p className="text-stone-500">Loading…</p>;
 
-  const { blocks, standing, watch } = plan;
+  const { blocks, standing, watch, streak, target, points, phrase } = plan;
   const total = mins(plan.totalMs);
   const toneRate = watch.tone.total ? watch.tone.correct / watch.tone.total : null;
+  const pct = target.reps ? Math.min(100, Math.round((target.done / target.reps) * 100)) : 0;
 
   return (
     <div className="space-y-10">
+      {/* The habit row. Days used is the binding constraint on this whole project —
+          122 reps happened in a single sitting, on one day. */}
+      <section className="flex flex-wrap items-center gap-x-8 gap-y-4">
+        <div>
+          <p className="text-4xl">
+            {streak.days}
+            <span className="ml-1 text-lg text-stone-500">day{streak.days === 1 ? '' : 's'}</span>
+          </p>
+          <p className="text-xs text-stone-500">
+            {streak.todayDone
+              ? 'today is in the bag'
+              : streak.days > 0
+                ? 'still safe — the day is not over'
+                : 'start one today'}
+          </p>
+        </div>
+
+        <div className="min-w-40 flex-1">
+          <div className="flex items-baseline justify-between text-sm">
+            {/* Keeping the day and clearing the plan are different things, and
+                conflating them makes a heavy backlog feel like a failed day. */}
+            <span>
+              {target.planCleared ? 'Plan cleared' : target.met ? 'Day secured' : "Today's plan"}
+            </span>
+            <span className="text-stone-500">
+              {target.done}/{target.reps}
+            </span>
+          </div>
+          <div className="mt-1 h-2 overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800">
+            <div
+              className={`h-full transition-all ${target.planCleared ? 'bg-emerald-600' : 'bg-amber-700 dark:bg-amber-500'}`}
+              style={{ width: `${pct}%` }}
+            />
+          </div>
+        </div>
+
+        <div>
+          <p className="text-sm">
+            Level <b>{points.level}</b>
+          </p>
+          <div className="mt-1 h-1.5 w-24 overflow-hidden rounded-full bg-stone-200 dark:bg-stone-800">
+            <div
+              className="h-full bg-stone-400 dark:bg-stone-600"
+              style={{ width: `${Math.round((points.into / points.span) * 100)}%` }}
+            />
+          </div>
+        </div>
+      </section>
+
       <section>
         <div className="flex items-baseline justify-between">
           <p className="label">Today</p>
@@ -78,6 +128,21 @@ export function Home({ onGo }: Props) {
           </ol>
         )}
       </section>
+
+      {/* The strongest asset in this project is not a counter, it is a fluent speaker
+          in the same house. One phrase used on a real person beats a lot of drilling:
+          retrieval under pressure, with a consequence, and someone waiting for it. */}
+      {phrase && (
+        <section className="rounded-xl border border-stone-200 p-5 dark:border-stone-800">
+          <p className="label">Say this to Jasmine today</p>
+          <p className="mt-2 text-3xl leading-snug">{phrase.hanziTrad}</p>
+          <p className="pinyin">{phrase.pinyin}</p>
+          <p className="mt-1 text-stone-500">{phrase.glossEn}</p>
+          <p className="mt-3 text-xs text-stone-400 dark:text-stone-600">
+            Every word in it is one you already know.
+          </p>
+        </section>
+      )}
 
       <section>
         <p className="label">Where you stand</p>

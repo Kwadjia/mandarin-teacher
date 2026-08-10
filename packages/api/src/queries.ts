@@ -279,12 +279,91 @@ export async function repGaps(
   }));
 }
 
+/**
+ * A sentence to actually say to someone today.
+ *
+ * The strongest thing available here is not a points counter — it is a fluent speaker
+ * in the same house. A phrase used on a real person, once, beats a great many drills:
+ * it is retrieval under pressure, it has a consequence, and someone is waiting for it.
+ * It also converts practice from a solitary chore into something the family is in on.
+ *
+ * Chosen from sentences whose every word is already introduced, preferring ones built
+ * from `personal` vocabulary — the baby, the house, the two of them — because those are
+ * the ones there will actually be an occasion to use.
+ *
+ * Deterministic per day: the same phrase all day, a new one tomorrow. Re-rolling on
+ * every page load would make it decoration rather than an assignment.
+ */
+export async function phraseOfTheDay(
+  db: Db,
+  modality: Modality,
+  dayIndex: number,
+): Promise<{ hanzi: string; hanziTrad: string; pinyin: string; glossEn: string } | null> {
+  const rows = await db.all<{
+    id: number;
+    hanzi: string;
+    hanzi_trad: string;
+    pinyin: string;
+    gloss_en: string;
+    personal: number;
+  }>(
+    `SELECT u.id, u.hanzi, u.hanzi_trad, u.pinyin, u.gloss_en,
+            sum(CASE WHEN c.source = 'personal' THEN 1 ELSE 0 END) AS personal
+     FROM utterance u
+     JOIN utterance_concept uc ON uc.utterance_id = u.id
+     JOIN concept c            ON c.id = uc.concept_id
+     WHERE u.status = 'approved'
+     GROUP BY u.id
+     HAVING count(*) = sum(
+       CASE WHEN EXISTS (
+         SELECT 1 FROM card k
+         WHERE k.concept_id = c.id AND k.modality = ? AND k.introduced_at IS NOT NULL
+       ) THEN 1 ELSE 0 END)
+     ORDER BY personal DESC, u.id`,
+    modality,
+  );
+  if (!rows.length) return null;
+
+  // Rotate within the personal-heavy group when there is one, so the daily phrase stays
+  // varied without drifting into sentences with no occasion to use them.
+  const best = rows[0]!.personal;
+  const pool = rows.filter((r) => r.personal === best);
+  const pick = pool[dayIndex % pool.length]!;
+  return {
+    hanzi: pick.hanzi,
+    hanziTrad: pick.hanzi_trad,
+    pinyin: pick.pinyin,
+    glossEn: pick.gloss_en,
+  };
+}
+
 export async function countEventsSince(db: Db, since: number): Promise<number> {
   const r = await db.first<{ n: number }>(
     `SELECT count(*) AS n FROM event WHERE kind = 'review' AND ts >= ?`,
     since,
   );
   return r?.n ?? 0;
+}
+
+/**
+ * Reps per local day, and the points earned, for the streak and level.
+ *
+ * Local dates rather than UTC: a session at 11pm belongs to that evening, and a streak
+ * that rolls over mid-evening would be both wrong and infuriating.
+ */
+export async function dailyActivity(
+  db: Db,
+): Promise<{ day: string; reps: number; modality: Modality | null; isNew: number; result: string | null }[]> {
+  return db.all(`
+    SELECT date(ts / 1000, 'unixepoch', 'localtime') AS day,
+           count(*) AS reps,
+           modality,
+           CASE WHEN exercise_type = 'first-exposure' THEN 1 ELSE 0 END AS isNew,
+           result
+    FROM event
+    WHERE kind = 'review'
+    GROUP BY day, modality, isNew, result
+  `);
 }
 
 export async function addCapture(

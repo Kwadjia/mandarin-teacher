@@ -13,3 +13,4 @@ export * from './selection.ts';
 export * from './grading.ts';
 export * from './progress.ts';
 export * from './plan.ts';
+export * from './daily.ts';
