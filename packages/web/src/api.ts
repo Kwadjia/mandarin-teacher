@@ -146,7 +146,14 @@ export interface Plan {
   target: { reps: number; done: number; met: boolean; planCleared: boolean };
   points: { total: number; level: number; into: number; span: number };
   /** A sentence to say to an actual person today, from words already known. */
-  phrase: { hanzi: string; hanziTrad: string; pinyin: string; glossEn: string } | null;
+  phrase: {
+    hanzi: string;
+    hanziTrad: string;
+    pinyin: string;
+    glossEn: string;
+    /** Words in it not yet introduced — 0 means every word is already known. */
+    unknownCount: number;
+  } | null;
   states: {
     modality: Modality;
     due: number;

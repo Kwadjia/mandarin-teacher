@@ -139,7 +139,9 @@ export function Home({ onGo }: Props) {
           <p className="pinyin">{phrase.pinyin}</p>
           <p className="mt-1 text-stone-500">{phrase.glossEn}</p>
           <p className="mt-3 text-xs text-stone-400 dark:text-stone-600">
-            Every word in it is one you already know.
+            {phrase.unknownCount === 0
+              ? "Every word in it is one you already know."
+              : "One word in it is new — read it off the screen."}
           </p>
         </section>
       )}

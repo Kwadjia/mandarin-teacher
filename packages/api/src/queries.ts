@@ -286,63 +286,6 @@ export async function repGaps(
   }));
 }
 
-/**
- * A sentence to actually say to someone today.
- *
- * The strongest thing available here is not a points counter — it is a fluent speaker
- * in the same house. A phrase used on a real person, once, beats a great many drills:
- * it is retrieval under pressure, it has a consequence, and someone is waiting for it.
- * It also converts practice from a solitary chore into something the family is in on.
- *
- * Chosen from sentences whose every word is already introduced, preferring ones built
- * from `personal` vocabulary — the baby, the house, the two of them — because those are
- * the ones there will actually be an occasion to use.
- *
- * Deterministic per day: the same phrase all day, a new one tomorrow. Re-rolling on
- * every page load would make it decoration rather than an assignment.
- */
-export async function phraseOfTheDay(
-  db: Db,
-  modality: Modality,
-  dayIndex: number,
-): Promise<{ hanzi: string; hanziTrad: string; pinyin: string; glossEn: string } | null> {
-  const rows = await db.all<{
-    id: number;
-    hanzi: string;
-    hanzi_trad: string;
-    pinyin: string;
-    gloss_en: string;
-    personal: number;
-  }>(
-    `SELECT u.id, u.hanzi, u.hanzi_trad, u.pinyin, u.gloss_en,
-            sum(CASE WHEN c.source = 'personal' THEN 1 ELSE 0 END) AS personal
-     FROM utterance u
-     JOIN utterance_concept uc ON uc.utterance_id = u.id
-     JOIN concept c            ON c.id = uc.concept_id
-     WHERE u.status = 'approved'
-     GROUP BY u.id
-     HAVING count(*) = sum(
-       CASE WHEN EXISTS (
-         SELECT 1 FROM card k
-         WHERE k.concept_id = c.id AND k.modality = ? AND k.introduced_at IS NOT NULL
-       ) THEN 1 ELSE 0 END)
-     ORDER BY personal DESC, u.id`,
-    modality,
-  );
-  if (!rows.length) return null;
-
-  // Rotate within the personal-heavy group when there is one, so the daily phrase stays
-  // varied without drifting into sentences with no occasion to use them.
-  const best = rows[0]!.personal;
-  const pool = rows.filter((r) => r.personal === best);
-  const pick = pool[dayIndex % pool.length]!;
-  return {
-    hanzi: pick.hanzi,
-    hanziTrad: pick.hanzi_trad,
-    pinyin: pick.pinyin,
-    glossEn: pick.gloss_en,
-  };
-}
 
 export async function countEventsSince(db: Db, since: number): Promise<number> {
   const r = await db.first<{ n: number }>(
@@ -483,4 +426,71 @@ export async function sentenceOptions(
     targetLength,
     limit,
   );
+}
+
+/**
+ * A sentence to actually say to someone today.
+ *
+ * The strongest asset in this project is not a counter — it is a fluent speaker in the
+ * same house. A phrase used on a real person once beats a great deal of drilling: it is
+ * retrieval under pressure, it has a consequence, and someone is waiting for it.
+ *
+ * Ranked by how many of its words are still unknown, then by how much *personal*
+ * vocabulary it uses — the baby, the house, the two of them — because those are the
+ * ones there will be an occasion to say.
+ *
+ * Requiring every word to be known was too strict to work: at twenty introduced words
+ * exactly one sentence in the corpus qualified, so the "phrase of the day" was the same
+ * phrase every day. A sentence with one unfamiliar word is perfectly sayable when it is
+ * being read off a screen, provided the UI does not claim otherwise — hence
+ * `unknownCount` comes back with it.
+ */
+export async function phraseOfTheDay(
+  db: Db,
+  modality: Modality,
+  dayIndex: number,
+): Promise<{
+  hanzi: string;
+  hanziTrad: string;
+  pinyin: string;
+  glossEn: string;
+  unknownCount: number;
+} | null> {
+  const rows = await db.all<{
+    hanzi: string;
+    hanzi_trad: string;
+    pinyin: string;
+    gloss_en: string;
+    unknown: number;
+    personal: number;
+  }>(
+    `SELECT u.hanzi, u.hanzi_trad, u.pinyin, u.gloss_en,
+            sum(CASE WHEN EXISTS (
+              SELECT 1 FROM card k
+              WHERE k.concept_id = c.id AND k.modality = ? AND k.introduced_at IS NOT NULL
+            ) THEN 0 ELSE 1 END) AS unknown,
+            sum(CASE WHEN c.source = 'personal' THEN 1 ELSE 0 END) AS personal
+     FROM utterance u
+     JOIN utterance_concept uc ON uc.utterance_id = u.id
+     JOIN concept c            ON c.id = uc.concept_id
+     WHERE u.status = 'approved'
+     GROUP BY u.id
+     HAVING unknown <= 1 AND personal > 0
+     ORDER BY unknown, personal DESC, u.id`,
+    modality,
+  );
+  if (!rows.length) return null;
+
+  // Rotate within the best tier so the phrase changes daily without drifting into
+  // sentences there is no occasion to use.
+  const top = rows.filter((r) => r.unknown === rows[0]!.unknown && r.personal === rows[0]!.personal);
+  const pool = top.length > 1 ? top : rows;
+  const pick = pool[dayIndex % pool.length]!;
+  return {
+    hanzi: pick.hanzi,
+    hanziTrad: pick.hanzi_trad,
+    pinyin: pick.pinyin,
+    glossEn: pick.gloss_en,
+    unknownCount: pick.unknown,
+  };
 }
