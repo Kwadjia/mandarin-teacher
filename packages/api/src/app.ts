@@ -798,16 +798,57 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
     const target = concepts.find((x) => x.id === card.conceptId)!;
     const pool = concepts.filter((x) => known.some((k) => k.conceptId === x.id));
 
-    const options = choices({ target, pool });
-    const pick = pickUtterance(
-      target.id,
-      utterances,
-      new Set(known.map((k) => k.conceptId)),
-    );
+    const knownIds = new Set(known.map((k) => k.conceptId));
+    const pick = pickUtterance(target.id, utterances, knownIds);
     const utterance = pick ? await q.loadUtteranceDetail(db, pick.utterance.id) : null;
     if (!utterance) {
       return c.json({ type: 'idle', reason: 'No sentence available for that word.' });
     }
+
+    /**
+     * Meaning Match is answered about the whole sentence, so its options are whole
+     * sentences.
+     *
+     * It used to play 奶奶抱宝宝 and offer single-word meanings, which made both
+     * "paternal grandmother" and "baby" defensible — the question had no correct
+     * answer. Asking what the sentence means has exactly one.
+     */
+    if (kind === 'meaning-match') {
+      const others = await q.sentenceOptions(db, utterance.id, utterance.hanzi.length);
+      if (others.length < 3) {
+        return c.json({
+          type: 'idle',
+          reason: 'Not enough sentences in the corpus yet for this one — try Which word.',
+        });
+      }
+      const opts = [
+        { conceptId: utterance.id, label: utterance.glossEn, sub: null },
+        ...others.map((o) => ({ conceptId: o.id, label: o.glossEn, sub: null })),
+      ];
+      for (let i = opts.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [opts[i], opts[j]] = [opts[j]!, opts[i]!];
+      }
+      return c.json({
+        type: 'item',
+        kind,
+        conceptId: target.id,
+        utteranceId: utterance.id,
+        // The correct option is identified by utterance id, not concept id.
+        answerId: null,
+        clips: utterance.clips,
+        options: opts,
+        prompt: null,
+      });
+    }
+
+    // Which One and Cloze ask about one word, so no other word from the sentence may
+    // appear as an option: 狗也累了 offered 狗 against the target 累, and both were in
+    // the audio.
+    const inSentence = new Set(
+      await q.conceptIdsForUtterance(db, utterance.id),
+    );
+    const options = choices({ target, pool, exclude: inSentence });
 
     return c.json({
       type: 'item',
@@ -817,16 +858,11 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
       clips: utterance.clips,
       options: options.map((o) => ({
         conceptId: o.id,
-        // Meaning Match asks for the English; the other two ask for the Chinese, so
-        // the audio cannot be bypassed by reading a translation.
-        label: kind === 'meaning-match' ? o.glossEn : o.headwordTrad,
-        sub: kind === 'meaning-match' ? null : o.pinyin,
+        label: o.headwordTrad,
+        sub: o.pinyin,
       })),
       // Cloze shows the sentence with the target blanked, so the gap is the question.
-      prompt:
-        kind === 'cloze'
-          ? utterance.hanziTrad.replace(target.headwordTrad, '＿'.repeat(1))
-          : null,
+      prompt: kind === 'cloze' ? utterance.hanziTrad.replace(target.headwordTrad, '＿') : null,
     });
   });
 
@@ -844,7 +880,12 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
       practice?: boolean;
     };
 
-    const correct = body.chosenConceptId === body.conceptId;
+    // Meaning Match asks about the sentence, so its options are utterances and the
+    // right answer is the one that was played. The other two ask about a word.
+    const correct =
+      body.kind === 'meaning-match'
+        ? body.chosenConceptId === body.utteranceId
+        : body.chosenConceptId === body.conceptId;
     const at = now();
     const grade = gradeAuto({
       correct,

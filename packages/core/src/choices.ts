@@ -79,6 +79,14 @@ export interface ChoiceInput {
   target: Concept;
   /** Only words already introduced — a wrong answer must mean misheard, not unmet. */
   pool: Concept[];
+  /**
+   * Concepts that must never be offered, beyond the target.
+   *
+   * In practice: every other word in the sentence being played. Offering one makes the
+   * question unanswerable — 狗也累了 with 狗 among the options has two words that were
+   * genuinely in the audio, and marking 狗 wrong is simply incorrect.
+   */
+  exclude?: ReadonlySet<number>;
   count?: number;
   /** Deterministic shuffling, so a test can assert on the result. */
   random?: () => number;
@@ -92,9 +100,17 @@ export interface ChoiceInput {
  * option keeps a wrong answer informative — missing an obvious one says something
  * different from missing a near-minimal pair.
  */
-export function distractors({ target, pool, count = 3, random = Math.random }: ChoiceInput): Concept[] {
+export function distractors({
+  target,
+  pool,
+  exclude,
+  count = 3,
+  random = Math.random,
+}: ChoiceInput): Concept[] {
   const candidates = pool
-    .filter((c) => c.id !== target.id && c.glossEn !== target.glossEn)
+    .filter(
+      (c) => c.id !== target.id && c.glossEn !== target.glossEn && !exclude?.has(c.id),
+    )
     .map((c) => ({ c, score: confusability(target, c) }))
     .sort((a, b) => b.score - a.score);
 

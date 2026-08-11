@@ -447,3 +447,40 @@ export async function cardId(
   );
   return r?.id ?? null;
 }
+
+
+/**
+ * Other sentences to use as wrong answers in sentence-level Meaning Match.
+ *
+ * The options are English, so there is no need for the learner to know the Chinese in
+ * them — requiring that made the exercise unavailable at twenty known words, since
+ * almost no sentence was fully covered.
+ *
+ * Preference goes to sentences sharing a word with the target, and then to similar
+ * length. Both matter: four sentences on unrelated topics can be eliminated without
+ * listening at all, and a long sentence beside three short ones gives the answer away
+ * by shape.
+ */
+export async function sentenceOptions(
+  db: Db,
+  excludeUtteranceId: number,
+  targetLength: number,
+  limit = 3,
+): Promise<{ id: number; glossEn: string }[]> {
+  return db.all<{ id: number; glossEn: string }>(
+    `SELECT u.id, u.gloss_en AS glossEn,
+            EXISTS (
+              SELECT 1 FROM utterance_concept a
+              JOIN utterance_concept b ON b.concept_id = a.concept_id
+              WHERE a.utterance_id = u.id AND b.utterance_id = ?
+            ) AS shares
+     FROM utterance u
+     WHERE u.status = 'approved' AND u.id != ? AND u.gloss_en != ''
+     ORDER BY shares DESC, abs(length(u.hanzi) - ?), random()
+     LIMIT ?`,
+    excludeUtteranceId,
+    excludeUtteranceId,
+    targetLength,
+    limit,
+  );
+}

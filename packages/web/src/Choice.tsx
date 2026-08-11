@@ -11,13 +11,17 @@ import { pickClip, useAudio, voiceLabel } from './useAudio.ts';
  *
  * The three differ only in what the options say, which is why they share a component:
  *
- *   Meaning Match  four English meanings — fastest, closest to "did you understand"
- *   Which One      four Chinese words — no translation to lean on
+ *   Meaning Match  four sentence translations — what did the whole thing mean
+ *   Which One      four Chinese words, none of the others in the audio
  *   Cloze          the sentence with the word blanked, four words to fill it
+ *
+ * Meaning Match asks about the sentence, not a word in it. Offering word meanings for
+ * 奶奶抱宝宝 made both "paternal grandmother" and "baby" defensible; the question had no
+ * correct answer.
  */
 
 const KINDS: { id: ChoiceKind; label: string; hint: string }[] = [
-  { id: 'meaning-match', label: 'Meaning', hint: 'pick what it means' },
+  { id: 'meaning-match', label: 'Meaning', hint: 'pick what the sentence means' },
   { id: 'which-one', label: 'Which word', hint: 'pick what you heard' },
   { id: 'cloze', label: 'Fill the gap', hint: 'pick the missing word' },
 ];
@@ -190,7 +194,8 @@ export function Choice({ sessionId, onAnswered }: Props) {
       <div className="mt-8 grid gap-3 sm:grid-cols-2">
         {item.options.map((o, i) => {
           const isChosen = chosen === o.conceptId;
-          const isAnswer = result && o.conceptId === item.conceptId;
+          const answerId = item.kind === 'meaning-match' ? item.utteranceId : item.conceptId;
+          const isAnswer = result && o.conceptId === answerId;
           const tone = !result
             ? 'border-stone-200 hover:border-amber-700/60 dark:border-stone-800'
             : isAnswer

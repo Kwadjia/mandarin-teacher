@@ -74,6 +74,23 @@ describe('distractors', () => {
     const d = distractors({ target: BAO3, pool: [...pool, twin], random: fixed });
     expect(d.map((c) => c.glossEn)).not.toContain('treasure');
   });
+
+  /**
+   * The other words in the sentence being played must never appear as options.
+   * 狗也累了 offered 狗 alongside the target 累 — both were genuinely in the audio, so
+   * marking 狗 wrong was simply incorrect, and the question had two right answers.
+   */
+  it('never offers an excluded word', () => {
+    const d = distractors({
+      target: BAO3,
+      pool,
+      exclude: new Set([BAO4.id, GAO1.id]),
+      random: fixed,
+    });
+    const ids = d.map((c) => c.id);
+    expect(ids).not.toContain(BAO4.id);
+    expect(ids).not.toContain(GAO1.id);
+  });
 });
 
 describe('choices', () => {
