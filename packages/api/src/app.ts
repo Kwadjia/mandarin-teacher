@@ -37,6 +37,7 @@ import {
   planSession,
   practiceQueue,
   review,
+  sampleForQuiz,
   shouldReschedule,
   strandedCards,
   NEW_WORDS_PER_DAY,
@@ -788,13 +789,11 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
       });
     }
 
-    // Weakest first, same as practice: the words about to be forgotten are the ones
-    // worth a question. Drawn from the weakest handful rather than always the single
-    // weakest, or a session is the same word over and over — taking index 0 every time
-    // served 宝宝 three questions running.
-    const queue = practiceQueue({ cards, modality: 'listen', now: at });
-    const window = queue.slice(0, Math.min(10, queue.length));
-    const card = window[Math.floor(Math.random() * window.length)]!;
+    // Weighted across everything introduced, biased toward fragile words. A hard
+    // weakest-ten window put 25 questions onto 8 words and never offered a single one
+    // of the twelve learned that day — because "weakest" was measured as predicted
+    // recall, which is near perfect for something just studied.
+    const card = sampleForQuiz(cards, 'listen')!;
     const target = concepts.find((x) => x.id === card.conceptId)!;
     const pool = concepts.filter((x) => known.some((k) => k.conceptId === x.id));
 

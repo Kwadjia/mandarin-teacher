@@ -46,19 +46,58 @@ export interface PracticeInput {
 }
 
 /**
- * Introduced cards ordered weakest first.
+ * Introduced cards ordered weakest first — weakest meaning *least durable*.
  *
- * Weakest by predicted recall rather than by due date: in practice everything is
- * "early", so due dates say nothing useful, while retrievability points straight at
- * the words about to be forgotten. Drilling those is the best use of an extra hour.
+ * Ordering by retrievability was wrong, and wrong in a way that hid itself. It measures
+ * "would this be recalled right now", which is near 1.0 for anything just studied — so
+ * every word learned today sorted to the bottom and was never offered. A quiz drawn
+ * from the weakest ten served only day-one vocabulary, and the twelve new words of the
+ * day never appeared at all.
+ *
+ * Stability is the right axis: how long the memory would survive. It is low for a word
+ * met an hour ago and low for one that keeps being forgotten, which are exactly the two
+ * groups worth drilling. Retrievability then breaks ties, so between two equally fragile
+ * words the one closer to being lost comes first.
  */
 export function practiceQueue({ cards, modality, now, seen }: PracticeInput): Card[] {
   const eligible = cards.filter(
     (c) => c.modality === modality && c.introducedAt !== null && !seen?.has(c.conceptId),
   );
-  return eligible.sort(
-    (a, b) => retrievability(a.fsrs, now) - retrievability(b.fsrs, now),
-  );
+  return eligible.sort((a, b) => {
+    const byStability = (a.fsrs.stability ?? 0) - (b.fsrs.stability ?? 0);
+    if (Math.abs(byStability) > 0.01) return byStability;
+    return retrievability(a.fsrs, now) - retrievability(b.fsrs, now);
+  });
+}
+
+/**
+ * One card to quiz on, drawn from the whole introduced set with a bias toward fragile
+ * words.
+ *
+ * A hard "weakest ten" window concentrates every question on a handful of words: 25
+ * questions produced eight distinct targets, one of them seven times. Weighted sampling
+ * keeps the bias — a fragile word is several times likelier than a solid one — while
+ * leaving every known word reachable, which is what makes a session feel like it covers
+ * what has been learned rather than looping.
+ */
+export function sampleForQuiz(
+  cards: Card[],
+  modality: Modality,
+  random: () => number = Math.random,
+): Card | null {
+  const eligible = cards.filter((c) => c.modality === modality && c.introducedAt !== null);
+  if (!eligible.length) return null;
+
+  // 1/(stability + 1): a brand-new word is worth about four of a fortnight-old one,
+  // and nothing ever drops to zero.
+  const weights = eligible.map((c) => 1 / ((c.fsrs.stability ?? 0) + 1));
+  const total = weights.reduce((a, b) => a + b, 0);
+  let r = random() * total;
+  for (let i = 0; i < eligible.length; i++) {
+    r -= weights[i]!;
+    if (r <= 0) return eligible[i]!;
+  }
+  return eligible[eligible.length - 1]!;
 }
 
 /**

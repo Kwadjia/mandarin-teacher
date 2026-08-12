@@ -9,7 +9,8 @@
     "start": "node --experimental-strip-types --no-warnings src/server.ts",
     "reset-cards": "node --experimental-strip-types --no-warnings src/reset-cards.ts",
     "test": "node --test --experimental-strip-types --no-warnings test/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "rebuild-cards": "node --experimental-strip-types --no-warnings src/rebuild-cards.ts"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",

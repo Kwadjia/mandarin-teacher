@@ -4,11 +4,24 @@ import {
   newCard,
   practiceQueue,
   review,
+  sampleForQuiz,
   shouldReschedule,
   type Card,
 } from '../src/index.ts';
 
 const T0 = new Date('2026-01-01T09:00:00.000Z');
+
+/** Same generator the simulation uses — a toy LCG had too short a cycle to sample with. */
+function mulberry32(seed: number): () => number {
+  let a = seed;
+  return () => {
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
 
 /** A card drilled n times, so it has some stability to compare against. */
 function drilled(conceptId: number, times: number): Card {
@@ -84,5 +97,66 @@ describe('shouldReschedule', () => {
     for (const g of ['again', 'hard', 'good', 'easy'] as const) {
       expect(shouldReschedule(g, true)).toBe(true);
     }
+  });
+});
+
+describe('practiceQueue ordering', () => {
+  /**
+   * The bug this replaced. Retrievability measures "would this be recalled right now",
+   * which is near 1.0 for anything just studied — so every word learned today sorted to
+   * the bottom and was never offered. Twelve new words appeared in none of 25 questions.
+   */
+  it('puts a word learned an hour ago ahead of one drilled for a fortnight', () => {
+    const fresh = { ...drilled(1, 1), introducedAt: T0.getTime() };
+    const solid = { ...drilled(2, 8), introducedAt: T0.getTime() };
+    const q = practiceQueue({ cards: [solid, fresh], modality: 'listen', now: T0 });
+    expect(q[0]!.conceptId).toBe(fresh.conceptId);
+  });
+
+  it('still surfaces a word that keeps being forgotten', () => {
+    const forgotten = { ...newCard(3, 'listen', T0), introducedAt: T0.getTime() };
+    const solid = { ...drilled(2, 8), introducedAt: T0.getTime() };
+    const q = practiceQueue({ cards: [solid, forgotten], modality: 'listen', now: T0 });
+    expect(q[0]!.conceptId).toBe(3);
+  });
+});
+
+describe('sampleForQuiz', () => {
+  /** Explicit stabilities, so this tests the sampler rather than FSRS's curve. */
+  const withStability = (id: number, stability: number): Card => ({
+    ...newCard(id, 'listen', T0),
+    introducedAt: T0.getTime(),
+    fsrs: { ...newCard(id, 'listen', T0).fsrs, stability },
+  });
+  // Six fragile (a day or two) and six settled (a fortnight) — the real spread in the
+  // corpus after a week of use.
+  const many = [
+    ...Array.from({ length: 6 }, (_, i) => withStability(i + 1, 1 + i * 0.3)),
+    ...Array.from({ length: 6 }, (_, i) => withStability(i + 7, 12 + i)),
+  ];
+
+  it('returns null when nothing is introduced', () => {
+    expect(sampleForQuiz([newCard(1, 'listen', T0)], 'listen')).toBe(null);
+  });
+
+  /**
+   * A hard weakest-ten window concentrated 25 questions onto 8 words, one of them seven
+   * times, and never once offered a word learned that day. Every known word has to stay
+   * reachable or the session loops.
+   */
+  it('can reach every introduced word', () => {
+    const seen = new Set<number>();
+    const rng = mulberry32(7);
+    for (let i = 0; i < 2000; i++) seen.add(sampleForQuiz(many, 'listen', rng)!.conceptId);
+    expect(seen.size).toBe(many.length);
+  });
+
+  it('favours the fragile ones', () => {
+    const rng = mulberry32(3);
+    let weak = 0;
+    for (let i = 0; i < 2000; i++) {
+      if (sampleForQuiz(many, 'listen', rng)!.conceptId <= 6) weak++;
+    }
+    expect(weak).toBeGreaterThan(1200); // well above the 1000 a flat draw would give
   });
 });
