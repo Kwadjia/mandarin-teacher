@@ -23,6 +23,29 @@ npm run seed          # corpus JSON -> data/mandarin.db  (idempotent)
 npm start             # the app on :8787 and the speech scorer on :8790
 ```
 
+## Backup
+
+Everything in the database is derived except one thing. Concepts, sentences and audio
+rebuild from the corpus JSON; cards replay from events. The **event log** is the record
+of what was actually studied, and nothing can reconstruct it.
+
+```powershell
+npm run backup -w @mt/schema      # data/history.jsonl — commit this
+```
+
+It is append-only text, so each export differs from the last only by the lines added
+and git stores it as a small delta. Run it after a session worth keeping.
+
+To recover on a new machine:
+
+```powershell
+npm install
+npm run seed                              # corpus -> database
+python pipeline/day0_validate.py --sentences --tts edge --yes   # regenerate the audio
+npm run restore -w @mt/schema -- --yes    # the event log
+npm run rebuild-cards -w @mt/api -- --yes # scheduler state, replayed from events
+```
+
 Open <http://localhost:8787>. Press **Start** (browsers block audio until a gesture),
 then drill with the keyboard:
 

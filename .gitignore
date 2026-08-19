@@ -15,7 +15,10 @@ dist/
 .env.local
 .dev.vars
 
-# Data — the database and generated audio are not source
+# Data — the database and generated audio are not source. The exception is
+# history.jsonl: the event log is the one thing that cannot be regenerated, and as an
+# append-only text file it versions cleanly (see packages/schema/src/history.ts).
+!data/history.jsonl
 data/*.db
 data/*.db-wal
 data/*.db-shm
