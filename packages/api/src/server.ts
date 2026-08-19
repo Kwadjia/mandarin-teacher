@@ -51,15 +51,26 @@ if (!tones.length) console.warn('No tone drills — run: python pipeline/build_t
  */
 const SPEECH_URL = process.env.MT_SPEECH_URL ?? 'http://127.0.0.1:8790';
 
+/**
+ * Asked per request rather than once at boot.
+ *
+ * The app starts in about a second; the scorer spends several loading a 3GB model. A
+ * single `npm start` therefore came up with speaking disabled and stayed that way,
+ * with nothing on screen explaining why. Cached briefly so a burst of requests does
+ * not mean a burst of probes.
+ */
+let speechCache = { at: 0, up: false };
 async function speechAvailable(): Promise<boolean> {
+  if (Date.now() - speechCache.at < 5000) return speechCache.up;
+  let up = false;
   try {
-    const res = await fetch(`${SPEECH_URL}/health`, {
-      signal: AbortSignal.timeout(1500),
-    });
-    return res.ok;
+    const res = await fetch(`${SPEECH_URL}/health`, { signal: AbortSignal.timeout(1500) });
+    up = res.ok;
   } catch {
-    return false;
+    up = false;
   }
+  speechCache = { at: Date.now(), up };
+  return up;
 }
 
 const scoreSpeech = async (input: {
@@ -88,7 +99,8 @@ const scoreSpeech = async (input: {
 
 const db = new NodeDb(DB_PATH);
 const speechUp = await speechAvailable();
-const app = createApp({ db, tones, scoreSpeech: speechUp ? scoreSpeech : undefined });
+// Always wired up; whether it is reachable is decided per request by speechReady.
+const app = createApp({ db, tones, scoreSpeech, speechReady: speechAvailable });
 
 // serveStatic resolves relative to cwd, so express the audio directory that way.
 const audioRoot = relative(process.cwd(), AUDIO_DIR).replaceAll('\\', '/');
@@ -128,7 +140,8 @@ const server = serve({ fetch: app.fetch, port: PORT }, (info) => {
   console.log(
     speechUp
       ? `  speaking enabled — scorer at ${SPEECH_URL}`
-      : `  speaking disabled — no scorer at ${SPEECH_URL}. Start it with: npm run speech`,
+      : `  speaking scorer not up at ${SPEECH_URL} yet — rechecked per request, so it ` +
+        `works as soon as the scorer finishes loading`,
   );
 });
 

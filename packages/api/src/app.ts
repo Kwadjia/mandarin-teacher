@@ -122,6 +122,16 @@ export interface Deps {
     pinyin: string;
     reference: string | null;
   }) => Promise<SpeechScore>;
+  /**
+   * Live check that the scoring service is reachable.
+   *
+   * Deciding this once at boot was a race: the app finishes starting in about a second
+   * while the scorer spends several loading a 3GB model, so a single `npm start` came
+   * up with speaking permanently disabled and nothing on screen explaining why. Asked
+   * per request, the two processes can start in any order and either can be restarted
+   * without the other noticing.
+   */
+  speechReady?: () => Promise<boolean>;
 }
 
 type Outcome =
@@ -172,10 +182,21 @@ const HAN = /[一-鿿㐀-䶿]/;
 const startOfToday = (now: Date) =>
   new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
 
-export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech }: Deps) {
+export function createApp({
+  db,
+  now = () => new Date(),
+  tones = [],
+  scoreSpeech,
+  speechReady,
+}: Deps) {
   const app = new Hono();
 
-  app.get('/api/health', (c) => c.json({ ok: true, speech: Boolean(scoreSpeech) }));
+  app.get('/api/health', async (c) =>
+    c.json({
+      ok: true,
+      speech: scoreSpeech ? ((await speechReady?.()) ?? true) : false,
+    }),
+  );
 
   app.get('/api/tones', (c) => c.json({ sets: tones }));
 
@@ -515,9 +536,9 @@ export function createApp({ db, now = () => new Date(), tones = [], scoreSpeech 
    * down is an operational state with an obvious remedy, not a bug in the app.
    */
   app.post('/api/speak', async (c) => {
-    if (!scoreSpeech) {
+    if (!scoreSpeech || (await speechReady?.()) === false) {
       return c.json(
-        { error: 'Speech scoring is not running. Start it with: npm run speech' },
+        { error: 'Speech scoring is not running. Start it with: npm start' },
         503,
       );
     }

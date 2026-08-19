@@ -20,7 +20,7 @@ settled (Taiwan), corpus at HSK1 completeness. No app code yet, on purpose.
 ```powershell
 npm install
 npm run seed          # corpus JSON -> data/mandarin.db  (idempotent)
-npm run study         # builds the web app and serves everything on :8787
+npm start             # the app on :8787 and the speech scorer on :8790
 ```
 
 Open <http://localhost:8787>. Press **Start** (browsers block audio until a gesture),

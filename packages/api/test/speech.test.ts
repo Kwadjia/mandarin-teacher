@@ -130,7 +130,7 @@ describe('POST /api/speak', () => {
       utteranceId: String(utteranceId),
     });
     assert.equal(status, 503);
-    assert.match(body.error, /npm run speech/);
+    assert.match(body.error, /npm start/);
   });
 
   /**
