@@ -12,6 +12,8 @@
 import { serve } from '@hono/node-server';
 import { serveStatic } from '@hono/node-server/serve-static';
 import { existsSync, readFileSync } from 'node:fs';
+import { createServer as createHttpsServer } from 'node:https';
+import { networkInterfaces } from 'node:os';
 import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { NodeDb } from '@mt/schema/node';
@@ -144,6 +146,35 @@ const server = serve({ fetch: app.fetch, port: PORT }, (info) => {
         `works as soon as the scorer finishes loading`,
   );
 });
+
+// HTTPS on a second port, for the phone. Browsers only allow microphone access on
+// secure origins, so plain http://<lan-ip>:8787 can play audio but never record it.
+// The certificate is self-signed (data/certs, see README) — the phone shows a warning
+// once, and after accepting it the origin counts as secure and getUserMedia works.
+// Optional by design: if the certs are absent, desktop use is unaffected.
+const CERT_DIR = join(REPO, 'data', 'certs');
+const HTTPS_PORT = Number(process.env.HTTPS_PORT ?? 8443);
+if (existsSync(join(CERT_DIR, 'lan.crt')) && existsSync(join(CERT_DIR, 'lan.key'))) {
+  const lanIps = Object.values(networkInterfaces())
+    .flat()
+    .filter((i) => i && i.family === 'IPv4' && !i.internal)
+    .map((i) => i!.address);
+  serve(
+    {
+      fetch: app.fetch,
+      port: HTTPS_PORT,
+      createServer: createHttpsServer,
+      serverOptions: {
+        cert: readFileSync(join(CERT_DIR, 'lan.crt')),
+        key: readFileSync(join(CERT_DIR, 'lan.key')),
+      },
+    },
+    (info) => {
+      const urls = lanIps.map((ip) => `https://${ip}:${info.port}`).join('  ');
+      console.log(`  phone (mic works): ${urls || `https://<this-machine>:${info.port}`}`);
+    },
+  );
+}
 
 // A stale server on the port is the most likely startup failure, and the default
 // unhandled-'error' stack trace buries what to do about it.

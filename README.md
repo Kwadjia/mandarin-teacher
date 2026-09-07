@@ -23,6 +23,24 @@ npm run seed          # corpus JSON -> data/mandarin.db  (idempotent)
 npm start             # the app on :8787 and the speech scorer on :8790
 ```
 
+### From a phone (same network)
+
+Open `https://10.0.0.223:8443` and accept the certificate warning once. HTTPS matters:
+browsers refuse microphone access on plain `http://<lan-ip>`, so the speaking drill only
+works over the secure port. The certificate is self-signed, generated into `data/certs/`
+(gitignored — the key never leaves this machine). If the PC's LAN IP ever changes,
+regenerate it with the new IP in the SAN list:
+
+```powershell
+cd data/certs
+openssl req -x509 -newkey ec -pkeyopt ec_paramgen_curve:prime256v1 -keyout lan.key `
+  -out lan.crt -days 825 -nodes -subj "/CN=mandarin-teacher" `
+  -addext "subjectAltName=DNS:localhost,IP:127.0.0.1,IP:<new-lan-ip>"
+```
+
+Both ports need an inbound firewall rule on the private profile (admin PowerShell):
+`New-NetFirewallRule -DisplayName "mandarin-teacher LAN" -Direction Inbound -Protocol TCP -LocalPort 8787,8443 -Action Allow -Profile Private`
+
 ## Backup
 
 Everything in the database is derived except one thing. Concepts, sentences and audio

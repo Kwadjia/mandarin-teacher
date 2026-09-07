@@ -19,6 +19,7 @@ dist/
 # history.jsonl: the event log is the one thing that cannot be regenerated, and as an
 # append-only text file it versions cleanly (see packages/schema/src/history.ts).
 !data/history.jsonl
+data/certs/
 data/*.db
 data/*.db-wal
 data/*.db-shm
