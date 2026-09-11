@@ -24,7 +24,6 @@ export function useRecorder() {
 
   const stream = useRef<MediaStream | null>(null);
   const recorder = useRef<MediaRecorder | null>(null);
-  const chunks = useRef<Blob[]>([]);
   const startedAt = useRef(0);
   /** Revoked on replacement — object URLs are not garbage collected on their own. */
   const lastUrl = useRef<string | null>(null);
@@ -37,7 +36,19 @@ export function useRecorder() {
   }, []);
 
   const arm = useCallback(async () => {
-    if (stream.current) return true;
+    if (stream.current) {
+      // Holding the stream for the session is a desktop luxury. Phone browsers
+      // reclaim the microphone between takes — the track flips to 'ended' with no
+      // event the UI reacts to — and recording from a dead track produces a few
+      // bytes of container tail that the scorer can do nothing with. One take
+      // worked, every take after it "failed", and the mic looked on the whole time.
+      if (stream.current.getAudioTracks().some((t) => t.readyState === 'ended')) {
+        stream.current.getTracks().forEach((t) => t.stop());
+        stream.current = null;
+      } else {
+        return true;
+      }
+    }
     if (typeof MediaRecorder === 'undefined' || !navigator.mediaDevices?.getUserMedia) {
       setState('unsupported');
       return false;
@@ -61,15 +72,18 @@ export function useRecorder() {
     if (!(await arm())) return;
     if (recorder.current?.state === 'recording') return;
 
-    chunks.current = [];
+    // Each recorder owns its chunks. A shared buffer had a race: starting the next
+    // take before the previous recorder's onstop fired would wipe or cross-wire the
+    // two recordings.
+    const chunks: Blob[] = [];
     const mr = new MediaRecorder(stream.current!, {
       mimeType: MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
         ? 'audio/webm;codecs=opus'
         : '',
     });
-    mr.ondataavailable = (e) => e.data.size && chunks.current.push(e.data);
+    mr.ondataavailable = (e) => e.data.size && chunks.push(e.data);
     mr.onstop = () => {
-      const blob = new Blob(chunks.current, { type: mr.mimeType || 'audio/webm' });
+      const blob = new Blob(chunks, { type: mr.mimeType || 'audio/webm' });
       if (lastUrl.current) URL.revokeObjectURL(lastUrl.current);
       lastUrl.current = URL.createObjectURL(blob);
       setRecording({ blob, url: lastUrl.current, durationMs: Date.now() - startedAt.current });

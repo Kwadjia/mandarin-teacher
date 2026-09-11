@@ -579,7 +579,20 @@ def score(attempt: Path | bytes, target_hanzi: str, target_pinyin: str,
       - the pitch contour against a native reading. Always available, noisier.
     """
     target = to_simplified("".join(c for c in target_hanzi if _han(c)))
-    wav = to_wav(attempt)
+    try:
+        wav = to_wav(attempt)
+    except subprocess.CalledProcessError:
+        # A truncated or empty upload ffmpeg cannot even identify — seen live when a
+        # phone browser silently killed the held microphone track and the next take
+        # arrived as a 5-byte webm tail. Not a learner failure (§2.12a), and there is
+        # nothing worth keeping: no audio survived to listen back to.
+        return {
+            "unusable": True,
+            "reason": "the recording arrived empty or broken — tap record and try again",
+            "transcript": "", "target": target, "confidence": None, "syllables": [],
+            "totalSyllables": 0, "correctSyllables": 0, "toneErrors": 0,
+            "scoredSyllables": 0, "meanToneDistance": None,
+        }
 
     def unusable(reason: str, transcript: str = "", confidence: float | None = None) -> dict:
         """A recogniser failure is not a learner failure.
