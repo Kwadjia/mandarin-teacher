@@ -11,6 +11,19 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 export type RecorderState = 'idle' | 'ready' | 'recording' | 'denied' | 'unsupported';
 
+/**
+ * Whether the microphone stream is kept open between takes.
+ *
+ * On desktop, yes — see the hook comment: re-asking per rep puts a few hundred
+ * milliseconds between hearing a sentence and repeating it. On a phone, no, for two
+ * reasons observed live: a hot microphone switches the device into communication
+ * audio mode, which ducks or mutes the sentence playback (audio "stopped working"
+ * after the first rep); and phone browsers reclaim the held track anyway, so the
+ * next take recorded from a dead stream. Primary pointer is the discriminator — a
+ * touchscreen laptop with a mouse still counts as desktop.
+ */
+const HOLD_STREAM = typeof matchMedia === 'undefined' || matchMedia('(pointer: fine)').matches;
+
 export interface Recording {
   blob: Blob;
   url: string;
@@ -88,6 +101,12 @@ export function useRecorder() {
       lastUrl.current = URL.createObjectURL(blob);
       setRecording({ blob, url: lastUrl.current, durationMs: Date.now() - startedAt.current });
       setState('ready');
+      if (!HOLD_STREAM) {
+        // Give the microphone back so the phone leaves communication mode and
+        // sentence playback comes back at full volume. The next take re-arms.
+        stream.current?.getTracks().forEach((t) => t.stop());
+        stream.current = null;
+      }
     };
     recorder.current = mr;
     startedAt.current = Date.now();
