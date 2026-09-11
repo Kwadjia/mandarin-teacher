@@ -17,6 +17,8 @@
     "build:web": "npm run build -w @mt/web",
     "study": "npm run build:web && npm run api",
     "web": "npm run dev -w @mt/web",
+    "showcase": "node scripts/build-showcase.mjs",
+    "showcase:deploy": "npm run showcase && npx wrangler pages deploy showcase --project-name=mandarin-showcase",
     "speech": ".venv\\Scripts\\python.exe pipeline/speech_server.py",
     "speech:calibrate": ".venv\\Scripts\\python.exe pipeline/speech_score.py --calibrate"
   },

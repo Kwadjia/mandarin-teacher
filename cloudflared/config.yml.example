@@ -1,0 +1,21 @@
+# Cloudflare Tunnel for the private app — copy to %USERPROFILE%\.cloudflared\config.yml
+# and replace <TUNNEL_ID> with the id printed by `cloudflared tunnel create mandarin`.
+#
+# The tunnel makes an outbound connection from this PC to Cloudflare's edge; nothing
+# is port-forwarded and the home IP is never exposed. TLS terminates at the edge, so
+# the local service is plain http on 8787 — the LAN https listener on 8443 is not
+# involved. Because the edge origin is a real https URL, the phone's microphone works
+# with no certificate warning.
+#
+# ORDER MATTERS: create the Cloudflare Access application for this hostname BEFORE
+# routing DNS to the tunnel (see README, Remote access). Routing first means the app
+# is on the public internet, un-gated, until Access is configured.
+
+tunnel: <TUNNEL_ID>
+credentials-file: C:\Users\ATNem\.cloudflared\<TUNNEL_ID>.json
+
+ingress:
+  - hostname: app.mandarin.arthurnemeth.com
+    service: http://localhost:8787
+  # Everything not matched above gets a 404, not a pass-through.
+  - service: http_status:404

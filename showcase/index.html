@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mandarin Teacher — a personal learning engine</title>
+<meta name="description" content="A single-user Mandarin learning engine: spaced repetition from an append-only event log, GPU speech scoring on local hardware, zero recurring costs. Built by Arthur Nemeth.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --plane: #f9f9f7; --surface: #fcfcfb;
+    --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+    --hairline: rgba(11, 11, 11, 0.10); --track: #e1e0d9;
+    --blue: #2a78d6; --blue-light: #86b6ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --plane: #0d0d0d; --surface: #1a1a19;
+      --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+      --hairline: rgba(255, 255, 255, 0.10); --track: #2c2c2a;
+      --blue: #3987e5; --blue-light: #184f95;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--plane); color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 880px; margin: 0 auto; padding: 48px 24px 64px; }
+  header h1 { font-size: 2rem; margin: 0 0 4px; letter-spacing: -0.02em; }
+  header .hanzi { color: var(--blue); font-weight: 600; }
+  header p.tagline { color: var(--ink-2); margin: 0; max-width: 60ch; }
+  .tiles {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px; margin: 36px 0;
+  }
+  .tile {
+    background: var(--surface); border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .tile .value { font-size: 1.7rem; font-weight: 650; line-height: 1.2; }
+  .tile .label { color: var(--muted); font-size: 0.8rem; margin-top: 2px; }
+  section { margin-top: 44px; }
+  h2 { font-size: 1.15rem; margin: 0 0 10px; }
+  .card {
+    background: var(--surface); border: 1px solid var(--hairline); border-radius: 10px;
+    padding: 20px;
+  }
+  .chart-note { color: var(--muted); font-size: 0.8rem; margin: 10px 0 0; }
+  .legend { display: flex; gap: 18px; margin: 0 0 14px; font-size: 0.85rem; color: var(--ink-2); }
+  .legend .swatch {
+    display: inline-block; width: 12px; height: 12px; border-radius: 3px;
+    margin-right: 6px; vertical-align: -1px;
+  }
+  svg { display: block; width: 100%; height: auto; }
+  svg text { font: 13px system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .bar-name { fill: var(--ink-2); }
+  .bar-value { fill: var(--ink-2); font-variant-numeric: tabular-nums; }
+  .track { fill: var(--track); }
+  .in-corpus { fill: var(--blue-light); }
+  .known { fill: var(--blue); }
+  .how p { color: var(--ink-2); max-width: 68ch; }
+  .how h3 { font-size: 0.95rem; margin: 22px 0 4px; }
+  .how h3 + p { margin-top: 0; }
+  .stack { color: var(--muted); font-size: 0.85rem; margin-top: 28px; }
+  footer {
+    margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--hairline);
+    color: var(--muted); font-size: 0.85rem;
+  }
+  footer a { color: var(--ink-2); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1><span class="hanzi">中文</span> Mandarin Teacher</h1>
+    <p class="tagline">A single-user Mandarin learning engine I built for myself — spaced
+    repetition driven by an append-only event log, with speech scoring on my own GPU.
+    One learner, one machine, zero recurring costs.</p>
+  </header>
+
+  <div class="tiles">
+    <div class="tile"><div class="value">42</div><div class="label">words in training</div></div>
+    <div class="tile"><div class="value">4</div><div class="label">proven solid (passed a retention test)</div></div>
+    <div class="tile"><div class="value">763</div><div class="label">reps logged since August 2026</div></div>
+    <div class="tile"><div class="value">1.9s</div><div class="label">median time to comprehend a sentence</div></div>
+    <div class="tile"><div class="value">5</div><div class="label">study days</div></div>
+    <div class="tile"><div class="value">14</div><div class="label">level · 5,606 points</div></div>
+  </div>
+
+  <section>
+    <h2>HSK coverage, by ear</h2>
+    <div class="card">
+      <div class="legend">
+        <span><span class="swatch" style="background: var(--blue)"></span>known by listening</span>
+        <span><span class="swatch" style="background: var(--blue-light)"></span>in the corpus</span>
+        <span><span class="swatch" style="background: var(--track)"></span>official level size</span>
+      </div>
+      <svg viewBox="0 0 560 94" role="img" aria-label="Words known per HSK level, against the official level sizes">
+    <g>
+      <text x="0" y="11" dominant-baseline="central" class="bar-name">HSK 1</text>
+      <rect x="74" y="0" width="402" height="22" rx="4" class="track">
+        <title>HSK 1: 150 words in the official list</title>
+      </rect>
+      <rect x="74" y="0" width="399" height="22" rx="4" class="in-corpus">
+        <title>149 of 150 words have sentences and audio in the corpus</title>
+      </rect>
+      <rect x="74" y="0" width="8" height="22" rx="4" class="known">
+        <title>3 known by ear so far</title>
+      </rect>
+      <text x="560" y="11" dominant-baseline="central" text-anchor="end" class="bar-value">3 / 150</text>
+    </g>
+    <g>
+      <text x="0" y="47" dominant-baseline="central" class="bar-name">HSK 2</text>
+      <rect x="74" y="36" width="402" height="22" rx="4" class="track">
+        <title>HSK 2: 150 words in the official list</title>
+      </rect>
+      <rect x="74" y="36" width="373" height="22" rx="4" class="in-corpus">
+        <title>139 of 150 words have sentences and audio in the corpus</title>
+      </rect>
+      <rect x="74" y="36" width="0" height="22" rx="4" class="known">
+        <title>0 known by ear so far</title>
+      </rect>
+      <text x="560" y="47" dominant-baseline="central" text-anchor="end" class="bar-value">0 / 150</text>
+    </g>
+    <g>
+      <text x="0" y="83" dominant-baseline="central" class="bar-name">HSK 3</text>
+      <rect x="74" y="72" width="402" height="22" rx="4" class="track">
+        <title>HSK 3: 300 words in the official list</title>
+      </rect>
+      <rect x="74" y="72" width="247" height="22" rx="4" class="in-corpus">
+        <title>184 of 300 words have sentences and audio in the corpus</title>
+      </rect>
+      <rect x="74" y="72" width="4" height="22" rx="4" class="known">
+        <title>1 known by ear so far</title>
+      </rect>
+      <text x="560" y="83" dominant-baseline="central" text-anchor="end" class="bar-value">1 / 300</text>
+    </g>
+      </svg>
+      <p class="chart-note">Denominators are the official HSK level sizes, not the corpus —
+      coverage is only claimed against the real target. The corpus currently spans
+      HSK 1–3: 810 sentences with 6,480 audio clips
+      across 503 words, and it grows ahead of the learning frontier.</p>
+    </div>
+  </section>
+
+  <section class="how">
+    <h2>How it works</h2>
+
+    <h3>The event log is the source of truth</h3>
+    <p>Every rep is one row in an append-only log — SQLite triggers physically refuse
+    updates and deletes. Scheduling state is a cache rebuilt by replaying the log, so a
+    scheduling bug can never destroy history: fix the code, replay, and the past is
+    reinterpreted rather than lost.</p>
+
+    <h3>Scheduling that separates skills</h3>
+    <p>FSRS spaced repetition, with a card per (word, skill) pair — hearing 累 and
+    saying 累 are tracked as different memories, because they are. Listening gates
+    speaking: nothing is asked of the mouth before the ear can verify it. New
+    vocabulary is capped per day; past the cap, the system serves practice on known
+    words instead of more novelty.</p>
+
+    <h3>Speech scoring on local hardware</h3>
+    <p>Attempts are transcribed by faster-whisper (large-v3, CUDA) and pitch-tracked
+    with Praat. Tone feedback does not depend on the transcript: MFCC features aligned
+    by dynamic time warping carry native syllable boundaries onto the learner's audio,
+    so tones are judged even when recognition fails. And a recogniser failure is never
+    graded as a learner failure — undecodable or hallucinated results are discarded,
+    not scored.</p>
+
+    <h3>Honest grading</h3>
+    <p>The interface commits before it reveals. Quiz answers are graded server-side,
+    dictation withholds the text until the answer is locked in, and replays are counted
+    against the grade automatically — the learner never has to be disciplined enough to
+    self-report.</p>
+
+    <h3>Local by construction</h3>
+    <p>Everything — database, scheduler, models, audio — runs on one machine. Voice
+    recordings never leave it, and there is no per-request bill anywhere in the loop:
+    the marginal cost of a rep is electricity.</p>
+
+    <p class="stack">TypeScript · Hono · React · SQLite (node:sqlite) · ts-fsrs ·
+    Python · faster-whisper · Praat/parselmouth · CUDA</p>
+  </section>
+
+  <footer>
+    Built by <a href="https://arthurnemeth.com">Arthur Nemeth</a>. The live app is
+    private by design — this page is a read-only snapshot, generated September 11, 2026.
+  </footer>
+</main>
+</body>
+</html>

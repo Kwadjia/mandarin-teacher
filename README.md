@@ -41,6 +41,52 @@ openssl req -x509 -newkey ec -pkeyopt ec_paramgen_curve:prime256v1 -keyout lan.k
 Both ports need an inbound firewall rule on the private profile (admin PowerShell):
 `New-NetFirewallRule -DisplayName "mandarin-teacher LAN" -Direction Inbound -Protocol TCP -LocalPort 8787,8443 -Action Allow -Profile Private`
 
+## Remote access
+
+Two faces on `arthurnemeth.com`, deliberately separate:
+
+**Public showcase — `mandarin.arthurnemeth.com`.** A static, read-only snapshot for
+visitors (aggregates and architecture only; no live endpoints, no vocabulary, nothing
+personal). Always up regardless of this PC, because it is served by Cloudflare Pages,
+not by the app.
+
+```powershell
+npm run showcase           # regenerate showcase/index.html from the running app
+npm run showcase:deploy    # regenerate + deploy to Cloudflare Pages
+```
+
+One-time setup: `npx wrangler login`, then the first `showcase:deploy` creates the
+`mandarin-showcase` Pages project; attach the custom domain in the Cloudflare
+dashboard (Workers & Pages → mandarin-showcase → Custom domains →
+`mandarin.arthurnemeth.com`).
+
+**Private app — `app.mandarin.arthurnemeth.com`.** The real thing, reachable from
+anywhere through a Cloudflare Tunnel, gated by Cloudflare Access so only the owner
+gets in. Works only while this PC is awake and `npm start` is running — the PC *is*
+the server; Cloudflare only relays. One-time setup, in this order (Access before DNS,
+so the app is never public even for a minute):
+
+```powershell
+winget install --id Cloudflare.cloudflared
+cloudflared tunnel login                  # opens the browser to authorise
+cloudflared tunnel create mandarin        # prints the tunnel id
+# copy cloudflared/config.yml.example to %USERPROFILE%\.cloudflared\config.yml
+# and fill in the tunnel id
+```
+
+Then in the Zero Trust dashboard (one.dash.cloudflare.com): Access → Applications →
+Add → Self-hosted, hostname `app.mandarin.arthurnemeth.com`, one policy: Allow →
+Emails → the owner's email. Only after that:
+
+```powershell
+cloudflared tunnel route dns mandarin app.mandarin.arthurnemeth.com
+cloudflared tunnel run mandarin           # keep running; or: cloudflared service install
+```
+
+The phone's microphone works over the tunnel with no certificate warning — the edge
+origin is real HTTPS, so the LAN self-signed setup above is only for the home network
+path.
+
 ## Backup
 
 Everything in the database is derived except one thing. Concepts, sentences and audio
